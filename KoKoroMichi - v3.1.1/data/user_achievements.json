@@ -1,0 +1,37 @@
+{
+  "unlocked_achievements": {
+    "1344603209829974016": [
+      "first_summon",
+      "collector_bronze"
+    ],
+    "884489252296073287": [
+      "first_summon",
+      "collector_bronze"
+    ]
+  },
+  "progress_tracking": {
+    "1344603209829974016": {
+      "first_summon_waifus_summoned": 11,
+      "collector_bronze_unique_waifus": 11,
+      "battle_master_battles_won": 0,
+      "affinity_sage_max_affinity_waifus": 0,
+      "dream_master_lore_books_completed": 0
+    },
+    "884489252296073287": {
+      "first_summon_waifus_summoned": 48,
+      "collector_bronze_unique_waifus": 48,
+      "battle_master_battles_won": 0,
+      "affinity_sage_max_affinity_waifus": 0,
+      "dream_master_lore_books_completed": 0
+    }
+  },
+  "unlocked_lore": {},
+  "user_titles": {
+    "1344603209829974016": [
+      "Newcomer"
+    ],
+    "884489252296073287": [
+      "Newcomer"
+    ]
+  }
+}

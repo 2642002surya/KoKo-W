@@ -1,0 +1,41 @@
+{
+  "mood_polls": {
+    "daily_themes": [
+      {"theme": "Adventure", "moods": ["Excited", "Brave", "Curious", "Determined"], "buffs": {"Excited": "battle_bonus", "Brave": "defense_boost"}},
+      {"theme": "Romance", "moods": ["Shy", "Flirty", "Passionate", "Dreamy"], "buffs": {"Flirty": "charm_bonus", "Passionate": "intimate_boost"}},
+      {"theme": "Mystery", "moods": ["Suspicious", "Intrigued", "Mystical", "Wise"], "buffs": {"Mystical": "magic_bonus", "Wise": "exp_boost"}},
+      {"theme": "Seasonal", "moods": ["Festive", "Cozy", "Energetic", "Peaceful"], "buffs": {"Festive": "coin_bonus", "Energetic": "action_boost"}}
+    ],
+    "voting_duration": 3600,
+    "rewards": {"participation": 100, "winning_mood": 250}
+  },
+  "fan_contests": {
+    "contest_types": [
+      {"type": "caption", "title": "Best Waifu Caption Contest", "description": "Write the funniest caption for this waifu moment!", "duration": 1800},
+      {"type": "story", "title": "Mini Story Contest", "description": "Create a short story about your favorite character!", "duration": 3600},
+      {"type": "trivia", "title": "Lore Master Challenge", "description": "Show your knowledge about mythological characters!", "duration": 900},
+      {"type": "art_description", "title": "Character Description Contest", "description": "Describe your dream waifu in detail!", "duration": 2700}
+    ],
+    "emoji_reactions": ["🏆", "⭐", "💖", "🔥", "👑", "✨", "🎉", "💯"],
+    "min_votes_to_win": 3,
+    "rewards": {
+      "winner": {"coins": 1000, "title": "Contest Champion"},
+      "participant": {"coins": 200, "title": "Creative Soul"}
+    }
+  },
+  "pet_races": {
+    "race_types": [
+      {"name": "Sprint Dash", "distance": "short", "duration": 300, "participants": 8},
+      {"name": "Endurance Run", "distance": "long", "duration": 600, "participants": 6},
+      {"name": "Obstacle Course", "distance": "medium", "duration": 450, "participants": 10}
+    ],
+    "pet_stats": ["speed", "stamina", "agility", "luck"],
+    "rewards": {
+      "1st": {"coins": 500, "item": "Victory Medal"},
+      "2nd": {"coins": 300, "item": "Silver Badge"},
+      "3rd": {"coins": 200, "item": "Bronze Badge"},
+      "participation": {"coins": 50}
+    },
+    "cooldown": 7200
+  }
+}

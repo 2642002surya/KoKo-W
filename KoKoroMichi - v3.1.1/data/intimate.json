@@ -1,0 +1,80 @@
+{
+  "affection_tiers": [
+    {"name": "Novice", "min": 0, "emoji": "🤍"},
+    {"name": "Cute Crush", "min": 50, "emoji": "💛"},
+    {"name": "Amorous", "min": 100, "emoji": "💚"},
+    {"name": "Flirty", "min": 250, "emoji": "💙"},
+    {"name": "Passionate", "min": 750, "emoji": "❤️"},
+    {"name": "Adoring", "min": 100, "emoji": "💜"},
+    {"name": "True Love", "min": 1400, "emoji": "💖"},
+    {"name": "Soulmate", "min": 1900, "emoji": "🌟"},
+    {"name": "Eternal Bond", "min": 5000, "emoji": "🌈"}
+  ],
+
+  "scene_moods": {
+    "romance": ["Tender", "Shy", "Warm", "Affectionate", "Sweet"],
+    "sexy": ["Playful", "Seductive", "Flirty", "Teasing", "Coy"],
+    "hot": ["Passionate", "Frenzied", "Intense", "Fiery", "Racy"],
+    "NSFW": ["Naughty", "Wild", "Uninhibited", "Provocative", "Risqué"]
+  },
+
+  "scene_category_emojis": {
+    "romance": ["❤️","💌","💞"],
+    "sexy": ["🔥","💋","🥵"],
+    "hot": ["🌶️","💥","💦"],
+    "NSFW": ["🫦","💦","😈"]
+  },
+
+  "bonus_effects": [
+    "Charm +1 💫",
+    "Critical Affection! 💥",
+    "Lucky Encounter ✨",
+    "Whispered Compliment 💌",
+    "Heartflutter Moment 💖",
+    "Secret Bond 🌙"
+  ],
+
+  "afterglow_texts": [
+    "You both catch your breath, smiling.",
+    "A warmth lingers in your hearts.",
+    "You feel closer than ever.",
+    "The world seems brighter around you.",
+    "A playful smile lingers on your lips.",
+    "Your bond grows stronger in silence."
+  ],
+
+  "mini_achievements": [
+      {"name": "First Kiss 💋", "affection_min": 150},
+      {"name": "Shared Secret 🤫", "affection_min": 550},
+      {"name": "Heartfelt Confession ❤️", "affection_min": 1000},
+      {"name": "True Companion 🌟", "affection_min": 2500},
+      {"name": "Soulmate Bond 🌈", "affection_min": 10000}
+  ],
+
+  "random_quips": [
+    "I knew you’d come for me 😉",
+    "You always know how to make me smile 😊",
+    "Your touch sends shivers down my spine 😳",
+    "I could stay in your arms forever 🫂",
+    "You’re trouble… but the good kind 😏"
+  ],
+
+  "seasonal_variations": {
+    "winter": {
+      "emojis": ["❄️","☕","🎄"],
+      "moods": ["Cozy", "Festive", "Chilly"]
+    },
+    "summer": {
+      "emojis": ["🌞","🏖️","🍦"],
+      "moods": ["Hot", "Playful", "Sunny"]
+    },
+    "valentines": {
+      "emojis": ["❤️","💌","🌹"],
+      "moods": ["Romantic","Flirty","Loving"]
+    },
+    "halloween": {
+      "emojis": ["🎃","🕸️","👻"],
+      "moods": ["Spooky","Mischievous","Playful"]
+    }
+  }
+}

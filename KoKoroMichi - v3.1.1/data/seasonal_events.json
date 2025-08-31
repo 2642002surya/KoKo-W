@@ -1,0 +1,240 @@
+{
+  "seasons": {
+    "spring": {
+      "name": "Cherry Blossom Festival",
+      "description": "Waifus enjoy the blooming season with special bonuses",
+      "duration_days": 30,
+      "bonuses": {
+        "xp_multiplier": 1.2,
+        "affinity_gain_bonus": 0.1,
+        "special_rewards": ["Cherry Blossom Crown", "Spring Charm"]
+      }
+    },
+    "summer": {
+      "name": "Beach Paradise Event",
+      "description": "Summer adventures with enhanced rewards",
+      "duration_days": 30,
+      "bonuses": {
+        "gold_multiplier": 1.3,
+        "quest_success_bonus": 0.15,
+        "special_rewards": ["Beach Outfit", "Summer Vibes"]
+      }
+    },
+    "autumn": {
+      "name": "Harvest Moon Festival",
+      "description": "Autumn brings wisdom and rare treasures",
+      "duration_days": 30,
+      "bonuses": {
+        "relic_drop_bonus": 0.2,
+        "legendary_quest_chance": 0.1,
+        "special_rewards": ["Autumn Leaf", "Harvest Blessing"]
+      }
+    },
+    "winter": {
+      "name": "Winter Wonderland",
+      "description": "Cozy winter activities with relationship bonuses",
+      "duration_days": 30,
+      "bonuses": {
+        "affinity_multiplier": 1.5,
+        "intimate_cooldown_reduction": 0.3,
+        "special_rewards": ["Winter Coat", "Snowflake Charm"]
+      }
+    },
+    "monsoon": {
+      "name": "Storm's Embrace",
+      "description": "The rains bring chaos and blessings alike",
+      "duration_days": 20,
+      "bonuses": {
+        "speed_boost": 1.25,
+        "energy_regeneration": 0.2,
+        "special_rewards": ["Storm Crystal", "Raindrop Pendant"]
+      }
+    },
+    "eclipse": {
+      "name": "Eternal Eclipse",
+      "description": "A rare celestial eclipse changes fate itself",
+      "duration_days": 15,
+      "bonuses": {
+        "crit_chance_bonus": 0.15,
+        "shadow_relic_bonus": 0.25,
+        "special_rewards": ["Eclipse Shard", "Shadow Crown"]
+      }
+    },
+    "festival_of_stars": {
+      "name": "Festival of Stars",
+      "description": "Celestial lights grant mystical powers to waifus",
+      "duration_days": 25,
+      "bonuses": {
+        "magic_damage_boost": 0.2,
+        "luck_multiplier": 1.3,
+        "special_rewards": ["Starlight Orb", "Celestial Robe"]
+      }
+    },
+    "eternal_dusk": {
+      "name": "Eternal Dusk",
+      "description": "A twilight season where shadows dance eternally",
+      "duration_days": 18,
+      "bonuses": {
+        "stealth_bonus": 0.25,
+        "night_event_bonus": 0.2,
+        "special_rewards": ["Twilight Blade", "Duskflower Amulet"]
+      }
+    }
+  },
+  "story_events": [
+    {
+      "name": "The Lost Temple",
+      "description": "A mysterious temple has appeared, offering legendary rewards to brave explorers",
+      "requirements": {"min_level": 10, "required_waifus": 2, "min_affinity": 30},
+      "chapters": [
+        {
+          "title": "Temple Discovery",
+          "story": "Your waifus discover an ancient temple hidden in the mists",
+          "choices": ["Explore cautiously", "Rush in boldly", "Study the entrance"],
+          "outcomes": {
+            "Explore cautiously": {"success_rate": 0.8, "reward_bonus": 1.2},
+            "Rush in boldly": {"success_rate": 0.6, "reward_bonus": 1.5},
+            "Study the entrance": {"success_rate": 0.9, "reward_bonus": 1.0}
+          }
+        },
+        {
+          "title": "Inner Chambers",
+          "story": "Deep within the temple, your waifus face ancient guardians",
+          "choices": ["Fight the guardians", "Solve the puzzle", "Use charm"],
+          "outcomes": {
+            "Fight the guardians": {"success_rate": 0.7, "reward_bonus": 1.3},
+            "Solve the puzzle": {"success_rate": 0.8, "reward_bonus": 1.4},
+            "Use charm": {"success_rate": 0.6, "reward_bonus": 1.6}
+          }
+        }
+      ],
+      "rewards": {
+        "base_xp": 1000,
+        "base_gold": 2000,
+        "special_items": ["Temple Key", "Ancient Scroll", "Guardian's Blessing"]
+      }
+    },
+    {
+      "name": "Dragon's Challenge",
+      "description": "An ancient dragon challenges the strongest waifus to prove their worth",
+      "requirements": {"min_level": 15, "required_waifus": 3, "min_total_potential": 15000},
+      "chapters": [
+        {
+          "title": "Dragon's Lair",
+          "story": "Your team approaches the dragon's mountain lair",
+          "choices": ["Diplomatic approach", "Show of strength", "Stealth infiltration"],
+          "outcomes": {
+            "Diplomatic approach": {"success_rate": 0.7, "reward_bonus": 1.1},
+            "Show of strength": {"success_rate": 0.8, "reward_bonus": 1.3},
+            "Stealth infiltration": {"success_rate": 0.6, "reward_bonus": 1.4}
+          }
+        }
+      ],
+      "rewards": {
+        "base_xp": 1500,
+        "base_gold": 3000,
+        "special_items": ["Dragon Scale", "Fire Gem", "Dragon's Respect"]
+      }
+    },
+    {
+      "name": "The Shattered Sky",
+      "description": "Fragments of the sky fall to the earth, and waifus must restore balance",
+      "requirements": {"min_level": 20, "required_waifus": 4, "min_affinity": 50},
+      "chapters": [
+        {
+          "title": "Falling Stars",
+          "story": "Meteor fragments crash across the land",
+          "choices": ["Collect fragments", "Protect civilians", "Study the anomaly"],
+          "outcomes": {
+            "Collect fragments": {"success_rate": 0.75, "reward_bonus": 1.4},
+            "Protect civilians": {"success_rate": 0.85, "reward_bonus": 1.2},
+            "Study the anomaly": {"success_rate": 0.7, "reward_bonus": 1.6}
+          }
+        }
+      ],
+      "rewards": {
+        "base_xp": 2000,
+        "base_gold": 3500,
+        "special_items": ["Star Core", "Sky Fragment", "Celestial Blessing"]
+      }
+    },
+    {
+      "name": "Curse of the Blood Moon",
+      "description": "A crimson moon rises, cursing the land with dark powers",
+      "requirements": {"min_level": 25, "required_waifus": 3, "min_total_potential": 18000},
+      "chapters": [
+        {
+          "title": "The Crimson Night",
+          "story": "The moon glows red, monsters emerge stronger than ever",
+          "choices": ["Battle the cursed beasts", "Seek shelter", "Invoke ancient rites"],
+          "outcomes": {
+            "Battle the cursed beasts": {"success_rate": 0.65, "reward_bonus": 1.7},
+            "Seek shelter": {"success_rate": 0.9, "reward_bonus": 1.0},
+            "Invoke ancient rites": {"success_rate": 0.7, "reward_bonus": 1.5}
+          }
+        }
+      ],
+      "rewards": {
+        "base_xp": 2500,
+        "base_gold": 4000,
+        "special_items": ["Blood Moon Shard", "Cursed Relic", "Moonlit Sigil"]
+      }
+    },
+    {
+      "name": "The Eternal Library",
+      "description": "A hidden library reveals forbidden knowledge to those brave enough",
+      "requirements": {"min_level": 30, "required_waifus": 2, "min_affinity": 60},
+      "chapters": [
+        {
+          "title": "Hall of Tomes",
+          "story": "Ancient books float in midair, whispering secrets",
+          "choices": ["Read forbidden texts", "Search for relics", "Ignore whispers"],
+          "outcomes": {
+            "Read forbidden texts": {"success_rate": 0.6, "reward_bonus": 2.0},
+            "Search for relics": {"success_rate": 0.8, "reward_bonus": 1.3},
+            "Ignore whispers": {"success_rate": 0.9, "reward_bonus": 1.0}
+          }
+        }
+      ],
+      "rewards": {
+        "base_xp": 3000,
+        "base_gold": 5000,
+        "special_items": ["Tome of Eternity", "Forbidden Codex", "Scholar’s Crown"]
+      }
+    },
+    {
+      "name": "Rise of the Phoenix",
+      "description": "A legendary phoenix emerges, testing the courage of heroes",
+      "requirements": {"min_level": 35, "required_waifus": 4, "min_total_potential": 25000},
+      "chapters": [
+        {
+          "title": "Fiery Rebirth",
+          "story": "Flames engulf the skies as the phoenix descends",
+          "choices": ["Attack head-on", "Seek divine aid", "Protect the villagers"],
+          "outcomes": {
+            "Attack head-on": {"success_rate": 0.7, "reward_bonus": 1.6},
+            "Seek divine aid": {"success_rate": 0.8, "reward_bonus": 1.4},
+            "Protect the villagers": {"success_rate": 0.9, "reward_bonus": 1.2}
+          }
+        }
+      ],
+      "rewards": {
+        "base_xp": 4000,
+        "base_gold": 7000,
+        "special_items": ["Phoenix Feather", "Flame Gem", "Ashen Crown"]
+      }
+    }
+  ],
+  "limited_events": [
+    {"name": "Valentine's Heart Hunt", "description": "Find special heart tokens hidden throughout the world", "spawn_chance": 0.15, "duration_hours": 72, "rewards": {"tokens_needed": 10, "reward_items": ["Love Potion", "Cupid's Arrow", "Heart Pendant"]}},
+    {"name": "Halloween Spook Fest", "description": "Spooky challenges with rare costume rewards", "spawn_chance": 0.1, "duration_hours": 168, "rewards": {"tokens_needed": 15, "reward_items": ["Witch Hat", "Vampire Cape", "Ghost Aura"]}},
+    {"name": "New Year's Fireworks", "description": "Celebrate the new year with dazzling fireworks and blessings", "spawn_chance": 0.2, "duration_hours": 48, "rewards": {"tokens_needed": 12, "reward_items": ["Firecracker Charm", "Golden Lantern", "New Year Crown"]}},
+    {"name": "White Day Gifts", "description": "Return the love by collecting special sweets", "spawn_chance": 0.12, "duration_hours": 72, "rewards": {"tokens_needed": 8, "reward_items": ["Sweet Box", "White Lily", "Candy Ring"]}},
+    {"name": "Golden Festival", "description": "Collect golden coins for rare treasures", "spawn_chance": 0.18, "duration_hours": 96, "rewards": {"tokens_needed": 20, "reward_items": ["Golden Relic", "Treasure Map", "Crown of Wealth"]}},
+    {"name": "Festival of Flames", "description": "Burning passion rewards those daring enough", "spawn_chance": 0.1, "duration_hours": 120, "rewards": {"tokens_needed": 18, "reward_items": ["Fire Crown", "Burning Amulet", "Inferno Cloak"]}},
+    {"name": "Mystic Lanterns", "description": "Light the path with mystical lanterns", "spawn_chance": 0.14, "duration_hours": 84, "rewards": {"tokens_needed": 12, "reward_items": ["Lantern Charm", "Spirit Flame", "Guiding Light"]}},
+    {"name": "Ocean’s Treasure Hunt", "description": "Dive deep for sunken treasures", "spawn_chance": 0.09, "duration_hours": 144, "rewards": {"tokens_needed": 25, "reward_items": ["Pearl Necklace", "Trident Shard", "Sea Crown"]}},
+    {"name": "Shadow Hunt", "description": "Chase and capture shadow beasts", "spawn_chance": 0.08, "duration_hours": 72, "rewards": {"tokens_needed": 15, "reward_items": ["Shadow Cloak", "Dark Crystal", "Phantom Ring"]}},
+    {"name": "Starfall Night", "description": "Catch falling stars for cosmic rewards", "spawn_chance": 0.11, "duration_hours": 60, "rewards": {"tokens_needed": 10, "reward_items": ["Star Shard", "Comet Tail", "Celestial Ring"]}}
+  ]
+}

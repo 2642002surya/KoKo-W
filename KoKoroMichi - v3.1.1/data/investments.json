@@ -1,0 +1,369 @@
+{
+  "investment_types": {
+    "waifu_cafe": {
+      "name": "Waifu Café",
+      "description": "A cozy café run by your waifus, generates passive income",
+      "initial_cost": 10000,
+      "daily_income": 200,
+      "upgrade_costs": [5000, 10000, 20000, 40000],
+      "upgrade_bonuses": [1.5, 2.0, 2.5, 3.0],
+      "requirements": {"min_waifus": 3, "min_affinity_total": 100}
+    },
+    "training_dojo": {
+      "name": "Training Dojo",
+      "description": "A martial arts dojo that provides XP bonuses to training waifus",
+      "initial_cost": 15000,
+      "daily_income": 150,
+      "special_bonus": {"training_xp_bonus": 0.2},
+      "upgrade_costs": [7500, 15000, 30000],
+      "upgrade_bonuses": [1.3, 1.6, 2.0],
+      "requirements": {"min_battle_wins": 50, "min_level_total": 100}
+    },
+    "enchanted_shop": {
+      "name": "Enchanted Shop",
+      "description": "A magical shop that occasionally finds rare items",
+      "initial_cost": 20000,
+      "daily_income": 100,
+      "special_bonus": {"rare_item_chance": 0.05},
+      "upgrade_costs": [10000, 20000, 40000, 80000],
+      "upgrade_bonuses": [1.2, 1.4, 1.7, 2.0],
+      "requirements": {"min_relics": 5, "min_magic_affinity": 200}
+    },
+    "adventure_guild": {
+      "name": "Adventure Guild",
+      "description": "A guild hall that boosts quest rewards for all members",
+      "initial_cost": 25000,
+      "daily_income": 250,
+      "special_bonus": {"quest_reward_bonus": 0.15},
+      "upgrade_costs": [12500, 25000, 50000],
+      "upgrade_bonuses": [1.4, 1.8, 2.2],
+      "requirements": {"min_quests_completed": 30, "guild_membership": true}
+    },
+    "waifu_spa": {
+      "name": "Waifu Spa",
+      "description": "A relaxing spa that improves waifu mood and affinity gain",
+      "initial_cost": 18000,
+      "daily_income": 180,
+      "special_bonus": {"affinity_gain_bonus": 0.25, "mood_stability": 0.3},
+      "upgrade_costs": [9000, 18000, 36000],
+      "upgrade_bonuses": [1.3, 1.6, 2.0],
+      "requirements": {"min_intimate_sessions": 20, "min_affinity_average": 60}
+    },
+    "alchemy_lab": {
+      "name": "Alchemy Lab",
+      "description": "Produces potions that grant temporary buffs to battles and training",
+      "initial_cost": 22000,
+      "daily_income": 160,
+      "special_bonus": {"potion_buff_bonus": 0.15},
+      "upgrade_costs": [11000, 22000, 44000],
+      "upgrade_bonuses": [1.4, 1.7, 2.0],
+      "requirements": {"min_relics": 3, "min_level_total": 120}
+    },
+    "arena_colosseum": {
+      "name": "Arena Colosseum",
+      "description": "Host battles and tournaments for fame and gold",
+      "initial_cost": 30000,
+      "daily_income": 300,
+      "special_bonus": {"battle_gold_bonus": 0.2},
+      "upgrade_costs": [15000, 30000, 60000, 120000],
+      "upgrade_bonuses": [1.5, 1.8, 2.2, 2.8],
+      "requirements": {"min_battle_wins": 100, "guild_membership": true}
+    },
+    "crystal_mine": {
+      "name": "Crystal Mine",
+      "description": "Generates rare crystals used for enchanting gear",
+      "initial_cost": 28000,
+      "daily_income": 220,
+      "special_bonus": {"enchant_success_bonus": 0.1},
+      "upgrade_costs": [14000, 28000, 56000],
+      "upgrade_bonuses": [1.4, 1.7, 2.1],
+      "requirements": {"min_relics": 8, "min_magic_affinity": 300}
+    },
+    "royal_library": {
+      "name": "Royal Library",
+      "description": "Houses ancient knowledge, boosting XP gain and lore unlocks",
+      "initial_cost": 35000,
+      "daily_income": 250,
+      "special_bonus": {"xp_gain_bonus": 0.15, "lore_discovery_chance": 0.1},
+      "upgrade_costs": [17500, 35000, 70000, 140000],
+      "upgrade_bonuses": [1.3, 1.6, 2.0, 2.5],
+      "requirements": {"min_level_total": 200, "min_affinity_total": 500}
+    },
+    "waifu_theater": {
+      "name": "Waifu Theater",
+      "description": "A stage where waifus perform, increasing mood and generating fans",
+      "initial_cost": 20000,
+      "daily_income": 180,
+      "special_bonus": {"mood_gain_bonus": 0.2, "fan_income_bonus": 0.1},
+      "upgrade_costs": [10000, 20000, 40000, 80000],
+      "upgrade_bonuses": [1.3, 1.5, 1.8, 2.2],
+      "requirements": {"min_waifus": 5, "min_affinity_average": 70}
+    },
+    "dimensional_portal": {
+      "name": "Dimensional Portal",
+      "description": "Opens rifts to other worlds, bringing exotic loot and quests",
+      "initial_cost": 50000,
+      "daily_income": 400,
+      "special_bonus": {"exotic_loot_chance": 0.1, "quest_rarity_bonus": 0.1},
+      "upgrade_costs": [25000, 50000, 100000, 200000],
+      "upgrade_bonuses": [1.5, 1.8, 2.3, 3.0],
+      "requirements": {"min_quests_completed": 100, "min_relics": 12}
+    },
+    "waifu_resort": {
+      "name": "Waifu Resort",
+      "description": "A luxury vacation retreat for waifus, massively boosts affinity and mood",
+      "initial_cost": 60000,
+      "daily_income": 500,
+      "special_bonus": {"affinity_gain_bonus": 0.4, "mood_stability": 0.5},
+      "upgrade_costs": [30000, 60000, 120000, 240000],
+      "upgrade_bonuses": [1.4, 1.7, 2.1, 2.7],
+      "requirements": {"min_waifus": 10, "min_intimate_sessions": 50}
+    },
+    "skyship_docks": {
+      "name": "Skyship Docks",
+      "description": "Construct skyships to explore hidden islands for treasures",
+      "initial_cost": 80000,
+      "daily_income": 600,
+      "special_bonus": {"exploration_reward_bonus": 0.2, "rare_item_chance": 0.1},
+      "upgrade_costs": [40000, 80000, 160000],
+      "upgrade_bonuses": [1.5, 2.0, 2.5],
+      "requirements": {"min_quests_completed": 150, "min_level_total": 500}
+    }
+  },
+  "business_events": [
+    {
+      "id": "cafe_festival",
+      "name": "Seasonal Café Festival",
+      "description": "Your Waifu Café holds a seasonal festival, attracting crowds from afar.",
+      "affected_business": "waifu_cafe",
+      "effect": {"daily_income_multiplier": 2.0},
+      "duration_hours": 24,
+      "rarity": "uncommon"
+    },
+    {
+      "id": "cafe_inspection",
+      "name": "Health Inspection",
+      "description": "A sudden health inspection forces you to shut down for cleaning.",
+      "affected_business": "waifu_cafe",
+      "effect": {"daily_income_multiplier": 0},
+      "duration_hours": 12,
+      "rarity": "common"
+    },
+    {
+      "id": "dojo_champion",
+      "name": "New Champion Emerges",
+      "description": "Your dojo's student wins a regional tournament, boosting popularity.",
+      "affected_business": "training_dojo",
+      "effect": {"daily_income_multiplier": 1.5, "xp_bonus": 0.1},
+      "duration_hours": 48,
+      "rarity": "rare"
+    },
+    {
+      "id": "dojo_brawl",
+      "name": "Dojo Brawl",
+      "description": "A rivalry causes a destructive brawl inside the dojo.",
+      "affected_business": "training_dojo",
+      "effect": {"daily_income_multiplier": 0.5},
+      "duration_hours": 24,
+      "rarity": "common"
+    },
+    {
+      "id": "shop_rare_discovery",
+      "name": "Rare Relic Discovery",
+      "description": "Your Enchanted Shop acquires a relic everyone desires.",
+      "affected_business": "enchanted_shop",
+      "effect": {"rare_item_chance_bonus": 0.2},
+      "duration_hours": 72,
+      "rarity": "epic"
+    },
+    {
+      "id": "shop_robbery",
+      "name": "Shop Robbery",
+      "description": "Thieves break in and steal a chunk of your profits.",
+      "affected_business": "enchanted_shop",
+      "effect": {"gold_loss": 2000},
+      "duration_hours": 0,
+      "rarity": "common"
+    },
+    {
+      "id": "guild_contract",
+      "name": "Guild Contract Surge",
+      "description": "The Adventure Guild signs multiple adventurers for new contracts.",
+      "affected_business": "adventure_guild",
+      "effect": {"quest_reward_bonus": 0.25, "daily_income_multiplier": 1.4},
+      "duration_hours": 48,
+      "rarity": "rare"
+    },
+    {
+      "id": "guild_scandal",
+      "name": "Guild Scandal",
+      "description": "A guild member is caught cheating, reputation suffers.",
+      "affected_business": "adventure_guild",
+      "effect": {"daily_income_multiplier": 0.6},
+      "duration_hours": 36,
+      "rarity": "common"
+    },
+    {
+      "id": "spa_celebrity_visit",
+      "name": "Celebrity Waifu Visit",
+      "description": "A famous waifu visits your spa, attracting huge attention.",
+      "affected_business": "waifu_spa",
+      "effect": {"affinity_gain_bonus": 0.3, "daily_income_multiplier": 2.0},
+      "duration_hours": 48,
+      "rarity": "rare"
+    },
+    {
+      "id": "spa_overwork",
+      "name": "Burnout Staff",
+      "description": "Your spa staff gets overworked, lowering customer satisfaction.",
+      "affected_business": "waifu_spa",
+      "effect": {"affinity_gain_bonus": -0.1, "daily_income_multiplier": 0.5},
+      "duration_hours": 24,
+      "rarity": "common"
+    },
+    {
+      "id": "alchemy_experiment",
+      "name": "Successful Potion Experiment",
+      "description": "Your Alchemy Lab develops a groundbreaking potion.",
+      "affected_business": "alchemy_lab",
+      "effect": {"potion_buff_bonus": 0.25, "daily_income_multiplier": 1.8},
+      "duration_hours": 72,
+      "rarity": "epic"
+    },
+    {
+      "id": "alchemy_explosion",
+      "name": "Lab Explosion",
+      "description": "A risky experiment backfires, causing downtime.",
+      "affected_business": "alchemy_lab",
+      "effect": {"daily_income_multiplier": 0},
+      "duration_hours": 24,
+      "rarity": "common"
+    },
+    {
+      "id": "arena_tournament",
+      "name": "Grand Tournament",
+      "description": "The Arena hosts a legendary tournament, drawing massive crowds.",
+      "affected_business": "arena_colosseum",
+      "effect": {"battle_gold_bonus": 0.3, "daily_income_multiplier": 2.5},
+      "duration_hours": 72,
+      "rarity": "legendary"
+    },
+    {
+      "id": "arena_protest",
+      "name": "Gladiator Protest",
+      "description": "Gladiators strike against unfair wages, halting battles.",
+      "affected_business": "arena_colosseum",
+      "effect": {"daily_income_multiplier": 0},
+      "duration_hours": 48,
+      "rarity": "rare"
+    },
+    {
+      "id": "mine_strike",
+      "name": "Crystal Mine Strike",
+      "description": "The miners demand better pay, halting production.",
+      "affected_business": "crystal_mine",
+      "effect": {"daily_income_multiplier": 0},
+      "duration_hours": 36,
+      "rarity": "common"
+    },
+    {
+      "id": "mine_overflow",
+      "name": "Crystal Overflow",
+      "description": "A sudden magical surge increases crystal output.",
+      "affected_business": "crystal_mine",
+      "effect": {"enchant_success_bonus": 0.2, "daily_income_multiplier": 2.0},
+      "duration_hours": 48,
+      "rarity": "rare"
+    },
+    {
+      "id": "library_discovery",
+      "name": "Ancient Tome Found",
+      "description": "The Royal Library unearths a long-lost tome of power.",
+      "affected_business": "royal_library",
+      "effect": {"xp_gain_bonus": 0.2, "lore_discovery_chance": 0.2},
+      "duration_hours": 72,
+      "rarity": "epic"
+    },
+    {
+      "id": "library_fire",
+      "name": "Library Fire",
+      "description": "A fire damages rare scrolls, lowering output.",
+      "affected_business": "royal_library",
+      "effect": {"xp_gain_bonus": -0.1, "daily_income_multiplier": 0.5},
+      "duration_hours": 24,
+      "rarity": "common"
+    },
+    {
+      "id": "theater_showcase",
+      "name": "Waifu Showcase",
+      "description": "Your theater holds a major performance, waifus shine brightly.",
+      "affected_business": "waifu_theater",
+      "effect": {"mood_gain_bonus": 0.3, "fan_income_bonus": 0.2},
+      "duration_hours": 48,
+      "rarity": "rare"
+    },
+    {
+      "id": "theater_scandal",
+      "name": "Stage Scandal",
+      "description": "One of your waifus embarrasses herself on stage, lowering fan trust.",
+      "affected_business": "waifu_theater",
+      "effect": {"mood_gain_bonus": -0.1, "fan_income_bonus": -0.1},
+      "duration_hours": 24,
+      "rarity": "common"
+    },
+    {
+      "id": "portal_invaders",
+      "name": "Dimensional Invaders",
+      "description": "Something dangerous slips through your portal.",
+      "affected_business": "dimensional_portal",
+      "effect": {"daily_income_multiplier": 0.7},
+      "duration_hours": 36,
+      "rarity": "rare"
+    },
+    {
+      "id": "portal_discovery",
+      "name": "Exotic World Discovery",
+      "description": "Your portal reveals a land rich with treasures.",
+      "affected_business": "dimensional_portal",
+      "effect": {"exotic_loot_chance": 0.2, "quest_rarity_bonus": 0.2},
+      "duration_hours": 72,
+      "rarity": "legendary"
+    },
+    {
+      "id": "resort_festival",
+      "name": "Luxury Festival",
+      "description": "Your Waifu Resort hosts a grand vacation event.",
+      "affected_business": "waifu_resort",
+      "effect": {"affinity_gain_bonus": 0.4, "daily_income_multiplier": 2.5},
+      "duration_hours": 72,
+      "rarity": "epic"
+    },
+    {
+      "id": "resort_maintenance",
+      "name": "Unexpected Maintenance",
+      "description": "Repairs and cleaning reduce efficiency.",
+      "affected_business": "waifu_resort",
+      "effect": {"daily_income_multiplier": 0.5},
+      "duration_hours": 24,
+      "rarity": "common"
+    },
+    {
+      "id": "skyship_discovery",
+      "name": "Hidden Island Found",
+      "description": "Your Skyship crew discovers a new floating island of riches.",
+      "affected_business": "skyship_docks",
+      "effect": {"exploration_reward_bonus": 0.3, "daily_income_multiplier": 2.0},
+      "duration_hours": 72,
+      "rarity": "legendary"
+    },
+    {
+      "id": "skyship_attack",
+      "name": "Sky Pirate Raid",
+      "description": "Sky pirates raid your ships, stealing profits.",
+      "affected_business": "skyship_docks",
+      "effect": {"gold_loss": 5000, "daily_income_multiplier": 0.5},
+      "duration_hours": 36,
+      "rarity": "rare"
+    }
+  ]
+}

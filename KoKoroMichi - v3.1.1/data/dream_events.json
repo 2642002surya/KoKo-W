@@ -1,0 +1,260 @@
+{
+  "event_settings": {
+    "trigger_chance": 0.15,
+    "cooldown_hours": 2,
+    "max_daily_events": 5,
+    "rarity_weights": {
+      "common": 0.45,
+      "uncommon": 0.25,
+      "rare": 0.15,
+      "epic": 0.08,
+      "legendary": 0.05,
+      "mythical": 0.02
+    }
+  },
+  "dream_events": [
+    {
+      "id": "mystical_encounter",
+      "name": "Mystical Encounter",
+      "description": "A mysterious figure appears in your dreams, offering ancient wisdom",
+      "rarity": "common",
+      "rewards": {
+        "gold": 500,
+        "xp": 100,
+        "items": ["Dream Essence", "Mystic Shard"]
+      },
+      "duration_minutes": 30
+    },
+    {
+      "id": "dream_feast",
+      "name": "Dream Feast",
+      "description": "You stumble into a banquet of endless dream food",
+      "rarity": "common",
+      "rewards": {
+        "gold": 300,
+        "xp": 50,
+        "items": ["Sweet Ambrosia"]
+      },
+      "duration_minutes": 20
+    },
+    {
+      "id": "butterfly_chase",
+      "name": "Butterfly Chase",
+      "description": "You chase dream butterflies that scatter glowing dust",
+      "rarity": "common",
+      "rewards": {
+        "gold": 400,
+        "xp": 75,
+        "items": ["Butterfly Dust"]
+      },
+      "duration_minutes": 25
+    },
+    {
+      "id": "celestial_blessing",
+      "name": "Celestial Blessing", 
+      "description": "The stars align to bestow their blessing upon you",
+      "rarity": "uncommon",
+      "rewards": {
+        "gold": 1000,
+        "xp": 250,
+        "temporary_buff": {
+          "type": "battle_boost",
+          "value": 0.2,
+          "duration_hours": 24
+        }
+      },
+      "duration_minutes": 60
+    },
+    {
+      "id": "waifu_serenade",
+      "name": "Waifu Serenade",
+      "description": "Your waifu sings a lullaby in your dreams, calming your soul",
+      "rarity": "uncommon",
+      "rewards": {
+        "xp": 200,
+        "waifu_affinity_boost": 5
+      },
+      "duration_minutes": 40
+    },
+    {
+      "id": "lunar_mirror",
+      "name": "Lunar Mirror",
+      "description": "A glowing mirror shows you visions of hidden truths",
+      "rarity": "uncommon",
+      "rewards": {
+        "gold": 800,
+        "xp": 150,
+        "items": ["Moonlit Shard"]
+      },
+      "duration_minutes": 45
+    },
+    {
+      "id": "nightmare_challenge",
+      "name": "Nightmare Challenge",
+      "description": "Face your deepest fears and emerge stronger",
+      "rarity": "rare",
+      "rewards": {
+        "gold": 2000,
+        "xp": 500,
+        "special_items": ["Courage Crystal", "Shadow Essence"],
+        "waifu_affinity_boost": 10
+      },
+      "duration_minutes": 120
+    },
+    {
+      "id": "guardian_trial",
+      "name": "Guardian’s Trial",
+      "description": "A mighty guardian tests your resolve in battle",
+      "rarity": "rare",
+      "rewards": {
+        "gold": 2500,
+        "xp": 600,
+        "special_items": ["Guardian Sigil"]
+      },
+      "duration_minutes": 100
+    },
+    {
+      "id": "flame_of_determination",
+      "name": "Flame of Determination",
+      "description": "You seize a burning flame that powers your spirit",
+      "rarity": "rare",
+      "rewards": {
+        "xp": 800,
+        "temporary_buff": {
+          "type": "courage_boost",
+          "value": 0.25,
+          "duration_hours": 12
+        }
+      },
+      "duration_minutes": 90
+    },
+    {
+      "id": "ethereal_fountain",
+      "name": "Ethereal Fountain",
+      "description": "You drink from the fountain of eternity",
+      "rarity": "epic",
+      "rewards": {
+        "gold": 4000,
+        "xp": 1200,
+        "rare_relics": ["Fountain Chalice"],
+        "waifu_affinity_boost": 15
+      },
+      "duration_minutes": 180
+    },
+    {
+      "id": "starlit_oath",
+      "name": "Starlit Oath",
+      "description": "You swear an oath under the starlit dream sky",
+      "rarity": "epic",
+      "rewards": {
+        "xp": 1500,
+        "permanent_boost": {
+          "type": "loyalty",
+          "value": 0.03
+        }
+      },
+      "duration_minutes": 200
+    },
+    {
+      "id": "crystal_labyrinth",
+      "name": "Crystal Labyrinth",
+      "description": "You wander through endless crystal halls filled with echoes",
+      "rarity": "epic",
+      "rewards": {
+        "gold": 5000,
+        "xp": 1800,
+        "special_items": ["Prism Key"]
+      },
+      "duration_minutes": 210
+    },
+    {
+      "id": "lucid_mastery",
+      "name": "Lucid Mastery",
+      "description": "You achieve perfect control over your dreamscape",
+      "rarity": "legendary",
+      "rewards": {
+        "gold": 5000,
+        "xp": 1000,
+        "rare_relics": ["Dream Weaver's Cloak"],
+        "permanent_boost": {
+          "type": "dream_mastery",
+          "value": 0.05
+        }
+      },
+      "duration_minutes": 240
+    },
+    {
+      "id": "phoenix_rebirth",
+      "name": "Phoenix Rebirth",
+      "description": "You rise from flames anew, empowered with eternal fire",
+      "rarity": "legendary",
+      "rewards": {
+        "gold": 6000,
+        "xp": 2000,
+        "rare_relics": ["Phoenix Feather"],
+        "permanent_boost": {
+          "type": "rebirth_power",
+          "value": 0.07
+        }
+      },
+      "duration_minutes": 260
+    },
+    {
+      "id": "eternal_guardian",
+      "name": "Eternal Guardian",
+      "description": "An eternal knight swears allegiance to your dream soul",
+      "rarity": "legendary",
+      "rewards": {
+        "xp": 2500,
+        "waifu_affinity_boost": 25,
+        "rare_relics": ["Guardian’s Oathblade"]
+      },
+      "duration_minutes": 300
+    },
+    {
+      "id": "cosmic_alignment",
+      "name": "Cosmic Alignment",
+      "description": "Planets align, granting unfathomable insight",
+      "rarity": "mythical",
+      "rewards": {
+        "gold": 10000,
+        "xp": 5000,
+        "permanent_boost": {
+          "type": "wisdom",
+          "value": 0.1
+        }
+      },
+      "duration_minutes": 360
+    },
+    {
+      "id": "timeless_library",
+      "name": "Timeless Library",
+      "description": "You enter a library beyond time, filled with infinite knowledge",
+      "rarity": "mythical",
+      "rewards": {
+        "xp": 8000,
+        "rare_relics": ["Codex of Eternity"],
+        "permanent_boost": {
+          "type": "knowledge",
+          "value": 0.12
+        }
+      },
+      "duration_minutes": 400
+    },
+    {
+      "id": "divine_embrace",
+      "name": "Divine Embrace",
+      "description": "A divine being embraces your soul, forever changing you",
+      "rarity": "mythical",
+      "rewards": {
+        "gold": 15000,
+        "xp": 10000,
+        "permanent_boost": {
+          "type": "divinity",
+          "value": 0.15
+        }
+      },
+      "duration_minutes": 480
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "auction_settings": {
+    "min_bid": 100,
+    "bid_increment": 50,
+    "auction_duration_hours": 24,
+    "max_active_auctions": 5,
+    "seller_fee_percentage": 0.05,
+    "auto_extend_minutes": 10
+  },
+  "auctionable_items": {
+    "waifus": {
+      "min_level": 5,
+      "cooldown_after_purchase": 72,
+      "affinity_reset": true,
+      "base_value_multiplier": 100
+    },
+    "relics": {
+      "any_relic": true,
+      "condition_affects_price": true,
+      "base_value_multiplier": 50
+    },
+    "rare_items": {
+      "XP Booster": {"base_value": 500, "stack_size": 10},
+      "Health Potion": {"base_value": 200, "stack_size": 20},
+      "Affinity Charm": {"base_value": 800, "stack_size": 5},
+      "Lucky Coin": {"base_value": 1000, "stack_size": 3},
+      "Evolution Stone": {"base_value": 2000, "stack_size": 1}
+    },
+    "special_items": {
+      "Golden Ticket": {"base_value": 5000, "description": "Guarantees a legendary summon"},
+      "Time Crystal": {"base_value": 3000, "description": "Instantly completes any quest"},
+      "Love Letter": {"base_value": 1500, "description": "Increases affinity by 10 points"},
+      "Master Key": {"base_value": 4000, "description": "Unlocks any locked content"},
+      "Phoenix Feather": {"base_value": 10000, "description": "Revives a defeated waifu with full stats"}
+    }
+  },
+  "auction_events": [
+    {
+      "name": "Collector's Special",
+      "description": "Rare items appear more frequently in auctions",
+      "chance": 0.1,
+      "duration_hours": 48,
+      "effects": {"rare_item_spawn_rate": 2.0}
+    },
+    {
+      "name": "Noble's Estate Sale",
+      "description": "High-value items from a wealthy collector",
+      "chance": 0.05,
+      "duration_hours": 24,
+      "special_items": ["Legendary Waifu", "Mythic Relic", "Ancient Artifact"]
+    },
+    {
+      "name": "Bargain Day",
+      "description": "All starting bids are reduced",
+      "chance": 0.15,
+      "duration_hours": 12,
+      "effects": {"starting_bid_multiplier": 0.5}
+    },
+    {
+      "name": "Bidding Frenzy",
+      "description": "Competitive atmosphere increases final prices",
+      "chance": 0.08,
+      "duration_hours": 6,
+      "effects": {"bid_competition_bonus": 1.5}
+    }
+  ],
+  "auction_categories": [
+    {
+      "name": "Waifus",
+      "description": "Buy and sell beloved companions",
+      "icon": "👩",
+      "filters": ["level", "rarity", "affinity", "traits"]
+    },
+    {
+      "name": "Equipment",
+      "description": "Relics and powerful artifacts",
+      "icon": "⚔️",
+      "filters": ["rarity", "type", "stat_bonus", "condition"]
+    },
+    {
+      "name": "Consumables",
+      "description": "Potions, boosters, and utility items",
+      "icon": "🧪",
+      "filters": ["type", "quantity", "effect"]
+    },
+    {
+      "name": "Specials",
+      "description": "Unique and limited items",
+      "icon": "✨",
+      "filters": ["rarity", "event_exclusive", "power_level"]
+    }
+  ],
+  "bidding_strategies": {
+    "sniper": {
+      "description": "Automatic bidding in the last few minutes",
+      "cost": 100,
+      "max_bid_required": true,
+      "success_rate": 0.7
+    },
+    "incremental": {
+      "description": "Gradually increase bids over time",
+      "cost": 50,
+      "patience_required": true,
+      "success_rate": 0.6
+    },
+    "aggressive": {
+      "description": "High bids to discourage competition",
+      "cost": 0,
+      "gold_requirement_multiplier": 1.5,
+      "success_rate": 0.8
+    }
+  }
+}

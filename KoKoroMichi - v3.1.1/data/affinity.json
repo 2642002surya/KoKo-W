@@ -1,0 +1,170 @@
+{
+  "relationships": {
+    "123456789012345678": {
+      "amaterasu": {
+        "tsukuyomi": 85,
+        "chaos": 15,
+        "hera": 62,
+        "odin": 45,
+        "lilith": 70,
+        "athena": 55,
+        "zeus": 40,
+        "freya": 80
+      },
+      "tsukuyomi": {
+        "amaterasu": 85,
+        "odin": 45,
+        "chaos": 25,
+        "lilith": 30,
+        "hera": 60,
+        "freya": 50,
+        "zeus": 35,
+        "athena": 75
+      },
+      "chaos": {
+        "amaterasu": 15,
+        "lilith": 90,
+        "hera": 12,
+        "odin": 20,
+        "freya": 25,
+        "athena": 40,
+        "zeus": 10
+      },
+      "hera": {
+        "amaterasu": 62,
+        "chaos": 12,
+        "tsukuyomi": 60,
+        "odin": 50,
+        "lilith": 35,
+        "freya": 45,
+        "athena": 70,
+        "zeus": 55
+      },
+      "odin": {
+        "tsukuyomi": 45,
+        "amaterasu": 40,
+        "hera": 50,
+        "chaos": 20,
+        "lilith": 55,
+        "freya": 65,
+        "athena": 60,
+        "zeus": 70
+      },
+      "lilith": {
+        "chaos": 90,
+        "amaterasu": 70,
+        "tsukuyomi": 30,
+        "hera": 35,
+        "odin": 55,
+        "freya": 40,
+        "athena": 20,
+        "zeus": 25
+      },
+      "freya": {
+        "amaterasu": 80,
+        "tsukuyomi": 50,
+        "hera": 45,
+        "odin": 65,
+        "chaos": 25,
+        "lilith": 40,
+        "athena": 60,
+        "zeus": 55
+      },
+      "athena": {
+        "amaterasu": 55,
+        "tsukuyomi": 75,
+        "hera": 70,
+        "odin": 60,
+        "chaos": 40,
+        "lilith": 20,
+        "freya": 60,
+        "zeus": 65
+      },
+      "zeus": {
+        "amaterasu": 40,
+        "tsukuyomi": 35,
+        "hera": 55,
+        "odin": 70,
+        "chaos": 10,
+        "lilith": 25,
+        "freya": 55,
+        "athena": 65
+      }
+    }
+  },
+  "global_events": {
+    "friendship_bonuses": {
+      "90-100": {"description": "Best Friends Forever", "battle_bonus": 0.08, "xp_bonus": 0.15, "quest_success_rate": 0.2},
+      "80-89": {"description": "Strong Friendship", "battle_bonus": 0.05, "xp_bonus": 0.1, "quest_success_rate": 0.15},
+      "70-79": {"description": "Good Friends", "battle_bonus": 0.03, "xp_bonus": 0.08, "quest_success_rate": 0.1},
+      "60-69": {"description": "Friendly", "battle_bonus": 0.02, "xp_bonus": 0.05, "quest_success_rate": 0.05},
+      "50-59": {"description": "Acquaintances", "battle_bonus": 0.01, "xp_bonus": 0.02, "quest_success_rate": 0.02}
+    },
+    "rivalry_effects": {
+      "0-10": {"description": "Deadly Rivalry", "battle_penalty": -0.05, "defense_penalty": -0.08, "quest_failure_chance": 0.15},
+      "11-20": {"description": "Strong Rivalry", "battle_penalty": -0.03, "defense_penalty": -0.05, "quest_failure_chance": 0.1},
+      "21-39": {"description": "Mild Rivalry", "battle_penalty": -0.01, "defense_penalty": -0.02, "quest_failure_chance": 0.03},
+      "40-49": {"description": "Minor Rivalry", "battle_penalty": -0.005, "defense_penalty": -0.01, "quest_failure_chance": 0.01}
+    }
+  },
+  "relationship_events": [
+    {"type": "battle_together", "affinity_change": 3, "description": "fought side by side"},
+    {"type": "quest_together", "affinity_change": 5, "description": "completed a quest together"},
+    {"type": "relic_sharing", "affinity_change": 2, "description": "shared equipment knowledge"},
+    {"type": "battle_against", "affinity_change": -2, "description": "fought as opponents"},
+    {"type": "rivalry_event", "affinity_change": -5, "description": "had a heated disagreement"},
+    {"type": "training_partner", "affinity_change": 4, "description": "trained together for improvement"},
+    {"type": "gift_exchange", "affinity_change": 3, "description": "exchanged meaningful gifts"},
+    {"type": "mission_support", "affinity_change": 5, "description": "helped in a difficult mission"},
+    {"type": "strategy_discussion", "affinity_change": 2, "description": "planned tactics together"},
+    {"type": "conflict_resolution", "affinity_change": 3, "description": "resolved a disagreement peacefully"},
+    {"type": "festival_participation", "affinity_change": 2, "description": "celebrated festival together"},
+    {"type": "rare_item_found", "affinity_change": 4, "description": "discovered a rare item together"},
+    {"type": "rescue_event", "affinity_change": 5, "description": "saved each other in crisis"},
+    {"type": "shared_secret", "affinity_change": 3, "description": "confided a secret"},
+    {"type": "friendly_competition", "affinity_change": 2, "description": "challenged each other in friendly duel"},
+    {"type": "teamwork_challenge", "affinity_change": 5, "description": "overcame obstacles using teamwork"},
+    {"type": "storytelling", "affinity_change": 2, "description": "shared stories around campfire"},
+    {"type": "mentor_guidance", "affinity_change": 4, "description": "mentored each other for skill growth"},
+    {"type": "shared_relic", "affinity_change": 3, "description": "together enhanced relic powers"},
+    {"type": "competition_loss", "affinity_change": -3, "description": "lost in friendly rivalry"}
+  ],
+  "story_templates": {
+    "friendship": [
+      "{waifu_a} and {waifu_b} bonded during their recent adventures, strengthening their friendship!",
+      "{waifu_a} gave {waifu_b} a small gift as a token of their growing friendship.",
+      "{waifu_a} and {waifu_b} spent time training together, improving their bond.",
+      "{waifu_a} helped {waifu_b} recover after a tough battle.",
+      "{waifu_a} and {waifu_b} shared a rare find during their journey.",
+      "{waifu_a} supported {waifu_b} in a critical quest stage.",
+      "{waifu_a} and {waifu_b} teamed up to defeat a strong enemy.",
+      "{waifu_a} encouraged {waifu_b} after a setback.",
+      "{waifu_a} and {waifu_b} discovered a hidden treasure together.",
+      "{waifu_a} cheered {waifu_b} during a festival event."
+    ],
+    "rivalry": [
+      "{waifu_a} and {waifu_b} had a heated argument about battle strategies.",
+      "{waifu_a} challenged {waifu_b} to prove who's stronger, creating tension.",
+      "{waifu_a} and {waifu_b} competed fiercely, their rivalry intensifying.",
+      "{waifu_a} attempted to outshine {waifu_b} in the arena.",
+      "{waifu_a} and {waifu_b} debated over tactics during the campaign.",
+      "{waifu_a} sabotaged {waifu_b}'s plan in secret.",
+      "{waifu_a} and {waifu_b} had a clash of personalities while on a quest.",
+      "{waifu_a} tried to prove superiority in a friendly duel.",
+      "{waifu_a} competed with {waifu_b} for rare items.",
+      "{waifu_a} and {waifu_b} disagreed over team strategies."
+    ],
+    "neutral": [
+      "{waifu_a} and {waifu_b} had a casual conversation.",
+      "{waifu_a} and {waifu_b} acknowledged each other with mutual respect.",
+      "{waifu_a} and {waifu_b} worked together professionally.",
+      "{waifu_a} and {waifu_b} discussed upcoming missions.",
+      "{waifu_a} and {waifu_b} exchanged information about relics.",
+      "{waifu_a} and {waifu_b} shared a brief training session.",
+      "{waifu_a} and {waifu_b} went on a short scouting mission.",
+      "{waifu_a} and {waifu_b} helped organize supplies.",
+      "{waifu_a} and {waifu_b} attended a guild meeting together.",
+      "{waifu_a} and {waifu_b} performed maintenance on equipment."
+    ]
+  }
+}

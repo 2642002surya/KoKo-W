@@ -1,0 +1,159 @@
+{
+  "active_moods": {
+    "1344603209829974016_{'name': 'Minotaur', 'rarity': 'R \ud83d\udd27', 'level': 1, 'exp': 20, 'hp': 500, 'atk': 50, 'def': 25, 'crit': 5, 'affection': 0, 'potential': 3190, 'skills': [], 'fate': [{'angels': ['Ungnyeo'], 'fate_name': 'Wild Force', 'effect': 'ATK UP 10%'}, {'angels': ['Muse'], 'fate_name': 'Beauty of Sin', 'effect': 'HP UP 10%'}], 'element': 'Neutral', 'summoned_at': '2025-08-19T11:18:07.668887', 'relic': None}": {
+      "mood": "sleepy",
+      "expires": "2025-08-19T21:38:45.225202",
+      "assigned": "2025-08-19T15:38:45.225210"
+    },
+    "884489252296073287_{'name': 'Gemini', 'rarity': 'N \ud83c\udf3f', 'level': 1, 'exp': 20, 'hp': 500, 'atk': 50, 'def': 25, 'crit': 5, 'affection': 0, 'potential': 336, 'skills': [], 'fate': [{'angels': ['Princess Kaguya', 'Sim Cheong'], 'fate_name': 'Gentle Breeze', 'effect': 'HP UP +20%'}, {'angels': ['Frost Dragon'], 'fate_name': 'Ice Mirror', 'effect': 'ATK UP +15%'}, {'angels': ['Amaterasu'], 'fate_name': 'Warm Beam', 'effect': 'ATK UP +15%'}, {'angels': ['Freyja'], 'fate_name': 'Drifting in Universe', 'effect': 'ATK UP +15%'}], 'element': 'Neutral', 'summoned_at': '2025-08-19T10:08:20.087017', 'relic': None}": {
+      "mood": "grumpy",
+      "expires": "2025-08-19T23:46:32.633464",
+      "assigned": "2025-08-19T17:46:32.633476"
+    },
+    "884489252296073287_{'name': 'Enmusubi', 'rarity': 'LR \u26a1', 'level': 1, 'exp': 0, 'hp': 500, 'atk': 50, 'def': 25, 'crit': 5, 'affection': 0, 'potential': 6131, 'skills': [], 'fate': [{'angels': ['Izu Dancer', 'Izanami'], 'fate_name': 'Brilliant Yamato', 'effect': 'ATK UP 20%'}, {'angels': ['Amaterasu'], 'fate_name': 'Order Controller', 'effect': 'HP UP 15%'}, {'angels': ['Michael', 'Icarus', 'Hera'], 'fate_name': 'Justice Sanctions', 'effect': 'ATK UP 25%'}, {'angels': ['Michael'], 'fate_name': 'Bright Link', 'effect': 'ATK UP 15%'}], 'element': 'Neutral', 'summoned_at': '2025-08-19T10:08:20.086814', 'relic': None}": {
+      "mood": "mischievous",
+      "expires": "2025-08-20T11:23:43.975591",
+      "assigned": "2025-08-20T05:23:43.975603"
+    },
+    "884489252296073287_{'name': 'Izanami', 'rarity': 'N \ud83c\udf3f', 'level': 2, 'exp': 0, 'hp': 538, 'atk': 60, 'def': 31, 'crit': 5, 'affection': 0, 'potential': 660, 'skills': [], 'fate': [{'angels': ['Phantasos'], 'fate_name': 'Mirror of Mirages', 'effect': 'HP UP +15%'}, {'angels': ['Izu Dancer', 'Enmusubi'], 'fate_name': 'Brilliant Yamato', 'effect': 'ATK UP +20%'}, {'angels': ['Hephaestus'], 'fate_name': 'Power of Defeating Demons', 'effect': 'HP UP +15%'}], 'element': 'Neutral', 'summoned_at': '2025-08-24T06:12:03.596890', 'relic': None}": {
+      "mood": "sleepy",
+      "expires": "2025-08-24T12:18:44.871067",
+      "assigned": "2025-08-24T06:18:44.871082"
+    },
+    "884489252296073287_{'name': 'Iris', 'rarity': 'N \ud83c\udf3f', 'level': 4, 'exp': 0, 'hp': 598, 'atk': 81, 'def': 43, 'crit': 5, 'affection': 0, 'potential': 680, 'skills': [], 'fate': [{'angels': ['Raphael'], 'fate_name': \"Goddess' Favor\", 'effect': 'HP UP +15%'}, {'angels': ['Belldandy'], 'fate_name': 'Blessing of Fate', 'effect': 'ATK UP +15%'}], 'element': 'Neutral', 'summoned_at': '2025-08-24T06:11:25.854721', 'relic': None}": {
+      "mood": "sleepy",
+      "expires": "2025-08-24T12:30:25.232287",
+      "assigned": "2025-08-24T06:30:25.232297"
+    },
+    "884489252296073287_{'name': 'Idun', 'rarity': 'R \ud83d\udd27', 'level': 1, 'exp': 0, 'hp': 800, 'atk': 80, 'def': 40, 'crit': 5, 'affection': 0, 'potential': 1040, 'skills': [], 'fate': [{'angels': [\"Jeanne d'Arc\"], 'fate_name': 'Pure Heart', 'effect': 'ATK UP +15%'}, {'angels': ['Siren'], 'fate_name': 'Forever Young', 'effect': 'ATK UP +15%'}, {'angels': ['Valkyrie', 'Odin'], 'fate_name': 'Ragnarok Witness', 'effect': 'HP UP +20%'}], 'element': 'Neutral', 'summoned_at': '2025-08-24T06:16:31.071269', 'relic': None}": {
+      "mood": "grumpy",
+      "expires": "2025-08-24T12:32:10.350629",
+      "assigned": "2025-08-24T06:32:10.350638"
+    },
+    "884489252296073287_{'name': 'Janet Warren', 'rarity': 'N \ud83c\udf3f', 'level': 3, 'exp': 0, 'hp': 576, 'atk': 68, 'def': 35, 'crit': 5, 'affection': 0, 'potential': 670, 'skills': [], 'fate': [{'angels': ['Rebecca Evans', 'Samantha Ramos'], 'fate_name': 'Blood Oath', 'effect': 'DMG UP 15%'}, {'angels': ['Nichole Simpson', 'Brianna Taylor'], 'fate_name': 'Haunted Past', 'effect': 'Max HP -10%'}, {'angels': ['Patricia King'], 'fate_name': 'Shadow Hunt', 'effect': 'ACC UP 12%'}, {'angels': ['Shelly Richard', 'Lauren Kirk'], 'fate_name': 'Fateful Strike', 'effect': 'HP DOWN 8%'}], 'element': 'Neutral', 'summoned_at': '2025-08-24T06:12:09.166981', 'relic': None}": {
+      "mood": "playful",
+      "expires": "2025-08-24T12:37:59.695476",
+      "assigned": "2025-08-24T06:37:59.695486"
+    },
+    "884489252296073287_{'name': 'Lilith', 'rarity': 'SR \ud83d\udd25', 'level': 1, 'exp': 0, 'hp': 1200, 'atk': 120, 'def': 60, 'crit': 5, 'affection': 0, 'potential': 1560, 'skills': [], 'fate': [{'angels': ['Geb'], 'fate_name': 'Bloodthirsty Fangs', 'effect': 'HP UP +15%'}, {'angels': ['Nyx'], 'fate_name': \"Devil's Whisper\", 'effect': 'ATK UP +15%'}], 'element': 'Neutral', 'summoned_at': '2025-08-24T06:11:25.854636', 'relic': None}": {
+      "mood": "playful",
+      "expires": "2025-08-24T12:40:29.095883",
+      "assigned": "2025-08-24T06:40:29.095895"
+    },
+    "1344603209829974016_Lilith": {
+      "mood": "grumpy",
+      "expires": "2025-08-26T18:09:00.473670",
+      "assigned": "2025-08-26T12:09:00.473680"
+    },
+    "1344603209829974016_Shennong": {
+      "mood": "embarrassed",
+      "expires": "2025-08-26T18:09:31.176049",
+      "assigned": "2025-08-26T12:09:31.176061"
+    },
+    "884489252296073287_Amaterasu": {
+      "mood": "sleepy",
+      "expires": "2025-08-26T18:33:39.369134",
+      "assigned": "2025-08-26T12:33:39.369151"
+    },
+    "884489252296073287_Tsukuyomi": {
+      "mood": "sheepish",
+      "expires": "2025-08-26T18:38:56.680895",
+      "assigned": "2025-08-26T12:38:56.680907"
+    },
+    "884489252296073287_Loki": {
+      "mood": "mischievous",
+      "expires": "2025-08-26T18:40:37.519886",
+      "assigned": "2025-08-26T12:40:37.519895"
+    },
+    "884489252296073287_April Smith": {
+      "mood": "happy",
+      "expires": "2025-08-26T18:58:03.853316",
+      "assigned": "2025-08-26T12:58:03.853327"
+    },
+    "884489252296073287_Gabriel": {
+      "mood": "happy",
+      "expires": "2025-08-26T19:14:40.507561",
+      "assigned": "2025-08-26T13:14:40.507569"
+    },
+    "884489252296073287_Izanami": {
+      "mood": "mischievous",
+      "expires": "2025-08-26T21:30:18.429703",
+      "assigned": "2025-08-26T15:30:18.429723"
+    },
+    "884489252296073287_Fuxi": {
+      "mood": "focused",
+      "expires": "2025-08-26T21:30:37.093791",
+      "assigned": "2025-08-26T15:30:37.093828"
+    },
+    "884489252296073287_Apep": {
+      "mood": "shy",
+      "expires": "2025-08-26T21:33:03.015501",
+      "assigned": "2025-08-26T15:33:03.015511"
+    },
+    "884489252296073287_Emma Williams": {
+      "mood": "happy",
+      "expires": "2025-08-26T21:53:47.940921",
+      "assigned": "2025-08-26T15:53:47.940933"
+    },
+    "884489252296073287_Belldandy": {
+      "mood": "adventurous",
+      "expires": "2025-08-29T10:56:58.258382",
+      "assigned": "2025-08-29T04:56:58.258390"
+    },
+    "884489252296073287_Valkyrie": {
+      "mood": "gloomy",
+      "expires": "2025-08-29T12:23:46.533118",
+      "assigned": "2025-08-29T06:23:46.533129"
+    },
+    "884489252296073287_Alicia Lawson": {
+      "mood": "excited",
+      "expires": "2025-08-29T12:28:42.750681",
+      "assigned": "2025-08-29T06:28:42.750694"
+    },
+    "884489252296073287_Geb": {
+      "mood": "grumpy",
+      "expires": "2025-08-29T12:28:47.137942",
+      "assigned": "2025-08-29T06:28:47.137950"
+    },
+    "884489252296073287_Medusa": {
+      "mood": "sheepish",
+      "expires": "2025-08-29T12:39:45.069712",
+      "assigned": "2025-08-29T06:39:45.069722"
+    },
+    "884489252296073287_Carrie Beard": {
+      "mood": "sheepish",
+      "expires": "2025-08-29T12:45:22.374533",
+      "assigned": "2025-08-29T06:45:22.374543"
+    },
+    "884489252296073287_Shennong": {
+      "mood": "happy",
+      "expires": "2025-08-29T13:54:26.839160",
+      "assigned": "2025-08-29T07:54:26.839172"
+    },
+    "884489252296073287_Nemesis": {
+      "mood": "mischievous",
+      "expires": "2025-08-29T14:01:23.212796",
+      "assigned": "2025-08-29T08:01:23.212808"
+    },
+    "884489252296073287_Enmusubi": {
+      "mood": "focused",
+      "expires": "2025-08-29T14:15:20.831887",
+      "assigned": "2025-08-29T08:15:20.831901"
+    }
+  },
+  "mishap_history": {
+    "884489252296073287": [
+      {
+        "mishap_id": "stargazing_late",
+        "mishap_name": "Stargazing Overtime",
+        "waifu_name": "Amaterasu",
+        "timestamp": "2025-08-26T12:33:39.380426",
+        "effects": {
+          "xp_gained": 30,
+          "affinity_change": 6
+        }
+      }
+    ]
+  },
+  "waifu_personalities": {}
+}

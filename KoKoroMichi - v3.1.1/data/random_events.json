@@ -1,0 +1,70 @@
+{
+  "dream_popups": {
+    "events": [
+      {"message": "✨ Your waifu whispers a secret in her sleep... +150 coins!", "reward": {"type": "coins", "amount": 150}, "probability": 0.25},
+      {"message": "🌙 A shooting star grants your wish! +200 coins!", "reward": {"type": "coins", "amount": 200}, "probability": 0.2},
+      {"message": "💫 Dream energy overflows! +300 coins!", "reward": {"type": "coins", "amount": 300}, "probability": 0.15},
+      {"message": "😴 Your waifu had a nightmare... -50 coins", "reward": {"type": "coins", "amount": -50}, "probability": 0.12},
+      {"message": "🔮 Mystical visions grant wisdom! +500 exp!", "reward": {"type": "experience", "amount": 500}, "probability": 0.08},
+      {"message": "🦋 A dream butterfly lands on you... +250 coins!", "reward": {"type": "coins", "amount": 250}, "probability": 0.1},
+      {"message": "🔥 A nightmare flame burns you... -100 exp!", "reward": {"type": "experience", "amount": -100}, "probability": 0.1},
+      {"message": "🍀 Four-leaf clover dream blesses you! +400 coins!", "reward": {"type": "coins", "amount": 400}, "probability": 0.08},
+      {"message": "🌌 Dream portal opens... +750 exp!", "reward": {"type": "experience", "amount": 750}, "probability": 0.06},
+      {"message": "👻 Mischievous dream spirit stole your coins... -100 coins", "reward": {"type": "coins", "amount": -100}, "probability": 0.05},
+      {"message": "💖 Waifu cuddles you in her dream... +200 exp!", "reward": {"type": "experience", "amount": 200}, "probability": 0.12},
+
+      {"message": "⚡ A dream thunderstorm strikes! +1000 coins!", "reward": {"type": "coins", "amount": 1000}, "probability": 0.02},
+      {"message": "🌠 A cosmic dream alignment grants +2000 exp!", "reward": {"type": "experience", "amount": 2000}, "probability": 0.015},
+      {"message": "👑 Legendary Waifu appears in your dream... +5000 coins!", "reward": {"type": "coins", "amount": 5000}, "probability": 0.01},
+      {"message": "🕊️ Eternal Dream Spirit blesses you... +10000 exp!", "reward": {"type": "experience", "amount": 10000}, "probability": 0.005}
+    ],
+    "trigger_chance": 0.05,
+    "cooldown": 3600
+  },
+  "treasure_hunts": {
+    "hidden_commands": [
+      {"command": "!dreamfind", "reward": {"type": "coins", "amount": 777}, "message": "🏴‍☠️ You discovered buried treasure!"},
+      {"command": "!mystickey", "reward": {"type": "item", "name": "Ancient Key"}, "message": "🗝️ An ancient key appears!"},
+      {"command": "!luckystar", "reward": {"type": "multiplier", "value": 1.8, "duration": 900}, "message": "⭐ A lucky star blesses you!"},
+      {"command": "!hiddengem", "reward": {"type": "coins", "amount": 1500}, "message": "💎 A hidden gem reveals itself!"},
+      {"command": "!dreamcake", "reward": {"type": "item", "name": "Sweet Dream Cake"}, "message": "🎂 You found a mysterious dream cake!"},
+      {"command": "!shadowcoin", "reward": {"type": "coins", "amount": 2025}, "message": "🕶️ A pile of shadow coins emerges!"},
+      {"command": "!starlight", "reward": {"type": "multiplier", "value": 2.5, "duration": 600}, "message": "🌠 Starlight empowers you!"},
+      {"command": "!dragonpearl", "reward": {"type": "item", "name": "Dragon Pearl"}, "message": "🐉 A dragon pearl glows in your hand!"},
+      {"command": "!dreamvault", "reward": {"type": "coins", "amount": 5000}, "message": "🏦 You unlock the Dream Vault! Jackpot!!"},
+      {"command": "!phoenixfeather", "reward": {"type": "item", "name": "Phoenix Feather"}, "message": "🔥 A Phoenix Feather floats down from the sky!"},
+
+      {"command": "!astralchest", "reward": {"type": "coins", "amount": 10000}, "message": "🌌 You opened an Astral Chest filled with riches!"},
+      {"command": "!eternalseal", "reward": {"type": "item", "name": "Eternal Seal"}, "message": "🔗 You obtained the Eternal Seal!"},
+      {"command": "!cosmicdice", "reward": {"type": "multiplier", "value": 3.5, "duration": 1200}, "message": "🎲 The Cosmic Dice favor you!"},
+      {"command": "!goddessblessing", "reward": {"type": "experience", "amount": 10000}, "message": "🌺 A goddess blesses your journey with wisdom!"}
+    ],
+    "spawn_probability": 0.02,
+    "active_duration": 1800,
+    "max_active_hunts": 3
+  },
+  "mini_pvp_duels": {
+    "duel_types": [
+      {"name": "Quick Draw", "description": "React fastest to win!", "duration": 10, "mechanic": "reaction"},
+      {"name": "Number Guess", "description": "Guess the number 1-10!", "duration": 15, "mechanic": "guess"},
+      {"name": "Riddle Match", "description": "Solve the riddle first!", "duration": 30, "mechanic": "riddle"},
+      {"name": "Memory Test", "description": "Remember the sequence!", "duration": 20, "mechanic": "memory"},
+      {"name": "Emoji Clash", "description": "Match the right emoji sequence first!", "duration": 15, "mechanic": "emoji"},
+      {"name": "Typing Race", "description": "Type the displayed text fastest!", "duration": 12, "mechanic": "typing"},
+      {"name": "Trivia Blitz", "description": "Answer trivia questions faster!", "duration": 25, "mechanic": "trivia"},
+      {"name": "Rock Paper Scissors", "description": "Classic best of three!", "duration": 15, "mechanic": "rps"},
+      {"name": "Dice Roll Duel", "description": "Roll higher to win!", "duration": 8, "mechanic": "dice"},
+      {"name": "Luck Spin", "description": "Spin the wheel of fate!", "duration": 10, "mechanic": "spin"},
+
+      {"name": "Element Clash", "description": "Choose Fire, Water, or Earth — counter wisely!", "duration": 15, "mechanic": "element"},
+      {"name": "Dream Maze", "description": "Pick the correct dream door to escape!", "duration": 20, "mechanic": "maze"},
+      {"name": "Balance Test", "description": "Stay balanced on the dream rope!", "duration": 18, "mechanic": "timing"},
+      {"name": "Legendary Trial", "description": "Ultra rare duel with legendary stakes!", "duration": 25, "mechanic": "legendary"}
+    ],
+    "rewards": {
+      "winner": {"coins": 250, "exp": 100, "legendary_bonus": {"chance": 0.02, "coins": 5000, "exp": 2000}},
+      "loser": {"coins": 50, "exp": 25}
+    },
+    "cooldown": 1800
+  }
+}

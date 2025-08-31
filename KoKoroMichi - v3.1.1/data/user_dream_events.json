@@ -1,0 +1,328 @@
+{
+  "active_dream_events": {
+    "1344603209829974016_2025-08-19T15:38:32.680594_4018": {
+      "event_id": "1344603209829974016_2025-08-19T15:38:32.680594_4018",
+      "user_id": "1344603209829974016",
+      "event_data": {
+        "id": "celestial_blessing",
+        "name": "Celestial Blessing",
+        "description": "The stars align to bestow their blessing upon you",
+        "rarity": "uncommon",
+        "rewards": {
+          "gold": 1000,
+          "xp": 250,
+          "temporary_buff": {
+            "type": "battle_boost",
+            "value": 0.2,
+            "duration_hours": 24
+          }
+        },
+        "duration_minutes": 60
+      },
+      "start_time": "2025-08-19T15:38:32.680606",
+      "completion_time": "2025-08-19T16:38:32.680601",
+      "status": "completed",
+      "completion_timestamp": "2025-08-26T12:09:30.861410"
+    },
+    "884489252296073287_2025-08-19T16:46:43.669727_4183": {
+      "event_id": "884489252296073287_2025-08-19T16:46:43.669727_4183",
+      "user_id": "884489252296073287",
+      "event_data": {
+        "id": "mystical_encounter",
+        "name": "Mystical Encounter",
+        "description": "A mysterious figure appears in your dreams, offering ancient wisdom",
+        "rarity": "common",
+        "rewards": {
+          "gold": 500,
+          "xp": 100,
+          "items": [
+            "Dream Essence",
+            "Mystic Shard"
+          ]
+        },
+        "duration_minutes": 30
+      },
+      "start_time": "2025-08-19T16:46:43.669744",
+      "completion_time": "2025-08-19T17:16:43.669738",
+      "status": "completed",
+      "completion_timestamp": "2025-08-21T03:59:35.449355"
+    },
+    "884489252296073287_2025-08-21T03:58:58.616543_6397": {
+      "event_id": "884489252296073287_2025-08-21T03:58:58.616543_6397",
+      "user_id": "884489252296073287",
+      "event_data": {
+        "id": "mystical_encounter",
+        "name": "Mystical Encounter",
+        "description": "A mysterious figure appears in your dreams, offering ancient wisdom",
+        "rarity": "common",
+        "rewards": {
+          "gold": 500,
+          "xp": 100,
+          "items": [
+            "Dream Essence",
+            "Mystic Shard"
+          ]
+        },
+        "duration_minutes": 30
+      },
+      "start_time": "2025-08-21T03:58:58.616556",
+      "completion_time": "2025-08-21T04:28:58.616553",
+      "status": "completed",
+      "completion_timestamp": "2025-08-24T06:18:44.734982"
+    },
+    "884489252296073287_2025-08-24T06:18:31.120868_5263": {
+      "event_id": "884489252296073287_2025-08-24T06:18:31.120868_5263",
+      "user_id": "884489252296073287",
+      "event_data": {
+        "id": "celestial_blessing",
+        "name": "Celestial Blessing",
+        "description": "The stars align to bestow their blessing upon you",
+        "rarity": "uncommon",
+        "rewards": {
+          "gold": 1000,
+          "xp": 250,
+          "temporary_buff": {
+            "type": "battle_boost",
+            "value": 0.2,
+            "duration_hours": 24
+          }
+        },
+        "duration_minutes": 60
+      },
+      "start_time": "2025-08-24T06:18:31.120881",
+      "completion_time": "2025-08-24T07:18:31.120877",
+      "status": "completed",
+      "completion_timestamp": "2025-08-26T08:20:26.175314"
+    },
+    "884489252296073287_2025-08-26T08:20:09.614360_5661": {
+      "event_id": "884489252296073287_2025-08-26T08:20:09.614360_5661",
+      "user_id": "884489252296073287",
+      "event_data": {
+        "id": "mystical_encounter",
+        "name": "Mystical Encounter",
+        "description": "A mysterious figure appears in your dreams, offering ancient wisdom",
+        "rarity": "common",
+        "rewards": {
+          "gold": 500,
+          "xp": 100,
+          "items": [
+            "Dream Essence",
+            "Mystic Shard"
+          ]
+        },
+        "duration_minutes": 30
+      },
+      "start_time": "2025-08-26T08:20:09.614375",
+      "completion_time": "2025-08-26T08:50:09.614372",
+      "status": "active"
+    },
+    "1344603209829974016_2025-08-26T12:09:00.471124_7598": {
+      "event_id": "1344603209829974016_2025-08-26T12:09:00.471124_7598",
+      "user_id": "1344603209829974016",
+      "event_data": {
+        "id": "guardian_trial",
+        "name": "Guardian\u2019s Trial",
+        "description": "A mighty guardian tests your resolve in battle",
+        "rarity": "rare",
+        "rewards": {
+          "gold": 2500,
+          "xp": 600,
+          "special_items": [
+            "Guardian Sigil"
+          ]
+        },
+        "duration_minutes": 100
+      },
+      "start_time": "2025-08-26T12:09:00.471138",
+      "completion_time": "2025-08-26T13:49:00.471135",
+      "status": "active"
+    },
+    "884489252296073287_2025-08-26T12:10:20.430241_8509": {
+      "event_id": "884489252296073287_2025-08-26T12:10:20.430241_8509",
+      "user_id": "884489252296073287",
+      "event_data": {
+        "id": "butterfly_chase",
+        "name": "Butterfly Chase",
+        "description": "You chase dream butterflies that scatter glowing dust",
+        "rarity": "common",
+        "rewards": {
+          "gold": 400,
+          "xp": 75,
+          "items": [
+            "Butterfly Dust"
+          ]
+        },
+        "duration_minutes": 25
+      },
+      "start_time": "2025-08-26T12:10:20.430256",
+      "completion_time": "2025-08-26T12:35:20.430253",
+      "status": "active"
+    },
+    "884489252296073287_2025-08-26T15:25:22.223438_4422": {
+      "event_id": "884489252296073287_2025-08-26T15:25:22.223438_4422",
+      "user_id": "884489252296073287",
+      "event_data": {
+        "id": "mystical_encounter",
+        "name": "Mystical Encounter",
+        "description": "A mysterious figure appears in your dreams, offering ancient wisdom",
+        "rarity": "common",
+        "rewards": {
+          "gold": 500,
+          "xp": 100,
+          "items": [
+            "Dream Essence",
+            "Mystic Shard"
+          ]
+        },
+        "duration_minutes": 30
+      },
+      "start_time": "2025-08-26T15:25:22.223450",
+      "completion_time": "2025-08-26T15:55:22.223447",
+      "status": "active"
+    },
+    "884489252296073287_2025-08-29T04:54:12.911456_5556": {
+      "event_id": "884489252296073287_2025-08-29T04:54:12.911456_5556",
+      "user_id": "884489252296073287",
+      "event_data": {
+        "id": "mystical_encounter",
+        "name": "Mystical Encounter",
+        "description": "A mysterious figure appears in your dreams, offering ancient wisdom",
+        "rarity": "common",
+        "rewards": {
+          "gold": 500,
+          "xp": 100,
+          "items": [
+            "Dream Essence",
+            "Mystic Shard"
+          ]
+        },
+        "duration_minutes": 30
+      },
+      "start_time": "2025-08-29T04:54:12.911471",
+      "completion_time": "2025-08-29T05:24:12.911468",
+      "status": "active"
+    },
+    "884489252296073287_2025-08-29T07:39:12.742192_5920": {
+      "event_id": "884489252296073287_2025-08-29T07:39:12.742192_5920",
+      "user_id": "884489252296073287",
+      "event_data": {
+        "id": "butterfly_chase",
+        "name": "Butterfly Chase",
+        "description": "You chase dream butterflies that scatter glowing dust",
+        "rarity": "common",
+        "rewards": {
+          "gold": 400,
+          "xp": 75,
+          "items": [
+            "Butterfly Dust"
+          ]
+        },
+        "duration_minutes": 25
+      },
+      "start_time": "2025-08-29T07:39:12.742209",
+      "completion_time": "2025-08-29T08:04:12.742205",
+      "status": "active"
+    }
+  },
+  "user_dream_history": {
+    "1344603209829974016": [
+      {
+        "event_id": "1344603209829974016_2025-08-19T15:38:32.680594_4018",
+        "event_name": "Celestial Blessing",
+        "timestamp": "2025-08-19T15:38:32.680617",
+        "status": "completed",
+        "completion_time": "2025-08-26T12:09:30.861413"
+      },
+      {
+        "event_id": "1344603209829974016_2025-08-26T12:09:00.471124_7598",
+        "event_name": "Guardian\u2019s Trial",
+        "timestamp": "2025-08-26T12:09:00.471154",
+        "status": "started"
+      }
+    ],
+    "884489252296073287": [
+      {
+        "event_id": "884489252296073287_2025-08-19T16:46:43.669727_4183",
+        "event_name": "Mystical Encounter",
+        "timestamp": "2025-08-19T16:46:43.669759",
+        "status": "completed",
+        "completion_time": "2025-08-21T03:59:35.449361"
+      },
+      {
+        "event_id": "884489252296073287_2025-08-21T03:58:58.616543_6397",
+        "event_name": "Mystical Encounter",
+        "timestamp": "2025-08-21T03:58:58.616571",
+        "status": "completed",
+        "completion_time": "2025-08-24T06:18:44.734989"
+      },
+      {
+        "event_id": "884489252296073287_2025-08-24T06:18:31.120868_5263",
+        "event_name": "Celestial Blessing",
+        "timestamp": "2025-08-24T06:18:31.120898",
+        "status": "completed",
+        "completion_time": "2025-08-26T08:20:26.175317"
+      },
+      {
+        "event_id": "884489252296073287_2025-08-26T08:20:09.614360_5661",
+        "event_name": "Mystical Encounter",
+        "timestamp": "2025-08-26T08:20:09.614389",
+        "status": "started"
+      },
+      {
+        "event_id": "884489252296073287_2025-08-26T12:10:20.430241_8509",
+        "event_name": "Butterfly Chase",
+        "timestamp": "2025-08-26T12:10:20.430270",
+        "status": "started"
+      },
+      {
+        "event_id": "884489252296073287_2025-08-26T15:25:22.223438_4422",
+        "event_name": "Mystical Encounter",
+        "timestamp": "2025-08-26T15:25:22.223464",
+        "status": "started"
+      },
+      {
+        "event_id": "884489252296073287_2025-08-29T04:54:12.911456_5556",
+        "event_name": "Mystical Encounter",
+        "timestamp": "2025-08-29T04:54:12.911482",
+        "status": "started"
+      },
+      {
+        "event_id": "884489252296073287_2025-08-29T07:39:12.742192_5920",
+        "event_name": "Butterfly Chase",
+        "timestamp": "2025-08-29T07:39:12.742228",
+        "status": "started"
+      }
+    ]
+  },
+  "daily_event_counts": {
+    "1344603209829974016": {
+      "2025-08-19": 1,
+      "2025-08-26": 1
+    },
+    "884489252296073287": {
+      "2025-08-19": 1,
+      "2025-08-21": 1,
+      "2025-08-24": 1,
+      "2025-08-26": 3,
+      "2025-08-29": 2
+    }
+  },
+  "dream_buffs": {
+    "884489252296073287": [
+      {
+        "type": "battle_boost",
+        "value": 0.2,
+        "expires": "2025-08-27T08:20:26.175304",
+        "source": "Celestial Blessing"
+      }
+    ],
+    "1344603209829974016": [
+      {
+        "type": "battle_boost",
+        "value": 0.2,
+        "expires": "2025-08-27T12:09:30.861400",
+        "source": "Celestial Blessing"
+      }
+    ]
+  }
+}

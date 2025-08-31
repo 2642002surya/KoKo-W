@@ -1,0 +1,27 @@
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "KoKoroMichi Bot"
+
+[[workflows.workflow]]
+name = "KoKoroMichi Bot"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd \"KoKoroMichi - v3.1.1\" && python bot.py"
+
+[workflows.workflow.metadata]
+outputType = "console"

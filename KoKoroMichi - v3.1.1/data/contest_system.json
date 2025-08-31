@@ -1,0 +1,33 @@
+{
+  "active_contests": {},
+  "contest_history": [],
+  "global_events": {
+    "arena_tournaments": {
+      "rewards": {
+        "1st": {"coins": 5000, "title": "Arena Champion", "item": "Golden Trophy"},
+        "2nd": {"coins": 3000, "title": "Arena Runner-up", "item": "Silver Trophy"},
+        "3rd": {"coins": 2000, "title": "Arena Finalist", "item": "Bronze Trophy"}
+      }
+    },
+    "seasonal_competitions": {
+      "rewards": {
+        "1st": {"coins": 7500, "title": "Seasonal Champion", "item": "Seasonal Crown"},
+        "2nd": {"coins": 5000, "title": "Seasonal Star", "item": "Seasonal Medal"},
+        "3rd": {"coins": 3000, "title": "Seasonal Hero", "item": "Seasonal Badge"}
+      }
+    },
+    "guild_competitions": {
+      "rewards": {
+        "1st": {"coins": 10000, "title": "Guild Master Supreme", "item": "Guild Banner"},
+        "2nd": {"coins": 7500, "title": "Guild Elite", "item": "Guild Shield"},
+        "3rd": {"coins": 5000, "title": "Guild Champion", "item": "Guild Emblem"}
+      }
+    }
+  },
+  "winner_announcement_template": {
+    "title": "🏆 WINNER ANNOUNCEMENT 🏆",
+    "description": "Congratulations to our champion!",
+    "color": 15844367,
+    "thumbnail": "https://i.imgur.com/trophy.png"
+  }
+}

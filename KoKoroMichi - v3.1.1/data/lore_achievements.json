@@ -1,0 +1,91 @@
+{
+  "lore_settings": {
+    "unlock_requirements": {
+      "basic_lore": {"level": 1},
+      "character_lore": {"affinity": 50},
+      "advanced_lore": {"battles_won": 100},
+      "legendary_lore": {"rare_waifus_owned": 5}
+    }
+  },
+  "lore_books": [
+    {
+      "id": "origins_of_kokoromichi",
+      "title": "Origins of KoKoroMichi",
+      "description": "The creation myth of the dream realm",
+      "unlock_requirement": "basic_lore",
+      "content": "In the beginning, there was only void and consciousness. The first dreamers shaped reality with their thoughts, creating realms where waifus could exist beyond mortal comprehension...",
+      "chapters": 5,
+      "rewards": {
+        "xp": 500,
+        "gold": 1000,
+        "title": "Dream Scholar"
+      }
+    },
+    {
+      "id": "mythology_compendium",
+      "title": "Mythology Compendium",
+      "description": "Stories of gods and legends",
+      "unlock_requirement": "character_lore", 
+      "content": "From the Norse halls of Valhalla to the Egyptian afterlife, these beings have shaped reality itself. Odin's wisdom, Ra's power, Chaos's unpredictability...",
+      "chapters": 12,
+      "rewards": {
+        "affinity_boost_all": 10,
+        "rare_relic": "Scribe's Quill"
+      }
+    },
+    {
+      "id": "battle_legends",
+      "title": "Battle Legends",
+      "description": "Epic tales of combat mastery",
+      "unlock_requirement": "advanced_lore",
+      "content": "The greatest battles are not won through strength alone, but through bonds forged with companions who trust you with their very existence...",
+      "chapters": 8,
+      "rewards": {
+        "permanent_battle_bonus": 0.05,
+        "legendary_title": "Battle Chronicler"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first_summon",
+      "name": "First Bond",
+      "description": "Summon your first waifu companion",
+      "requirement": {"waifus_summoned": 1},
+      "rewards": {"gold": 500, "title": "Newcomer"},
+      "rarity": "common"
+    },
+    {
+      "id": "collector_bronze",
+      "name": "Growing Collection", 
+      "description": "Own 10 different waifus",
+      "requirement": {"unique_waifus": 10},
+      "rewards": {"gold": 2000, "inventory_slot": 5},
+      "rarity": "uncommon"
+    },
+    {
+      "id": "battle_master",
+      "name": "Combat Veteran",
+      "description": "Win 100 battles", 
+      "requirement": {"battles_won": 100},
+      "rewards": {"permanent_attack_boost": 0.10, "title": "Veteran"},
+      "rarity": "rare"
+    },
+    {
+      "id": "affinity_sage",
+      "name": "Heart Whisperer",
+      "description": "Reach max affinity with 5 waifus",
+      "requirement": {"max_affinity_waifus": 5},
+      "rewards": {"affinity_gain_boost": 0.25, "title": "Beloved"},
+      "rarity": "epic"
+    },
+    {
+      "id": "dream_master",
+      "name": "Master of Dreams",
+      "description": "Complete all lore books and achieve legendary status",
+      "requirement": {"lore_books_completed": 3, "level": 100, "legendary_waifus": 3},
+      "rewards": {"dream_crown": true, "title": "Dream Master", "global_boost": 0.20},
+      "rarity": "legendary"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "trait_categories": {
+    "personality": [
+      {
+        "name": "Stoic",
+        "description": "Keeps calm under pressure, resists negative effects",
+        "effects": {"status_resistance": 0.15, "focus_bonus": 0.1},
+        "unlock_conditions": {"battles_survived": 20, "min_level": 8}
+      },
+      {
+        "name": "Charismatic",
+        "description": "Natural leader, improves allies' morale",
+        "effects": {"team_xp_bonus": 0.08, "leadership_bonus": 0.1},
+        "unlock_conditions": {"team_quests_completed": 10, "min_affinity": 30}
+      },
+      {
+        "name": "Cautious",
+        "description": "Plans carefully, reduced damage taken from ambushes",
+        "effects": {"trap_resistance": 0.2, "defense_bonus": 0.05},
+        "unlock_conditions": {"quests_completed": 20, "battles_avoided": 5}
+      },
+      {
+        "name": "Loyal",
+        "description": "Sticks by allies, boosts affinity and teamwork",
+        "effects": {"affinity_gain_bonus": 0.1, "teamwork_bonus": 0.08},
+        "unlock_conditions": {"days_together": 20, "quests_completed": 15}
+      },
+      {
+        "name": "Reckless",
+        "description": "Charges headfirst into danger, high damage but risky",
+        "effects": {"damage_bonus": 0.12, "damage_taken_bonus": 0.05},
+        "unlock_conditions": {"damage_dealt": 5000, "battles_won": 15}
+      },
+      {
+        "name": "Wise",
+        "description": "Learns quickly, boosts XP and knowledge-related stats",
+        "effects": {"xp_bonus": 0.12, "wisdom_gain": 0.15},
+        "unlock_conditions": {"spells_cast": 100, "min_level": 15}
+      },
+      {
+        "name": "Kind",
+        "description": "Always helps others, better healing and support",
+        "effects": {"healing_bonus": 0.12, "quest_success_bonus": 0.05},
+        "unlock_conditions": {"allies_healed": 2000, "positive_interactions": 20}
+      },
+      {
+        "name": "Hot-headed",
+        "description": "Quick to anger, gains rage faster but loses calm",
+        "effects": {"rage_buildup": 0.15, "mood_stability": -0.1},
+        "unlock_conditions": {"rage_activations": 10, "battles_fought": 20}
+      },
+      {
+        "name": "Calm",
+        "description": "Balanced mindset, resists fear and mental effects",
+        "effects": {"fear_resistance": 0.25, "focus_bonus": 0.08},
+        "unlock_conditions": {"failed_quests": 5, "battles_survived": 25}
+      },
+      {
+        "name": "Creative",
+        "description": "Finds clever solutions, bonus crafting & rare item chances",
+        "effects": {"crafting_bonus": 0.1, "rare_drop_bonus": 0.05},
+        "unlock_conditions": {"items_crafted": 10, "quests_completed": 12}
+      }
+    ],
+    "combat": [
+      {
+        "name": "Shieldbearer",
+        "description": "Expert at defense, reduces all incoming damage slightly",
+        "effects": {"defense_bonus": 0.15, "damage_reduction": 0.05},
+        "unlock_conditions": {"battles_survived": 30, "damage_taken": 5000}
+      },
+      {
+        "name": "Sharpshooter",
+        "description": "Precision attacks, increases ranged damage and crit chance",
+        "effects": {"ranged_damage_bonus": 0.12, "crit_chance": 0.1},
+        "unlock_conditions": {"ranged_attacks": 50, "battles_won": 15}
+      },
+      {
+        "name": "Tank",
+        "description": "Absorbs hits for the team, massive HP boost",
+        "effects": {"hp_bonus": 0.2, "taunt_chance": 0.08},
+        "unlock_conditions": {"damage_taken": 10000, "battles_survived": 40}
+      },
+      {
+        "name": "Duelist",
+        "description": "Skilled in one-on-one combat, boosts single-target damage",
+        "effects": {"single_target_damage": 0.2, "speed_bonus": 0.05},
+        "unlock_conditions": {"duels_won": 20, "min_level": 15}
+      },
+      {
+        "name": "Elementalist",
+        "description": "Harness elemental forces, increased elemental damage",
+        "effects": {"fire_damage": 0.1, "ice_damage": 0.1, "lightning_damage": 0.1},
+        "unlock_conditions": {"magic_damage_dealt": 5000, "elements_mastered": 3}
+      },
+      {
+        "name": "Brawler",
+        "description": "Close combat specialist, bonus melee damage",
+        "effects": {"melee_damage": 0.15, "rage_buildup": 0.05},
+        "unlock_conditions": {"melee_attacks": 100, "battles_won": 20}
+      },
+      {
+        "name": "Sniper",
+        "description": "Patient and deadly, critical hits deal extra damage",
+        "effects": {"crit_damage_bonus": 0.25, "first_strike_chance": 0.1},
+        "unlock_conditions": {"long_range_kills": 50, "battles_won": 25}
+      },
+      {
+        "name": "Berserker Mage",
+        "description": "Combines magic and rage for devastating attacks",
+        "effects": {"magic_damage_bonus": 0.15, "rage_buildup": 0.1},
+        "unlock_conditions": {"magic_attacks": 50, "rage_activations": 10}
+      },
+      {
+        "name": "Dual Wielder",
+        "description": "Expert with two weapons, increases attack speed and damage",
+        "effects": {"attack_speed_bonus": 0.15, "damage_bonus": 0.1},
+        "unlock_conditions": {"dual_weapon_kills": 50, "battles_won": 20}
+      },
+      {
+        "name": "Tactician",
+        "description": "Strategic mind, gains bonus for planning and team maneuvers",
+        "effects": {"team_damage_bonus": 0.1, "battle_strategy_bonus": 0.15},
+        "unlock_conditions": {"team_quests_completed": 10, "battles_won": 30}
+      }
+    ],
+    "special": [
+      {
+        "name": "Dreamwalker",
+        "description": "Can slip between dreams and reality, gaining unique buffs from dream events",
+        "effects": {"dream_event_bonus": 0.2, "buff_duration_bonus": 0.1},
+        "unlock_conditions": {"dream_events_completed": 15}
+      },
+      {
+        "name": "Lucky Star",
+        "description": "Lady Luck smiles upon you, higher chance for rare drops",
+        "effects": {"rare_drop_chance": 0.15, "gold_find_bonus": 0.1},
+        "unlock_conditions": {"quests_completed": 50, "treasures_found": 20}
+      },
+      {
+        "name": "Charmcaster",
+        "description": "Masters of persuasion, better deals and higher affinity gains",
+        "effects": {"shop_discount": 0.1, "affinity_gain_bonus": 0.2},
+        "unlock_conditions": {"successful_charms": 10, "waifus_recruited": 5}
+      },
+      {
+        "name": "Shadow Veil",
+        "description": "Able to blend into shadows, reduces enemy detection",
+        "effects": {"stealth_bonus": 0.2, "escape_chance": 0.15},
+        "unlock_conditions": {"successful_escapes": 10, "night_quests_completed": 5}
+      },
+      {
+        "name": "Celestial Bond",
+        "description": "A divine blessing grants power based on the moon phase",
+        "effects": {"buff_scaling": "moon_phase", "xp_bonus": 0.1},
+        "unlock_conditions": {"celestial_events_observed": 5}
+      },
+      {
+        "name": "Gambler's Soul",
+        "description": "Thrives on risk, higher crit chance but also more likely to miss",
+        "effects": {"crit_chance": 0.2, "miss_chance": 0.1},
+        "unlock_conditions": {"coin_flips": 50, "battles_won": 20}
+      },
+      {
+        "name": "Time Weaver",
+        "description": "Bends time slightly, reducing cooldowns",
+        "effects": {"cooldown_reduction": 0.1, "speed_bonus": 0.05},
+        "unlock_conditions": {"time_magic_casts": 25, "battles_won": 30}
+      },
+      {
+        "name": "Beast Whisperer",
+        "description": "Animals trust you, better taming and beast ally boosts",
+        "effects": {"beast_affinity": 0.25, "pet_damage_bonus": 0.15},
+        "unlock_conditions": {"pets_tamed": 5, "quests_with_beasts": 10}
+      },
+      {
+        "name": "Blood Pact",
+        "description": "Sacrifices HP to unleash stronger attacks",
+        "effects": {"damage_bonus": 0.2, "hp_drain": 0.05},
+        "unlock_conditions": {"hp_sacrificed": 1000, "dark_magic_casts": 10}
+      },
+      {
+        "name": "Soul Resonance",
+        "description": "Your soul harmonizes with allies, increasing team synergy",
+        "effects": {"team_buff_bonus": 0.15, "waifu_affinity_bonus": 0.1},
+        "unlock_conditions": {"team_battles_completed": 20, "waifu_affinity_total": 200}
+      }
+    ],
+    "exploration": [
+      {
+        "name": "Pathfinder",
+        "description": "Always finds the best routes, reducing travel time and encounters",
+        "effects": {"travel_speed_bonus": 0.2, "random_encounter_reduction": 0.15},
+        "unlock_conditions": {"areas_explored": 10}
+      },
+      {
+        "name": "Treasure Hunter",
+        "description": "Increased chance of finding rare items and hidden caches",
+        "effects": {"rare_item_chance": 0.2, "gold_bonus": 0.1},
+        "unlock_conditions": {"treasures_found": 25, "quests_completed": 20}
+      },
+      {
+        "name": "Cartographer",
+        "description": "Maps out regions in detail, revealing hidden locations and shortcuts",
+        "effects": {"map_reveal_bonus": true, "hidden_area_bonus": 0.15},
+        "unlock_conditions": {"maps_completed": 5, "exploration_hours": 50}
+      },
+      {
+        "name": "Herbalist",
+        "description": "Expert at gathering plants, herbs, and alchemical ingredients",
+        "effects": {"herb_gathering_bonus": 0.25, "potion_success_bonus": 0.1},
+        "unlock_conditions": {"plants_collected": 100, "potions_crafted": 10}
+      },
+      {
+        "name": "Beast Tracker",
+        "description": "Can follow animal tracks and anticipate their movements",
+        "effects": {"pet_discovery_bonus": 0.2, "hunt_success_bonus": 0.15},
+        "unlock_conditions": {"beasts_tracked": 15, "pets_tamed": 5}
+      },
+      {
+        "name": "Treacherous Eye",
+        "description": "Can detect traps and hidden dangers easily",
+        "effects": {"trap_detection": 0.3, "danger_avoidance": 0.2},
+        "unlock_conditions": {"traps_disarmed": 10, "quests_completed": 20}
+      },
+      {
+        "name": "Mystic Aura",
+        "description": "Senses magical energies in the surroundings",
+        "effects": {"magic_detection": true, "rare_relic_chance": 0.1},
+        "unlock_conditions": {"magic_items_found": 15, "magic_affinity": 50}
+      },
+      {
+        "name": "Adventurer's Instinct",
+        "description": "Always aware of hidden opportunities and shortcuts",
+        "effects": {"discovery_chance": 0.2, "xp_bonus": 0.05},
+        "unlock_conditions": {"quests_completed": 30, "areas_explored": 20}
+      },
+      {
+        "name": "Night Owl",
+        "description": "Excels in nighttime exploration with fewer penalties",
+        "effects": {"night_quest_bonus": 0.25, "stealth_bonus": 0.1},
+        "unlock_conditions": {"night_quests_completed": 10, "days_explored_at_night": 5}
+      },
+      {
+        "name": "Weather Adept",
+        "description": "Adjusts well to harsh weather, reducing negative effects",
+        "effects": {"weather_penalty_reduction": 0.3, "xp_bonus": 0.05},
+        "unlock_conditions": {"quests_completed_in_bad_weather": 15}
+      }
+    ],
+    "crafting_gathering": [
+      {
+        "name": "Master Craftsman",
+        "description": "Creates items more efficiently, with higher quality",
+        "effects": {"crafting_quality_bonus": 0.2, "crafting_speed_bonus": 0.15},
+        "unlock_conditions": {"items_crafted": 50, "level": 10}
+      },
+      {
+        "name": "Resourceful",
+        "description": "Maximizes materials gained from gathering",
+        "effects": {"material_yield_bonus": 0.25, "rare_material_chance": 0.1},
+        "unlock_conditions": {"resources_gathered": 100}
+      },
+      {
+        "name": "Alchemy Expert",
+        "description": "Potions and elixirs are more potent and stable",
+        "effects": {"potion_effect_bonus": 0.2, "alchemy_success_rate": 0.15},
+        "unlock_conditions": {"potions_created": 20, "magic_affinity": 50}
+      },
+      {
+        "name": "Blacksmith",
+        "description": "Weapons and armor gain additional stats when forged",
+        "effects": {"weapon_stat_bonus": 0.1, "armor_stat_bonus": 0.1},
+        "unlock_conditions": {"weapons_forged": 30, "armors_forged": 30}
+      },
+      {
+        "name": "Forager",
+        "description": "Finds extra food and ingredients while exploring",
+        "effects": {"gathering_bonus": 0.2, "rare_food_chance": 0.15},
+        "unlock_conditions": {"food_gathered": 50, "exploration_hours": 20}
+      },
+      {
+        "name": "Enchanter",
+        "description": "Enchantments last longer and are more effective",
+        "effects": {"enchantment_strength_bonus": 0.2, "enchantment_duration_bonus": 0.25},
+        "unlock_conditions": {"items_enchanted": 25, "magic_affinity": 60}
+      },
+      {
+        "name": "Gem Cutter",
+        "description": "Cuts and polishes gems flawlessly, increasing their value",
+        "effects": {"gem_value_bonus": 0.2, "rare_gem_chance": 0.1},
+        "unlock_conditions": {"gems_processed": 20, "gold_collected": 5000}
+      },
+      {
+        "name": "Tailor",
+        "description": "Crafts clothing and gear with extra bonuses",
+        "effects": {"gear_stat_bonus": 0.15, "clothing_appearance_bonus": 0.2},
+        "unlock_conditions": {"gear_crafted": 30, "fashion_items_created": 10}
+      },
+      {
+        "name": "Jeweler",
+        "description": "Creates jewelry that gives small passive bonuses",
+        "effects": {"accessory_stat_bonus": 0.1, "rare_accessory_chance": 0.15},
+        "unlock_conditions": {"jewelry_crafted": 20, "gems_used": 50}
+      },
+      {
+        "name": "Innovator",
+        "description": "Develops new tools, improving efficiency and versatility",
+        "effects": {"crafting_innovation_bonus": 0.25, "special_item_chance": 0.1},
+        "unlock_conditions": {"unique_items_created": 10, "experiments_tried": 20}
+      }
+    ]
+  },
+  "evolution_paths": {
+    "combat_evolution": {
+      "novice": {"battles_won": 0, "level": 1, "bonuses": {}},
+      "warrior": {"battles_won": 50, "level": 10, "bonuses": {"attack_bonus": 0.05}},
+      "veteran": {"battles_won": 150, "level": 20, "bonuses": {"attack_bonus": 0.1, "defense_bonus": 0.05}},
+      "champion": {"battles_won": 300, "level": 30, "bonuses": {"attack_bonus": 0.15, "defense_bonus": 0.1, "crit_chance": 0.05}},
+      "legend": {"battles_won": 500, "level": 40, "bonuses": {"attack_bonus": 0.2, "defense_bonus": 0.15, "crit_chance": 0.1, "special_abilities": ["legendary_strike"]}}
+    },
+    "affinity_evolution": {
+      "stranger": {"affinity": 0, "bonuses": {}},
+      "acquaintance": {"affinity": 25, "bonuses": {"xp_bonus": 0.02}},
+      "friend": {"affinity": 75, "bonuses": {"xp_bonus": 0.05, "gold_bonus": 0.03}},
+      "close_friend": {"affinity": 150, "bonuses": {"xp_bonus": 0.08, "gold_bonus": 0.05, "battle_bonus": 0.03}},
+      "devoted": {"affinity": 250, "bonuses": {"xp_bonus": 0.12, "gold_bonus": 0.08, "battle_bonus": 0.05, "special_abilities": ["devotion_boost"]}},
+      "soulmate": {"affinity": 400, "bonuses": {"xp_bonus": 0.2, "gold_bonus": 0.15, "battle_bonus": 0.1, "special_abilities": ["soul_bond", "shared_destiny"]}}
+    }
+  },
+  "mood_system": {
+    "happy": {
+      "description": "Cheerful and energetic",
+      "effects": {"xp_gain": 0.1, "gold_bonus": 0.05, "affinity_gain": 0.08},
+      "triggers": ["successful_quest", "gift_received", "battle_victory"]
+    },
+    "excited": {
+      "description": "Thrilled and eager for adventure",
+      "effects": {"battle_damage": 0.15, "quest_success": 0.1, "xp_gain": 0.08},
+      "triggers": ["rare_item_found", "level_up", "achievement_unlocked"]
+    },
+    "content": {
+      "description": "Peaceful and satisfied",
+      "effects": {"defense_bonus": 0.05, "affinity_gain": 0.05},
+      "triggers": ["rest", "meditation", "time_spent_together"]
+    },
+    "sad": {
+      "description": "Feeling down and melancholic",
+      "effects": {"xp_gain": -0.1, "battle_damage": -0.05},
+      "triggers": ["quest_failure", "long_separation", "negative_interaction"]
+    },
+    "angry": {
+      "description": "Furious and aggressive",
+      "effects": {"battle_damage": 0.2, "defense_bonus": -0.1, "affinity_gain": -0.05},
+      "triggers": ["betrayal", "insult", "unfair_treatment"]
+    },
+    "tired": {
+      "description": "Exhausted and needing rest",
+      "effects": {"all_stats": -0.15},
+      "triggers": ["overwork", "too_many_battles", "lack_of_rest"]
+    },
+    "motivated": {
+      "description": "Inspired and ready to achieve goals",
+      "effects": {"quest_success": 0.2, "xp_gain": 0.15, "crafting_bonus": 0.1},
+      "triggers": ["inspirational_speech", "new_goal_set", "mentor_guidance"]
+    }
+  }
+}

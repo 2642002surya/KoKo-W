@@ -1,0 +1,46 @@
+In this, check is store and summon commands are working as they should be
+specific commands should be only work in specific channels like :
+battle commands should only work in combact-calls, duel-zone
+duel commands should only work in = combact-calls, duel-zone
+arena commands should only work in = arena-hub, coliseum
+intimate commands should only work in = lust-chamber 
+forge commands should only work in = forging-hall
+all mini-games should only work in = mini-games
+guild commands should only work in = guild-hall, guild-chronicles
+pet commands should only work in = pet-corner
+dream commands and pop-ups should only work in = dream-realm
+events related and events should only work in = events
+
+And main thing is when bot starts, it should send an emebed like instrutions to each and every channel above mentioned, it should send like :
+Welcome to ⁠🐾-pet-corner! Care for your companions and pets!
+🎮 Available Commands
+• !pet
+• !feed
+• !pet_battle
+💡 Tips
+Raise pets • Feed them regularly • Pet battles for fun
+📖 Need Help?
+Use !help for all commands or !help <command> for specific help
+KoKoroMichi 3.0.0 Advanced • Enjoy your adventure!•Today at 6:23 PM
+
+And all other profile, summon, upgrade, train, gallery, businesses, invest commands if any I left to mentioned should be able to work in all channels.
+One more thing is bot code should only create the specific channels only when bot program can't find them in server, And when searching the channels, bot should ignore emojis, so it can identiy history channel, when server owner added any emojis before or after history name in channel name
+Admin commands should be sent to user DM, I think I gave user ID for admin
+Admin Commands:
+
+!give - Give gold/gems to specific user, example !give 1000 gems @username
+!giveall - Give resources to all users, example !give 10000 gems > gives 1000 gems o eacha nd every users, !give 1000 gems <server_name/ID> (server name or ID depends on how bot code is saving when bot is added to different servers)
+!erase - Clear channel messages excluding exluding pin messages, if can't identify pins then delete everything
+!reset_profiles - Reset all user profiles to defaults
+!resetuser - Reset specific user profile
+!setlevel - Set user level manually, example !setuser @username 10 > levels upto 10 for that user
+!viewdata - View raw user JSON data for debugging
+!banwaifu - Remove waifu from user collection, example !banwaifu waifu name @username
+!addwaifu - Manually add waifu to user, example !addwaifu waifu name @username
+!setlevel - Modify user experience points, it should set level manually, example !setlevel @username 3 > sets user level 3
+!editaffection - Edit user affection levels, example !editaffection @username waifu name 1000 > add affection/intimate to that waifu in that username mentioned
+!addrelic - Give relic to user manually, example !addrelic @username relic name 
+!adminhelp - Display all admin commands in embed
+
+There are many json files that are not getting used and simply remaining untouched, so understand the json data and use that data to any existing commands or create new commands. like there maybe some mini-game related data which is simple untouched, so you can add another command module/command to create another mini-game like
+Also there is some data is misplaced or mismatched to original data, like I mean i added extra data to already present data, but made a few mistakes > so program code is not recognizing that and using only existed data, like for businesses or invest > I added extra bussiness but either of 2 commands cannot use that data because of few different names or mismatched names, thers is extra pets data in oets related json file, but !pet is showing only 1 or 2 pets, there should be 10+ pets data in that json file > so understand the related command modules like there might be 1 or 2+ commands using that data in json file, so understand and modify the json data according to command usages

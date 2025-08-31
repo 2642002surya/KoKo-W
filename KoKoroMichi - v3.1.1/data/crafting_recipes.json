@@ -1,0 +1,288 @@
+{
+  "categories": {
+    "consumables": [
+      {
+        "name": "Greater Health Potion",
+        "description": "Restores a large amount of health instantly",
+        "required_level": 2,
+        "ingredients": [
+          {"item": "Health Potion Small", "quantity": 3},
+          {"item": "Crystal Shard", "quantity": 2}
+        ],
+        "result": {
+          "item": "Greater Health Potion",
+          "quantity": 1,
+          "stats": {
+            "healing": 300,
+            "description": "Restore 300 HP instantly"
+          }
+        },
+        "crafting_time_minutes": 20,
+        "success_rate": 0.80,
+        "xp_reward": 35
+      },
+      {
+        "name": "Mana Potion Medium",
+        "description": "Replenishes moderate magical energy",
+        "required_level": 3,
+        "ingredients": [
+          {"item": "Mana Potion Small", "quantity": 2},
+          {"item": "Spectral Cloth", "quantity": 1}
+        ],
+        "result": {
+          "item": "Mana Potion Medium",
+          "quantity": 1,
+          "stats": {
+            "mana_restore": 120,
+            "description": "Restore 120 MP instantly"
+          }
+        },
+        "crafting_time_minutes": 18,
+        "success_rate": 0.82,
+        "xp_reward": 30
+      },
+      {
+        "name": "Ultimate Health Potion",
+        "description": "The strongest healing potion ever brewed",
+        "required_level": 12,
+        "ingredients": [
+          {"item": "Greater Health Potion", "quantity": 2},
+          {"item": "Dragon Scale", "quantity": 1},
+          {"item": "Phoenix Feather", "quantity": 1}
+        ],
+        "result": {
+          "item": "Ultimate Health Potion",
+          "quantity": 1,
+          "stats": {
+            "healing": 1000,
+            "description": "Restore 1000 HP instantly"
+          }
+        },
+        "crafting_time_minutes": 60,
+        "success_rate": 0.55,
+        "xp_reward": 150
+      },
+      {
+        "name": "Elixir of Endurance",
+        "description": "Boost stamina regeneration during battles",
+        "required_level": 4,
+        "ingredients": [
+          {"item": "Mana Potion Small", "quantity": 1},
+          {"item": "Health Potion Small", "quantity": 1},
+          {"item": "Mystic Powder", "quantity": 1}
+        ],
+        "result": {
+          "item": "Elixir of Endurance",
+          "quantity": 1,
+          "stats": {
+            "stamina_regen": 10,
+            "duration_minutes": 30,
+            "description": "+10 stamina regen for 30 minutes"
+          }
+        },
+        "crafting_time_minutes": 25,
+        "success_rate": 0.70,
+        "xp_reward": 40
+      },
+      {
+        "name": "Celestial Ambrosia",
+        "description": "A divine nectar brewed only by the chosen",
+        "required_level": 18,
+        "ingredients": [
+          {"item": "Ambrosia Nectar", "quantity": 3},
+          {"item": "Sacred Rune", "quantity": 3},
+          {"item": "Phoenix Feather", "quantity": 2}
+        ],
+        "result": {
+          "item": "Celestial Ambrosia",
+          "quantity": 1,
+          "stats": {
+            "all_stats_bonus": 25,
+            "duration_minutes": 60,
+            "description": "+25 to all stats for 1 hour"
+          }
+        },
+        "crafting_time_minutes": 150,
+        "success_rate": 0.20,
+        "xp_reward": 400
+      }
+    ],
+    "equipment": [
+      {
+        "name": "Iron Longsword",
+        "description": "A sturdy blade for novice adventurers",
+        "required_level": 5,
+        "type": "weapon",
+        "subtype": "sword",
+        "ingredients": [
+          {"item": "Iron Ore", "quantity": 5},
+          {"item": "Wood Plank", "quantity": 2}
+        ],
+        "result": {
+          "item": "Iron Longsword",
+          "quantity": 1,
+          "stats": {
+            "attack": 15,
+            "durability": 100,
+            "description": "+15 attack, basic durability"
+          }
+        },
+        "crafting_time_minutes": 40,
+        "success_rate": 0.85,
+        "xp_reward": 60
+      },
+      {
+        "name": "Steel Greatsword",
+        "description": "Forged for brute force warriors",
+        "required_level": 10,
+        "type": "weapon",
+        "subtype": "sword",
+        "ingredients": [
+          {"item": "Steel Ingot", "quantity": 4},
+          {"item": "Leather Strap", "quantity": 2}
+        ],
+        "result": {
+          "item": "Steel Greatsword",
+          "quantity": 1,
+          "stats": {
+            "attack": 35,
+            "crit_chance": 5,
+            "durability": 120,
+            "description": "+35 attack, +5% crit"
+          }
+        },
+        "crafting_time_minutes": 75,
+        "success_rate": 0.70,
+        "xp_reward": 120
+      },
+      {
+        "name": "Leather Vest",
+        "description": "Basic protection for adventurers",
+        "required_level": 3,
+        "type": "armor",
+        "subtype": "chest",
+        "ingredients": [
+          {"item": "Leather Hide", "quantity": 3},
+          {"item": "Thread", "quantity": 2}
+        ],
+        "result": {
+          "item": "Leather Vest",
+          "quantity": 1,
+          "stats": {
+            "defense": 8,
+            "durability": 80,
+            "description": "+8 defense"
+          }
+        },
+        "crafting_time_minutes": 30,
+        "success_rate": 0.90,
+        "xp_reward": 25
+      },
+      {
+        "name": "Iron Helmet",
+        "description": "Protects the head from enemy attacks",
+        "required_level": 6,
+        "type": "armor",
+        "subtype": "helmet",
+        "ingredients": [
+          {"item": "Iron Ore", "quantity": 3},
+          {"item": "Leather Strap", "quantity": 1}
+        ],
+        "result": {
+          "item": "Iron Helmet",
+          "quantity": 1,
+          "stats": {
+            "defense": 12,
+            "durability": 90,
+            "description": "+12 defense"
+          }
+        },
+        "crafting_time_minutes": 35,
+        "success_rate": 0.80,
+        "xp_reward": 45
+      },
+      {
+        "name": "Reinforced Boots",
+        "description": "Sturdy footwear for long journeys",
+        "required_level": 4,
+        "type": "armor",
+        "subtype": "boots",
+        "ingredients": [
+          {"item": "Leather Hide", "quantity": 2},
+          {"item": "Iron Ore", "quantity": 1}
+        ],
+        "result": {
+          "item": "Reinforced Boots",
+          "quantity": 1,
+          "stats": {
+            "defense": 6,
+            "speed_bonus": 2,
+            "durability": 85,
+            "description": "+6 defense, +2 speed"
+          }
+        },
+        "crafting_time_minutes": 25,
+        "success_rate": 0.85,
+        "xp_reward": 30
+      }
+    ],
+    "utility": [
+      {
+        "name": "Scroll of Teleportation",
+        "description": "Instantly return to a safe location",
+        "required_level": 8,
+        "ingredients": [
+          {"item": "Parchment", "quantity": 1},
+          {"item": "Mystic Ink", "quantity": 2}
+        ],
+        "result": {
+          "item": "Scroll of Teleportation",
+          "quantity": 1,
+          "stats": {
+            "teleport": true,
+            "description": "Instantly escape from battle or return to town"
+          }
+        },
+        "crafting_time_minutes": 40,
+        "success_rate": 0.65,
+        "xp_reward": 80
+      },
+      {
+        "name": "Dream Compass",
+        "description": "Points toward rare dream events",
+        "required_level": 20,
+        "ingredients": [
+          {"item": "Crystal Lens", "quantity": 1},
+          {"item": "Dream Essence", "quantity": 2}
+        ],
+        "result": {
+          "item": "Dream Compass",
+          "quantity": 1,
+          "stats": {
+            "event_discovery": 25,
+            "description": "+25% chance to discover rare dream events"
+          }
+        },
+        "crafting_time_minutes": 100,
+        "success_rate": 0.45,
+        "xp_reward": 220
+      }
+    ]
+  },
+  "gear_slots": {
+    "weapon": {"max_equipped": 1, "types": ["sword", "bow", "staff", "dagger", "hammer", "spear"]},
+    "armor": {"max_equipped": 1, "types": ["chest"]},
+    "helmet": {"max_equipped": 1, "types": ["helmet"]},
+    "boots": {"max_equipped": 1, "types": ["boots"]},
+    "gloves": {"max_equipped": 1, "types": ["gloves"]},
+    "accessory": {"max_equipped": 2, "types": ["ring", "necklace", "charm"]}
+  },
+  "crafting_levels": {
+    "1": {"name": "Novice", "xp_required": 0},
+    "5": {"name": "Apprentice", "xp_required": 500},
+    "10": {"name": "Journeyman", "xp_required": 1500},
+    "15": {"name": "Expert", "xp_required": 3500},
+    "20": {"name": "Master", "xp_required": 7000},
+    "25": {"name": "Grandmaster", "xp_required": 12000}
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "mishap_settings": {
+    "trigger_chance": 0.1,
+    "mood_duration_hours": 6
+  },
+  "mood_messages": {
+    "playful": [
+      "Your waifu playfully hides behind a pillow when you check on her!",
+      "She’s practicing battle poses in the mirror—too cute to interrupt.",
+      "You catch her humming while organizing your relic collection.",
+      "She made you a friendship bracelet out of spare summoning crystals!",
+      "She challenges you to a thumb war… and loses dramatically.",
+      "You find doodles of you with hearts in the margins of her notes.",
+      "She taps your shoulder from behind and pretends it wasn’t her.",
+      "She leaves a riddle on your desk that leads to a cookie stash."
+    ],
+    "mischievous": [
+      "Your waifu rearranged all your inventory items by color—chaotic but pretty!",
+      "She tried to cook but somehow created rainbow-colored rice. It’s… edible?",
+      "You find her teaching combat moves to your pet companions.",
+      "She painted her nails with liquid starlight. They’re literally glowing!",
+      "She swapped your relic display plaques just to watch you notice.",
+      "She hid behind drapes to jump-scare the guild master. It worked.",
+      "She turned your cape inside out and called it a ‘fashion upgrade’.",
+      "She placed googly eyes on your storage chests. They judge you now."
+    ],
+    "sleepy": [
+      "Your waifu is napping in a pile of gold coins like a dragon.",
+      "She fell asleep while reading ancient battle manuals.",
+      "You find her sleep-talking about defeating legendary bosses.",
+      "She’s dreaming and occasionally casting spells in her sleep!",
+      "She curls up in your oversized hood and refuses to emerge.",
+      "She wanders the halls like a gentle ghost seeking a blanket.",
+      "She yawns so contagiously that three familiars also yawn.",
+      "She scribbles ‘zzz’ sigils that make you drowsy too."
+    ],
+    "energetic": [
+      "Your waifu is doing jumping jacks to stay in fighting shape!",
+      "She challenged your other waifus to a friendly dance battle.",
+      "You find her doing pushups with a stack of relic books on her back.",
+      "She’s speed-cleaning your entire collection at superhuman pace!",
+      "She sprints laps around the guild hall shouting a training mantra.",
+      "She practices parries against falling leaves mid-air.",
+      "She tries three workouts at once and invents a fourth by accident.",
+      "She times how fast you can say ‘ultimate ultra arcana’ ten times."
+    ],
+    "grumpy": [
+      "Your waifu is grumbling about the quality of today’s summoning rates.",
+      "She’s giving you the cold shoulder because you peeked at another waifu’s gallery.",
+      "You find her angrily polishing weapons that don’t need polishing.",
+      "She mutters about how ‘back in her day’ battles were more honorable.",
+      "She crosses her arms so hard it counts as strength training.",
+      "She glares at a cloud for moving suspiciously.",
+      "She renames your sword ‘Disappointment’ for one hour.",
+      "She files a formal complaint against ‘mornings’."
+    ],
+    "embarrassed": [
+      "She blushes and hides her face behind a spellbook.",
+      "She pretends to check the weather inside the room.",
+      "She drops her tea and apologizes to the floor for the mess.",
+      "She tries to change the topic to the history of spoons.",
+      "She insists the slip-up was a ‘planned comedy routine’.",
+      "She trips on absolutely nothing and salutes like it was intentional.",
+      "She turns away but peeks every two seconds to check your reaction.",
+      "She writes ‘ignore this’ on a sticky note and sticks it to herself."
+    ],
+    "sheepish": [
+      "She shrugs with a tiny smile that says ‘my bad’.",
+      "She offers you a slightly crumpled peace flower.",
+      "She signs an IOU for ‘one (1) non-chaotic day’.",
+      "She draws a circle on the floor labeled ‘time-out spot’ and sits in it.",
+      "She hides a silly apology poem under your cup.",
+      "She brings you tea with a note: ‘I tried. It’s drinkable-ish’.",
+      "She wears your cloak like a blanket and mumbles sorry.",
+      "She promises to only cause ‘low-impact mischief’ for a while."
+    ],
+    "happy": [
+      "She beams so brightly the lamps dim out of respect.",
+      "She skips down the corridor, cape fluttering like a banner.",
+      "She compliments everyone she passes, including the potted plants.",
+      "She hums your favorite tune and nails the high note.",
+      "She bakes cookies and labels them ‘for morale (and snacking)’.",
+      "She makes a victory pose every time you make eye contact.",
+      "She thanks the dishwasher for its service. Twice.",
+      "She writes ‘good vibes only’ on the mission board."
+    ],
+    "affectionate": [
+      "She brings you a warm drink before you even ask.",
+      "She adjusts your collar and lingers a heartbeat longer.",
+      "She sits a little closer than necessary during strategy talk.",
+      "She braids a charm into your gear for luck.",
+      "She squeezes your hand after a long quest in comfortable silence.",
+      "She stays up to make sure you get home safe from the arena.",
+      "She writes your name with a tiny heart in the corner of her notes.",
+      "She hugs you from behind and says, ‘You’re doing great.’"
+    ],
+    "shy": [
+      "She looks away the moment you meet eyes.",
+      "She practices her greeting behind a column and forgets it when you arrive.",
+      "She whispers thank you and then hides in her hood.",
+      "She leaves notes instead of speaking, each with a doodle.",
+      "She stands in doorways like a timid cat until invited in.",
+      "She asks a question and immediately apologizes for asking.",
+      "She compliments you so quietly the wind answers ‘you’re welcome’.",
+      "She waves… at the floor… in your direction."
+    ],
+    "focused": [
+      "She narrows her eyes and analyzes enemy movements on old footage.",
+      "She marks weak points on a training dummy with chalk.",
+      "She sorts tactics scrolls by threat level and snack compatibility.",
+      "She meditates, hands steady, breathing controlled.",
+      "She rewraps her grip tape with precise, ritual calm.",
+      "She maps patrol routes and highlights ambush angles.",
+      "She tests gear balance by stacking coins on sword edges.",
+      "She runs mental simulations like a chess engine with sass."
+    ],
+    "adventurous": [
+      "She proposes a random portal just to see where it goes.",
+      "She builds a rope swing over the guild fountain (safely?).",
+      "She points at a mountain and says, ‘Race you’.",
+      "She collects rumors like shinies and wants to check them all.",
+      "She suggests spelunking in the basement because ‘vibes’.",
+      "She befriends a traveling merchant and returns with five maps.",
+      "She volunteers to scout the haunted orchard at midnight.",
+      "She names the wind and asks it for shortcuts."
+    ],
+    "bored": [
+      "She flips a coin repeatedly and narrates its life story.",
+      "She tries to stack chairs until you intervene.",
+      "She learns three card tricks and one dangerous one.",
+      "She alphabetizes the pantry by texture.",
+      "She watches raindrops race down the window and bets candy on winners.",
+      "She challenges the wall to a staring contest.",
+      "She writes ‘I’m bored’ in twelve languages on the chalkboard.",
+      "She plays hide-and-seek with herself and claims victory."
+    ],
+    "protective": [
+      "She steps subtly between you and trouble without a word.",
+      "She sharpens your spare blade and straps it to your pack.",
+      "She checks the door locks twice and the windows thrice.",
+      "She reads the fine print on contracts before you sign.",
+      "She teaches your pet a defensive trick.",
+      "She updates your emergency runes and tests the wards.",
+      "She memorizes escape routes and safehouses for every district.",
+      "She gives ‘the glare’ to anyone who speaks too harshly to you."
+    ],
+    "gloomy": [
+      "She gazes out the window, rain matching her mood.",
+      "She speaks softly and keeps her cloak hooded low.",
+      "She writes a poem about the moon forgetting its shine.",
+      "She moves slowly, carefully, as if not to disturb the evening.",
+      "She lights a candle and watches the wax like a river.",
+      "She offers quiet company rather than conversation.",
+      "She hums a minor key tune that’s still oddly comforting.",
+      "She thanks you for simply being there today."
+    ],
+    "excited": [
+      "She can’t stop bouncing on her toes about the next quest!",
+      "She claps at even mediocre magic tricks with genuine delight.",
+      "She organizes a ‘mini festival’ in the hallway.",
+      "She speaks too fast and then laughs at herself.",
+      "She shakes a treasure map dramatically for emphasis.",
+      "She creates a checklist titled ‘Fun Things Right Now’.",
+      "She squeals when the bakery releases a new pastry.",
+      "She plans three parties and insists they’re ‘mission-critical’."
+    ]
+  },
+  "mishap_events": [
+    {
+      "id": "cooking_disaster",
+      "name": "Cooking Mishap",
+      "description": "Your waifu tried to cook but created something... unique.",
+      "mood_change": "embarrassed",
+      "effects": {
+        "gold_loss": 200,
+        "affinity_change": 5,
+        "items_gained": [
+          "Mystery Food"
+        ]
+      }
+    },
+    {
+      "id": "training_accident",
+      "name": "Training Accident",
+      "description": "Training got a bit too intense; there’s a waifu-shaped hole in the wall.",
+      "mood_change": "sheepish",
+      "effects": {
+        "gold_loss": 500,
+        "xp_gained": 50,
+        "affinity_change": 3
+      }
+    },
+    {
+      "id": "surprise_gift",
+      "name": "Surprise Gift",
+      "description": "Your waifu found something shiny and decided to give it to you!",
+      "mood_change": "happy",
+      "effects": {
+        "items_gained": [
+          "Shiny Trinket",
+          "Waifu's Love"
+        ],
+        "affinity_change": 8
+      }
+    },
+    {
+      "id": "potion_prank",
+      "name": "Potion Prank",
+      "description": "A mislabeled tonic turned her hair neon for an hour.",
+      "mood_change": "mischievous",
+      "effects": {
+        "gold_loss": 100,
+        "items_gained": [
+          "Colorful Residue"
+        ],
+        "affinity_change": 2
+      }
+    },
+    {
+      "id": "lost_in_library",
+      "name": "Lost in Library",
+      "description": "She wandered deep into the archives and emerged with forbidden trivia.",
+      "mood_change": "focused",
+      "effects": {
+        "xp_gained": 120,
+        "items_gained": [
+          "Dusty Index Card"
+        ],
+        "affinity_change": 4
+      }
+    },
+    {
+      "id": "stargazing_late",
+      "name": "Stargazing Overtime",
+      "description": "She stayed out watching constellations and forgot the time.",
+      "mood_change": "sleepy",
+      "effects": {
+        "xp_gained": 30,
+        "affinity_change": 6
+      }
+    },
+    {
+      "id": "relic_shuffle",
+      "name": "Relic Shuffle",
+      "description": "She reorganized relics by ‘vibe’ rather than element.",
+      "mood_change": "playful",
+      "effects": {
+        "gold_loss": 50,
+        "items_gained": [
+          "Unsorted Relic Tag"
+        ]
+      }
+    },
+    {
+      "id": "sparring_win",
+      "name": "Sparring Streak",
+      "description": "She won three quick sparring matches back-to-back.",
+      "mood_change": "energetic",
+      "effects": {
+        "xp_gained": 200,
+        "affinity_change": 7
+      }
+    },
+    {
+      "id": "weather_ward_fail",
+      "name": "Weather Ward Wobble",
+      "description": "A ward fizzled and it rained confetti in the guild hall.",
+      "mood_change": "embarrassed",
+      "effects": {
+        "gold_loss": 120,
+        "items_gained": [
+          "Soggy Confetti"
+        ],
+        "affinity_change": 2
+      }
+    },
+    {
+      "id": "bakery_binge",
+      "name": "Bakery Binge",
+      "description": "She bought one of every pastry to ‘compare textures’.",
+      "mood_change": "happy",
+      "effects": {
+        "gold_loss": 300,
+        "items_gained": [
+          "Assorted Pastries"
+        ],
+        "affinity_change": 5
+      }
+    },
+    {
+      "id": "pet_parade",
+      "name": "Pet Parade",
+      "description": "She organized the familiars into a marching band.",
+      "mood_change": "excited",
+      "effects": {
+        "xp_gained": 40,
+        "items_gained": [
+          "Tiny Drum"
+        ],
+        "affinity_change": 3
+      }
+    },
+    {
+      "id": "cloak_trip",
+      "name": "Cloak Trip",
+      "description": "She stepped on her own cloak mid-duel rehearsal.",
+      "mood_change": "sheepish",
+      "effects": {
+        "xp_gained": 10,
+        "affinity_change": 1
+      }
+    },
+    {
+      "id": "guardian_glare",
+      "name": "Guardian Glare",
+      "description": "She warned off a shady trader with a single look.",
+      "mood_change": "protective",
+      "effects": {
+        "xp_gained": 60,
+        "affinity_change": 6
+      }
+    },
+    {
+      "id": "map_misread",
+      "name": "Map Misread",
+      "description": "She read the map upside down; scenic detour acquired.",
+      "mood_change": "bored",
+      "effects": {
+        "gold_loss": 80,
+        "xp_gained": 20
+      }
+    },
+    {
+      "id": "glorious_cleaning",
+      "name": "Glorious Cleaning",
+      "description": "She deep-cleaned the armory and found lost coin under racks.",
+      "mood_change": "energetic",
+      "effects": {
+        "xp_gained": 70,
+        "items_gained": [
+          "Forgotten Coin Pouch"
+        ],
+        "affinity_change": 4
+      }
+    },
+    {
+      "id": "wardrobe_malfunction",
+      "name": "Wardrobe Malfunction",
+      "description": "A strap snapped during a flourish; crisis averted with style.",
+      "mood_change": "embarrassed",
+      "effects": {
+        "gold_loss": 90,
+        "affinity_change": 3
+      }
+    },
+    {
+      "id": "mirror_duel",
+      "name": "Mirror Duel",
+      "description": "She dueled her reflection to ‘keep it humble’.",
+      "mood_change": "playful",
+      "effects": {
+        "xp_gained": 55
+      }
+    },
+    {
+      "id": "herb_garden_help",
+      "name": "Herb Garden Help",
+      "description": "She helped the apothecary harvest starlit mint.",
+      "mood_change": "affectionate",
+      "effects": {
+        "items_gained": [
+          "Starlit Mint"
+        ],
+        "affinity_change": 7
+      }
+    },
+    {
+      "id": "contract_loop",
+      "name": "Contract Loop",
+      "description": "She found a loophole that saved the guild a fee.",
+      "mood_change": "focused",
+      "effects": {
+        "gold_loss": 0,
+        "xp_gained": 90,
+        "affinity_change": 5
+      }
+    },
+    {
+      "id": "rain_watch",
+      "name": "Rain Watch",
+      "description": "She counted raindrops until she forgot what numbers are.",
+      "mood_change": "gloomy",
+      "effects": {
+        "xp_gained": 15
+      }
+    },
+    {
+      "id": "festival_stand",
+      "name": "Festival Stand",
+      "description": "She ran a charity charm-stand; the line loved her.",
+      "mood_change": "happy",
+      "effects": {
+        "xp_gained": 110,
+        "items_gained": [
+          "Donation Jar"
+        ],
+        "affinity_change": 9
+      }
+    },
+    {
+      "id": "rope_swing_woops",
+      "name": "Rope Swing ‘Test’",
+      "description": "The fountain swing worked… then didn’t.",
+      "mood_change": "sheepish",
+      "effects": {
+        "gold_loss": 220,
+        "xp_gained": 35
+      }
+    },
+    {
+      "id": "ghost_orchard_scout",
+      "name": "Ghost Orchard Scout",
+      "description": "She scouted the haunted orchard and made friends with a ghost.",
+      "mood_change": "adventurous",
+      "effects": {
+        "xp_gained": 140,
+        "items_gained": [
+          "Friendly Wisp"
+        ],
+        "affinity_change": 6
+      }
+    },
+    {
+      "id": "tea_too_strong",
+      "name": "Tea Too Strong",
+      "description": "She brewed tea so potent it briefly woke the portraits.",
+      "mood_change": "mischievous",
+      "effects": {
+        "gold_loss": 60,
+        "affinity_change": 2
+      }
+    },
+    {
+      "id": "window_gaze",
+      "name": "Window Gaze",
+      "description": "She got reflective and wrote a soft poem about you.",
+      "mood_change": "affectionate",
+      "effects": {
+        "affinity_change": 10,
+        "items_gained": [
+          "Folded Poem"
+        ]
+      }
+    },
+    {
+      "id": "paperwork_avalanche",
+      "name": "Paperwork Avalanche",
+      "description": "A scroll shelf collapsed; she rescued the forms heroically.",
+      "mood_change": "protective",
+      "effects": {
+        "xp_gained": 45,
+        "affinity_change": 4
+      }
+    },
+    {
+      "id": "sparks_on_stage",
+      "name": "Stage Sparks",
+      "description": "Her demo spell showered sparks—applause plus mild panic.",
+      "mood_change": "excited",
+      "effects": {
+        "xp_gained": 95,
+        "gold_loss": 70,
+        "affinity_change": 3
+      }
+    },
+    {
+      "id": "night_watch",
+      "name": "Night Watch",
+      "description": "She stayed up to keep you safe, eyes steady at the window.",
+      "mood_change": "protective",
+      "effects": {
+        "xp_gained": 80,
+        "affinity_change": 9
+      }
+    }
+  ]
+}

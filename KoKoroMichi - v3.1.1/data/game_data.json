@@ -1,0 +1,5042 @@
+{
+  "traits": {
+    "trait_categories": {
+      "personality": [
+        {
+          "name": "Stoic",
+          "description": "Keeps calm under pressure, resists negative effects",
+          "effects": {
+            "status_resistance": 0.15,
+            "focus_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "battles_survived": 20,
+            "min_level": 8
+          }
+        },
+        {
+          "name": "Charismatic",
+          "description": "Natural leader, improves allies' morale",
+          "effects": {
+            "team_xp_bonus": 0.08,
+            "leadership_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "team_quests_completed": 10,
+            "min_affinity": 30
+          }
+        },
+        {
+          "name": "Cautious",
+          "description": "Plans carefully, reduced damage taken from ambushes",
+          "effects": {
+            "trap_resistance": 0.2,
+            "defense_bonus": 0.05
+          },
+          "unlock_conditions": {
+            "quests_completed": 20,
+            "battles_avoided": 5
+          }
+        },
+        {
+          "name": "Loyal",
+          "description": "Sticks by allies, boosts affinity and teamwork",
+          "effects": {
+            "affinity_gain_bonus": 0.1,
+            "teamwork_bonus": 0.08
+          },
+          "unlock_conditions": {
+            "days_together": 20,
+            "quests_completed": 15
+          }
+        },
+        {
+          "name": "Reckless",
+          "description": "Charges headfirst into danger, high damage but risky",
+          "effects": {
+            "damage_bonus": 0.12,
+            "damage_taken_bonus": 0.05
+          },
+          "unlock_conditions": {
+            "damage_dealt": 5000,
+            "battles_won": 15
+          }
+        },
+        {
+          "name": "Wise",
+          "description": "Learns quickly, boosts XP and knowledge-related stats",
+          "effects": {
+            "xp_bonus": 0.12,
+            "wisdom_gain": 0.15
+          },
+          "unlock_conditions": {
+            "spells_cast": 100,
+            "min_level": 15
+          }
+        },
+        {
+          "name": "Kind",
+          "description": "Always helps others, better healing and support",
+          "effects": {
+            "healing_bonus": 0.12,
+            "quest_success_bonus": 0.05
+          },
+          "unlock_conditions": {
+            "allies_healed": 2000,
+            "positive_interactions": 20
+          }
+        },
+        {
+          "name": "Hot-headed",
+          "description": "Quick to anger, gains rage faster but loses calm",
+          "effects": {
+            "rage_buildup": 0.15,
+            "mood_stability": -0.1
+          },
+          "unlock_conditions": {
+            "rage_activations": 10,
+            "battles_fought": 20
+          }
+        },
+        {
+          "name": "Calm",
+          "description": "Balanced mindset, resists fear and mental effects",
+          "effects": {
+            "fear_resistance": 0.25,
+            "focus_bonus": 0.08
+          },
+          "unlock_conditions": {
+            "failed_quests": 5,
+            "battles_survived": 25
+          }
+        },
+        {
+          "name": "Creative",
+          "description": "Finds clever solutions, bonus crafting & rare item chances",
+          "effects": {
+            "crafting_bonus": 0.1,
+            "rare_drop_bonus": 0.05
+          },
+          "unlock_conditions": {
+            "items_crafted": 10,
+            "quests_completed": 12
+          }
+        }
+      ],
+      "combat": [
+        {
+          "name": "Shieldbearer",
+          "description": "Expert at defense, reduces all incoming damage slightly",
+          "effects": {
+            "defense_bonus": 0.15,
+            "damage_reduction": 0.05
+          },
+          "unlock_conditions": {
+            "battles_survived": 30,
+            "damage_taken": 5000
+          }
+        },
+        {
+          "name": "Sharpshooter",
+          "description": "Precision attacks, increases ranged damage and crit chance",
+          "effects": {
+            "ranged_damage_bonus": 0.12,
+            "crit_chance": 0.1
+          },
+          "unlock_conditions": {
+            "ranged_attacks": 50,
+            "battles_won": 15
+          }
+        },
+        {
+          "name": "Tank",
+          "description": "Absorbs hits for the team, massive HP boost",
+          "effects": {
+            "hp_bonus": 0.2,
+            "taunt_chance": 0.08
+          },
+          "unlock_conditions": {
+            "damage_taken": 10000,
+            "battles_survived": 40
+          }
+        },
+        {
+          "name": "Duelist",
+          "description": "Skilled in one-on-one combat, boosts single-target damage",
+          "effects": {
+            "single_target_damage": 0.2,
+            "speed_bonus": 0.05
+          },
+          "unlock_conditions": {
+            "duels_won": 20,
+            "min_level": 15
+          }
+        },
+        {
+          "name": "Elementalist",
+          "description": "Harness elemental forces, increased elemental damage",
+          "effects": {
+            "fire_damage": 0.1,
+            "ice_damage": 0.1,
+            "lightning_damage": 0.1
+          },
+          "unlock_conditions": {
+            "magic_damage_dealt": 5000,
+            "elements_mastered": 3
+          }
+        },
+        {
+          "name": "Brawler",
+          "description": "Close combat specialist, bonus melee damage",
+          "effects": {
+            "melee_damage": 0.15,
+            "rage_buildup": 0.05
+          },
+          "unlock_conditions": {
+            "melee_attacks": 100,
+            "battles_won": 20
+          }
+        },
+        {
+          "name": "Sniper",
+          "description": "Patient and deadly, critical hits deal extra damage",
+          "effects": {
+            "crit_damage_bonus": 0.25,
+            "first_strike_chance": 0.1
+          },
+          "unlock_conditions": {
+            "long_range_kills": 50,
+            "battles_won": 25
+          }
+        },
+        {
+          "name": "Berserker Mage",
+          "description": "Combines magic and rage for devastating attacks",
+          "effects": {
+            "magic_damage_bonus": 0.15,
+            "rage_buildup": 0.1
+          },
+          "unlock_conditions": {
+            "magic_attacks": 50,
+            "rage_activations": 10
+          }
+        },
+        {
+          "name": "Dual Wielder",
+          "description": "Expert with two weapons, increases attack speed and damage",
+          "effects": {
+            "attack_speed_bonus": 0.15,
+            "damage_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "dual_weapon_kills": 50,
+            "battles_won": 20
+          }
+        },
+        {
+          "name": "Tactician",
+          "description": "Strategic mind, gains bonus for planning and team maneuvers",
+          "effects": {
+            "team_damage_bonus": 0.1,
+            "battle_strategy_bonus": 0.15
+          },
+          "unlock_conditions": {
+            "team_quests_completed": 10,
+            "battles_won": 30
+          }
+        }
+      ],
+      "special": [
+        {
+          "name": "Dreamwalker",
+          "description": "Can slip between dreams and reality, gaining unique buffs from dream events",
+          "effects": {
+            "dream_event_bonus": 0.2,
+            "buff_duration_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "dream_events_completed": 15
+          }
+        },
+        {
+          "name": "Lucky Star",
+          "description": "Lady Luck smiles upon you, higher chance for rare drops",
+          "effects": {
+            "rare_drop_chance": 0.15,
+            "gold_find_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "quests_completed": 50,
+            "treasures_found": 20
+          }
+        },
+        {
+          "name": "Charmcaster",
+          "description": "Masters of persuasion, better deals and higher affinity gains",
+          "effects": {
+            "shop_discount": 0.1,
+            "affinity_gain_bonus": 0.2
+          },
+          "unlock_conditions": {
+            "successful_charms": 10,
+            "waifus_recruited": 5
+          }
+        },
+        {
+          "name": "Shadow Veil",
+          "description": "Able to blend into shadows, reduces enemy detection",
+          "effects": {
+            "stealth_bonus": 0.2,
+            "escape_chance": 0.15
+          },
+          "unlock_conditions": {
+            "successful_escapes": 10,
+            "night_quests_completed": 5
+          }
+        },
+        {
+          "name": "Celestial Bond",
+          "description": "A divine blessing grants power based on the moon phase",
+          "effects": {
+            "buff_scaling": "moon_phase",
+            "xp_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "celestial_events_observed": 5
+          }
+        },
+        {
+          "name": "Gambler's Soul",
+          "description": "Thrives on risk, higher crit chance but also more likely to miss",
+          "effects": {
+            "crit_chance": 0.2,
+            "miss_chance": 0.1
+          },
+          "unlock_conditions": {
+            "coin_flips": 50,
+            "battles_won": 20
+          }
+        },
+        {
+          "name": "Time Weaver",
+          "description": "Bends time slightly, reducing cooldowns",
+          "effects": {
+            "cooldown_reduction": 0.1,
+            "speed_bonus": 0.05
+          },
+          "unlock_conditions": {
+            "time_magic_casts": 25,
+            "battles_won": 30
+          }
+        },
+        {
+          "name": "Beast Whisperer",
+          "description": "Animals trust you, better taming and beast ally boosts",
+          "effects": {
+            "beast_affinity": 0.25,
+            "pet_damage_bonus": 0.15
+          },
+          "unlock_conditions": {
+            "pets_tamed": 5,
+            "quests_with_beasts": 10
+          }
+        },
+        {
+          "name": "Blood Pact",
+          "description": "Sacrifices HP to unleash stronger attacks",
+          "effects": {
+            "damage_bonus": 0.2,
+            "hp_drain": 0.05
+          },
+          "unlock_conditions": {
+            "hp_sacrificed": 1000,
+            "dark_magic_casts": 10
+          }
+        },
+        {
+          "name": "Soul Resonance",
+          "description": "Your soul harmonizes with allies, increasing team synergy",
+          "effects": {
+            "team_buff_bonus": 0.15,
+            "waifu_affinity_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "team_battles_completed": 20,
+            "waifu_affinity_total": 200
+          }
+        }
+      ],
+      "exploration": [
+        {
+          "name": "Pathfinder",
+          "description": "Always finds the best routes, reducing travel time and encounters",
+          "effects": {
+            "travel_speed_bonus": 0.2,
+            "random_encounter_reduction": 0.15
+          },
+          "unlock_conditions": {
+            "areas_explored": 10
+          }
+        },
+        {
+          "name": "Treasure Hunter",
+          "description": "Increased chance of finding rare items and hidden caches",
+          "effects": {
+            "rare_item_chance": 0.2,
+            "gold_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "treasures_found": 25,
+            "quests_completed": 20
+          }
+        },
+        {
+          "name": "Cartographer",
+          "description": "Maps out regions in detail, revealing hidden locations and shortcuts",
+          "effects": {
+            "map_reveal_bonus": true,
+            "hidden_area_bonus": 0.15
+          },
+          "unlock_conditions": {
+            "maps_completed": 5,
+            "exploration_hours": 50
+          }
+        },
+        {
+          "name": "Herbalist",
+          "description": "Expert at gathering plants, herbs, and alchemical ingredients",
+          "effects": {
+            "herb_gathering_bonus": 0.25,
+            "potion_success_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "plants_collected": 100,
+            "potions_crafted": 10
+          }
+        },
+        {
+          "name": "Beast Tracker",
+          "description": "Can follow animal tracks and anticipate their movements",
+          "effects": {
+            "pet_discovery_bonus": 0.2,
+            "hunt_success_bonus": 0.15
+          },
+          "unlock_conditions": {
+            "beasts_tracked": 15,
+            "pets_tamed": 5
+          }
+        },
+        {
+          "name": "Treacherous Eye",
+          "description": "Can detect traps and hidden dangers easily",
+          "effects": {
+            "trap_detection": 0.3,
+            "danger_avoidance": 0.2
+          },
+          "unlock_conditions": {
+            "traps_disarmed": 10,
+            "quests_completed": 20
+          }
+        },
+        {
+          "name": "Mystic Aura",
+          "description": "Senses magical energies in the surroundings",
+          "effects": {
+            "magic_detection": true,
+            "rare_relic_chance": 0.1
+          },
+          "unlock_conditions": {
+            "magic_items_found": 15,
+            "magic_affinity": 50
+          }
+        },
+        {
+          "name": "Adventurer's Instinct",
+          "description": "Always aware of hidden opportunities and shortcuts",
+          "effects": {
+            "discovery_chance": 0.2,
+            "xp_bonus": 0.05
+          },
+          "unlock_conditions": {
+            "quests_completed": 30,
+            "areas_explored": 20
+          }
+        },
+        {
+          "name": "Night Owl",
+          "description": "Excels in nighttime exploration with fewer penalties",
+          "effects": {
+            "night_quest_bonus": 0.25,
+            "stealth_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "night_quests_completed": 10,
+            "days_explored_at_night": 5
+          }
+        },
+        {
+          "name": "Weather Adept",
+          "description": "Adjusts well to harsh weather, reducing negative effects",
+          "effects": {
+            "weather_penalty_reduction": 0.3,
+            "xp_bonus": 0.05
+          },
+          "unlock_conditions": {
+            "quests_completed_in_bad_weather": 15
+          }
+        }
+      ],
+      "crafting_gathering": [
+        {
+          "name": "Master Craftsman",
+          "description": "Creates items more efficiently, with higher quality",
+          "effects": {
+            "crafting_quality_bonus": 0.2,
+            "crafting_speed_bonus": 0.15
+          },
+          "unlock_conditions": {
+            "items_crafted": 50,
+            "level": 10
+          }
+        },
+        {
+          "name": "Resourceful",
+          "description": "Maximizes materials gained from gathering",
+          "effects": {
+            "material_yield_bonus": 0.25,
+            "rare_material_chance": 0.1
+          },
+          "unlock_conditions": {
+            "resources_gathered": 100
+          }
+        },
+        {
+          "name": "Alchemy Expert",
+          "description": "Potions and elixirs are more potent and stable",
+          "effects": {
+            "potion_effect_bonus": 0.2,
+            "alchemy_success_rate": 0.15
+          },
+          "unlock_conditions": {
+            "potions_created": 20,
+            "magic_affinity": 50
+          }
+        },
+        {
+          "name": "Blacksmith",
+          "description": "Weapons and armor gain additional stats when forged",
+          "effects": {
+            "weapon_stat_bonus": 0.1,
+            "armor_stat_bonus": 0.1
+          },
+          "unlock_conditions": {
+            "weapons_forged": 30,
+            "armors_forged": 30
+          }
+        },
+        {
+          "name": "Forager",
+          "description": "Finds extra food and ingredients while exploring",
+          "effects": {
+            "gathering_bonus": 0.2,
+            "rare_food_chance": 0.15
+          },
+          "unlock_conditions": {
+            "food_gathered": 50,
+            "exploration_hours": 20
+          }
+        },
+        {
+          "name": "Enchanter",
+          "description": "Enchantments last longer and are more effective",
+          "effects": {
+            "enchantment_strength_bonus": 0.2,
+            "enchantment_duration_bonus": 0.25
+          },
+          "unlock_conditions": {
+            "items_enchanted": 25,
+            "magic_affinity": 60
+          }
+        },
+        {
+          "name": "Gem Cutter",
+          "description": "Cuts and polishes gems flawlessly, increasing their value",
+          "effects": {
+            "gem_value_bonus": 0.2,
+            "rare_gem_chance": 0.1
+          },
+          "unlock_conditions": {
+            "gems_processed": 20,
+            "gold_collected": 5000
+          }
+        },
+        {
+          "name": "Tailor",
+          "description": "Crafts clothing and gear with extra bonuses",
+          "effects": {
+            "gear_stat_bonus": 0.15,
+            "clothing_appearance_bonus": 0.2
+          },
+          "unlock_conditions": {
+            "gear_crafted": 30,
+            "fashion_items_created": 10
+          }
+        },
+        {
+          "name": "Jeweler",
+          "description": "Creates jewelry that gives small passive bonuses",
+          "effects": {
+            "accessory_stat_bonus": 0.1,
+            "rare_accessory_chance": 0.15
+          },
+          "unlock_conditions": {
+            "jewelry_crafted": 20,
+            "gems_used": 50
+          }
+        },
+        {
+          "name": "Innovator",
+          "description": "Develops new tools, improving efficiency and versatility",
+          "effects": {
+            "crafting_innovation_bonus": 0.25,
+            "special_item_chance": 0.1
+          },
+          "unlock_conditions": {
+            "unique_items_created": 10,
+            "experiments_tried": 20
+          }
+        }
+      ]
+    },
+    "evolution_paths": {
+      "combat_evolution": {
+        "novice": {
+          "battles_won": 0,
+          "level": 1,
+          "bonuses": {}
+        },
+        "warrior": {
+          "battles_won": 50,
+          "level": 10,
+          "bonuses": {
+            "attack_bonus": 0.05
+          }
+        },
+        "veteran": {
+          "battles_won": 150,
+          "level": 20,
+          "bonuses": {
+            "attack_bonus": 0.1,
+            "defense_bonus": 0.05
+          }
+        },
+        "champion": {
+          "battles_won": 300,
+          "level": 30,
+          "bonuses": {
+            "attack_bonus": 0.15,
+            "defense_bonus": 0.1,
+            "crit_chance": 0.05
+          }
+        },
+        "legend": {
+          "battles_won": 500,
+          "level": 40,
+          "bonuses": {
+            "attack_bonus": 0.2,
+            "defense_bonus": 0.15,
+            "crit_chance": 0.1,
+            "special_abilities": [
+              "legendary_strike"
+            ]
+          }
+        }
+      },
+      "affinity_evolution": {
+        "stranger": {
+          "affinity": 0,
+          "bonuses": {}
+        },
+        "acquaintance": {
+          "affinity": 25,
+          "bonuses": {
+            "xp_bonus": 0.02
+          }
+        },
+        "friend": {
+          "affinity": 75,
+          "bonuses": {
+            "xp_bonus": 0.05,
+            "gold_bonus": 0.03
+          }
+        },
+        "close_friend": {
+          "affinity": 150,
+          "bonuses": {
+            "xp_bonus": 0.08,
+            "gold_bonus": 0.05,
+            "battle_bonus": 0.03
+          }
+        },
+        "devoted": {
+          "affinity": 250,
+          "bonuses": {
+            "xp_bonus": 0.12,
+            "gold_bonus": 0.08,
+            "battle_bonus": 0.05,
+            "special_abilities": [
+              "devotion_boost"
+            ]
+          }
+        },
+        "soulmate": {
+          "affinity": 400,
+          "bonuses": {
+            "xp_bonus": 0.2,
+            "gold_bonus": 0.15,
+            "battle_bonus": 0.1,
+            "special_abilities": [
+              "soul_bond",
+              "shared_destiny"
+            ]
+          }
+        }
+      }
+    },
+    "mood_system": {
+      "happy": {
+        "description": "Cheerful and energetic",
+        "effects": {
+          "xp_gain": 0.1,
+          "gold_bonus": 0.05,
+          "affinity_gain": 0.08
+        },
+        "triggers": [
+          "successful_quest",
+          "gift_received",
+          "battle_victory"
+        ]
+      },
+      "excited": {
+        "description": "Thrilled and eager for adventure",
+        "effects": {
+          "battle_damage": 0.15,
+          "quest_success": 0.1,
+          "xp_gain": 0.08
+        },
+        "triggers": [
+          "rare_item_found",
+          "level_up",
+          "achievement_unlocked"
+        ]
+      },
+      "content": {
+        "description": "Peaceful and satisfied",
+        "effects": {
+          "defense_bonus": 0.05,
+          "affinity_gain": 0.05
+        },
+        "triggers": [
+          "rest",
+          "meditation",
+          "time_spent_together"
+        ]
+      },
+      "sad": {
+        "description": "Feeling down and melancholic",
+        "effects": {
+          "xp_gain": -0.1,
+          "battle_damage": -0.05
+        },
+        "triggers": [
+          "quest_failure",
+          "long_separation",
+          "negative_interaction"
+        ]
+      },
+      "angry": {
+        "description": "Furious and aggressive",
+        "effects": {
+          "battle_damage": 0.2,
+          "defense_bonus": -0.1,
+          "affinity_gain": -0.05
+        },
+        "triggers": [
+          "betrayal",
+          "insult",
+          "unfair_treatment"
+        ]
+      },
+      "tired": {
+        "description": "Exhausted and needing rest",
+        "effects": {
+          "all_stats": -0.15
+        },
+        "triggers": [
+          "overwork",
+          "too_many_battles",
+          "lack_of_rest"
+        ]
+      },
+      "motivated": {
+        "description": "Inspired and ready to achieve goals",
+        "effects": {
+          "quest_success": 0.2,
+          "xp_gain": 0.15,
+          "crafting_bonus": 0.1
+        },
+        "triggers": [
+          "inspirational_speech",
+          "new_goal_set",
+          "mentor_guidance"
+        ]
+      }
+    }
+  },
+  "crafting_recipes": {
+    "categories": {
+      "consumables": [
+        {
+          "name": "Greater Health Potion",
+          "description": "Restores a large amount of health instantly",
+          "required_level": 2,
+          "ingredients": [
+            {
+              "item": "Health Potion Small",
+              "quantity": 3
+            },
+            {
+              "item": "Crystal Shard",
+              "quantity": 2
+            }
+          ],
+          "result": {
+            "item": "Greater Health Potion",
+            "quantity": 1,
+            "stats": {
+              "healing": 300,
+              "description": "Restore 300 HP instantly"
+            }
+          },
+          "crafting_time_minutes": 20,
+          "success_rate": 0.8,
+          "xp_reward": 35
+        },
+        {
+          "name": "Mana Potion Medium",
+          "description": "Replenishes moderate magical energy",
+          "required_level": 3,
+          "ingredients": [
+            {
+              "item": "Mana Potion Small",
+              "quantity": 2
+            },
+            {
+              "item": "Spectral Cloth",
+              "quantity": 1
+            }
+          ],
+          "result": {
+            "item": "Mana Potion Medium",
+            "quantity": 1,
+            "stats": {
+              "mana_restore": 120,
+              "description": "Restore 120 MP instantly"
+            }
+          },
+          "crafting_time_minutes": 18,
+          "success_rate": 0.82,
+          "xp_reward": 30
+        },
+        {
+          "name": "Ultimate Health Potion",
+          "description": "The strongest healing potion ever brewed",
+          "required_level": 12,
+          "ingredients": [
+            {
+              "item": "Greater Health Potion",
+              "quantity": 2
+            },
+            {
+              "item": "Dragon Scale",
+              "quantity": 1
+            },
+            {
+              "item": "Phoenix Feather",
+              "quantity": 1
+            }
+          ],
+          "result": {
+            "item": "Ultimate Health Potion",
+            "quantity": 1,
+            "stats": {
+              "healing": 1000,
+              "description": "Restore 1000 HP instantly"
+            }
+          },
+          "crafting_time_minutes": 60,
+          "success_rate": 0.55,
+          "xp_reward": 150
+        },
+        {
+          "name": "Elixir of Endurance",
+          "description": "Boost stamina regeneration during battles",
+          "required_level": 4,
+          "ingredients": [
+            {
+              "item": "Mana Potion Small",
+              "quantity": 1
+            },
+            {
+              "item": "Health Potion Small",
+              "quantity": 1
+            },
+            {
+              "item": "Mystic Powder",
+              "quantity": 1
+            }
+          ],
+          "result": {
+            "item": "Elixir of Endurance",
+            "quantity": 1,
+            "stats": {
+              "stamina_regen": 10,
+              "duration_minutes": 30,
+              "description": "+10 stamina regen for 30 minutes"
+            }
+          },
+          "crafting_time_minutes": 25,
+          "success_rate": 0.7,
+          "xp_reward": 40
+        },
+        {
+          "name": "Celestial Ambrosia",
+          "description": "A divine nectar brewed only by the chosen",
+          "required_level": 18,
+          "ingredients": [
+            {
+              "item": "Ambrosia Nectar",
+              "quantity": 3
+            },
+            {
+              "item": "Sacred Rune",
+              "quantity": 3
+            },
+            {
+              "item": "Phoenix Feather",
+              "quantity": 2
+            }
+          ],
+          "result": {
+            "item": "Celestial Ambrosia",
+            "quantity": 1,
+            "stats": {
+              "all_stats_bonus": 25,
+              "duration_minutes": 60,
+              "description": "+25 to all stats for 1 hour"
+            }
+          },
+          "crafting_time_minutes": 150,
+          "success_rate": 0.2,
+          "xp_reward": 400
+        }
+      ],
+      "equipment": [
+        {
+          "name": "Iron Longsword",
+          "description": "A sturdy blade for novice adventurers",
+          "required_level": 5,
+          "type": "weapon",
+          "subtype": "sword",
+          "ingredients": [
+            {
+              "item": "Iron Ore",
+              "quantity": 5
+            },
+            {
+              "item": "Wood Plank",
+              "quantity": 2
+            }
+          ],
+          "result": {
+            "item": "Iron Longsword",
+            "quantity": 1,
+            "stats": {
+              "attack": 15,
+              "durability": 100,
+              "description": "+15 attack, basic durability"
+            }
+          },
+          "crafting_time_minutes": 40,
+          "success_rate": 0.85,
+          "xp_reward": 60
+        },
+        {
+          "name": "Steel Greatsword",
+          "description": "Forged for brute force warriors",
+          "required_level": 10,
+          "type": "weapon",
+          "subtype": "sword",
+          "ingredients": [
+            {
+              "item": "Steel Ingot",
+              "quantity": 4
+            },
+            {
+              "item": "Leather Strap",
+              "quantity": 2
+            }
+          ],
+          "result": {
+            "item": "Steel Greatsword",
+            "quantity": 1,
+            "stats": {
+              "attack": 35,
+              "crit_chance": 5,
+              "durability": 120,
+              "description": "+35 attack, +5% crit"
+            }
+          },
+          "crafting_time_minutes": 75,
+          "success_rate": 0.7,
+          "xp_reward": 120
+        },
+        {
+          "name": "Leather Vest",
+          "description": "Basic protection for adventurers",
+          "required_level": 3,
+          "type": "armor",
+          "subtype": "chest",
+          "ingredients": [
+            {
+              "item": "Leather Hide",
+              "quantity": 3
+            },
+            {
+              "item": "Thread",
+              "quantity": 2
+            }
+          ],
+          "result": {
+            "item": "Leather Vest",
+            "quantity": 1,
+            "stats": {
+              "defense": 8,
+              "durability": 80,
+              "description": "+8 defense"
+            }
+          },
+          "crafting_time_minutes": 30,
+          "success_rate": 0.9,
+          "xp_reward": 25
+        },
+        {
+          "name": "Iron Helmet",
+          "description": "Protects the head from enemy attacks",
+          "required_level": 6,
+          "type": "armor",
+          "subtype": "helmet",
+          "ingredients": [
+            {
+              "item": "Iron Ore",
+              "quantity": 3
+            },
+            {
+              "item": "Leather Strap",
+              "quantity": 1
+            }
+          ],
+          "result": {
+            "item": "Iron Helmet",
+            "quantity": 1,
+            "stats": {
+              "defense": 12,
+              "durability": 90,
+              "description": "+12 defense"
+            }
+          },
+          "crafting_time_minutes": 35,
+          "success_rate": 0.8,
+          "xp_reward": 45
+        },
+        {
+          "name": "Reinforced Boots",
+          "description": "Sturdy footwear for long journeys",
+          "required_level": 4,
+          "type": "armor",
+          "subtype": "boots",
+          "ingredients": [
+            {
+              "item": "Leather Hide",
+              "quantity": 2
+            },
+            {
+              "item": "Iron Ore",
+              "quantity": 1
+            }
+          ],
+          "result": {
+            "item": "Reinforced Boots",
+            "quantity": 1,
+            "stats": {
+              "defense": 6,
+              "speed_bonus": 2,
+              "durability": 85,
+              "description": "+6 defense, +2 speed"
+            }
+          },
+          "crafting_time_minutes": 25,
+          "success_rate": 0.85,
+          "xp_reward": 30
+        }
+      ],
+      "utility": [
+        {
+          "name": "Scroll of Teleportation",
+          "description": "Instantly return to a safe location",
+          "required_level": 8,
+          "ingredients": [
+            {
+              "item": "Parchment",
+              "quantity": 1
+            },
+            {
+              "item": "Mystic Ink",
+              "quantity": 2
+            }
+          ],
+          "result": {
+            "item": "Scroll of Teleportation",
+            "quantity": 1,
+            "stats": {
+              "teleport": true,
+              "description": "Instantly escape from battle or return to town"
+            }
+          },
+          "crafting_time_minutes": 40,
+          "success_rate": 0.65,
+          "xp_reward": 80
+        },
+        {
+          "name": "Dream Compass",
+          "description": "Points toward rare dream events",
+          "required_level": 20,
+          "ingredients": [
+            {
+              "item": "Crystal Lens",
+              "quantity": 1
+            },
+            {
+              "item": "Dream Essence",
+              "quantity": 2
+            }
+          ],
+          "result": {
+            "item": "Dream Compass",
+            "quantity": 1,
+            "stats": {
+              "event_discovery": 25,
+              "description": "+25% chance to discover rare dream events"
+            }
+          },
+          "crafting_time_minutes": 100,
+          "success_rate": 0.45,
+          "xp_reward": 220
+        }
+      ]
+    },
+    "gear_slots": {
+      "weapon": {
+        "max_equipped": 1,
+        "types": [
+          "sword",
+          "bow",
+          "staff",
+          "dagger",
+          "hammer",
+          "spear"
+        ]
+      },
+      "armor": {
+        "max_equipped": 1,
+        "types": [
+          "chest"
+        ]
+      },
+      "helmet": {
+        "max_equipped": 1,
+        "types": [
+          "helmet"
+        ]
+      },
+      "boots": {
+        "max_equipped": 1,
+        "types": [
+          "boots"
+        ]
+      },
+      "gloves": {
+        "max_equipped": 1,
+        "types": [
+          "gloves"
+        ]
+      },
+      "accessory": {
+        "max_equipped": 2,
+        "types": [
+          "ring",
+          "necklace",
+          "charm"
+        ]
+      }
+    },
+    "crafting_levels": {
+      "1": {
+        "name": "Novice",
+        "xp_required": 0
+      },
+      "5": {
+        "name": "Apprentice",
+        "xp_required": 500
+      },
+      "10": {
+        "name": "Journeyman",
+        "xp_required": 1500
+      },
+      "15": {
+        "name": "Expert",
+        "xp_required": 3500
+      },
+      "20": {
+        "name": "Master",
+        "xp_required": 7000
+      },
+      "25": {
+        "name": "Grandmaster",
+        "xp_required": 12000
+      }
+    }
+  },
+  "dream_events": {
+    "event_settings": {
+      "trigger_chance": 0.15,
+      "cooldown_hours": 2,
+      "max_daily_events": 5,
+      "rarity_weights": {
+        "common": 0.45,
+        "uncommon": 0.25,
+        "rare": 0.15,
+        "epic": 0.08,
+        "legendary": 0.05,
+        "mythical": 0.02
+      }
+    },
+    "dream_events": [
+      {
+        "id": "mystical_encounter",
+        "name": "Mystical Encounter",
+        "description": "A mysterious figure appears in your dreams, offering ancient wisdom",
+        "rarity": "common",
+        "rewards": {
+          "gold": 500,
+          "xp": 100,
+          "items": [
+            "Dream Essence",
+            "Mystic Shard"
+          ]
+        },
+        "duration_minutes": 30
+      },
+      {
+        "id": "dream_feast",
+        "name": "Dream Feast",
+        "description": "You stumble into a banquet of endless dream food",
+        "rarity": "common",
+        "rewards": {
+          "gold": 300,
+          "xp": 50,
+          "items": [
+            "Sweet Ambrosia"
+          ]
+        },
+        "duration_minutes": 20
+      },
+      {
+        "id": "butterfly_chase",
+        "name": "Butterfly Chase",
+        "description": "You chase dream butterflies that scatter glowing dust",
+        "rarity": "common",
+        "rewards": {
+          "gold": 400,
+          "xp": 75,
+          "items": [
+            "Butterfly Dust"
+          ]
+        },
+        "duration_minutes": 25
+      },
+      {
+        "id": "celestial_blessing",
+        "name": "Celestial Blessing",
+        "description": "The stars align to bestow their blessing upon you",
+        "rarity": "uncommon",
+        "rewards": {
+          "gold": 1000,
+          "xp": 250,
+          "temporary_buff": {
+            "type": "battle_boost",
+            "value": 0.2,
+            "duration_hours": 24
+          }
+        },
+        "duration_minutes": 60
+      },
+      {
+        "id": "waifu_serenade",
+        "name": "Waifu Serenade",
+        "description": "Your waifu sings a lullaby in your dreams, calming your soul",
+        "rarity": "uncommon",
+        "rewards": {
+          "xp": 200,
+          "waifu_affinity_boost": 5
+        },
+        "duration_minutes": 40
+      },
+      {
+        "id": "lunar_mirror",
+        "name": "Lunar Mirror",
+        "description": "A glowing mirror shows you visions of hidden truths",
+        "rarity": "uncommon",
+        "rewards": {
+          "gold": 800,
+          "xp": 150,
+          "items": [
+            "Moonlit Shard"
+          ]
+        },
+        "duration_minutes": 45
+      },
+      {
+        "id": "nightmare_challenge",
+        "name": "Nightmare Challenge",
+        "description": "Face your deepest fears and emerge stronger",
+        "rarity": "rare",
+        "rewards": {
+          "gold": 2000,
+          "xp": 500,
+          "special_items": [
+            "Courage Crystal",
+            "Shadow Essence"
+          ],
+          "waifu_affinity_boost": 10
+        },
+        "duration_minutes": 120
+      },
+      {
+        "id": "guardian_trial",
+        "name": "Guardian’s Trial",
+        "description": "A mighty guardian tests your resolve in battle",
+        "rarity": "rare",
+        "rewards": {
+          "gold": 2500,
+          "xp": 600,
+          "special_items": [
+            "Guardian Sigil"
+          ]
+        },
+        "duration_minutes": 100
+      },
+      {
+        "id": "flame_of_determination",
+        "name": "Flame of Determination",
+        "description": "You seize a burning flame that powers your spirit",
+        "rarity": "rare",
+        "rewards": {
+          "xp": 800,
+          "temporary_buff": {
+            "type": "courage_boost",
+            "value": 0.25,
+            "duration_hours": 12
+          }
+        },
+        "duration_minutes": 90
+      },
+      {
+        "id": "ethereal_fountain",
+        "name": "Ethereal Fountain",
+        "description": "You drink from the fountain of eternity",
+        "rarity": "epic",
+        "rewards": {
+          "gold": 4000,
+          "xp": 1200,
+          "rare_relics": [
+            "Fountain Chalice"
+          ],
+          "waifu_affinity_boost": 15
+        },
+        "duration_minutes": 180
+      },
+      {
+        "id": "starlit_oath",
+        "name": "Starlit Oath",
+        "description": "You swear an oath under the starlit dream sky",
+        "rarity": "epic",
+        "rewards": {
+          "xp": 1500,
+          "permanent_boost": {
+            "type": "loyalty",
+            "value": 0.03
+          }
+        },
+        "duration_minutes": 200
+      },
+      {
+        "id": "crystal_labyrinth",
+        "name": "Crystal Labyrinth",
+        "description": "You wander through endless crystal halls filled with echoes",
+        "rarity": "epic",
+        "rewards": {
+          "gold": 5000,
+          "xp": 1800,
+          "special_items": [
+            "Prism Key"
+          ]
+        },
+        "duration_minutes": 210
+      },
+      {
+        "id": "lucid_mastery",
+        "name": "Lucid Mastery",
+        "description": "You achieve perfect control over your dreamscape",
+        "rarity": "legendary",
+        "rewards": {
+          "gold": 5000,
+          "xp": 1000,
+          "rare_relics": [
+            "Dream Weaver's Cloak"
+          ],
+          "permanent_boost": {
+            "type": "dream_mastery",
+            "value": 0.05
+          }
+        },
+        "duration_minutes": 240
+      },
+      {
+        "id": "phoenix_rebirth",
+        "name": "Phoenix Rebirth",
+        "description": "You rise from flames anew, empowered with eternal fire",
+        "rarity": "legendary",
+        "rewards": {
+          "gold": 6000,
+          "xp": 2000,
+          "rare_relics": [
+            "Phoenix Feather"
+          ],
+          "permanent_boost": {
+            "type": "rebirth_power",
+            "value": 0.07
+          }
+        },
+        "duration_minutes": 260
+      },
+      {
+        "id": "eternal_guardian",
+        "name": "Eternal Guardian",
+        "description": "An eternal knight swears allegiance to your dream soul",
+        "rarity": "legendary",
+        "rewards": {
+          "xp": 2500,
+          "waifu_affinity_boost": 25,
+          "rare_relics": [
+            "Guardian’s Oathblade"
+          ]
+        },
+        "duration_minutes": 300
+      },
+      {
+        "id": "cosmic_alignment",
+        "name": "Cosmic Alignment",
+        "description": "Planets align, granting unfathomable insight",
+        "rarity": "mythical",
+        "rewards": {
+          "gold": 10000,
+          "xp": 5000,
+          "permanent_boost": {
+            "type": "wisdom",
+            "value": 0.1
+          }
+        },
+        "duration_minutes": 360
+      },
+      {
+        "id": "timeless_library",
+        "name": "Timeless Library",
+        "description": "You enter a library beyond time, filled with infinite knowledge",
+        "rarity": "mythical",
+        "rewards": {
+          "xp": 8000,
+          "rare_relics": [
+            "Codex of Eternity"
+          ],
+          "permanent_boost": {
+            "type": "knowledge",
+            "value": 0.12
+          }
+        },
+        "duration_minutes": 400
+      },
+      {
+        "id": "divine_embrace",
+        "name": "Divine Embrace",
+        "description": "A divine being embraces your soul, forever changing you",
+        "rarity": "mythical",
+        "rewards": {
+          "gold": 15000,
+          "xp": 10000,
+          "permanent_boost": {
+            "type": "divinity",
+            "value": 0.15
+          }
+        },
+        "duration_minutes": 480
+      }
+    ]
+  },
+  "investments": {
+    "investment_types": {
+      "waifu_cafe": {
+        "name": "Waifu Café",
+        "description": "A cozy café run by your waifus, generates passive income",
+        "initial_cost": 10000,
+        "daily_income": 200,
+        "upgrade_costs": [
+          5000,
+          10000,
+          20000,
+          40000
+        ],
+        "upgrade_bonuses": [
+          1.5,
+          2.0,
+          2.5,
+          3.0
+        ],
+        "requirements": {
+          "min_waifus": 3,
+          "min_affinity_total": 100
+        }
+      },
+      "training_dojo": {
+        "name": "Training Dojo",
+        "description": "A martial arts dojo that provides XP bonuses to training waifus",
+        "initial_cost": 15000,
+        "daily_income": 150,
+        "special_bonus": {
+          "training_xp_bonus": 0.2
+        },
+        "upgrade_costs": [
+          7500,
+          15000,
+          30000
+        ],
+        "upgrade_bonuses": [
+          1.3,
+          1.6,
+          2.0
+        ],
+        "requirements": {
+          "min_battle_wins": 50,
+          "min_level_total": 100
+        }
+      },
+      "enchanted_shop": {
+        "name": "Enchanted Shop",
+        "description": "A magical shop that occasionally finds rare items",
+        "initial_cost": 20000,
+        "daily_income": 100,
+        "special_bonus": {
+          "rare_item_chance": 0.05
+        },
+        "upgrade_costs": [
+          10000,
+          20000,
+          40000,
+          80000
+        ],
+        "upgrade_bonuses": [
+          1.2,
+          1.4,
+          1.7,
+          2.0
+        ],
+        "requirements": {
+          "min_relics": 5,
+          "min_magic_affinity": 200
+        }
+      },
+      "adventure_guild": {
+        "name": "Adventure Guild",
+        "description": "A guild hall that boosts quest rewards for all members",
+        "initial_cost": 25000,
+        "daily_income": 250,
+        "special_bonus": {
+          "quest_reward_bonus": 0.15
+        },
+        "upgrade_costs": [
+          12500,
+          25000,
+          50000
+        ],
+        "upgrade_bonuses": [
+          1.4,
+          1.8,
+          2.2
+        ],
+        "requirements": {
+          "min_quests_completed": 30,
+          "guild_membership": true
+        }
+      },
+      "waifu_spa": {
+        "name": "Waifu Spa",
+        "description": "A relaxing spa that improves waifu mood and affinity gain",
+        "initial_cost": 18000,
+        "daily_income": 180,
+        "special_bonus": {
+          "affinity_gain_bonus": 0.25,
+          "mood_stability": 0.3
+        },
+        "upgrade_costs": [
+          9000,
+          18000,
+          36000
+        ],
+        "upgrade_bonuses": [
+          1.3,
+          1.6,
+          2.0
+        ],
+        "requirements": {
+          "min_intimate_sessions": 20,
+          "min_affinity_average": 60
+        }
+      },
+      "alchemy_lab": {
+        "name": "Alchemy Lab",
+        "description": "Produces potions that grant temporary buffs to battles and training",
+        "initial_cost": 22000,
+        "daily_income": 160,
+        "special_bonus": {
+          "potion_buff_bonus": 0.15
+        },
+        "upgrade_costs": [
+          11000,
+          22000,
+          44000
+        ],
+        "upgrade_bonuses": [
+          1.4,
+          1.7,
+          2.0
+        ],
+        "requirements": {
+          "min_relics": 3,
+          "min_level_total": 120
+        }
+      },
+      "arena_colosseum": {
+        "name": "Arena Colosseum",
+        "description": "Host battles and tournaments for fame and gold",
+        "initial_cost": 30000,
+        "daily_income": 300,
+        "special_bonus": {
+          "battle_gold_bonus": 0.2
+        },
+        "upgrade_costs": [
+          15000,
+          30000,
+          60000,
+          120000
+        ],
+        "upgrade_bonuses": [
+          1.5,
+          1.8,
+          2.2,
+          2.8
+        ],
+        "requirements": {
+          "min_battle_wins": 100,
+          "guild_membership": true
+        }
+      },
+      "crystal_mine": {
+        "name": "Crystal Mine",
+        "description": "Generates rare crystals used for enchanting gear",
+        "initial_cost": 28000,
+        "daily_income": 220,
+        "special_bonus": {
+          "enchant_success_bonus": 0.1
+        },
+        "upgrade_costs": [
+          14000,
+          28000,
+          56000
+        ],
+        "upgrade_bonuses": [
+          1.4,
+          1.7,
+          2.1
+        ],
+        "requirements": {
+          "min_relics": 8,
+          "min_magic_affinity": 300
+        }
+      },
+      "royal_library": {
+        "name": "Royal Library",
+        "description": "Houses ancient knowledge, boosting XP gain and lore unlocks",
+        "initial_cost": 35000,
+        "daily_income": 250,
+        "special_bonus": {
+          "xp_gain_bonus": 0.15,
+          "lore_discovery_chance": 0.1
+        },
+        "upgrade_costs": [
+          17500,
+          35000,
+          70000,
+          140000
+        ],
+        "upgrade_bonuses": [
+          1.3,
+          1.6,
+          2.0,
+          2.5
+        ],
+        "requirements": {
+          "min_level_total": 200,
+          "min_affinity_total": 500
+        }
+      },
+      "waifu_theater": {
+        "name": "Waifu Theater",
+        "description": "A stage where waifus perform, increasing mood and generating fans",
+        "initial_cost": 20000,
+        "daily_income": 180,
+        "special_bonus": {
+          "mood_gain_bonus": 0.2,
+          "fan_income_bonus": 0.1
+        },
+        "upgrade_costs": [
+          10000,
+          20000,
+          40000,
+          80000
+        ],
+        "upgrade_bonuses": [
+          1.3,
+          1.5,
+          1.8,
+          2.2
+        ],
+        "requirements": {
+          "min_waifus": 5,
+          "min_affinity_average": 70
+        }
+      },
+      "dimensional_portal": {
+        "name": "Dimensional Portal",
+        "description": "Opens rifts to other worlds, bringing exotic loot and quests",
+        "initial_cost": 50000,
+        "daily_income": 400,
+        "special_bonus": {
+          "exotic_loot_chance": 0.1,
+          "quest_rarity_bonus": 0.1
+        },
+        "upgrade_costs": [
+          25000,
+          50000,
+          100000,
+          200000
+        ],
+        "upgrade_bonuses": [
+          1.5,
+          1.8,
+          2.3,
+          3.0
+        ],
+        "requirements": {
+          "min_quests_completed": 100,
+          "min_relics": 12
+        }
+      },
+      "waifu_resort": {
+        "name": "Waifu Resort",
+        "description": "A luxury vacation retreat for waifus, massively boosts affinity and mood",
+        "initial_cost": 60000,
+        "daily_income": 500,
+        "special_bonus": {
+          "affinity_gain_bonus": 0.4,
+          "mood_stability": 0.5
+        },
+        "upgrade_costs": [
+          30000,
+          60000,
+          120000,
+          240000
+        ],
+        "upgrade_bonuses": [
+          1.4,
+          1.7,
+          2.1,
+          2.7
+        ],
+        "requirements": {
+          "min_waifus": 10,
+          "min_intimate_sessions": 50
+        }
+      },
+      "skyship_docks": {
+        "name": "Skyship Docks",
+        "description": "Construct skyships to explore hidden islands for treasures",
+        "initial_cost": 80000,
+        "daily_income": 600,
+        "special_bonus": {
+          "exploration_reward_bonus": 0.2,
+          "rare_item_chance": 0.1
+        },
+        "upgrade_costs": [
+          40000,
+          80000,
+          160000
+        ],
+        "upgrade_bonuses": [
+          1.5,
+          2.0,
+          2.5
+        ],
+        "requirements": {
+          "min_quests_completed": 150,
+          "min_level_total": 500
+        }
+      }
+    },
+    "business_events": [
+      {
+        "id": "cafe_festival",
+        "name": "Seasonal Café Festival",
+        "description": "Your Waifu Café holds a seasonal festival, attracting crowds from afar.",
+        "affected_business": "waifu_cafe",
+        "effect": {
+          "daily_income_multiplier": 2.0
+        },
+        "duration_hours": 24,
+        "rarity": "uncommon"
+      },
+      {
+        "id": "cafe_inspection",
+        "name": "Health Inspection",
+        "description": "A sudden health inspection forces you to shut down for cleaning.",
+        "affected_business": "waifu_cafe",
+        "effect": {
+          "daily_income_multiplier": 0
+        },
+        "duration_hours": 12,
+        "rarity": "common"
+      },
+      {
+        "id": "dojo_champion",
+        "name": "New Champion Emerges",
+        "description": "Your dojo's student wins a regional tournament, boosting popularity.",
+        "affected_business": "training_dojo",
+        "effect": {
+          "daily_income_multiplier": 1.5,
+          "xp_bonus": 0.1
+        },
+        "duration_hours": 48,
+        "rarity": "rare"
+      },
+      {
+        "id": "dojo_brawl",
+        "name": "Dojo Brawl",
+        "description": "A rivalry causes a destructive brawl inside the dojo.",
+        "affected_business": "training_dojo",
+        "effect": {
+          "daily_income_multiplier": 0.5
+        },
+        "duration_hours": 24,
+        "rarity": "common"
+      },
+      {
+        "id": "shop_rare_discovery",
+        "name": "Rare Relic Discovery",
+        "description": "Your Enchanted Shop acquires a relic everyone desires.",
+        "affected_business": "enchanted_shop",
+        "effect": {
+          "rare_item_chance_bonus": 0.2
+        },
+        "duration_hours": 72,
+        "rarity": "epic"
+      },
+      {
+        "id": "shop_robbery",
+        "name": "Shop Robbery",
+        "description": "Thieves break in and steal a chunk of your profits.",
+        "affected_business": "enchanted_shop",
+        "effect": {
+          "gold_loss": 2000
+        },
+        "duration_hours": 0,
+        "rarity": "common"
+      },
+      {
+        "id": "guild_contract",
+        "name": "Guild Contract Surge",
+        "description": "The Adventure Guild signs multiple adventurers for new contracts.",
+        "affected_business": "adventure_guild",
+        "effect": {
+          "quest_reward_bonus": 0.25,
+          "daily_income_multiplier": 1.4
+        },
+        "duration_hours": 48,
+        "rarity": "rare"
+      },
+      {
+        "id": "guild_scandal",
+        "name": "Guild Scandal",
+        "description": "A guild member is caught cheating, reputation suffers.",
+        "affected_business": "adventure_guild",
+        "effect": {
+          "daily_income_multiplier": 0.6
+        },
+        "duration_hours": 36,
+        "rarity": "common"
+      },
+      {
+        "id": "spa_celebrity_visit",
+        "name": "Celebrity Waifu Visit",
+        "description": "A famous waifu visits your spa, attracting huge attention.",
+        "affected_business": "waifu_spa",
+        "effect": {
+          "affinity_gain_bonus": 0.3,
+          "daily_income_multiplier": 2.0
+        },
+        "duration_hours": 48,
+        "rarity": "rare"
+      },
+      {
+        "id": "spa_overwork",
+        "name": "Burnout Staff",
+        "description": "Your spa staff gets overworked, lowering customer satisfaction.",
+        "affected_business": "waifu_spa",
+        "effect": {
+          "affinity_gain_bonus": -0.1,
+          "daily_income_multiplier": 0.5
+        },
+        "duration_hours": 24,
+        "rarity": "common"
+      },
+      {
+        "id": "alchemy_experiment",
+        "name": "Successful Potion Experiment",
+        "description": "Your Alchemy Lab develops a groundbreaking potion.",
+        "affected_business": "alchemy_lab",
+        "effect": {
+          "potion_buff_bonus": 0.25,
+          "daily_income_multiplier": 1.8
+        },
+        "duration_hours": 72,
+        "rarity": "epic"
+      },
+      {
+        "id": "alchemy_explosion",
+        "name": "Lab Explosion",
+        "description": "A risky experiment backfires, causing downtime.",
+        "affected_business": "alchemy_lab",
+        "effect": {
+          "daily_income_multiplier": 0
+        },
+        "duration_hours": 24,
+        "rarity": "common"
+      },
+      {
+        "id": "arena_tournament",
+        "name": "Grand Tournament",
+        "description": "The Arena hosts a legendary tournament, drawing massive crowds.",
+        "affected_business": "arena_colosseum",
+        "effect": {
+          "battle_gold_bonus": 0.3,
+          "daily_income_multiplier": 2.5
+        },
+        "duration_hours": 72,
+        "rarity": "legendary"
+      },
+      {
+        "id": "arena_protest",
+        "name": "Gladiator Protest",
+        "description": "Gladiators strike against unfair wages, halting battles.",
+        "affected_business": "arena_colosseum",
+        "effect": {
+          "daily_income_multiplier": 0
+        },
+        "duration_hours": 48,
+        "rarity": "rare"
+      },
+      {
+        "id": "mine_strike",
+        "name": "Crystal Mine Strike",
+        "description": "The miners demand better pay, halting production.",
+        "affected_business": "crystal_mine",
+        "effect": {
+          "daily_income_multiplier": 0
+        },
+        "duration_hours": 36,
+        "rarity": "common"
+      },
+      {
+        "id": "mine_overflow",
+        "name": "Crystal Overflow",
+        "description": "A sudden magical surge increases crystal output.",
+        "affected_business": "crystal_mine",
+        "effect": {
+          "enchant_success_bonus": 0.2,
+          "daily_income_multiplier": 2.0
+        },
+        "duration_hours": 48,
+        "rarity": "rare"
+      },
+      {
+        "id": "library_discovery",
+        "name": "Ancient Tome Found",
+        "description": "The Royal Library unearths a long-lost tome of power.",
+        "affected_business": "royal_library",
+        "effect": {
+          "xp_gain_bonus": 0.2,
+          "lore_discovery_chance": 0.2
+        },
+        "duration_hours": 72,
+        "rarity": "epic"
+      },
+      {
+        "id": "library_fire",
+        "name": "Library Fire",
+        "description": "A fire damages rare scrolls, lowering output.",
+        "affected_business": "royal_library",
+        "effect": {
+          "xp_gain_bonus": -0.1,
+          "daily_income_multiplier": 0.5
+        },
+        "duration_hours": 24,
+        "rarity": "common"
+      },
+      {
+        "id": "theater_showcase",
+        "name": "Waifu Showcase",
+        "description": "Your theater holds a major performance, waifus shine brightly.",
+        "affected_business": "waifu_theater",
+        "effect": {
+          "mood_gain_bonus": 0.3,
+          "fan_income_bonus": 0.2
+        },
+        "duration_hours": 48,
+        "rarity": "rare"
+      },
+      {
+        "id": "theater_scandal",
+        "name": "Stage Scandal",
+        "description": "One of your waifus embarrasses herself on stage, lowering fan trust.",
+        "affected_business": "waifu_theater",
+        "effect": {
+          "mood_gain_bonus": -0.1,
+          "fan_income_bonus": -0.1
+        },
+        "duration_hours": 24,
+        "rarity": "common"
+      },
+      {
+        "id": "portal_invaders",
+        "name": "Dimensional Invaders",
+        "description": "Something dangerous slips through your portal.",
+        "affected_business": "dimensional_portal",
+        "effect": {
+          "daily_income_multiplier": 0.7
+        },
+        "duration_hours": 36,
+        "rarity": "rare"
+      },
+      {
+        "id": "portal_discovery",
+        "name": "Exotic World Discovery",
+        "description": "Your portal reveals a land rich with treasures.",
+        "affected_business": "dimensional_portal",
+        "effect": {
+          "exotic_loot_chance": 0.2,
+          "quest_rarity_bonus": 0.2
+        },
+        "duration_hours": 72,
+        "rarity": "legendary"
+      },
+      {
+        "id": "resort_festival",
+        "name": "Luxury Festival",
+        "description": "Your Waifu Resort hosts a grand vacation event.",
+        "affected_business": "waifu_resort",
+        "effect": {
+          "affinity_gain_bonus": 0.4,
+          "daily_income_multiplier": 2.5
+        },
+        "duration_hours": 72,
+        "rarity": "epic"
+      },
+      {
+        "id": "resort_maintenance",
+        "name": "Unexpected Maintenance",
+        "description": "Repairs and cleaning reduce efficiency.",
+        "affected_business": "waifu_resort",
+        "effect": {
+          "daily_income_multiplier": 0.5
+        },
+        "duration_hours": 24,
+        "rarity": "common"
+      },
+      {
+        "id": "skyship_discovery",
+        "name": "Hidden Island Found",
+        "description": "Your Skyship crew discovers a new floating island of riches.",
+        "affected_business": "skyship_docks",
+        "effect": {
+          "exploration_reward_bonus": 0.3,
+          "daily_income_multiplier": 2.0
+        },
+        "duration_hours": 72,
+        "rarity": "legendary"
+      },
+      {
+        "id": "skyship_attack",
+        "name": "Sky Pirate Raid",
+        "description": "Sky pirates raid your ships, stealing profits.",
+        "affected_business": "skyship_docks",
+        "effect": {
+          "gold_loss": 5000,
+          "daily_income_multiplier": 0.5
+        },
+        "duration_hours": 36,
+        "rarity": "rare"
+      }
+    ]
+  },
+  "auctions": {
+    "auction_settings": {
+      "min_bid": 100,
+      "bid_increment": 50,
+      "auction_duration_hours": 24,
+      "max_active_auctions": 5,
+      "seller_fee_percentage": 0.05,
+      "auto_extend_minutes": 10
+    },
+    "auctionable_items": {
+      "waifus": {
+        "min_level": 5,
+        "cooldown_after_purchase": 72,
+        "affinity_reset": true,
+        "base_value_multiplier": 100
+      },
+      "relics": {
+        "any_relic": true,
+        "condition_affects_price": true,
+        "base_value_multiplier": 50
+      },
+      "rare_items": {
+        "XP Booster": {
+          "base_value": 500,
+          "stack_size": 10
+        },
+        "Health Potion": {
+          "base_value": 200,
+          "stack_size": 20
+        },
+        "Affinity Charm": {
+          "base_value": 800,
+          "stack_size": 5
+        },
+        "Lucky Coin": {
+          "base_value": 1000,
+          "stack_size": 3
+        },
+        "Evolution Stone": {
+          "base_value": 2000,
+          "stack_size": 1
+        }
+      },
+      "special_items": {
+        "Golden Ticket": {
+          "base_value": 5000,
+          "description": "Guarantees a legendary summon"
+        },
+        "Time Crystal": {
+          "base_value": 3000,
+          "description": "Instantly completes any quest"
+        },
+        "Love Letter": {
+          "base_value": 1500,
+          "description": "Increases affinity by 10 points"
+        },
+        "Master Key": {
+          "base_value": 4000,
+          "description": "Unlocks any locked content"
+        },
+        "Phoenix Feather": {
+          "base_value": 10000,
+          "description": "Revives a defeated waifu with full stats"
+        }
+      }
+    },
+    "auction_events": [
+      {
+        "name": "Collector's Special",
+        "description": "Rare items appear more frequently in auctions",
+        "chance": 0.1,
+        "duration_hours": 48,
+        "effects": {
+          "rare_item_spawn_rate": 2.0
+        }
+      },
+      {
+        "name": "Noble's Estate Sale",
+        "description": "High-value items from a wealthy collector",
+        "chance": 0.05,
+        "duration_hours": 24,
+        "special_items": [
+          "Legendary Waifu",
+          "Mythic Relic",
+          "Ancient Artifact"
+        ]
+      },
+      {
+        "name": "Bargain Day",
+        "description": "All starting bids are reduced",
+        "chance": 0.15,
+        "duration_hours": 12,
+        "effects": {
+          "starting_bid_multiplier": 0.5
+        }
+      },
+      {
+        "name": "Bidding Frenzy",
+        "description": "Competitive atmosphere increases final prices",
+        "chance": 0.08,
+        "duration_hours": 6,
+        "effects": {
+          "bid_competition_bonus": 1.5
+        }
+      }
+    ],
+    "auction_categories": [
+      {
+        "name": "Waifus",
+        "description": "Buy and sell beloved companions",
+        "icon": "👩",
+        "filters": [
+          "level",
+          "rarity",
+          "affinity",
+          "traits"
+        ]
+      },
+      {
+        "name": "Equipment",
+        "description": "Relics and powerful artifacts",
+        "icon": "⚔️",
+        "filters": [
+          "rarity",
+          "type",
+          "stat_bonus",
+          "condition"
+        ]
+      },
+      {
+        "name": "Consumables",
+        "description": "Potions, boosters, and utility items",
+        "icon": "🧪",
+        "filters": [
+          "type",
+          "quantity",
+          "effect"
+        ]
+      },
+      {
+        "name": "Specials",
+        "description": "Unique and limited items",
+        "icon": "✨",
+        "filters": [
+          "rarity",
+          "event_exclusive",
+          "power_level"
+        ]
+      }
+    ],
+    "bidding_strategies": {
+      "sniper": {
+        "description": "Automatic bidding in the last few minutes",
+        "cost": 100,
+        "max_bid_required": true,
+        "success_rate": 0.7
+      },
+      "incremental": {
+        "description": "Gradually increase bids over time",
+        "cost": 50,
+        "patience_required": true,
+        "success_rate": 0.6
+      },
+      "aggressive": {
+        "description": "High bids to discourage competition",
+        "cost": 0,
+        "gold_requirement_multiplier": 1.5,
+        "success_rate": 0.8
+      }
+    }
+  },
+  "quests": {
+    "quest_types": {
+      "common": [
+        {
+          "name": "Gather Herbs",
+          "description": "Collect medicinal herbs from the forest",
+          "reward_type": "gold",
+          "min_reward": 100,
+          "max_reward": 500,
+          "duration": 1800,
+          "success_rate": 0.85,
+          "story_outcomes": [
+            "{waifu} carefully gathered rare herbs, earning {reward} gold.",
+            "{waifu} found a hidden grove full of valuable plants!"
+          ]
+        },
+        {
+          "name": "Hunt a Monster",
+          "description": "Defeat a wandering beast threatening nearby villages",
+          "reward_type": "xp",
+          "min_reward": 50,
+          "max_reward": 200,
+          "duration": 3600,
+          "success_rate": 0.75,
+          "story_outcomes": [
+            "{waifu} defeated the monster after an intense battle, gaining {reward} XP!",
+            "{waifu} used clever tactics to outwit the beast."
+          ]
+        },
+        {
+          "name": "Deliver Message",
+          "description": "Carry an important message between distant cities",
+          "reward_type": "gold",
+          "min_reward": 200,
+          "max_reward": 400,
+          "duration": 2700,
+          "success_rate": 0.9,
+          "story_outcomes": [
+            "{waifu} successfully delivered the message, earning {reward} gold.",
+            "{waifu} made the journey safely despite rough weather."
+          ]
+        },
+        {
+          "name": "Mine Crystals",
+          "description": "Extract valuable crystals from ancient caves",
+          "reward_type": "item",
+          "reward_items": [
+            "XP Booster",
+            "Health Potion",
+            "Mana Potion"
+          ],
+          "duration": 2400,
+          "success_rate": 0.8,
+          "story_outcomes": [
+            "{waifu} discovered shimmering crystals deep in the cave.",
+            "{waifu} carefully extracted precious gems from the mine."
+          ]
+        },
+        {
+          "name": "Patrol the Village",
+          "description": "Help keep the peace in a nearby settlement",
+          "reward_type": "xp",
+          "min_reward": 40,
+          "max_reward": 120,
+          "duration": 1500,
+          "success_rate": 0.95,
+          "story_outcomes": [
+            "{waifu} deterred troublemakers, earning {reward} XP.",
+            "{waifu} reassured the villagers and strengthened bonds."
+          ]
+        },
+        {
+          "name": "Fishing Trip",
+          "description": "Spend time by the river catching fish",
+          "reward_type": "item",
+          "reward_items": [
+            "Golden Carp",
+            "Mystic Eel",
+            "Healing Fish"
+          ],
+          "duration": 2000,
+          "success_rate": 0.88,
+          "story_outcomes": [
+            "{waifu} caught a rare {reward_item}!",
+            "{waifu} enjoyed the calm waters and brought back fresh fish."
+          ]
+        },
+        {
+          "name": "Escort Caravan",
+          "description": "Protect a merchant caravan along a dangerous road",
+          "reward_type": "gold",
+          "min_reward": 300,
+          "max_reward": 700,
+          "duration": 4200,
+          "success_rate": 0.7,
+          "story_outcomes": [
+            "{waifu} fought off bandits and earned {reward} gold.",
+            "{waifu} kept the merchants safe until their destination."
+          ]
+        },
+        {
+          "name": "Train in Dojo",
+          "description": "Sharpen your skills under a master",
+          "reward_type": "xp",
+          "min_reward": 60,
+          "max_reward": 250,
+          "duration": 1800,
+          "success_rate": 0.9,
+          "story_outcomes": [
+            "{waifu} pushed their limits and gained {reward} XP.",
+            "{waifu} learned new fighting techniques from the master."
+          ]
+        }
+      ],
+      "rare": [
+        {
+          "name": "Rescue the Lost Relic",
+          "description": "Recover a legendary artifact from dangerous ruins",
+          "reward_type": "relic",
+          "relic_options": [
+            "Frosty Spear",
+            "Crystal Shield",
+            "Shadow Blade"
+          ],
+          "duration": 7200,
+          "success_rate": 0.6,
+          "requires_level": 30,
+          "story_outcomes": [
+            "{waifu} braved ancient traps to recover the legendary {reward}!",
+            "{waifu} solved mystical puzzles to claim the {reward}."
+          ]
+        },
+        {
+          "name": "Dragon's Challenge",
+          "description": "Face an ancient dragon in single combat",
+          "reward_type": "multiple",
+          "rewards": {
+            "xp": [
+              300,
+              500
+            ],
+            "gold": [
+              800,
+              1200
+            ],
+            "item": [
+              "Mythic Upgrade Crystal"
+            ]
+          },
+          "duration": 10800,
+          "success_rate": 0.45,
+          "requires_level": 50,
+          "story_outcomes": [
+            "{waifu} emerged victorious from the dragon's lair with incredible rewards!",
+            "{waifu} proved their worth against the ancient wyrm."
+          ]
+        },
+        {
+          "name": "Mystical Portal",
+          "description": "Investigate a mysterious portal to another realm",
+          "reward_type": "random",
+          "duration": 5400,
+          "success_rate": 0.7,
+          "requires_level": 25,
+          "story_outcomes": [
+            "{waifu} returned from another dimension with strange treasures.",
+            "{waifu} witnessed wonders beyond imagination in the mystical realm."
+          ]
+        },
+        {
+          "name": "Bandit Stronghold",
+          "description": "Raid a dangerous hideout of bandits",
+          "reward_type": "gold",
+          "min_reward": 1000,
+          "max_reward": 2500,
+          "duration": 6400,
+          "success_rate": 0.55,
+          "requires_level": 35,
+          "story_outcomes": [
+            "{waifu} defeated the bandit leader and seized {reward} gold.",
+            "{waifu} burned the stronghold to the ground and returned victorious."
+          ]
+        },
+        {
+          "name": "Haunted Catacombs",
+          "description": "Explore the cursed catacombs beneath the city",
+          "reward_type": "item",
+          "reward_items": [
+            "Soul Lantern",
+            "Cursed Dagger",
+            "Phantom Dust"
+          ],
+          "duration": 7800,
+          "success_rate": 0.5,
+          "requires_level": 40,
+          "story_outcomes": [
+            "{waifu} braved terrifying spirits to recover the {reward_item}.",
+            "{waifu} found ancient treasures amidst the haunting whispers."
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "Godslayer's Trial",
+          "description": "Undertake the ultimate test of strength and wisdom",
+          "reward_type": "legendary_relic",
+          "legendary_relics": [
+            "Odin's Spear",
+            "Zeus's Thunderbolt",
+            "Ra's Crown"
+          ],
+          "duration": 21600,
+          "success_rate": 0.3,
+          "requires_level": 80,
+          "requires_friendship": 90,
+          "story_outcomes": [
+            "{waifu} completed the impossible trial, earning divine recognition!",
+            "{waifu} transcended mortal limits to claim the {reward}."
+          ]
+        },
+        {
+          "name": "The Eternal Labyrinth",
+          "description": "Navigate an endless maze crafted by the gods themselves",
+          "reward_type": "legendary_relic",
+          "legendary_relics": [
+            "Minotaur's Helm",
+            "Key of Infinity"
+          ],
+          "duration": 28800,
+          "success_rate": 0.25,
+          "requires_level": 90,
+          "requires_friendship": 95,
+          "story_outcomes": [
+            "{waifu} conquered the Eternal Labyrinth, finding the {reward}.",
+            "{waifu} wandered for days but emerged with divine spoils."
+          ]
+        },
+        {
+          "name": "Celestial Convergence",
+          "description": "Harness the power of the stars during a rare alignment",
+          "reward_type": "multiple",
+          "rewards": {
+            "xp": [
+              1000,
+              2000
+            ],
+            "gold": [
+              5000,
+              8000
+            ],
+            "legendary_relic": [
+              "Stellar Crown"
+            ]
+          },
+          "duration": 43200,
+          "success_rate": 0.2,
+          "requires_level": 95,
+          "requires_friendship": 100,
+          "story_outcomes": [
+            "{waifu} captured the essence of the stars, wielding cosmic power!",
+            "{waifu} absorbed celestial energy and gained legendary might."
+          ]
+        }
+      ]
+    },
+    "quest_mechanics": {
+      "multi_waifu_bonuses": {
+        "2_waifus": {
+          "success_rate_bonus": 0.1,
+          "rare_quest_chance": 0.15
+        },
+        "3_waifus": {
+          "success_rate_bonus": 0.2,
+          "rare_quest_chance": 0.25,
+          "legendary_quest_chance": 0.05
+        },
+        "4_plus_waifus": {
+          "success_rate_bonus": 0.3,
+          "rare_quest_chance": 0.35,
+          "legendary_quest_chance": 0.1
+        }
+      },
+      "affinity_effects": {
+        "high_affinity_bonus": {
+          "threshold": 80,
+          "success_rate_bonus": 0.15,
+          "reward_multiplier": 1.2
+        },
+        "low_affinity_penalty": {
+          "threshold": 20,
+          "success_rate_penalty": 0.1,
+          "reward_multiplier": 0.8
+        }
+      },
+      "cooldowns": {
+        "per_waifu_hours": 6,
+        "global_user_hours": 2
+      }
+    },
+    "active_quests": {},
+    "quest_history": {}
+  },
+  "guilds": {
+    "guild_settings": {
+      "max_members": 20,
+      "creation_cost": 5000,
+      "daily_maintenance": 100,
+      "max_guild_name_length": 30,
+      "min_level_to_join": 5
+    },
+    "guild_bonuses": {
+      "small_guild": {
+        "member_range": [
+          3,
+          7
+        ],
+        "bonuses": {
+          "battle_xp_bonus": 0.05,
+          "quest_gold_bonus": 0.1,
+          "affinity_gain_bonus": 0.05
+        }
+      },
+      "medium_guild": {
+        "member_range": [
+          8,
+          15
+        ],
+        "bonuses": {
+          "battle_xp_bonus": 0.1,
+          "quest_gold_bonus": 0.15,
+          "affinity_gain_bonus": 0.1,
+          "relic_drop_bonus": 0.05
+        }
+      },
+      "large_guild": {
+        "member_range": [
+          16,
+          20
+        ],
+        "bonuses": {
+          "battle_xp_bonus": 0.15,
+          "quest_gold_bonus": 0.2,
+          "affinity_gain_bonus": 0.15,
+          "relic_drop_bonus": 0.1,
+          "legendary_quest_bonus": 0.05
+        }
+      }
+    },
+    "guild_roles": {
+      "leader": {
+        "permissions": [
+          "kick",
+          "invite",
+          "promote",
+          "demote",
+          "disband",
+          "edit_info"
+        ],
+        "bonus_multiplier": 1.2
+      },
+      "officer": {
+        "permissions": [
+          "kick",
+          "invite",
+          "promote_to_member"
+        ],
+        "bonus_multiplier": 1.1
+      },
+      "member": {
+        "permissions": [
+          "participate"
+        ],
+        "bonus_multiplier": 1.0
+      }
+    },
+    "guild_activities": [
+      {
+        "name": "Guild Raid",
+        "description": "Team up to defeat powerful bosses",
+        "min_participants": 5,
+        "duration_hours": 24,
+        "rewards": {
+          "base_xp": 500,
+          "base_gold": 1000,
+          "special_items": [
+            "Guild Badge",
+            "Raid Trophy",
+            "Team Spirit"
+          ]
+        }
+      },
+      {
+        "name": "Guild Tournament",
+        "description": "Compete against other guilds in organized battles",
+        "min_participants": 8,
+        "duration_hours": 48,
+        "rewards": {
+          "winner": {
+            "xp": 1000,
+            "gold": 2000,
+            "items": [
+              "Champion's Crown"
+            ]
+          },
+          "second": {
+            "xp": 700,
+            "gold": 1500,
+            "items": [
+              "Silver Medal"
+            ]
+          },
+          "third": {
+            "xp": 500,
+            "gold": 1000,
+            "items": [
+              "Bronze Medal"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Guild Quest",
+        "description": "Special multi-stage quests requiring cooperation",
+        "min_participants": 3,
+        "stages": [
+          {
+            "name": "Resource Gathering",
+            "description": "Collect materials for the guild project",
+            "requirements": {
+              "total_items": 50,
+              "participant_contribution": 5
+            }
+          },
+          {
+            "name": "Boss Battle",
+            "description": "Face the final challenge together",
+            "requirements": {
+              "min_total_level": 100,
+              "min_affinity": 200
+            }
+          }
+        ],
+        "rewards": {
+          "base_xp": 800,
+          "base_gold": 1500,
+          "guild_xp": 100
+        }
+      }
+    ],
+    "faction_system": {
+      "light": {
+        "name": "Order of Light",
+        "description": "Defenders of peace and harmony",
+        "opposing_faction": "dark",
+        "bonuses": {
+          "healing_bonus": 0.1,
+          "support_skill_bonus": 0.15,
+          "holy_damage_bonus": 0.1
+        },
+        "special_quests": [
+          "Purify the Darkness",
+          "Heal the Wounded",
+          "Protect the Innocent"
+        ]
+      },
+      "dark": {
+        "name": "Shadow Covenant",
+        "description": "Masters of forbidden arts and power",
+        "opposing_faction": "light",
+        "bonuses": {
+          "damage_bonus": 0.1,
+          "critical_chance_bonus": 0.05,
+          "dark_magic_bonus": 0.15
+        },
+        "special_quests": [
+          "Embrace the Shadow",
+          "Corrupt the Pure",
+          "Seek Forbidden Knowledge"
+        ]
+      },
+      "nature": {
+        "name": "Guardians of Nature",
+        "description": "Protectors of the natural world",
+        "opposing_faction": "tech",
+        "bonuses": {
+          "regeneration_bonus": 0.1,
+          "earth_magic_bonus": 0.15,
+          "beast_taming_bonus": 0.2
+        },
+        "special_quests": [
+          "Plant the Sacred Grove",
+          "Tame Wild Beasts",
+          "Restore the Balance"
+        ]
+      },
+      "tech": {
+        "name": "Techno Syndicate",
+        "description": "Innovators of magical technology",
+        "opposing_faction": "nature",
+        "bonuses": {
+          "equipment_bonus": 0.1,
+          "lightning_damage_bonus": 0.15,
+          "invention_success_bonus": 0.1
+        },
+        "special_quests": [
+          "Build Magitech Device",
+          "Upgrade Ancient Artifacts",
+          "Create New Inventions"
+        ]
+      }
+    }
+  },
+  "seasonal_events": {
+    "seasons": {
+      "spring": {
+        "name": "Cherry Blossom Festival",
+        "description": "Waifus enjoy the blooming season with special bonuses",
+        "duration_days": 30,
+        "bonuses": {
+          "xp_multiplier": 1.2,
+          "affinity_gain_bonus": 0.1,
+          "special_rewards": [
+            "Cherry Blossom Crown",
+            "Spring Charm"
+          ]
+        }
+      },
+      "summer": {
+        "name": "Beach Paradise Event",
+        "description": "Summer adventures with enhanced rewards",
+        "duration_days": 30,
+        "bonuses": {
+          "gold_multiplier": 1.3,
+          "quest_success_bonus": 0.15,
+          "special_rewards": [
+            "Beach Outfit",
+            "Summer Vibes"
+          ]
+        }
+      },
+      "autumn": {
+        "name": "Harvest Moon Festival",
+        "description": "Autumn brings wisdom and rare treasures",
+        "duration_days": 30,
+        "bonuses": {
+          "relic_drop_bonus": 0.2,
+          "legendary_quest_chance": 0.1,
+          "special_rewards": [
+            "Autumn Leaf",
+            "Harvest Blessing"
+          ]
+        }
+      },
+      "winter": {
+        "name": "Winter Wonderland",
+        "description": "Cozy winter activities with relationship bonuses",
+        "duration_days": 30,
+        "bonuses": {
+          "affinity_multiplier": 1.5,
+          "intimate_cooldown_reduction": 0.3,
+          "special_rewards": [
+            "Winter Coat",
+            "Snowflake Charm"
+          ]
+        }
+      },
+      "monsoon": {
+        "name": "Storm's Embrace",
+        "description": "The rains bring chaos and blessings alike",
+        "duration_days": 20,
+        "bonuses": {
+          "speed_boost": 1.25,
+          "energy_regeneration": 0.2,
+          "special_rewards": [
+            "Storm Crystal",
+            "Raindrop Pendant"
+          ]
+        }
+      },
+      "eclipse": {
+        "name": "Eternal Eclipse",
+        "description": "A rare celestial eclipse changes fate itself",
+        "duration_days": 15,
+        "bonuses": {
+          "crit_chance_bonus": 0.15,
+          "shadow_relic_bonus": 0.25,
+          "special_rewards": [
+            "Eclipse Shard",
+            "Shadow Crown"
+          ]
+        }
+      },
+      "festival_of_stars": {
+        "name": "Festival of Stars",
+        "description": "Celestial lights grant mystical powers to waifus",
+        "duration_days": 25,
+        "bonuses": {
+          "magic_damage_boost": 0.2,
+          "luck_multiplier": 1.3,
+          "special_rewards": [
+            "Starlight Orb",
+            "Celestial Robe"
+          ]
+        }
+      },
+      "eternal_dusk": {
+        "name": "Eternal Dusk",
+        "description": "A twilight season where shadows dance eternally",
+        "duration_days": 18,
+        "bonuses": {
+          "stealth_bonus": 0.25,
+          "night_event_bonus": 0.2,
+          "special_rewards": [
+            "Twilight Blade",
+            "Duskflower Amulet"
+          ]
+        }
+      }
+    },
+    "story_events": [
+      {
+        "name": "The Lost Temple",
+        "description": "A mysterious temple has appeared, offering legendary rewards to brave explorers",
+        "requirements": {
+          "min_level": 10,
+          "required_waifus": 2,
+          "min_affinity": 30
+        },
+        "chapters": [
+          {
+            "title": "Temple Discovery",
+            "story": "Your waifus discover an ancient temple hidden in the mists",
+            "choices": [
+              "Explore cautiously",
+              "Rush in boldly",
+              "Study the entrance"
+            ],
+            "outcomes": {
+              "Explore cautiously": {
+                "success_rate": 0.8,
+                "reward_bonus": 1.2
+              },
+              "Rush in boldly": {
+                "success_rate": 0.6,
+                "reward_bonus": 1.5
+              },
+              "Study the entrance": {
+                "success_rate": 0.9,
+                "reward_bonus": 1.0
+              }
+            }
+          },
+          {
+            "title": "Inner Chambers",
+            "story": "Deep within the temple, your waifus face ancient guardians",
+            "choices": [
+              "Fight the guardians",
+              "Solve the puzzle",
+              "Use charm"
+            ],
+            "outcomes": {
+              "Fight the guardians": {
+                "success_rate": 0.7,
+                "reward_bonus": 1.3
+              },
+              "Solve the puzzle": {
+                "success_rate": 0.8,
+                "reward_bonus": 1.4
+              },
+              "Use charm": {
+                "success_rate": 0.6,
+                "reward_bonus": 1.6
+              }
+            }
+          }
+        ],
+        "rewards": {
+          "base_xp": 1000,
+          "base_gold": 2000,
+          "special_items": [
+            "Temple Key",
+            "Ancient Scroll",
+            "Guardian's Blessing"
+          ]
+        }
+      },
+      {
+        "name": "Dragon's Challenge",
+        "description": "An ancient dragon challenges the strongest waifus to prove their worth",
+        "requirements": {
+          "min_level": 15,
+          "required_waifus": 3,
+          "min_total_potential": 15000
+        },
+        "chapters": [
+          {
+            "title": "Dragon's Lair",
+            "story": "Your team approaches the dragon's mountain lair",
+            "choices": [
+              "Diplomatic approach",
+              "Show of strength",
+              "Stealth infiltration"
+            ],
+            "outcomes": {
+              "Diplomatic approach": {
+                "success_rate": 0.7,
+                "reward_bonus": 1.1
+              },
+              "Show of strength": {
+                "success_rate": 0.8,
+                "reward_bonus": 1.3
+              },
+              "Stealth infiltration": {
+                "success_rate": 0.6,
+                "reward_bonus": 1.4
+              }
+            }
+          }
+        ],
+        "rewards": {
+          "base_xp": 1500,
+          "base_gold": 3000,
+          "special_items": [
+            "Dragon Scale",
+            "Fire Gem",
+            "Dragon's Respect"
+          ]
+        }
+      },
+      {
+        "name": "The Shattered Sky",
+        "description": "Fragments of the sky fall to the earth, and waifus must restore balance",
+        "requirements": {
+          "min_level": 20,
+          "required_waifus": 4,
+          "min_affinity": 50
+        },
+        "chapters": [
+          {
+            "title": "Falling Stars",
+            "story": "Meteor fragments crash across the land",
+            "choices": [
+              "Collect fragments",
+              "Protect civilians",
+              "Study the anomaly"
+            ],
+            "outcomes": {
+              "Collect fragments": {
+                "success_rate": 0.75,
+                "reward_bonus": 1.4
+              },
+              "Protect civilians": {
+                "success_rate": 0.85,
+                "reward_bonus": 1.2
+              },
+              "Study the anomaly": {
+                "success_rate": 0.7,
+                "reward_bonus": 1.6
+              }
+            }
+          }
+        ],
+        "rewards": {
+          "base_xp": 2000,
+          "base_gold": 3500,
+          "special_items": [
+            "Star Core",
+            "Sky Fragment",
+            "Celestial Blessing"
+          ]
+        }
+      },
+      {
+        "name": "Curse of the Blood Moon",
+        "description": "A crimson moon rises, cursing the land with dark powers",
+        "requirements": {
+          "min_level": 25,
+          "required_waifus": 3,
+          "min_total_potential": 18000
+        },
+        "chapters": [
+          {
+            "title": "The Crimson Night",
+            "story": "The moon glows red, monsters emerge stronger than ever",
+            "choices": [
+              "Battle the cursed beasts",
+              "Seek shelter",
+              "Invoke ancient rites"
+            ],
+            "outcomes": {
+              "Battle the cursed beasts": {
+                "success_rate": 0.65,
+                "reward_bonus": 1.7
+              },
+              "Seek shelter": {
+                "success_rate": 0.9,
+                "reward_bonus": 1.0
+              },
+              "Invoke ancient rites": {
+                "success_rate": 0.7,
+                "reward_bonus": 1.5
+              }
+            }
+          }
+        ],
+        "rewards": {
+          "base_xp": 2500,
+          "base_gold": 4000,
+          "special_items": [
+            "Blood Moon Shard",
+            "Cursed Relic",
+            "Moonlit Sigil"
+          ]
+        }
+      },
+      {
+        "name": "The Eternal Library",
+        "description": "A hidden library reveals forbidden knowledge to those brave enough",
+        "requirements": {
+          "min_level": 30,
+          "required_waifus": 2,
+          "min_affinity": 60
+        },
+        "chapters": [
+          {
+            "title": "Hall of Tomes",
+            "story": "Ancient books float in midair, whispering secrets",
+            "choices": [
+              "Read forbidden texts",
+              "Search for relics",
+              "Ignore whispers"
+            ],
+            "outcomes": {
+              "Read forbidden texts": {
+                "success_rate": 0.6,
+                "reward_bonus": 2.0
+              },
+              "Search for relics": {
+                "success_rate": 0.8,
+                "reward_bonus": 1.3
+              },
+              "Ignore whispers": {
+                "success_rate": 0.9,
+                "reward_bonus": 1.0
+              }
+            }
+          }
+        ],
+        "rewards": {
+          "base_xp": 3000,
+          "base_gold": 5000,
+          "special_items": [
+            "Tome of Eternity",
+            "Forbidden Codex",
+            "Scholar’s Crown"
+          ]
+        }
+      },
+      {
+        "name": "Rise of the Phoenix",
+        "description": "A legendary phoenix emerges, testing the courage of heroes",
+        "requirements": {
+          "min_level": 35,
+          "required_waifus": 4,
+          "min_total_potential": 25000
+        },
+        "chapters": [
+          {
+            "title": "Fiery Rebirth",
+            "story": "Flames engulf the skies as the phoenix descends",
+            "choices": [
+              "Attack head-on",
+              "Seek divine aid",
+              "Protect the villagers"
+            ],
+            "outcomes": {
+              "Attack head-on": {
+                "success_rate": 0.7,
+                "reward_bonus": 1.6
+              },
+              "Seek divine aid": {
+                "success_rate": 0.8,
+                "reward_bonus": 1.4
+              },
+              "Protect the villagers": {
+                "success_rate": 0.9,
+                "reward_bonus": 1.2
+              }
+            }
+          }
+        ],
+        "rewards": {
+          "base_xp": 4000,
+          "base_gold": 7000,
+          "special_items": [
+            "Phoenix Feather",
+            "Flame Gem",
+            "Ashen Crown"
+          ]
+        }
+      }
+    ],
+    "limited_events": [
+      {
+        "name": "Valentine's Heart Hunt",
+        "description": "Find special heart tokens hidden throughout the world",
+        "spawn_chance": 0.15,
+        "duration_hours": 72,
+        "rewards": {
+          "tokens_needed": 10,
+          "reward_items": [
+            "Love Potion",
+            "Cupid's Arrow",
+            "Heart Pendant"
+          ]
+        }
+      },
+      {
+        "name": "Halloween Spook Fest",
+        "description": "Spooky challenges with rare costume rewards",
+        "spawn_chance": 0.1,
+        "duration_hours": 168,
+        "rewards": {
+          "tokens_needed": 15,
+          "reward_items": [
+            "Witch Hat",
+            "Vampire Cape",
+            "Ghost Aura"
+          ]
+        }
+      },
+      {
+        "name": "New Year's Fireworks",
+        "description": "Celebrate the new year with dazzling fireworks and blessings",
+        "spawn_chance": 0.2,
+        "duration_hours": 48,
+        "rewards": {
+          "tokens_needed": 12,
+          "reward_items": [
+            "Firecracker Charm",
+            "Golden Lantern",
+            "New Year Crown"
+          ]
+        }
+      },
+      {
+        "name": "White Day Gifts",
+        "description": "Return the love by collecting special sweets",
+        "spawn_chance": 0.12,
+        "duration_hours": 72,
+        "rewards": {
+          "tokens_needed": 8,
+          "reward_items": [
+            "Sweet Box",
+            "White Lily",
+            "Candy Ring"
+          ]
+        }
+      },
+      {
+        "name": "Golden Festival",
+        "description": "Collect golden coins for rare treasures",
+        "spawn_chance": 0.18,
+        "duration_hours": 96,
+        "rewards": {
+          "tokens_needed": 20,
+          "reward_items": [
+            "Golden Relic",
+            "Treasure Map",
+            "Crown of Wealth"
+          ]
+        }
+      },
+      {
+        "name": "Festival of Flames",
+        "description": "Burning passion rewards those daring enough",
+        "spawn_chance": 0.1,
+        "duration_hours": 120,
+        "rewards": {
+          "tokens_needed": 18,
+          "reward_items": [
+            "Fire Crown",
+            "Burning Amulet",
+            "Inferno Cloak"
+          ]
+        }
+      },
+      {
+        "name": "Mystic Lanterns",
+        "description": "Light the path with mystical lanterns",
+        "spawn_chance": 0.14,
+        "duration_hours": 84,
+        "rewards": {
+          "tokens_needed": 12,
+          "reward_items": [
+            "Lantern Charm",
+            "Spirit Flame",
+            "Guiding Light"
+          ]
+        }
+      },
+      {
+        "name": "Ocean’s Treasure Hunt",
+        "description": "Dive deep for sunken treasures",
+        "spawn_chance": 0.09,
+        "duration_hours": 144,
+        "rewards": {
+          "tokens_needed": 25,
+          "reward_items": [
+            "Pearl Necklace",
+            "Trident Shard",
+            "Sea Crown"
+          ]
+        }
+      },
+      {
+        "name": "Shadow Hunt",
+        "description": "Chase and capture shadow beasts",
+        "spawn_chance": 0.08,
+        "duration_hours": 72,
+        "rewards": {
+          "tokens_needed": 15,
+          "reward_items": [
+            "Shadow Cloak",
+            "Dark Crystal",
+            "Phantom Ring"
+          ]
+        }
+      },
+      {
+        "name": "Starfall Night",
+        "description": "Catch falling stars for cosmic rewards",
+        "spawn_chance": 0.11,
+        "duration_hours": 60,
+        "rewards": {
+          "tokens_needed": 10,
+          "reward_items": [
+            "Star Shard",
+            "Comet Tail",
+            "Celestial Ring"
+          ]
+        }
+      }
+    ]
+  },
+  "lore_achievements": {
+    "lore_settings": {
+      "unlock_requirements": {
+        "basic_lore": {
+          "level": 1
+        },
+        "character_lore": {
+          "affinity": 50
+        },
+        "advanced_lore": {
+          "battles_won": 100
+        },
+        "legendary_lore": {
+          "rare_waifus_owned": 5
+        }
+      }
+    },
+    "lore_books": [
+      {
+        "id": "origins_of_lucid_dreams",
+        "title": "Origins of Lucid Dreams",
+        "description": "The creation myth of the dream realm",
+        "unlock_requirement": "basic_lore",
+        "content": "In the beginning, there was only void and consciousness. The first dreamers shaped reality with their thoughts, creating realms where waifus could exist beyond mortal comprehension...",
+        "chapters": 5,
+        "rewards": {
+          "xp": 500,
+          "gold": 1000,
+          "title": "Dream Scholar"
+        }
+      },
+      {
+        "id": "mythology_compendium",
+        "title": "Mythology Compendium",
+        "description": "Stories of gods and legends",
+        "unlock_requirement": "character_lore",
+        "content": "From the Norse halls of Valhalla to the Egyptian afterlife, these beings have shaped reality itself. Odin's wisdom, Ra's power, Chaos's unpredictability...",
+        "chapters": 12,
+        "rewards": {
+          "affinity_boost_all": 10,
+          "rare_relic": "Scribe's Quill"
+        }
+      },
+      {
+        "id": "battle_legends",
+        "title": "Battle Legends",
+        "description": "Epic tales of combat mastery",
+        "unlock_requirement": "advanced_lore",
+        "content": "The greatest battles are not won through strength alone, but through bonds forged with companions who trust you with their very existence...",
+        "chapters": 8,
+        "rewards": {
+          "permanent_battle_bonus": 0.05,
+          "legendary_title": "Battle Chronicler"
+        }
+      }
+    ],
+    "achievements": [
+      {
+        "id": "first_summon",
+        "name": "First Bond",
+        "description": "Summon your first waifu companion",
+        "requirement": {
+          "waifus_summoned": 1
+        },
+        "rewards": {
+          "gold": 500,
+          "title": "Newcomer"
+        },
+        "rarity": "common"
+      },
+      {
+        "id": "collector_bronze",
+        "name": "Growing Collection",
+        "description": "Own 10 different waifus",
+        "requirement": {
+          "unique_waifus": 10
+        },
+        "rewards": {
+          "gold": 2000,
+          "inventory_slot": 5
+        },
+        "rarity": "uncommon"
+      },
+      {
+        "id": "battle_master",
+        "name": "Combat Veteran",
+        "description": "Win 100 battles",
+        "requirement": {
+          "battles_won": 100
+        },
+        "rewards": {
+          "permanent_attack_boost": 0.1,
+          "title": "Veteran"
+        },
+        "rarity": "rare"
+      },
+      {
+        "id": "affinity_sage",
+        "name": "Heart Whisperer",
+        "description": "Reach max affinity with 5 waifus",
+        "requirement": {
+          "max_affinity_waifus": 5
+        },
+        "rewards": {
+          "affinity_gain_boost": 0.25,
+          "title": "Beloved"
+        },
+        "rarity": "epic"
+      },
+      {
+        "id": "dream_master",
+        "name": "Master of Dreams",
+        "description": "Complete all lore books and achieve legendary status",
+        "requirement": {
+          "lore_books_completed": 3,
+          "level": 100,
+          "legendary_waifus": 3
+        },
+        "rewards": {
+          "dream_crown": true,
+          "title": "Dream Master",
+          "global_boost": 0.2
+        },
+        "rarity": "legendary"
+      }
+    ]
+  },
+  "store_items": {
+    "user_items": {
+      "884489252296073287": {
+        "arena_pass": 0,
+        "arena_pass_used_today": 7,
+        "xp_booster_large": 3,
+        "crystal_chandelier": 1
+      },
+      "1344603209829974016": {
+        "small_health_potion": 1
+      },
+      "last_reset": "2025-08-29T07:55:14.546306+00:00"
+    }
+  },
+  "relics": {
+    "Angel Blade": {
+      "name": "Angel Blade",
+      "id": "AngelBlade",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "quality": "SR",
+      "exclusive_limit": "Main Angel",
+      "exclusive_effect": {
+        "atk_up": {
+          "base": 0.12,
+          "max": 0.45
+        }
+      },
+      "awakening": true,
+      "static_attribute": {
+        "hp_up": {
+          "base": 0.16,
+          "max": 0.6
+        }
+      },
+      "introduction": "It's jungle out there. I will no longer be kind in a world of evil. Against enemies who cannot be influenced by heart, it is a good choice to use violence against violence. Let's go, Angel Blade!",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "skill_name": "Thunderstroke",
+          "description": "Deals an extra 100% DMG to all enemies"
+        },
+        {
+          "level": 60,
+          "skill_name": "Battle Cry",
+          "description": "Make 1 more teammate enter [Excite] state, which deals 40% Crit DMG additionally"
+        },
+        {
+          "level": 90,
+          "skill_name": "Twilight",
+          "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+        }
+      ],
+      "unlock_level": 60,
+      "image": "AngelBlade.webp",
+      "base_price": 4000
+    },
+    "Angel Heart": {
+      "name": "Angel Heart",
+      "id": "AngelHeart",
+      "initial_quality": "SR",
+      "max_quality": "UR+5★",
+      "unlock_level": 60,
+      "awakening_available": true,
+      "exclusive_class": "Main Angel",
+      "exclusive_buff": {
+        "atk": 4000,
+        "atk_max": 15000
+      },
+      "static_attributes": {
+        "hp": 40000,
+        "hp_max": 150000
+      },
+      "awakening_skills": {
+        "30": {
+          "name": "Thunderstroke",
+          "description": "Deals an extra 100% DMG to 2 enemies"
+        },
+        "60": {
+          "name": "Battle Cry",
+          "description": "Make 1 more teammate enter [Excite] state"
+        },
+        "90": {
+          "name": "Twilight",
+          "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      },
+      "description": "In a despicable person's eyes, Angel Heart is a dangerous thing; For a kind-hearted person, Angel Heart can be a sharp sword in his hand and slay the despicable souls.",
+      "image": "AngelHeart.png",
+      "base_price": 10000
+    },
+    "Arrow of Love": {
+      "name": "Arrow of Love",
+      "id": "ArrowOfLove",
+      "rarity": "SR",
+      "max_rarity": "UR+5★",
+      "exclusive": {
+        "angel": "Cupid",
+        "bonus": "Increased Heal +20%",
+        "max_bonus": "75% at Max"
+      },
+      "awakening": true,
+      "static_attributes": {
+        "SPD": 50,
+        "SPD_max": 187.5
+      },
+      "awakening_skills": {
+        "30": {
+          "name": "Heart to Heart",
+          "description": "Grants all angels an additional shield by 100% of Cupid's Max ATK."
+        },
+        "60": {
+          "name": "Cupid Arrows",
+          "description": "Increase the coefficient of P.DMG by 50%, and Crit is guaranteed if enemies in any debuff situation."
+        },
+        "90": {
+          "name": "Twilight",
+          "description": "Speed+100, Crit DMG+20% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      },
+      "introduction": "On this romantic night, send the blessings of love to your dear. Cupid is using arrows to weave a loving line that belongs only to this couple.",
+      "image": "ArrowOfLove.webp",
+      "base_price": 240,
+      "unlock_level": 60
+    },
+    "Blessing Elixir": {
+      "name": "Blessing Elixir",
+      "id": "BlessingElixir",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "quality": "SR",
+      "exclusive_limit": {
+        "class": "Archer",
+        "effect": "DMG Increase +8%",
+        "max_effect": "30%"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "type": "DMG to Mage",
+        "value": "+16%",
+        "max_value": "60%"
+      },
+      "introduction": "The baby in the swaddle was abandoned and life shouldn't have been so damaged. The magpie was flying to guard and the golden tortoise swam into the sea with the baby on its back. Buddha rescued her and handed it to Huazi for adoption. When this baby growed up. She will bring more healing to the creatures.",
+      "enhance_awakening": null,
+      "unlock_level": 60,
+      "base_price": 5000,
+      "attributes": {
+        "healing_power": 120,
+        "defense": 30
+      },
+      "image": "BlessingElixir.webp"
+    },
+    "Blood Pool": {
+      "name": "Blood Pool",
+      "id": "BloodPool",
+      "initial_quality": "R",
+      "max_quality": "SSR+",
+      "awakening": false,
+      "exclusive_class": null,
+      "unlock_level": 60,
+      "base_price": 1000,
+      "static_attribute": {
+        "effect": "DMG to Warrior",
+        "base_value": 7.5,
+        "max_value": 24
+      },
+      "introduction": "When he came back to his senses, the hand was tingled.\nThe scar is healed by time, but the heart was sad by rose.\nThe heart has been stolen, willing to turn into a drop in this pool of blood.",
+      "image": "BloodPool.png",
+      "enhance_info": "N/A"
+    },
+    "Book of Destiny": {
+      "name": "Book of Destiny",
+      "id": "BookOfDestiny",
+      "initial_quality": "R",
+      "max_quality": "SSR+",
+      "unlock_level": 60,
+      "exclusive_class_buff": {
+        "class": "Mage",
+        "effect": "DMG Increase",
+        "value": 2.5,
+        "max_value": 7.5
+      },
+      "awakening": false,
+      "static_attribute": {
+        "target": "Warrior",
+        "effect": "DMG Bonus",
+        "value": 7.5,
+        "max_value": 24.0
+      },
+      "introduction": "No one knows their fate on Book of Destiny.\nYou will know nothing about your life until you open the fate box.",
+      "base_price": 1200,
+      "image": "BookOfDestiny.png"
+    },
+    "Cretan's Maze": {
+      "name": "Cretan's Maze",
+      "id": "CretansMaze",
+      "initial_quality": "N",
+      "max_quality": "SR+",
+      "exclusive_limit": "N/A",
+      "awakening": false,
+      "static_attribute": {
+        "damage_to_archer": 4
+      },
+      "static_attribute_max": {
+        "damage_to_archer": 10
+      },
+      "introduction": "Daedalus built an unusually complex and chaotic maze. But no matter how complicated it is, it cannot be a cover for Milos.",
+      "enhance_awakening": "N/A"
+    },
+    "Dead Blond Hair": {
+      "name": "Dead Blond Hair",
+      "id": "DeadBlondHair",
+      "initial_quality": "R",
+      "max_quality": "SSR+",
+      "awakening": false,
+      "exclusive_limit": "N/A",
+      "unlock_level": 60,
+      "attributes": {
+        "static": {
+          "DMG Reduction": "3.7%"
+        },
+        "max": {
+          "DMG Reduction": "?"
+        }
+      },
+      "description": "It is dazzling, like golden wheat in the ground. Even if the gold thread is now woven into such an eternal laurel, there is no chance to return to that summer.",
+      "image": "DeadBlondHair.png",
+      "base_price": 100,
+      "category": "relic"
+    },
+    "Destiny Wheel": {
+      "name": "Destiny Wheel",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "character": "Icarus",
+        "effect": "DMG Increase +12% (45% when Max)"
+      },
+      "awakening": true,
+      "static_attribute": {
+        "atk_up": "12% (45% when Max)"
+      },
+      "introduction": "The destiny wheel can never stop spinning. Destiny is more fascinating because of its ups and downs. Because of the uncertainty, it is worth the challenge. It finally realize that the process of chasing destiny is far more interesting than the result.",
+      "enhance_awakening": {
+        "exclusive_limited": "Icarus",
+        "skills": [
+          {
+            "level": 30,
+            "name": "Holy Wing (Newborn Feather)",
+            "description": "If the target's HP is higher than 80%, increase the CRIT by 50%"
+          },
+          {
+            "level": 60,
+            "name": "Chain of light (Heart-locking Chain)",
+            "description": "If the target's HP is lower than 30%, increase the CRIT by 50%"
+          },
+          {
+            "level": 90,
+            "name": "Twilight",
+            "description": "ATK+10%, Crit DMG+20% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+          }
+        ]
+      },
+      "unlock_level": 60,
+      "image": "DestinyWheel.webp",
+      "base_price": 3500
+    },
+    "Divine Dice of Destiny": {
+      "name": "Divine Dice of Destiny",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "character": "Loki",
+        "effect": "Debuff RES +8%",
+        "max_effect": "Debuff RES +30%"
+      },
+      "awakening": true,
+      "static_attributes": {
+        "ATK_UP": "12%",
+        "max_ATK_UP": "45%"
+      },
+      "introduction": "The forbidden artifact of the Asa Divine Realm, which is said to be powerful enough to change the fate of deities. Whether it is survival, or destruction, everything is hidden in this divine dice.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Phantom Spell (The Art of Invisibility)",
+          "description": "Increase the coefficient of P.DMG by 50%, additionally increase hit probability of [Blind] by 30%"
+        },
+        {
+          "level": 60,
+          "name": "Live or Die (Judgment of Fate)",
+          "description": "Increase the probability of rolling big numbers of the dice"
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "ATK+10%, Speed+100 (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+        }
+      ],
+      "unlock_level": 60,
+      "base_price": 4000,
+      "image": "DivineDiceOfDestiny.webp"
+    },
+    "Doll of Love": {
+      "name": "Doll of Love",
+      "filename": "DollOfLove",
+      "initial_quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "class": "Archer",
+        "bonus": "Crit probability +10%",
+        "max_bonus": "Crit probability +37.5%"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "effect": "DMG to Mage +16%",
+        "max_effect": "DMG to Mage +60%"
+      },
+      "unlock_level": 60,
+      "base_price": 15000,
+      "description": "Although it is difficult for Izanami to have a relationship with the Amaterasu, she had an incomparable desire of it. This feeling is watered on the Amaterasu's doll, floating among the plants and trees of the world.",
+      "enhance_awakening": null,
+      "image": "store/weapons/DollOfLove.png"
+    },
+    "Eight Trigrams": {
+      "name": "Eight Trigrams",
+      "rarity": "SR",
+      "quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "class": "Mage",
+        "effect": "ACC +12%",
+        "max_effect": "ACC +45%"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "SPD": 20,
+        "max_SPD": 75
+      },
+      "introduction": "Anciently, when Bao-xi had come to the rule of all under heaven, looking up, he contemplated the brilliant forms exhibited in the sky, and looking down he surveyed the patterns shown on the earth. On this he devised the eight trigrams, to show fully the attributes of the spirit-like and intelligent (operations working secretly), and to classify the qualities of the myriads of things.",
+      "enhance_awakening": "N/A",
+      "unlock_level": 60,
+      "image": "EightTrigrams.webp",
+      "base_price": 4500
+    },
+    "Elato's Harp": {
+      "name": "Elato's Harp",
+      "id": "ElatosHarp",
+      "rarity": "N",
+      "max_rarity": "SR+",
+      "awakening": false,
+      "exclusive_limit": null,
+      "attributes": {
+        "warrior_dmg": 4
+      },
+      "max_attributes": {
+        "warrior_dmg": 10
+      },
+      "introduction": "This is a story about art and joy, and the harp silently recounts this memory in its own way.",
+      "base_price": 800,
+      "image": "ElatosHarp.webp"
+    },
+    "Ember Spirit": {
+      "name": "Ember Spirit",
+      "image": "EmberSpirit.webp",
+      "unlock_level": 60,
+      "initial_quality": "SR",
+      "max_quality": "UR+5★",
+      "awakening_available": true,
+      "base_price": 300,
+      "static_attributes": {
+        "atk_percent": 12,
+        "atk_percent_max": 45
+      },
+      "exclusive_limit": {
+        "character": "Ember Dragon",
+        "effect": "True Damage Increase +20%",
+        "effect_max": "+75%"
+      },
+      "awakening_skills": {
+        "30": {
+          "name": "Ember Dragon Breath",
+          "description": "Inflict [Ignite] on all enemies, and UR Ember Dragon will grant all teammates an extra [Fire Shield]"
+        },
+        "60": {
+          "name": "Flames Bomb",
+          "description": "Releases one more attack"
+        },
+        "90": {
+          "name": "Twilight",
+          "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      },
+      "introduction": "It is said that the Ember Dragon is a girl who loves cleanliness. It is true, she always easier to deal with the dust left by the enemy. It's just that she is going to trouble the Storm Dragon again to clean the dust."
+    },
+    "Fate Umbrella": {
+      "name": "Fate Umbrella",
+      "id": "FateU",
+      "initial_quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_to": "Enmusubi",
+      "exclusive_effect": {
+        "description": "Effect ACC +20%",
+        "max_description": "Effect ACC +75%"
+      },
+      "awakening": true,
+      "static_attribute": {
+        "attribute": "HP UP",
+        "value": "12%",
+        "max_value": "45%"
+      },
+      "unlock_level": 60,
+      "base_price": 3000,
+      "arena_valid": true,
+      "introduction": "It's raining heavily, and you are worried about whether or not an umbrella will be enough to keep her from getting wet. Enmusubi disagrees, a fate umbrella is enough. This is the rain of love. Rain is hugging her to bring each other closer.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Affection (Thrilling tenderness)",
+          "description": "All teammates will be granted an extra shield by 10% of Enmusubi's Max ATK for 1 round if the last position angel in your team takes any buff effect from Enmusubi."
+        },
+        {
+          "level": 60,
+          "name": "Dizzy (Love whirlpool)",
+          "description": "Increase the coefficient of M.DMG by 15%"
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "ATK+10%, HP+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      ],
+      "image": "Fate Umbrella - main.webp"
+    },
+    "Five-color Stone": {
+      "name": "Five-color Stone",
+      "id": "FiveColorStone",
+      "initial_quality": "SR",
+      "max_quality": "UR+5★",
+      "unlock_level": 60,
+      "exclusive_limit": {
+        "character": "Nuwa",
+        "effect": "Increased Heal +20%",
+        "max_effect": "75%"
+      },
+      "awakening": true,
+      "static_attributes": {
+        "DMG to Warrior": "24%",
+        "max": "90%"
+      },
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Strike of Nuwa",
+          "description": "Increase the coefficient of M.DMG by 30%"
+        },
+        {
+          "level": 60,
+          "name": "Sky Mending Colors",
+          "description": "Increase the coefficient of Restore HP by 40%"
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "ATK+10%, HP+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      ],
+      "introduction": "The four pillars fell and the land of earth was destroyed. Fire spread everywhere and floods crushed houses. Humans have lost the hope for their lives. Nuwa who mended the sky with the five-color stone. Just like her mother, she used all kinds of five-color stones to prop up the sky of our growth.",
+      "image": "FiveColorStone.webp",
+      "base_price": 8000
+    },
+    "Flag of Resistance": {
+      "name": "Flag of Resistance",
+      "rarity": "SR",
+      "quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_class": "Warrior",
+      "exclusive_bonus": {
+        "hp_up_percent": 8,
+        "hp_up_max_percent": 30
+      },
+      "awakening": false,
+      "static_attribute": {
+        "dmg_reduction_percent": 10,
+        "dmg_reduction_max_percent": 37.5
+      },
+      "introduction": "Jeanne d'Arc met an angel under the big tree behind the village and received 'God's revelation'. She raised the rebellious war flag and led her generals to win the war. This flag followed her in the battle on the front lines of the war but was never broken. The oracles from flag often helped Jeanne d'Arc.",
+      "base_price": 4500,
+      "image": "FlagOfResistance.webp"
+    },
+    "Frosty Spear": {
+      "name": "Frosty Spear",
+      "image": "FrostySpear",
+      "initial_quality": "SR",
+      "max_quality": "UR+5★",
+      "exclusive_limit": {
+        "class": "Frost Dragon",
+        "effect": "Effect ACC +20%",
+        "effect_max": "Effect ACC +75%"
+      },
+      "awakening": true,
+      "static_attributes": {
+        "HP UP": "16%",
+        "HP UP Max": "60%"
+      },
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Frost Dragon Breath (Frozen Blizzard)",
+          "description": "Increase the coefficient of M.DMG by 20%, and the chance of [freeze] enemies increases by 15%"
+        },
+        {
+          "level": 60,
+          "name": "Cold Guardian (Aegis of Ice)",
+          "description": "Apply [Ice Armor] to all teammates for 3 rounds"
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "HP+10%, Speed+100 (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      ],
+      "unlock_level": 60,
+      "base_price": 600,
+      "introduction": "Away from the boredom of the sky, away from the noise on the ground. The Frost dragon is lying quietly in the deeping ice cave. This silence makes the mind deeper and gives the ice spear the power of fantasy."
+    },
+    "Gangnir": {
+      "name": "Gangnir",
+      "rarity": "SR+",
+      "quality": "SR",
+      "attributes": {
+        "atk": 120,
+        "crit": 15,
+        "speed": 10
+      },
+      "awakening": true,
+      "unlock_level": 60,
+      "image": "Gangnir.webp",
+      "base_price": 3000
+    },
+    "Gentle Pray": {
+      "name": "Gentle Pray",
+      "image": "Gentle Pray.webp",
+      "initial_quality": "R",
+      "max_quality": "SSR+",
+      "exclusive_limit": null,
+      "awakening": false,
+      "unlock_level": 60,
+      "static_attribute": {
+        "Increased Heal": "+10%"
+      },
+      "description": "Raphael owns the title of Wisdom Angel. This is representative of powerful strength. In the night of winter, it is the existence that can warm and heal people's hearts.",
+      "base_price": 4500,
+      "exclusive_class_buff": null,
+      "attribute_growth": {
+        "quality_path": [
+          "R",
+          "R+",
+          "SR",
+          "SR+",
+          "SSR",
+          "SSR+"
+        ],
+        "resources_required": {
+          "R→R+": {
+            "type": "same",
+            "quality": "R",
+            "quantity": 2
+          },
+          "R+→SR": {
+            "type": "any",
+            "quality": "R+",
+            "quantity": 2
+          },
+          "SR→SR+": {
+            "type": "same",
+            "quality": "SR",
+            "quantity": 1
+          },
+          "SR+→SSR": {
+            "type": "any",
+            "quality": "SR+",
+            "quantity": 2
+          },
+          "SSR→SSR+": {
+            "type": "same",
+            "quality": "SSR+",
+            "quantity": 1
+          }
+        }
+      }
+    },
+    "Ghost Blade": {
+      "name": "Ghost Blade",
+      "image": "GhostBlade.webp",
+      "initial_quality": "SR",
+      "max_quality": "UR+5★",
+      "unlock_level": 60,
+      "exclusive_to": {
+        "name": "Himiko",
+        "buff": "Crit DMG +24%",
+        "buff_max": "Crit DMG +90%"
+      },
+      "awakening_available": true,
+      "static_attributes": {
+        "ATK%": {
+          "min": 12,
+          "max": 45
+        }
+      },
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Soul Heaven Slash",
+          "description": "DMG dealt will not trigger DMG reflection."
+        },
+        {
+          "level": 60,
+          "name": "Mysterious Slash",
+          "description": "The chance to trigger mysterious power increases by 30%."
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)."
+        }
+      ],
+      "introduction": "Under the blue sky, there was a young girl practicing swordsmanship, sometimes absent-minded, and sometimes arrogant. Waving a few slashes towards the sky, split the confusion in happiness, but the girl's confusion is more than these."
+    },
+    "Gold Censer": {
+      "name": "Gold Censer",
+      "id": "GoldCenser",
+      "rarity": "N",
+      "max_quality": "SR+",
+      "exclusive_limit": "N/A",
+      "awakening": false,
+      "attributes": {
+        "dmg_reduction": 2
+      },
+      "max_attributes": {
+        "dmg_reduction": 5
+      },
+      "introduction": "The censer is full of magical power. It can ward off evil spirits, attract blessings, and gives peculiar power to the Ungnyeo.",
+      "enhance_awakening": "N/A",
+      "unlock_level": 1,
+      "image": "GoldCenser.webp",
+      "base_price": 800
+    },
+    "Guiding Lantern": {
+      "name": "Guiding Lantern",
+      "initial_quality": "SR",
+      "max_quality": "UR+5★",
+      "exclusive_class": "Asura",
+      "exclusive_effect": {
+        "effect": "DMG Reduction",
+        "value": "41.25%"
+      },
+      "awakening": true,
+      "static_attributes": {
+        "ATK UP": "45%"
+      },
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Shuraba (Shura King Realm)",
+          "description": "All enemies will receive an extra 3% of Asura's attributes reduction"
+        },
+        {
+          "level": 60,
+          "name": "Hatred Heart (Antipathy heart)",
+          "description": "Increase the coefficient of P.DMG by 50%"
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "CRIT+10%, FOR+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      ],
+      "unlock_level": 60,
+      "base_price": 600,
+      "image": "Guiding Lantern.webp",
+      "introduction": "On this lonely road, there is always a need for guidance, no matter whether it is the light in her heart. Asura didn't seem to treat the enemies' souls so cruelly, and it was a bit of comfort for the bruised fleshes in Shuraba."
+    },
+    "Horn of Doom": {
+      "name": "Horn of Doom",
+      "id": "HornOfDoom",
+      "rarity": "N",
+      "max_quality": "SR+",
+      "exclusive_limit": "N/A",
+      "awakening": false,
+      "attributes": {
+        "dmg_to_mage": 4
+      },
+      "max_attributes": {
+        "dmg_to_mage": 10
+      },
+      "introduction": "The doomsday represents the end of the old era. What new era will usher in? The horn of doomsday does not give its answer.",
+      "enhance_awakening": "N/A",
+      "unlock_level": 1,
+      "base_price": 500,
+      "image": "HornOfDoom.webp"
+    },
+    "Judgment Blade": {
+      "name": "Judgment Blade",
+      "image": "JudgmentBlade",
+      "initial_quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_for": {
+        "name": "Michael",
+        "effect": "Crit DMG UP +20%",
+        "effect_max": "Crit DMG UP +75%"
+      },
+      "awakening": true,
+      "static_attributes": {
+        "ATK": "+10%",
+        "ATK_max": "+37.5%"
+      },
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "The will of celestial",
+          "description": "Increase the coefficient of M.DMG by 50%"
+        },
+        {
+          "level": 60,
+          "name": "Sanction of Light",
+          "description": "Increase the coefficient of M.DMG by 80%"
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "ATK+10%, Crit DMG +20% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      ],
+      "introduction": "No one can escape her judgment, even if you are the king of hell. After forty-nine years, even the time is longer than this, Michael will not give up the trial of darkness."
+    },
+    "Laurel Wreath": {
+      "name": "Laurel Wreath",
+      "id": "LaurelWreath",
+      "initial_quality": "SR",
+      "max_quality": "UR+5★",
+      "unlock_level": 60,
+      "awakening": false,
+      "exclusive": {
+        "class": "Warrior",
+        "effect": "Crit DMG UP +12%",
+        "max_effect": "Crit DMG UP +45%"
+      },
+      "static_attribute": {
+        "description": "DMG to Archer +16%",
+        "max_description": "DMG to Archer +60%"
+      },
+      "base_price": 4500,
+      "image": "LaurelWreath.png",
+      "introduction": "Embarked on a journey to find the only one in my heart. The road is torturous and complicated in journey, but as long as your firm direction, the angel of victory will eventually wear a laurel crown on your head."
+    },
+    "magic mirror": {
+      "name": "Magic Mirror",
+      "id": "MagicMirror",
+      "initial_quality": "SR",
+      "max_quality": "UR+5",
+      "awakening": true,
+      "exclusive_limit": {
+        "class": "Archer",
+        "effect": "HP UP +8%",
+        "max_effect": "HP UP +30%"
+      },
+      "static_attribute": {
+        "effect": "DMG to Mage +16%",
+        "max_effect": "DMG to Mage +60%"
+      },
+      "description": "Phantasos knew every skill and she can transform into the appearance of everything in the world. No one has ever seen the original appearance of Phantasos, maybe she has forgotten what she was originally.",
+      "awaken_skills": []
+    },
+    "Merciless": {
+      "name": "Merciless",
+      "initial_quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "class": "Archer",
+        "effect": "EVA probability +10%",
+        "max_effect": "37.5%"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "description": "DMG to Mage +16%",
+        "max": "60%"
+      },
+      "unlock_level": 60,
+      "base_price": 600,
+      "introduction": "Sins turn into silk threads and gradually wrap around you. You cannot breathe. Your body and soul will die unless the silks are cut through by Nemesis. Even in her merciless justice, death is inevitable as she cuts through the silks, down into your very soul.",
+      "enhance_awakening": null,
+      "image": "merciless.webp"
+    },
+    "Miniature Universe": {
+      "name": "Miniature Universe",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": "Gaia",
+      "exclusive_buff": "Crit DMG UP +20% (75% when Max)",
+      "awakening": true,
+      "static_attribute": "DMG to Warrior +24% (90% when Max)",
+      "introduction": "Standing on the solid ground and surrounded by the hustle and bustle of the city, everyone is busy living their own life and worries about trivial things. But the vastness of the universe humbles us. We all live under the eye of Gaia and we exist in this chaotic universe only because of Gaia's love for us.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "skill_icon": "Avator",
+          "description": "Increase the coefficient of M.DMG by 30%"
+        },
+        {
+          "level": 60,
+          "skill_icon": "Gaia's Sympathy",
+          "description": "Increase the coefficient of M.DMG by 120%"
+        },
+        {
+          "level": 90,
+          "skill_icon": "Twilight",
+          "description": "ATK+10%, Crit +10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+        }
+      ],
+      "base_price": 3500,
+      "unlock_level": 60,
+      "image": "miniature_universe.webp"
+    },
+    "Moonlight Law": {
+      "name": "Moonlight Law",
+      "id": "moonlight_law",
+      "initial_quality": "R",
+      "max_quality": "SSR+",
+      "exclusive_limit": {
+        "class": "Archer",
+        "bonus": "Effect ACC +3.7%"
+      },
+      "awakening": false,
+      "attributes": {
+        "SPD": 6
+      },
+      "introduction": "Light can scribble through the night sky, and light can shine straight into people's hearts. But light will be absorbed by black hole and it also follows Nyx's Moon Night Law.",
+      "image": "Moonlight Law.png",
+      "base_price": 480
+    },
+    "Myth Peach": {
+      "name": "Myth Peach",
+      "rarity": "R",
+      "quality": "R",
+      "max_quality": "SSR+",
+      "exclusive_limit": {
+        "class": "Mage",
+        "effect": "Crit probability +3.7%"
+      },
+      "awakening": false,
+      "static_attributes": {
+        "DMG to Archer": 7.5
+      },
+      "static_attributes_max": {
+        "DMG to Archer": 24.0
+      },
+      "introduction": "The flowers and the fruits are small. Myth Peach were riped for three thousand years, when people ate them, they will become immortals and their body will be light; Myth Peach were riped for six thousand years, when people ate them will be soaring and living",
+      "enhance_awakening": "N/A",
+      "unlock_level": 60,
+      "image": "myth_peach.webp",
+      "base_price": 1800
+    },
+    "Nether Shawl": {
+      "name": "Nether Shawl",
+      "id": "NetherShawl",
+      "initial_quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "character": "Erebus",
+        "effect": "DMG Reflection +20%",
+        "effect_max": "DMG Reflection +75%"
+      },
+      "awakening": true,
+      "static_attribute": {
+        "description": "DMG to Archer +24%",
+        "max": "DMG to Archer +90%"
+      },
+      "introduction": "The nether god Erebus is the embodiment of eternal darkness, and she uses her Nether Shawl to block the world and the underworld. No trace of light can pass through the Nether Shawl to reach the territory of Erebus, she is staying in darkness forever.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Evernight",
+          "description": "Increase the coefficient of P.DMG to 3% when losing 1% self HP"
+        },
+        {
+          "level": 60,
+          "name": "Grudges of Hades",
+          "description": "Increase the coefficient of P.DMG by 70%"
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "ATK+10%, HP+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      ],
+      "image": "NetherShawl.webp",
+      "base_price": 800
+    },
+    "Pandora's Box": {
+      "name": "Pandora's Box",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "initial_quality": "SR",
+      "exclusive_limit": {
+        "class": "Mage",
+        "effect": "DMG Increase +8%",
+        "max_effect": "30% when Max"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "effect": "DMG to Warrior +16%",
+        "max_effect": "60% when Max"
+      },
+      "source": "Abyss store OR using Orange Relic Fragment with probability to synthesis it. Not included in relic summoning pool.",
+      "introduction": "Even though humans know what dangers lie ahead, they still can't retain their desires, hence a lot of suffering in the wake of opening Pandora's Boxes. Humans are still opening Pandora's Boxes one after another. But never forget the last hope hidden in Pandora's Boxes.",
+      "enhance_awakening": "N/A",
+      "unlock_level": 60,
+      "image": "PandorasBox.webp",
+      "base_price": 4500,
+      "attributes": {
+        "dmg_increase_mage": 8,
+        "dmg_to_warrior": 16
+      }
+    },
+    "Petrified Magic Eye": {
+      "name": "Petrified Magic Eye",
+      "id": "PetrifiedMagicEye",
+      "rarity": "SR",
+      "max_rarity": "UR+5",
+      "unlock_level": 60,
+      "awakening": false,
+      "exclusive_class": {
+        "Warrior": {
+          "effect": "True Damage Increase",
+          "base_value": 20,
+          "max_value": 75
+        }
+      },
+      "static_attributes": {
+        "DMG to Archer": {
+          "base_value": 16,
+          "max_value": 60
+        }
+      },
+      "introduction": "Through the beautiful eyes, I saw you and Medusa are in the journey. It is beautiful and pure. It likes and unattainable dream, but it makes you willing to pursue it until your body and soul slowly petrify.",
+      "image": "PetrifiedMagicEye.png",
+      "base_price": 1200
+    },
+    "Pink Butterfly": {
+      "name": "Pink Butterfly",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "character": "Nekomata",
+        "effect": "Increased Heal +20%",
+        "max_effect": "75%"
+      },
+      "awakening": true,
+      "awakening_skills": {
+        "30": {
+          "skill_name": "Paws Scratch",
+          "description": "Heals 4 angels with the lowest HP"
+        },
+        "60": {
+          "skill_name": "Paws Whirlwind",
+          "description": "Deals extra 250% DMG to the enemy with the lowest current HP, and inflicts [Bleed] effect"
+        },
+        "90": {
+          "skill_name": "Twilight",
+          "description": "ATK+10%, HP+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+        }
+      },
+      "static_attribute": {
+        "HP UP": "12%",
+        "max_HP_UP": "45%"
+      },
+      "unlock_level": 60,
+      "introduction": "The bell on the bow are making a jingle sound gracefully, and gradually it's getting closer and closer. Deliberately trying to avoid this gentle trap. Your eyes start to drift away. But these are all illusions.",
+      "image": "PinkButterfly.webp",
+      "base_price": 5000
+    },
+    "Plane Lens": {
+      "name": "Plane Lens",
+      "id": "PlaneLens",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "quality": "SR",
+      "exclusive_limit": {
+        "class": "Gemini",
+        "effect": "ATK UP +12%",
+        "max_effect": "45%"
+      },
+      "awakening": true,
+      "static_attribute": {
+        "name": "DMG Reduction",
+        "base_value": 10,
+        "max_value": 37.5,
+        "unit": "%"
+      },
+      "introduction": "Seeing countless different futures, joy, anger, sorrow, and joy alternate in various parallel worlds. Gemini is always observing silently, constantly searching for the mystery of the universe and the ultimate answer hidden among us.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "skill_name": "Phantom Twins (Twin's Embrace)",
+          "description": "Attacks the shield enemy again, but the DMG dealt will not ignore the target's shield and M.RES."
+        },
+        {
+          "level": 60,
+          "skill_name": "Divergent Fates (Intertwined Fates)",
+          "description": "Additional DMG will be triggered if the enemy is killed."
+        },
+        {
+          "level": 90,
+          "skill_name": "Twilight",
+          "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)."
+        }
+      ],
+      "unlock_level": 60,
+      "image": "PlaneLens.webp",
+      "base_price": 3500
+    },
+    "Poseidon's Trident": {
+      "name": "Poseidon's Trident",
+      "filename": "PoseidonsTrident",
+      "initial_quality": "SR",
+      "max_quality": "UR+5",
+      "awakening": false,
+      "exclusive": {
+        "class": "Mage",
+        "effect": "Increased Heal +12%",
+        "max_effect": "45%"
+      },
+      "static_attributes": {
+        "base": "DMG to Warrior +16%",
+        "max": "60%"
+      },
+      "description": "Ordinary weapons: tearing the land, crushing rocks, and collapsing the earth. Poseidon's Trident: It can do what ordinary weapons can do. Also it can tear the universe and expose the underworld."
+    },
+    "Pride Wings": {
+      "name": "Pride Wings",
+      "id": "PrideWings",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "quality": "SR",
+      "exclusive_limit": {
+        "class": "Warrior",
+        "effect": "DMG Increase +8%",
+        "max_effect": "30% when Max"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "effect": "DMG to Archer +16%",
+        "max_effect": "60% when Max"
+      },
+      "introduction": "We can't detect her guilt through her beautiful face from a fallen angel. Until she spread her Pride Wings.",
+      "enhance_awakening": "N/A",
+      "base_price": 4500,
+      "attributes": {
+        "atk": 250,
+        "crit": 20,
+        "speed": 15
+      },
+      "unlock_level": 60,
+      "image": "PrideWings.webp"
+    },
+    "Pyramid": {
+      "name": "Pyramid",
+      "initial_quality": "R",
+      "max_quality": "SSR+",
+      "exclusive_class_buff": {
+        "class": [
+          "Warrior"
+        ],
+        "effect": "DMG Reflection +6.2%",
+        "max_effect": "DMG Reflection +?%"
+      },
+      "awakening": false,
+      "static_attributes": {
+        "base": "DMG to Mage +7.5%",
+        "max": "DMG to Mage +24%"
+      },
+      "introduction": "Memories are blurred by suffering and joy is taken away from death. For the souls who came to the underworld, it is still the other side of the heart.",
+      "image": "Pyramid.webp",
+      "base_price": 2000
+    },
+    "Scale of Truth": {
+      "name": "Scale of Truth",
+      "id": "ScaleOfTruth",
+      "filename": "ScaleOfTruth",
+      "rarity": "SR",
+      "initial_quality": "SR",
+      "quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_to": "Ra",
+      "exclusive_bonus": {
+        "base": "DMG Increase +12%",
+        "max": "DMG Increase +45%"
+      },
+      "awakening": true,
+      "attributes": {
+        "base": "DMG Increase +20%",
+        "max": "DMG Increase +75%"
+      },
+      "awakening_skills": {
+        "30": {
+          "name": "Eye of Ra (Star Gaze)",
+          "description": "Release the skill again if the targeted enemy has been killed."
+        },
+        "60": {
+          "name": "Solar Storm (Universe Storm)",
+          "description": "Increase the coefficient of M.DMG by 20% and burn enemies' Max HP."
+        },
+        "90": {
+          "name": "Twilight",
+          "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      },
+      "description": "Anubis's scale of truth fell into Ra's hands and the dead people will have a wonderful journey of their soul weighing.",
+      "unlock_level": 60,
+      "base_price": 4500,
+      "image": "ScaleOfTruth.webp"
+    },
+    "Shennongqin": {
+      "name": "Shennongqin",
+      "initial_quality": "R",
+      "max_quality": "SSR+",
+      "unlock_level": 60,
+      "exclusive_limit": "None",
+      "awakening_available": false,
+      "base_price": 2500,
+      "exclusive_buff": {
+        "target": "Archer",
+        "stat": "DMG",
+        "initial_bonus": 7.5,
+        "max_bonus": 24.0
+      },
+      "static_attributes": [
+        {
+          "type": "DMG to Archer",
+          "value": 7.5
+        }
+      ],
+      "description": "Shennongqin has five strings on it: Yue, Gong, Jiao, Zheng ,Yu. The sound of it can express the virtue of heaven and earth and bring happiness to people.",
+      "image": "Shennongqin.png",
+      "enhancement_info": "N/A",
+      "awakening_info": "N/A"
+    },
+    "Sky Dome": {
+      "name": "Sky Dome",
+      "rarity": "SR",
+      "quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "class": "Warrior",
+        "effect": "Increase Heal +12%",
+        "max_effect": "Increase Heal +45%"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "HP UP": "12%",
+        "max_HP_UP": "45%"
+      },
+      "introduction": "The sun, moon and stars all perish and regenerate under her dome. Hundreds of millions of lives on the earth are sheltering the reincarnation of the next generation.",
+      "enhance_awakening": "N/A",
+      "unlock_level": 60,
+      "base_price": 3000,
+      "image": "sky_dome.webp"
+    },
+    "Song of Siren": {
+      "name": "Song of Siren",
+      "id": "SongOfSiren",
+      "rarity": "SR",
+      "max_quality": "UR+5★",
+      "exclusive": {
+        "class": "Mage",
+        "buff": {
+          "effect": "Debuff RES +8%",
+          "max_effect": "Debuff RES +30%"
+        }
+      },
+      "awakening": false,
+      "static_attribute": {
+        "type": "SPD",
+        "base": 20,
+        "max": 75
+      },
+      "description": "Don't approach the good night in the night and fall asleep in such a comfortable song to avoid falling into their mouths.",
+      "unlock_level": 60,
+      "image": "song_of_siren.webp",
+      "base_price": 1500
+    },
+    "Spirit Wrapper": {
+      "name": "Spirit Wrapper",
+      "filename": "spirit_wrapper.json",
+      "initial_quality": "R",
+      "max_quality": "SSR+",
+      "exclusive_limit": null,
+      "awakening": false,
+      "unlock_level": 60,
+      "image": "spirit_wrapper.png",
+      "base_price": 3000,
+      "static_attributes": {
+        "DMG to Mage": {
+          "base": 7.5,
+          "max": 24.0
+        }
+      },
+      "introduction": "The wrapper is sacred and pure. Geb used them to wrap the sinful souls. Buried under the earth, there is no way to escape forever.",
+      "enhance_awakening": null
+    },
+    "Starfire Stone": {
+      "name": "Starfire Stone",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "quality": "SR",
+      "exclusive_limit": {
+        "class": "Mage",
+        "effect": "True Damage Increase +20%",
+        "max_effect": "True Damage Increase +75%"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "effect": "DMG Increase +10%",
+        "max_effect": "DMG Increase +37.5%"
+      },
+      "introduction": "Under the uncanny work of nature, this Starfire Stone has continued the Chinese civilization. Lie down in the jungle and mountains when calm, and burst into starlight sparks when fierce. It is both a continuation of civilization and a dangerous terminator.",
+      "enhance_awakening": "N/A",
+      "unlock_level": 60,
+      "attributes": {
+        "atk": 150,
+        "crit": 12,
+        "speed": 8
+      },
+      "base_price": 4500,
+      "image": "starfire_stone.webp"
+    },
+    "Supreme Scepter": {
+      "name": "Supreme Scepter",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "character": "Hera",
+        "effect": "ATK Increase +12%",
+        "max_effect": "45%"
+      },
+      "awakening": true,
+      "static_attribute": {
+        "def": 12,
+        "max_def": 45
+      },
+      "introduction": "Do you want to have supreme rights? Do you want to be respected by Zeus? Hera will destroy you without batting an eye if your answer is yes.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "skill_icon": "song_of_war_icon.webp",
+          "description": "Song of war (Hero Hymn): 10% of Hera's Crit DMG and FOR will be added in [Encourage]"
+        },
+        {
+          "level": 60,
+          "skill_icon": "for_the_throne_icon.webp",
+          "description": "For the Throne (Supreme Glory): Increase the coefficient of Hera's M.DMG by 30%, and the DMG must be doubled."
+        },
+        {
+          "level": 90,
+          "skill_icon": "twilight_icon.webp",
+          "description": "Twilight: ATK+10%, DEF+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+        }
+      ],
+      "unlock_level": 60,
+      "base_price": 10000,
+      "image": "supreme_scepter.webp",
+      "attributes": {
+        "atk": 0,
+        "def": 12,
+        "crit": 0,
+        "speed": 0
+      }
+    },
+    "Surprise Wreath": {
+      "name": "Surprise Wreath",
+      "id": "SurpriseWreath",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "character": "Xmas Angel",
+        "effect": "Crit DMG UP +20%",
+        "max_effect": "Crit DMG UP +75%"
+      },
+      "awakening": true,
+      "static_attribute": {
+        "HP UP": "12%",
+        "max_value": "45%"
+      },
+      "introduction": "The Xmas Angel ask about what the surprise is? The Xmas Angel stared at the wreath in her hand and thought, she seemed to be excited when she discovered a new world of flowers and plants. She is still thinking, looking for an answer forever.",
+      "enhance_awakening": {
+        "exclusive_limited": "Xmas Angel",
+        "skills": [
+          {
+            "level": 30,
+            "name": "Frozen Snow (Frozen field)",
+            "description": "Increase the coefficient of P.DMG by 40%"
+          },
+          {
+            "level": 60,
+            "name": "Arrow of Surprise (Surprise Arrow)",
+            "description": "Deals P.DMG to one more enemy"
+          },
+          {
+            "level": 90,
+            "name": "Twilight",
+            "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+          }
+        ]
+      },
+      "unlock_level": 60,
+      "base_price": 4800,
+      "image": "SurpriseWreath.webp"
+    },
+    "Sword of Sun and Moon": {
+      "name": "Sword of Sun and Moon",
+      "id": "SwordOfSunAndMoon",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "character": "Freyja",
+        "effect": "SPD +60 (225 at Max Quality)"
+      },
+      "awakening": true,
+      "static_attribute": {
+        "DMG Increase": "12% (45% at Max Quality)"
+      },
+      "introduction": "It is too dreamy, too fascinating, representing the ethereal in the starry sky, and the eternity of the universe. Energetic human being, be courage to use Sword of Sun and Moon to explore this dangerous universe.",
+      "enhance_awakening": {
+        "exclusive_limited": "Freyja",
+        "awaken_skills": [
+          {
+            "level": 30,
+            "name": "Shiny Pulse (Divine retribution)",
+            "description": "Double the coefficient of M.DMG for the 1st strike"
+          },
+          {
+            "level": 60,
+            "name": "Demon Retreat (Primal force)",
+            "description": "For every empty slot in line-up (as 7 enemies deployed), and the Max M.DMG is 1050%."
+          },
+          {
+            "level": 90,
+            "name": "Twilight",
+            "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+          }
+        ]
+      },
+      "attributes": {
+        "SPD": 60,
+        "DMG Increase": 12
+      },
+      "unlock_level": 60,
+      "image": "SwordOfSunAndMoon.webp",
+      "base_price": 5000
+    },
+    "The Eye of Horus": {
+      "name": "The Eye of Horus",
+      "id": "TheEyeOfHorus",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "initial_quality": "SR",
+      "exclusive_limit": {
+        "character": "Horus",
+        "effect": "ACC +20% (75% when Max)"
+      },
+      "awakening": true,
+      "static_attributes": {
+        "ATK": 12,
+        "ATK_max_percent": 45
+      },
+      "unlock_level": 60,
+      "introduction": "This supreme artifact from Egyptian mythology represents the divine protection and ultimate sovereignty of the gods. It is said no one can lie while under the gaze of The Eye of Horus.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Judgment Claw (Divine Judgment)",
+          "description": "When the bearer of [Judgment] is defeated, the enemy who defeated her becomes the target. Reduces the target's ATK by extra 5%."
+        },
+        {
+          "level": 60,
+          "name": "Punishment Eye (Divinity Eye)",
+          "description": "All allies receive an extra shield equal to 200% of Horus's ATK that lasts for 2 rounds (cannot be dispelled)."
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "Speed +100, Buff Hit Probability +10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+        }
+      ],
+      "image": "TheEyeOfHorus.webp",
+      "base_price": 10000
+    },
+    "Throne": {
+      "name": "Throne",
+      "rarity": "R",
+      "max_quality": "SSR+",
+      "exclusive_limit": {
+        "class": "Archer",
+        "effect": "DMG Increase +2.5%",
+        "max_effect": null
+      },
+      "awakening": false,
+      "static_attribute": {
+        "effect": "DMG to Mage +7.5%",
+        "max_effect": "24%"
+      },
+      "introduction": "Iris as the meaning of the throne provided the throne to pharaoh who is Iris's child. Iris can use her throne to protect young children and dead people, also she can also use her throne to resurrect the dead.",
+      "enhance_awakening": "N/A",
+      "unlock_level": 60,
+      "attributes": {},
+      "image": "Throne.webp",
+      "base_price": 2000
+    },
+    "valhalla": {
+      "name": "Valhalla",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "quality": "SR",
+      "exclusive_limit": {
+        "class": "Valkyrie",
+        "effect": "ACC +20%",
+        "max_effect": "ACC +75%"
+      },
+      "awakening": true,
+      "static_attribute": {
+        "DMG_to_Mage": "24%",
+        "max_static_attribute": "90%"
+      },
+      "unlock_level": 60,
+      "introduction": "The dying warriors accepted Valkyrie's death kiss and were led to Valhalla. Only the brave death warriors can arrive to Valhalla in their dreams. Death warriors enjoying the most satisfying life of fighting during the day and resurrecting at night.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Light Spear",
+          "description": "Increase the coefficient of P.DMG by 20%, and increase the chance of [Steal] by 10%"
+        },
+        {
+          "level": 60,
+          "name": "Heroic Stab",
+          "description": "Deals an extra 280% P.DMG to the target if the target's current HP is lower than 30% of her Max HP"
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "ATK+10%, HP+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)"
+        }
+      ],
+      "attributes": {
+        "ACC": 20
+      },
+      "image": "valhalla.webp",
+      "base_price": 5000
+    },
+    "Veil of Death": {
+      "name": "Veil of Death",
+      "id": "VeilOfDeath",
+      "initial_quality": "SR",
+      "max_quality": "UR+5",
+      "exclusive_limit": {
+        "character": "Hades",
+        "effect": "RES PEN +300",
+        "max_effect": "RES PEN +1125"
+      },
+      "awakening": true,
+      "static_attributes": {
+        "atk_percent": 10,
+        "max_atk_percent": 37.5
+      },
+      "introduction": "Hades has many veils, one of those veils is really special. Is it because of the veil itself? No, the person who gave me the veil gave it an unique meaning.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Underground Hand",
+          "description": "Release the skill again (up to 6 times) if the targeted enemy has been killed."
+        },
+        {
+          "level": 60,
+          "name": "Underground Fog",
+          "description": "Increase the coefficient of P.DMG by 50%."
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "ATK+10%, CRIT+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, Conqueror of Legends, and friends battle)."
+        }
+      ],
+      "unlock_level": 60,
+      "image": "VeilOfDeath.webp",
+      "base_price": 4500
+    },
+    "Yasakani no Magatama": {
+      "name": "Yasakani no Magatama",
+      "id": "YMagatama",
+      "initial_quality": "SR",
+      "max_quality": "UR+5★",
+      "unlock_level": 60,
+      "awakening_available": true,
+      "exclusive": {
+        "character": "Amaterasu",
+        "effect": "Effect ACC +16%",
+        "max_effect": "Effect ACC +60%"
+      },
+      "attributes": {
+        "static": {
+          "SPD": 40,
+          "SPD_max": 150
+        }
+      },
+      "introduction": "Yasakani no Magatama can protect people from disasters and allow people to obtain divine blessings. Coordinates the growth of all things, represents the sun and the moon and is bestowed by Izanami.",
+      "awakening_skills": [
+        {
+          "level": 30,
+          "name": "Vibrating Jade Charm",
+          "description": "Increase the coefficient of P.DMG by 15%, enemies under the state of [Stun] reduce DEF by 40% for 1 round"
+        },
+        {
+          "level": 60,
+          "name": "Yata no Kagami",
+          "description": "Enemies under the state of [Ignite] will lose 4% of self Max HP for 4 rounds."
+        },
+        {
+          "level": 90,
+          "name": "Twilight",
+          "description": "Speed+100, Buff Hit Probability+10% (Valid ONLY in Arena, Clash of Titans, Glory Arena, Clash of Guilds, Olympus Legend, Gods Twilight, and friends battle)"
+        }
+      ]
+    },
+    "Youth Apple": {
+      "name": "Youth Apple",
+      "rarity": "SR",
+      "max_quality": "UR+5",
+      "initial_quality": "SR",
+      "exclusive_limit": {
+        "class": "Archer",
+        "effect": "ACC +12%",
+        "max_effect": "45%"
+      },
+      "awakening": false,
+      "static_attribute": {
+        "effect": "DMG to Mage +16%",
+        "max_effect": "60%"
+      },
+      "introduction": "When the bird of youth is not there and it was captured by the autumn wind. Only youth apple can bring vigor and hope to people.",
+      "enhance_awakening": "N/A",
+      "unlock_level": 60,
+      "base_price": 3000,
+      "image": "YouthApple.webp"
+    }
+  },
+  "_metadata": {
+    "version": "3.0.0",
+    "consolidated_at": "2025-08-29T12:34:16.560800",
+    "total_files": 64,
+    "features_enabled": {
+      "pvp": true,
+      "trading": true,
+      "guilds": true,
+      "crafting": true,
+      "dreams": true,
+      "investments": true,
+      "auctions": true,
+      "seasonal_events": true
+    }
+  }
+}

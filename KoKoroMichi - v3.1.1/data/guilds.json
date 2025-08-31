@@ -1,0 +1,144 @@
+{
+  "guild_settings": {
+    "max_members": 20,
+    "creation_cost": 5000,
+    "daily_maintenance": 100,
+    "max_guild_name_length": 30,
+    "min_level_to_join": 5
+  },
+  "guild_bonuses": {
+    "small_guild": {
+      "member_range": [3, 7],
+      "bonuses": {
+        "battle_xp_bonus": 0.05,
+        "quest_gold_bonus": 0.1,
+        "affinity_gain_bonus": 0.05
+      }
+    },
+    "medium_guild": {
+      "member_range": [8, 15],
+      "bonuses": {
+        "battle_xp_bonus": 0.1,
+        "quest_gold_bonus": 0.15,
+        "affinity_gain_bonus": 0.1,
+        "relic_drop_bonus": 0.05
+      }
+    },
+    "large_guild": {
+      "member_range": [16, 20],
+      "bonuses": {
+        "battle_xp_bonus": 0.15,
+        "quest_gold_bonus": 0.2,
+        "affinity_gain_bonus": 0.15,
+        "relic_drop_bonus": 0.1,
+        "legendary_quest_bonus": 0.05
+      }
+    }
+  },
+  "guild_roles": {
+    "leader": {
+      "permissions": ["kick", "invite", "promote", "demote", "disband", "edit_info"],
+      "bonus_multiplier": 1.2
+    },
+    "officer": {
+      "permissions": ["kick", "invite", "promote_to_member"],
+      "bonus_multiplier": 1.1
+    },
+    "member": {
+      "permissions": ["participate"],
+      "bonus_multiplier": 1.0
+    }
+  },
+  "guild_activities": [
+    {
+      "name": "Guild Raid",
+      "description": "Team up to defeat powerful bosses",
+      "min_participants": 5,
+      "duration_hours": 24,
+      "rewards": {
+        "base_xp": 500,
+        "base_gold": 1000,
+        "special_items": ["Guild Badge", "Raid Trophy", "Team Spirit"]
+      }
+    },
+    {
+      "name": "Guild Tournament",
+      "description": "Compete against other guilds in organized battles",
+      "min_participants": 8,
+      "duration_hours": 48,
+      "rewards": {
+        "winner": {"xp": 1000, "gold": 2000, "items": ["Champion's Crown"]},
+        "second": {"xp": 700, "gold": 1500, "items": ["Silver Medal"]},
+        "third": {"xp": 500, "gold": 1000, "items": ["Bronze Medal"]}
+      }
+    },
+    {
+      "name": "Guild Quest",
+      "description": "Special multi-stage quests requiring cooperation",
+      "min_participants": 3,
+      "stages": [
+        {
+          "name": "Resource Gathering",
+          "description": "Collect materials for the guild project",
+          "requirements": {"total_items": 50, "participant_contribution": 5}
+        },
+        {
+          "name": "Boss Battle",
+          "description": "Face the final challenge together",
+          "requirements": {"min_total_level": 100, "min_affinity": 200}
+        }
+      ],
+      "rewards": {
+        "base_xp": 800,
+        "base_gold": 1500,
+        "guild_xp": 100
+      }
+    }
+  ],
+  "faction_system": {
+    "light": {
+      "name": "Order of Light",
+      "description": "Defenders of peace and harmony",
+      "opposing_faction": "dark",
+      "bonuses": {
+        "healing_bonus": 0.1,
+        "support_skill_bonus": 0.15,
+        "holy_damage_bonus": 0.1
+      },
+      "special_quests": ["Purify the Darkness", "Heal the Wounded", "Protect the Innocent"]
+    },
+    "dark": {
+      "name": "Shadow Covenant",
+      "description": "Masters of forbidden arts and power",
+      "opposing_faction": "light",
+      "bonuses": {
+        "damage_bonus": 0.1,
+        "critical_chance_bonus": 0.05,
+        "dark_magic_bonus": 0.15
+      },
+      "special_quests": ["Embrace the Shadow", "Corrupt the Pure", "Seek Forbidden Knowledge"]
+    },
+    "nature": {
+      "name": "Guardians of Nature",
+      "description": "Protectors of the natural world",
+      "opposing_faction": "tech",
+      "bonuses": {
+        "regeneration_bonus": 0.1,
+        "earth_magic_bonus": 0.15,
+        "beast_taming_bonus": 0.2
+      },
+      "special_quests": ["Plant the Sacred Grove", "Tame Wild Beasts", "Restore the Balance"]
+    },
+    "tech": {
+      "name": "Techno Syndicate",
+      "description": "Innovators of magical technology",
+      "opposing_faction": "nature",
+      "bonuses": {
+        "equipment_bonus": 0.1,
+        "lightning_damage_bonus": 0.15,
+        "invention_success_bonus": 0.1
+      },
+      "special_quests": ["Build Magitech Device", "Upgrade Ancient Artifacts", "Create New Inventions"]
+    }
+  }
+}

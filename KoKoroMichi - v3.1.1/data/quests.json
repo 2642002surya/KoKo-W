@@ -1,0 +1,263 @@
+{
+  "quest_types": {
+    "common": [
+      {
+        "name": "Gather Herbs",
+        "description": "Collect medicinal herbs from the forest",
+        "reward_type": "gold",
+        "min_reward": 100,
+        "max_reward": 500,
+        "duration": 1800,
+        "success_rate": 0.85,
+        "story_outcomes": [
+          "{waifu} carefully gathered rare herbs, earning {reward} gold.",
+          "{waifu} found a hidden grove full of valuable plants!"
+        ]
+      },
+      {
+        "name": "Hunt a Monster",
+        "description": "Defeat a wandering beast threatening nearby villages",
+        "reward_type": "xp",
+        "min_reward": 50,
+        "max_reward": 200,
+        "duration": 3600,
+        "success_rate": 0.75,
+        "story_outcomes": [
+          "{waifu} defeated the monster after an intense battle, gaining {reward} XP!",
+          "{waifu} used clever tactics to outwit the beast."
+        ]
+      },
+      {
+        "name": "Deliver Message",
+        "description": "Carry an important message between distant cities",
+        "reward_type": "gold",
+        "min_reward": 200,
+        "max_reward": 400,
+        "duration": 2700,
+        "success_rate": 0.90,
+        "story_outcomes": [
+          "{waifu} successfully delivered the message, earning {reward} gold.",
+          "{waifu} made the journey safely despite rough weather."
+        ]
+      },
+      {
+        "name": "Mine Crystals",
+        "description": "Extract valuable crystals from ancient caves",
+        "reward_type": "item",
+        "reward_items": ["XP Booster", "Health Potion", "Mana Potion"],
+        "duration": 2400,
+        "success_rate": 0.80,
+        "story_outcomes": [
+          "{waifu} discovered shimmering crystals deep in the cave.",
+          "{waifu} carefully extracted precious gems from the mine."
+        ]
+      },
+      {
+        "name": "Patrol the Village",
+        "description": "Help keep the peace in a nearby settlement",
+        "reward_type": "xp",
+        "min_reward": 40,
+        "max_reward": 120,
+        "duration": 1500,
+        "success_rate": 0.95,
+        "story_outcomes": [
+          "{waifu} deterred troublemakers, earning {reward} XP.",
+          "{waifu} reassured the villagers and strengthened bonds."
+        ]
+      },
+      {
+        "name": "Fishing Trip",
+        "description": "Spend time by the river catching fish",
+        "reward_type": "item",
+        "reward_items": ["Golden Carp", "Mystic Eel", "Healing Fish"],
+        "duration": 2000,
+        "success_rate": 0.88,
+        "story_outcomes": [
+          "{waifu} caught a rare {reward_item}!",
+          "{waifu} enjoyed the calm waters and brought back fresh fish."
+        ]
+      },
+      {
+        "name": "Escort Caravan",
+        "description": "Protect a merchant caravan along a dangerous road",
+        "reward_type": "gold",
+        "min_reward": 300,
+        "max_reward": 700,
+        "duration": 4200,
+        "success_rate": 0.70,
+        "story_outcomes": [
+          "{waifu} fought off bandits and earned {reward} gold.",
+          "{waifu} kept the merchants safe until their destination."
+        ]
+      },
+      {
+        "name": "Train in Dojo",
+        "description": "Sharpen your skills under a master",
+        "reward_type": "xp",
+        "min_reward": 60,
+        "max_reward": 250,
+        "duration": 1800,
+        "success_rate": 0.90,
+        "story_outcomes": [
+          "{waifu} pushed their limits and gained {reward} XP.",
+          "{waifu} learned new fighting techniques from the master."
+        ]
+      }
+    ],
+    "rare": [
+      {
+        "name": "Rescue the Lost Relic",
+        "description": "Recover a legendary artifact from dangerous ruins",
+        "reward_type": "relic",
+        "relic_options": ["Frosty Spear", "Crystal Shield", "Shadow Blade"],
+        "duration": 7200,
+        "success_rate": 0.60,
+        "requires_level": 30,
+        "story_outcomes": [
+          "{waifu} braved ancient traps to recover the legendary {reward}!",
+          "{waifu} solved mystical puzzles to claim the {reward}."
+        ]
+      },
+      {
+        "name": "Dragon's Challenge",
+        "description": "Face an ancient dragon in single combat",
+        "reward_type": "multiple",
+        "rewards": {
+          "xp": [300, 500],
+          "gold": [800, 1200],
+          "item": ["Mythic Upgrade Crystal"]
+        },
+        "duration": 10800,
+        "success_rate": 0.45,
+        "requires_level": 50,
+        "story_outcomes": [
+          "{waifu} emerged victorious from the dragon's lair with incredible rewards!",
+          "{waifu} proved their worth against the ancient wyrm."
+        ]
+      },
+      {
+        "name": "Mystical Portal",
+        "description": "Investigate a mysterious portal to another realm",
+        "reward_type": "random",
+        "duration": 5400,
+        "success_rate": 0.70,
+        "requires_level": 25,
+        "story_outcomes": [
+          "{waifu} returned from another dimension with strange treasures.",
+          "{waifu} witnessed wonders beyond imagination in the mystical realm."
+        ]
+      },
+      {
+        "name": "Bandit Stronghold",
+        "description": "Raid a dangerous hideout of bandits",
+        "reward_type": "gold",
+        "min_reward": 1000,
+        "max_reward": 2500,
+        "duration": 6400,
+        "success_rate": 0.55,
+        "requires_level": 35,
+        "story_outcomes": [
+          "{waifu} defeated the bandit leader and seized {reward} gold.",
+          "{waifu} burned the stronghold to the ground and returned victorious."
+        ]
+      },
+      {
+        "name": "Haunted Catacombs",
+        "description": "Explore the cursed catacombs beneath the city",
+        "reward_type": "item",
+        "reward_items": ["Soul Lantern", "Cursed Dagger", "Phantom Dust"],
+        "duration": 7800,
+        "success_rate": 0.50,
+        "requires_level": 40,
+        "story_outcomes": [
+          "{waifu} braved terrifying spirits to recover the {reward_item}.",
+          "{waifu} found ancient treasures amidst the haunting whispers."
+        ]
+      }
+    ],
+    "legendary": [
+      {
+        "name": "Godslayer's Trial",
+        "description": "Undertake the ultimate test of strength and wisdom",
+        "reward_type": "legendary_relic",
+        "legendary_relics": ["Odin's Spear", "Zeus's Thunderbolt", "Ra's Crown"],
+        "duration": 21600,
+        "success_rate": 0.30,
+        "requires_level": 80,
+        "requires_friendship": 90,
+        "story_outcomes": [
+          "{waifu} completed the impossible trial, earning divine recognition!",
+          "{waifu} transcended mortal limits to claim the {reward}."
+        ]
+      },
+      {
+        "name": "The Eternal Labyrinth",
+        "description": "Navigate an endless maze crafted by the gods themselves",
+        "reward_type": "legendary_relic",
+        "legendary_relics": ["Minotaur's Helm", "Key of Infinity"],
+        "duration": 28800,
+        "success_rate": 0.25,
+        "requires_level": 90,
+        "requires_friendship": 95,
+        "story_outcomes": [
+          "{waifu} conquered the Eternal Labyrinth, finding the {reward}.",
+          "{waifu} wandered for days but emerged with divine spoils."
+        ]
+      },
+      {
+        "name": "Celestial Convergence",
+        "description": "Harness the power of the stars during a rare alignment",
+        "reward_type": "multiple",
+        "rewards": {
+          "xp": [1000, 2000],
+          "gold": [5000, 8000],
+          "legendary_relic": ["Stellar Crown"]
+        },
+        "duration": 43200,
+        "success_rate": 0.20,
+        "requires_level": 95,
+        "requires_friendship": 100,
+        "story_outcomes": [
+          "{waifu} captured the essence of the stars, wielding cosmic power!",
+          "{waifu} absorbed celestial energy and gained legendary might."
+        ]
+      }
+    ]
+  },
+  "quest_mechanics": {
+    "multi_waifu_bonuses": {
+      "2_waifus": {
+        "success_rate_bonus": 0.10,
+        "rare_quest_chance": 0.15
+      },
+      "3_waifus": {
+        "success_rate_bonus": 0.20,
+        "rare_quest_chance": 0.25,
+        "legendary_quest_chance": 0.05
+      },
+      "4_plus_waifus": {
+        "success_rate_bonus": 0.30,
+        "rare_quest_chance": 0.35,
+        "legendary_quest_chance": 0.10
+      }
+    },
+    "affinity_effects": {
+      "high_affinity_bonus": {
+        "threshold": 80,
+        "success_rate_bonus": 0.15,
+        "reward_multiplier": 1.2
+      },
+      "low_affinity_penalty": {
+        "threshold": 20,
+        "success_rate_penalty": 0.10,
+        "reward_multiplier": 0.8
+      }
+    },
+    "cooldowns": {
+      "per_waifu_hours": 6,
+      "global_user_hours": 2
+    }
+  },
+  "active_quests": {},
+  "quest_history": {}
+}

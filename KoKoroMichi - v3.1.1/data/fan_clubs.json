@@ -1,0 +1,79 @@
+{
+  "club_settings": {
+    "voting_duration_hours": 48,
+    "min_votes_required": 5,
+    "max_clubs_per_user": 3
+  },
+  "active_polls": {},
+  "fan_clubs": {
+    "odin_enthusiasts": {
+      "name": "Odin Enthusiasts",
+      "description": "Worshippers of the All-Father",
+      "waifu_focus": "odin",
+      "members": [],
+      "weekly_rewards": {
+        "gold": 1000,
+        "items": [
+          "Runic Essence",
+          "Valhalla Token"
+        ]
+      },
+      "club_level": 1,
+      "total_contributions": 0
+    },
+    "chaos_cultists": {
+      "name": "Chaos Cultists",
+      "description": "Embracers of beautiful chaos",
+      "waifu_focus": "chaos",
+      "members": [
+        "884489252296073287"
+      ],
+      "weekly_rewards": {
+        "gold": 1200,
+        "items": [
+          "Chaos Shard",
+          "Entropy Crystal"
+        ]
+      },
+      "club_level": 1,
+      "total_contributions": 0
+    },
+    "amaterasu_shrine": {
+      "name": "Amaterasu Shrine",
+      "description": "Devotees of the Sun Goddess",
+      "waifu_focus": "amaterasu",
+      "members": [],
+      "weekly_rewards": {
+        "gold": 800,
+        "items": [
+          "Solar Fragment",
+          "Divine Light"
+        ]
+      },
+      "club_level": 1,
+      "total_contributions": 0
+    }
+  },
+  "voting_categories": [
+    {
+      "id": "waifu_of_the_month",
+      "name": "Waifu of the Month",
+      "description": "Vote for the most beloved waifu!",
+      "reward_type": "community_bonus",
+      "winner_rewards": {
+        "global_affinity_boost": 5,
+        "special_title": "Community Favorite"
+      }
+    },
+    {
+      "id": "best_battle_strategy",
+      "name": "Best Battle Strategy",
+      "description": "Share and vote on battle tactics!",
+      "reward_type": "strategy_guide",
+      "winner_rewards": {
+        "gold": 5000,
+        "battle_boost_duration": 168
+      }
+    }
+  ]
+}

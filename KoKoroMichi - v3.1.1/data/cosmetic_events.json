@@ -1,0 +1,55 @@
+{
+  "animated_messages": {
+    "borders": {
+      "stars": "✨━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━✨",
+      "hearts": "💖━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━💖",
+      "swords": "⚔️━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━⚔️",
+      "magic": "🌙━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━🌙"
+    },
+    "waifu_expressions": {
+      "happy": ["😊", "😄", "🥰", "😍", "🤗"],
+      "sad": ["😢", "😭", "🥺", "😞", "💔"],
+      "angry": ["😠", "😡", "🤬", "👿", "💢"],
+      "surprised": ["😮", "😯", "🤯", "😲", "🙀"],
+      "sleepy": ["😴", "💤", "🥱", "😪", "💭"],
+      "excited": ["🤩", "😆", "🎉", "✨", "🌟"]
+    },
+    "action_effects": {
+      "summon": "🌟 ✨ 💫 ⭐ 🌟 ✨ 💫 ⭐",
+      "battle": "⚔️ 💥 🔥 ⚡ 💨 💥 ⚔️ 🛡️",
+      "upgrade": "📈 ✨ 🔧 ⚡ 💎 ✨ 📈 🌟",
+      "quest": "🗺️ 🧭 🏃 💨 🏆 ✨ 🎯 🌟"
+    }
+  },
+  "leaderboard_highlights": {
+    "achievement_messages": [
+      "{user} just achieved something legendary! 🏆",
+      "{user} is making waves in the dream realm! 🌊",
+      "{user} reached a new milestone! 🎯",
+      "{user} is climbing the ranks! 📈",
+      "{user} unlocked a rare achievement! 💎"
+    ],
+    "funny_events": [
+      "{user}'s waifu tripped in her dream! 😅",
+      "{user} found their waifu sleepwalking! 🌙",
+      "{user}'s pet did something adorable! 🐾",
+      "{user} discovered their waifu's secret hobby! 🎭",
+      "{user}'s waifu is having the sweetest dreams! 💕"
+    ]
+  },
+  "story_beats": {
+    "daily_flavors": [
+      "The dream realm feels particularly mystical today...",
+      "A gentle breeze carries whispers of ancient magic...",
+      "The stars seem brighter in the dream sky tonight...",
+      "Something special is stirring in the realm of dreams...",
+      "The waifus seem more animated than usual today..."
+    ],
+    "seasonal_flavors": {
+      "spring": "Cherry blossoms drift through the dream realm...",
+      "summer": "The dream realm basks in warm, golden light...",
+      "autumn": "Colorful leaves dance in the mystical winds...",
+      "winter": "Snowflakes sparkle like tiny diamonds in dreams..."
+    }
+  }
+}

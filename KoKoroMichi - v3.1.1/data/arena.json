@@ -1,0 +1,174 @@
+{
+  "884489252296073287": {
+    "daily_fights": {
+      "2025-08-16": 18,
+      "2025-08-17": 2,
+      "2025-08-19": 17,
+      "2025-08-24": 1,
+      "2025-08-26": 1
+    },
+    "history": [
+      {
+        "timestamp": "2025-08-17T18:45:24.929068",
+        "opponent": "NPC_4795",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-17T18:45:40.898220",
+        "opponent": "NPC_7720",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:26:55.252894",
+        "opponent": "NPC_1194",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:01.265922",
+        "opponent": "NPC_3799",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:10.901689",
+        "opponent": "NPC_4439",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:14.603183",
+        "opponent": "NPC_3264",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:17.855897",
+        "opponent": "NPC_4870",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:20.580810",
+        "opponent": "NPC_4313",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:22.718482",
+        "opponent": "NPC_8324",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:27.660355",
+        "opponent": "NPC_7227",
+        "result": "\ud83c\udfc6 **\u0f12 V E N O M \u0f12** wins!",
+        "xp": 250000,
+        "gold": 100000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:30.107600",
+        "opponent": "NPC_5945",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:31.680533",
+        "opponent": "NPC_9068",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:33.173667",
+        "opponent": "NPC_1502",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:34.791663",
+        "opponent": "NPC_3947",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:36.030369",
+        "opponent": "NPC_5088",
+        "result": "\ud83c\udfc6 **\u0f12 V E N O M \u0f12** wins!",
+        "xp": 250000,
+        "gold": 100000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:37.624918",
+        "opponent": "NPC_6141",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T01:27:39.090510",
+        "opponent": "NPC_7363",
+        "result": "\ud83d\udca5 It's a draw!",
+        "xp": 150000,
+        "gold": 40000
+      },
+      {
+        "timestamp": "2025-08-19T10:08:54.563201",
+        "opponent": "NPC_2163",
+        "result": "\ud83c\udfc6 **NPC_2163** wins!",
+        "xp": 50000,
+        "gold": 20000
+      },
+      {
+        "timestamp": "2025-08-19T17:56:28.549522",
+        "opponent": "Sophia Lewis",
+        "result": "\ud83c\udfc6 **\u0f12 V E N O M \u0f12** wins!",
+        "xp": 250000,
+        "gold": 100000
+      },
+      {
+        "timestamp": "2025-08-24T06:27:57.158341",
+        "opponent": "Vera Lebedeva",
+        "result": "\ud83c\udfc6 **\u0f12 V E N O M \u0f12** wins!",
+        "xp": 250000,
+        "gold": 100000
+      },
+      {
+        "timestamp": "2025-08-26T12:13:07.396594",
+        "opponent": "James",
+        "result": "\ud83c\udfc6 **\u0f12 V E N O M \u0f12** wins!",
+        "xp": 250000,
+        "gold": 100000
+      }
+    ]
+  },
+  "1344603209829974016": {
+    "daily_fights": {
+      "2025-08-19": 1
+    },
+    "history": [
+      {
+        "timestamp": "2025-08-19T10:26:15.964387",
+        "opponent": "NPC_2997",
+        "result": "\ud83c\udfc6 **NPC_2997** wins!",
+        "xp": 50000,
+        "gold": 20000
+      }
+    ]
+  }
+}

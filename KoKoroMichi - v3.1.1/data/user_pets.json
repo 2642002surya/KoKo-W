@@ -1,0 +1,34 @@
+{
+  "user_pets": {
+    "884489252296073287": [
+      "pet_884489252296073287_Storm_Eagle_1756017558.618513"
+    ]
+  },
+  "pet_stats": {
+    "pet_884489252296073287_Storm_Eagle_1756017558.618513": {
+      "pet_id": "pet_884489252296073287_Storm_Eagle_1756017558.618513",
+      "species": "Storm Eagle",
+      "name": "Storm Eagle",
+      "level": 1,
+      "xp": 0,
+      "stats": {
+        "health": 70,
+        "energy": 70,
+        "happiness": 50,
+        "loyalty": 70
+      },
+      "mood": "neutral",
+      "mood_expires": null,
+      "adoption_date": "2025-08-24T06:39:18.618528",
+      "last_fed": null,
+      "last_activity": null,
+      "evolution_stage": "base",
+      "unlocked_abilities": [
+        "Lightning Speed"
+      ]
+    }
+  },
+  "active_pets": {},
+  "active_activities": {},
+  "feeding_cooldowns": {}
+}

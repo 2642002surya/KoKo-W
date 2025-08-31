@@ -1,0 +1,41 @@
+{
+  "gacha_spins": {
+    "rewards": [
+      {"type": "coins", "amount": 100, "rarity": "common", "message": "You found some loose change!"},
+      {"type": "coins", "amount": 500, "rarity": "uncommon", "message": "A small treasure chest!"},
+      {"type": "coins", "amount": 1000, "rarity": "rare", "message": "A golden coin purse!"},
+      {"type": "multiplier", "value": 1.5, "duration": 300, "rarity": "uncommon", "message": "Lucky charm activated!"},
+      {"type": "multiplier", "value": 2.0, "duration": 600, "rarity": "rare", "message": "Fortune smiles upon you!"},
+      {"type": "item", "name": "Dream Fragment", "rarity": "common", "message": "A mysterious fragment appears!"},
+      {"type": "item", "name": "Mystic Orb", "rarity": "rare", "message": "A powerful orb materializes!"}
+    ],
+    "cooldown": 1800
+  },
+  "trivia": {
+    "questions": [
+      {"question": "Which goddess is known as the Queen of Heaven in Egyptian mythology?", "answer": "Nut", "alternatives": ["Isis", "Nephthys", "Hathor"]},
+      {"question": "What is Amaterasu's domain in Japanese mythology?", "answer": "Sun", "alternatives": ["Moon", "Storm", "Earth"]},
+      {"question": "Who is the Norse god of mischief?", "answer": "Loki", "alternatives": ["Thor", "Odin", "Freyr"]},
+      {"question": "In Greek mythology, who opened the box containing all evils?", "answer": "Pandora", "alternatives": ["Athena", "Aphrodite", "Hera"]},
+      {"question": "What animal is associated with Anubis?", "answer": "Jackal", "alternatives": ["Cat", "Falcon", "Ibis"]},
+      {"question": "Which Chinese goddess created humans from clay?", "answer": "Nuwa", "alternatives": ["Chang'e", "Mazu", "Xiwangmu"]}
+    ],
+    "rewards": {
+      "correct": {"coins": 200, "message": "Correct! Your wisdom is rewarded!"},
+      "incorrect": {"coins": 50, "message": "Not quite, but effort counts!"}
+    }
+  },
+  "memory_game": {
+    "card_sets": [
+      ["💖", "⚔️", "🌙", "✨"],
+      ["🔥", "💧", "🌍", "💨"],
+      ["👑", "🗡️", "🛡️", "🏹"],
+      ["🌸", "🍃", "⭐", "🌊"]
+    ],
+    "difficulty_levels": {
+      "easy": {"cards": 4, "time": 30, "reward": 150},
+      "medium": {"cards": 6, "time": 25, "reward": 300},
+      "hard": {"cards": 8, "time": 20, "reward": 500}
+    }
+  }
+}

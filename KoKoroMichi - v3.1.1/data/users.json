@@ -1,0 +1,980 @@
+{
+  "1344603209829974016": {
+    "name": "man_castle.",
+    "gold": 123500,
+    "gems": 9500,
+    "claimed_waifus": [
+      {
+        "name": "Minotaur",
+        "rarity": "R 🔧",
+        "level": 1,
+        "exp": 20,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 3190,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Ungnyeo"
+            ],
+            "fate_name": "Wild Force",
+            "effect": "ATK UP 10%"
+          },
+          {
+            "angels": [
+              "Muse"
+            ],
+            "fate_name": "Beauty of Sin",
+            "effect": "HP UP 10%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:07.668887",
+        "relic": null
+      },
+      {
+        "name": "Shennong",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 100,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Xiwangmu"
+            ],
+            "fate_name": "Soul of China",
+            "effect": "HP UP 15%"
+          },
+          {
+            "angels": [
+              "Apep"
+            ],
+            "fate_name": "Banishing of Chaos",
+            "effect": "ATK UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914669",
+        "relic": null
+      },
+      {
+        "name": "Medusa",
+        "rarity": "SR 🔥",
+        "level": 1,
+        "exp": 20,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 3962,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Siren",
+              "Pandora"
+            ],
+            "fate_name": "Origin of Degeneration",
+            "effect": "HP UP 20%"
+          },
+          {
+            "angels": [
+              "Nemesis"
+            ],
+            "fate_name": "Power of Time",
+            "effect": "ATK UP 15%"
+          },
+          {
+            "angels": [
+              "Zhu Rong"
+            ],
+            "fate_name": "Power of Truth",
+            "effect": "HP UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914765",
+        "relic": null
+      },
+      {
+        "name": "Horus",
+        "rarity": "SR 🔥",
+        "level": 2,
+        "exp": 0,
+        "hp": 536,
+        "atk": 60,
+        "def": 30,
+        "crit": 5,
+        "affection": 0,
+        "potential": 3940,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Ra"
+            ],
+            "fate_name": "Divine Legacy",
+            "effect": "ATK UP +15%"
+          },
+          {
+            "angels": [
+              "Anubis"
+            ],
+            "fate_name": "Live to Die",
+            "effect": "ATK UP +15%"
+          },
+          {
+            "angels": [
+              "Icarus"
+            ],
+            "fate_name": "Eagle Wings",
+            "effect": "HP UP +15%"
+          },
+          {
+            "angels": [
+              "Ra",
+              "Nuit"
+            ],
+            "fate_name": "Heart of Egypt",
+            "effect": "HP UP +20%"
+          },
+          {
+            "angels": [
+              "Amaterasu",
+              "Thor",
+              "Athena"
+            ],
+            "fate_name": "Angel of Destiny",
+            "effect": "ATK UP +25%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914833",
+        "relic": null
+      },
+      {
+        "name": "Muse",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 195,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Minotaur"
+            ],
+            "fate_name": "Beauty of Sin",
+            "effect": "HP UP 10%"
+          },
+          {
+            "angels": [
+              "Sif"
+            ],
+            "fate_name": "Beauty and Dream",
+            "effect": "ATK UP 10%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914880",
+        "relic": null
+      },
+      {
+        "name": "Odin",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 277,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Player"
+            ],
+            "fate_name": "God's Inheritance",
+            "effect": "ATK UP 25%"
+          },
+          {
+            "angels": [
+              "Idun",
+              "Valkyrie"
+            ],
+            "fate_name": "Ragnarok Witness",
+            "effect": "HP UP 20%"
+          },
+          {
+            "angels": [
+              "Gaia",
+              "Amaterasu",
+              "Nuwa"
+            ],
+            "fate_name": "Supreme Volition",
+            "effect": "HP UP 25%"
+          },
+          {
+            "angels": [
+              "Heimdall"
+            ],
+            "fate_name": "Pure Power",
+            "effect": "HP UP 15%"
+          },
+          {
+            "angels": [
+              "Ember Dragon",
+              "Ra"
+            ],
+            "fate_name": "Emberbringer",
+            "effect": "ATK UP 20%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914936",
+        "relic": null
+      },
+      {
+        "name": "Enmusubi",
+        "rarity": "R 🔧",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 2879,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Izu Dancer",
+              "Izanami"
+            ],
+            "fate_name": "Brilliant Yamato",
+            "effect": "ATK UP 20%"
+          },
+          {
+            "angels": [
+              "Amaterasu"
+            ],
+            "fate_name": "Order Controller",
+            "effect": "HP UP 15%"
+          },
+          {
+            "angels": [
+              "Michael",
+              "Icarus",
+              "Hera"
+            ],
+            "fate_name": "Justice Sanctions",
+            "effect": "ATK UP 25%"
+          },
+          {
+            "angels": [
+              "Michael"
+            ],
+            "fate_name": "Bright Link",
+            "effect": "ATK UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914998",
+        "relic": null
+      },
+      {
+        "name": "Lilith",
+        "rarity": "SR 🔥",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 4136,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Geb"
+            ],
+            "fate_name": "Bloodthirsty Fangs",
+            "effect": "HP UP +15%"
+          },
+          {
+            "angels": [
+              "Nyx"
+            ],
+            "fate_name": "Devil's Whisper",
+            "effect": "ATK UP +15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.915053",
+        "relic": null
+      },
+      {
+        "name": "Tsukuyomi",
+        "rarity": "UR 🌟",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 5813,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Ungnyeo"
+            ],
+            "fate_name": "Oriental Beauty",
+            "effect": "Max HP +1000"
+          },
+          {
+            "angels": [
+              "Gabriel"
+            ],
+            "fate_name": "Novice Village",
+            "effect": "Max HP +1000"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.915097",
+        "relic": null
+      },
+      {
+        "name": "Nemesis",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 100,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Medusa"
+            ],
+            "fate_name": "Power of Time",
+            "effect": "ATK UP 15%"
+          },
+          {
+            "angels": [
+              "Jeanne d'Arc",
+              "Nike"
+            ],
+            "fate_name": "Battle Cry",
+            "effect": "HP UP 20%"
+          },
+          {
+            "angels": [
+              "Erebus"
+            ],
+            "fate_name": "Dark and Death",
+            "effect": "ATK UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.915154",
+        "relic": null
+      },
+      {
+        "name": "Anubis",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 167,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Nephthys"
+            ],
+            "fate_name": "Master of Death",
+            "effect": "HP UP 15%"
+          },
+          {
+            "angels": [
+              "Nyx"
+            ],
+            "fate_name": "Death of Darkness",
+            "effect": "ATK UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.915201",
+        "relic": null
+      }
+    ],
+    "affection": 0,
+    "summon_count": 12,
+    "level": 1,
+    "xp": 250,
+    "pity_counter": 3,
+    "waifu_stats": {
+      "Minotaur": {
+        "name": "Minotaur",
+        "rarity": "R 🔧",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 3190,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Ungnyeo"
+            ],
+            "fate_name": "Wild Force",
+            "effect": "ATK UP 10%"
+          },
+          {
+            "angels": [
+              "Muse"
+            ],
+            "fate_name": "Beauty of Sin",
+            "effect": "HP UP 10%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:07.668887",
+        "relic": null
+      },
+      "Shennong": {
+        "name": "Shennong",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 100,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Xiwangmu"
+            ],
+            "fate_name": "Soul of China",
+            "effect": "HP UP 15%"
+          },
+          {
+            "angels": [
+              "Apep"
+            ],
+            "fate_name": "Banishing of Chaos",
+            "effect": "ATK UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914669",
+        "relic": null
+      },
+      "Medusa": {
+        "name": "Medusa",
+        "rarity": "SR 🔥",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 3962,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Siren",
+              "Pandora"
+            ],
+            "fate_name": "Origin of Degeneration",
+            "effect": "HP UP 20%"
+          },
+          {
+            "angels": [
+              "Nemesis"
+            ],
+            "fate_name": "Power of Time",
+            "effect": "ATK UP 15%"
+          },
+          {
+            "angels": [
+              "Zhu Rong"
+            ],
+            "fate_name": "Power of Truth",
+            "effect": "HP UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914765",
+        "relic": null
+      },
+      "Horus": {
+        "name": "Horus",
+        "rarity": "SR 🔥",
+        "level": 2,
+        "exp": 0,
+        "hp": 536,
+        "atk": 60,
+        "def": 30,
+        "crit": 5,
+        "affection": 0,
+        "potential": 3940,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Ra"
+            ],
+            "fate_name": "Divine Legacy",
+            "effect": "ATK UP +15%"
+          },
+          {
+            "angels": [
+              "Anubis"
+            ],
+            "fate_name": "Live to Die",
+            "effect": "ATK UP +15%"
+          },
+          {
+            "angels": [
+              "Icarus"
+            ],
+            "fate_name": "Eagle Wings",
+            "effect": "HP UP +15%"
+          },
+          {
+            "angels": [
+              "Ra",
+              "Nuit"
+            ],
+            "fate_name": "Heart of Egypt",
+            "effect": "HP UP +20%"
+          },
+          {
+            "angels": [
+              "Amaterasu",
+              "Thor",
+              "Athena"
+            ],
+            "fate_name": "Angel of Destiny",
+            "effect": "ATK UP +25%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914833",
+        "relic": null
+      },
+      "Muse": {
+        "name": "Muse",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 195,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Minotaur"
+            ],
+            "fate_name": "Beauty of Sin",
+            "effect": "HP UP 10%"
+          },
+          {
+            "angels": [
+              "Sif"
+            ],
+            "fate_name": "Beauty and Dream",
+            "effect": "ATK UP 10%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914880",
+        "relic": null
+      },
+      "Odin": {
+        "name": "Odin",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 277,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Player"
+            ],
+            "fate_name": "God's Inheritance",
+            "effect": "ATK UP 25%"
+          },
+          {
+            "angels": [
+              "Idun",
+              "Valkyrie"
+            ],
+            "fate_name": "Ragnarok Witness",
+            "effect": "HP UP 20%"
+          },
+          {
+            "angels": [
+              "Gaia",
+              "Amaterasu",
+              "Nuwa"
+            ],
+            "fate_name": "Supreme Volition",
+            "effect": "HP UP 25%"
+          },
+          {
+            "angels": [
+              "Heimdall"
+            ],
+            "fate_name": "Pure Power",
+            "effect": "HP UP 15%"
+          },
+          {
+            "angels": [
+              "Ember Dragon",
+              "Ra"
+            ],
+            "fate_name": "Emberbringer",
+            "effect": "ATK UP 20%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914936",
+        "relic": null
+      },
+      "Enmusubi": {
+        "name": "Enmusubi",
+        "rarity": "R 🔧",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 2879,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Izu Dancer",
+              "Izanami"
+            ],
+            "fate_name": "Brilliant Yamato",
+            "effect": "ATK UP 20%"
+          },
+          {
+            "angels": [
+              "Amaterasu"
+            ],
+            "fate_name": "Order Controller",
+            "effect": "HP UP 15%"
+          },
+          {
+            "angels": [
+              "Michael",
+              "Icarus",
+              "Hera"
+            ],
+            "fate_name": "Justice Sanctions",
+            "effect": "ATK UP 25%"
+          },
+          {
+            "angels": [
+              "Michael"
+            ],
+            "fate_name": "Bright Link",
+            "effect": "ATK UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.914998",
+        "relic": null
+      },
+      "Lilith": {
+        "name": "Lilith",
+        "rarity": "SR 🔥",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 4136,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Geb"
+            ],
+            "fate_name": "Bloodthirsty Fangs",
+            "effect": "HP UP +15%"
+          },
+          {
+            "angels": [
+              "Nyx"
+            ],
+            "fate_name": "Devil's Whisper",
+            "effect": "ATK UP +15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.915053",
+        "relic": null
+      },
+      "Tsukuyomi": {
+        "name": "Tsukuyomi",
+        "rarity": "UR 🌟",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 5813,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Ungnyeo"
+            ],
+            "fate_name": "Oriental Beauty",
+            "effect": "Max HP +1000"
+          },
+          {
+            "angels": [
+              "Gabriel"
+            ],
+            "fate_name": "Novice Village",
+            "effect": "Max HP +1000"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.915097",
+        "relic": null
+      },
+      "Nemesis": {
+        "name": "Nemesis",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 100,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Medusa"
+            ],
+            "fate_name": "Power of Time",
+            "effect": "ATK UP 15%"
+          },
+          {
+            "angels": [
+              "Jeanne d'Arc",
+              "Nike"
+            ],
+            "fate_name": "Battle Cry",
+            "effect": "HP UP 20%"
+          },
+          {
+            "angels": [
+              "Erebus"
+            ],
+            "fate_name": "Dark and Death",
+            "effect": "ATK UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.915154",
+        "relic": null
+      },
+      "Anubis": {
+        "name": "Anubis",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "hp": 500,
+        "atk": 50,
+        "def": 25,
+        "crit": 5,
+        "affection": 0,
+        "potential": 167,
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Nephthys"
+            ],
+            "fate_name": "Master of Death",
+            "effect": "HP UP 15%"
+          },
+          {
+            "angels": [
+              "Nyx"
+            ],
+            "fate_name": "Death of Darkness",
+            "effect": "ATK UP 15%"
+          }
+        ],
+        "element": "Neutral",
+        "summoned_at": "2025-08-19T11:18:56.915201",
+        "relic": null
+      }
+    },
+    "battle_history": [
+      {
+        "waifu": "Minotaur",
+        "opponent": "Minotaur",
+        "result": "win",
+        "timestamp": "2025-08-19 11:18:23 UTC"
+      },
+      {
+        "waifu": "Medusa",
+        "opponent": "Medusa",
+        "result": "win",
+        "timestamp": "2025-08-19 11:19:49 UTC"
+      },
+      {
+        "waifu": "Minotaur",
+        "opponent": "Ra",
+        "result": "lose",
+        "timestamp": "2025-08-26 15:45:30 UTC"
+      }
+    ],
+    "inventory_slots": 25
+  },
+  "884489252296073287": {
+    "name": "",
+    "gold": 10110,
+    "gems": 50,
+    "level": 1,
+    "xp": 55,
+    "hp": 100,
+    "claimed_waifus": [],
+    "waifu_stats": {},
+    "inventory": {
+      "Small Gem": 1
+    },
+    "investments": {},
+    "guild_id": null,
+    "achievements": [],
+    "battle_stats": {
+      "battles_won": 1,
+      "battles_lost": 0,
+      "total_damage_dealt": 38,
+      "total_damage_taken": 37
+    },
+    "crafting_stats": {
+      "items_crafted": 0,
+      "materials_gathered": 0,
+      "successful_crafts": 0
+    },
+    "settings": {
+      "auto_collect": false,
+      "notifications": true,
+      "display_mode": "detailed"
+    },
+    "created_at": "2025-08-31T15:29:34.123473",
+    "last_active": "2025-08-31T15:29:54.058589",
+    "summon_stats": {
+      "total_summons": 1,
+      "gems_spent": 50
+    }
+  },
+  "test_user": {
+    "test": true,
+    "gold": 1000,
+    "last_active": "2025-08-31T10:16:05.562073"
+  },
+  "1361309483359277117": {
+    "name": "THE LOST SOUL",
+    "gold": 10000,
+    "gems": 100,
+    "level": 1,
+    "xp": 0,
+    "hp": 100,
+    "claimed_waifus": [],
+    "waifu_stats": {},
+    "inventory": {},
+    "investments": {},
+    "guild_id": null,
+    "achievements": [],
+    "battle_stats": {
+      "battles_won": 0,
+      "battles_lost": 0,
+      "total_damage_dealt": 0,
+      "total_damage_taken": 0
+    },
+    "crafting_stats": {
+      "items_crafted": 0,
+      "materials_gathered": 0,
+      "successful_crafts": 0
+    },
+    "settings": {
+      "auto_collect": false,
+      "notifications": true,
+      "display_mode": "detailed"
+    },
+    "created_at": "2025-08-31T12:39:28.133435",
+    "last_active": "2025-08-31T12:39:53.177770"
+  }
+}

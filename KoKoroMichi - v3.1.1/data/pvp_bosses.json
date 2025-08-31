@@ -1,0 +1,250 @@
+{
+  "duel_settings": {
+    "cooldown_minutes": 30,
+    "min_level_difference": 5,
+    "stake_percentage": 0.1,
+    "max_stakes": 10000,
+    "victory_bonus_multiplier": 1.5
+  },
+  "rare_bosses": {
+    "spawn_settings": {
+      "base_spawn_chance": 0.08,
+      "spawn_interval_hours": 2,
+      "boss_duration_minutes": 45,
+      "max_active_bosses": 3
+    },
+    "boss_types": [
+      {
+        "name": "Shadow Dragon Xerath",
+        "description": "An ancient dragon corrupted by dark magic",
+        "rarity": "legendary",
+        "spawn_chance": 0.02,
+        "level_range": [40, 60],
+        "hp_multiplier": 8.0,
+        "damage_multiplier": 3.5,
+        "special_abilities": [
+          {
+            "name": "Shadow Flame Breath",
+            "description": "Devastating area attack dealing 200% damage",
+            "chance": 0.25,
+            "cooldown_turns": 3
+          },
+          {
+            "name": "Dark Regeneration", 
+            "description": "Heals 15% HP every 2 turns",
+            "chance": 1.0,
+            "trigger": "health_below_50"
+          }
+        ],
+        "rewards": {
+          "base_xp": 2500,
+          "base_gold": 5000,
+          "guaranteed_items": ["Dragon Scale", "Shadow Essence"],
+          "rare_drops": [
+            {"item": "Legendary Relic Box", "chance": 0.3},
+            {"item": "Dragon Soul Fragment", "chance": 0.15},
+            {"item": "Mythic Evolution Stone", "chance": 0.05}
+          ]
+        },
+        "weaknesses": ["light_magic", "holy_damage"],
+        "resistances": ["dark_magic", "fire_damage"]
+      },
+      {
+        "name": "Crystal Golem Titan",
+        "description": "A massive construct of pure crystal energy",
+        "rarity": "epic",
+        "spawn_chance": 0.05,
+        "level_range": [25, 45],
+        "hp_multiplier": 6.0,
+        "damage_multiplier": 2.8,
+        "special_abilities": [
+          {
+            "name": "Crystal Barrage",
+            "description": "Launches crystal shards at all enemies",
+            "chance": 0.3,
+            "cooldown_turns": 2
+          },
+          {
+            "name": "Hardened Shell",
+            "description": "Reduces all damage by 50% for 3 turns",
+            "chance": 0.2,
+            "trigger": "health_below_30"
+          }
+        ],
+        "rewards": {
+          "base_xp": 1800,
+          "base_gold": 3500,
+          "guaranteed_items": ["Crystal Shard", "Golem Core"],
+          "rare_drops": [
+            {"item": "Epic Relic Box", "chance": 0.4},
+            {"item": "Crystal Heart", "chance": 0.2},
+            {"item": "Titan's Strength Potion", "chance": 0.1}
+          ]
+        },
+        "weaknesses": ["earth_magic", "crushing_damage"],
+        "resistances": ["physical_damage", "ice_damage"]
+      },
+      {
+        "name": "Void Wraith Queen",
+        "description": "A spectral entity from the realm between worlds",
+        "rarity": "rare",
+        "spawn_chance": 0.08,
+        "level_range": [15, 35],
+        "hp_multiplier": 4.5,
+        "damage_multiplier": 2.2,
+        "special_abilities": [
+          {
+            "name": "Soul Drain",
+            "description": "Drains enemy HP and adds to own HP",
+            "chance": 0.35,
+            "heal_percentage": 0.5
+          },
+          {
+            "name": "Phase Step",
+            "description": "Becomes untargetable for 1 turn",
+            "chance": 0.15,
+            "cooldown_turns": 4
+          }
+        ],
+        "rewards": {
+          "base_xp": 1200,
+          "base_gold": 2500,
+          "guaranteed_items": ["Void Essence", "Spectral Cloth"],
+          "rare_drops": [
+            {"item": "Rare Relic Box", "chance": 0.5},
+            {"item": "Wraith Cloak", "chance": 0.25},
+            {"item": "Soul Gem", "chance": 0.15}
+          ]
+        },
+        "weaknesses": ["holy_damage", "light_magic"],
+        "resistances": ["dark_magic", "necrotic_damage"]
+      },
+      {
+        "name": "Storm Phoenix Aethon",
+        "description": "A majestic phoenix wielding the power of storms",
+        "rarity": "epic",
+        "spawn_chance": 0.04,
+        "level_range": [30, 50],
+        "hp_multiplier": 5.5,
+        "damage_multiplier": 3.0,
+        "special_abilities": [
+          {
+            "name": "Lightning Storm",
+            "description": "Chain lightning hits all enemies multiple times",
+            "chance": 0.28,
+            "hits": 3
+          },
+          {
+            "name": "Phoenix Rebirth",
+            "description": "Revives with 25% HP if killed (once per fight)",
+            "chance": 1.0,
+            "trigger": "death",
+            "uses": 1
+          }
+        ],
+        "rewards": {
+          "base_xp": 2000,
+          "base_gold": 4200,
+          "guaranteed_items": ["Phoenix Feather", "Storm Crystal"],
+          "rare_drops": [
+            {"item": "Epic Relic Box", "chance": 0.35},
+            {"item": "Lightning Orb", "chance": 0.18},
+            {"item": "Rebirth Token", "chance": 0.08}
+          ]
+        },
+        "weaknesses": ["ice_damage", "earth_magic"],
+        "resistances": ["fire_damage", "lightning_damage"]
+      }
+    ]
+  },
+  "duel_arenas": [
+    {
+      "name": "Crimson Colosseum",
+      "description": "An ancient arena where legends are born",
+      "battle_modifiers": {
+        "damage_multiplier": 1.1,
+        "crit_chance_bonus": 0.05
+      },
+      "entry_requirements": {
+        "min_level": 10,
+        "min_battles_won": 5
+      }
+    },
+    {
+      "name": "Mystic Sanctum",
+      "description": "A magical arena that enhances spellcasting",
+      "battle_modifiers": {
+        "magic_damage_bonus": 0.2,
+        "mana_regen_bonus": 0.15
+      },
+      "entry_requirements": {
+        "min_level": 15,
+        "min_magic_affinity": 100
+      }
+    },
+    {
+      "name": "Void Nexus",
+      "description": "A dark arena where anything can happen",
+      "battle_modifiers": {
+        "random_effects": true,
+        "chaos_chance": 0.1
+      },
+      "entry_requirements": {
+        "min_level": 20,
+        "special_access": "Void Walker"
+      }
+    }
+  ],
+  "pvp_ranks": [
+    {
+      "rank": "Bronze Duelist",
+      "min_rating": 0,
+      "max_rating": 1200,
+      "rewards": {
+        "weekly_gold": 500,
+        "title": "Bronze Duelist"
+      }
+    },
+    {
+      "rank": "Silver Champion",
+      "min_rating": 1201,
+      "max_rating": 1800,
+      "rewards": {
+        "weekly_gold": 1000,
+        "weekly_items": ["XP Booster", "Health Potion"],
+        "title": "Silver Champion"
+      }
+    },
+    {
+      "rank": "Gold Gladiator",
+      "min_rating": 1801,
+      "max_rating": 2500,
+      "rewards": {
+        "weekly_gold": 2000,
+        "weekly_items": ["Rare Relic Box", "Mana Potion"],
+        "title": "Gold Gladiator"
+      }
+    },
+    {
+      "rank": "Platinum Warrior",
+      "min_rating": 2501,
+      "max_rating": 3500,
+      "rewards": {
+        "weekly_gold": 3500,
+        "weekly_items": ["Epic Relic Box", "Evolution Stone"],
+        "title": "Platinum Warrior"
+      }
+    },
+    {
+      "rank": "Diamond Legend",
+      "min_rating": 3501,
+      "max_rating": 99999,
+      "rewards": {
+        "weekly_gold": 5000,
+        "weekly_items": ["Legendary Relic Box", "Mythic Evolution Stone"],
+        "title": "Diamond Legend",
+        "special_access": ["Legendary Arena", "Boss Summoning"]
+      }
+    }
+  ]
+}

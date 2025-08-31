@@ -1,0 +1,956 @@
+{
+  "user_trait_data": {},
+  "waifu_traits": {
+    "884489252296073287_Ra": [
+      {
+        "name": "Stoic",
+        "category": "personality",
+        "description": "Keeps calm under pressure, resists negative effects",
+        "effects": {
+          "status_resistance": 0.15,
+          "focus_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335202"
+      },
+      {
+        "name": "Kind",
+        "category": "personality",
+        "description": "Always helps others, better healing and support",
+        "effects": {
+          "healing_bonus": 0.12,
+          "quest_success_bonus": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:28.335224"
+      },
+      {
+        "name": "Hot-headed",
+        "category": "personality",
+        "description": "Quick to anger, gains rage faster but loses calm",
+        "effects": {
+          "rage_buildup": 0.15,
+          "mood_stability": -0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335231"
+      },
+      {
+        "name": "Calm",
+        "category": "personality",
+        "description": "Balanced mindset, resists fear and mental effects",
+        "effects": {
+          "fear_resistance": 0.25,
+          "focus_bonus": 0.08
+        },
+        "unlock_date": "2025-08-29T08:01:28.335236"
+      },
+      {
+        "name": "Shieldbearer",
+        "category": "combat",
+        "description": "Expert at defense, reduces all incoming damage slightly",
+        "effects": {
+          "defense_bonus": 0.15,
+          "damage_reduction": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:28.335241"
+      },
+      {
+        "name": "Tank",
+        "category": "combat",
+        "description": "Absorbs hits for the team, massive HP boost",
+        "effects": {
+          "hp_bonus": 0.2,
+          "taunt_chance": 0.08
+        },
+        "unlock_date": "2025-08-29T08:01:28.335245"
+      },
+      {
+        "name": "Elementalist",
+        "category": "combat",
+        "description": "Harness elemental forces, increased elemental damage",
+        "effects": {
+          "fire_damage": 0.1,
+          "ice_damage": 0.1,
+          "lightning_damage": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335249"
+      },
+      {
+        "name": "Berserker Mage",
+        "category": "combat",
+        "description": "Combines magic and rage for devastating attacks",
+        "effects": {
+          "magic_damage_bonus": 0.15,
+          "rage_buildup": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335253"
+      },
+      {
+        "name": "Dreamwalker",
+        "category": "special",
+        "description": "Can slip between dreams and reality, gaining unique buffs from dream events",
+        "effects": {
+          "dream_event_bonus": 0.2,
+          "buff_duration_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335258"
+      },
+      {
+        "name": "Charmcaster",
+        "category": "special",
+        "description": "Masters of persuasion, better deals and higher affinity gains",
+        "effects": {
+          "shop_discount": 0.1,
+          "affinity_gain_bonus": 0.2
+        },
+        "unlock_date": "2025-08-29T08:01:28.335262"
+      },
+      {
+        "name": "Shadow Veil",
+        "category": "special",
+        "description": "Able to blend into shadows, reduces enemy detection",
+        "effects": {
+          "stealth_bonus": 0.2,
+          "escape_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335264"
+      },
+      {
+        "name": "Celestial Bond",
+        "category": "special",
+        "description": "A divine blessing grants power based on the moon phase",
+        "effects": {
+          "buff_scaling": "moon_phase",
+          "xp_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335267"
+      },
+      {
+        "name": "Beast Whisperer",
+        "category": "special",
+        "description": "Animals trust you, better taming and beast ally boosts",
+        "effects": {
+          "beast_affinity": 0.25,
+          "pet_damage_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335271"
+      },
+      {
+        "name": "Blood Pact",
+        "category": "special",
+        "description": "Sacrifices HP to unleash stronger attacks",
+        "effects": {
+          "damage_bonus": 0.2,
+          "hp_drain": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:28.335274"
+      },
+      {
+        "name": "Soul Resonance",
+        "category": "special",
+        "description": "Your soul harmonizes with allies, increasing team synergy",
+        "effects": {
+          "team_buff_bonus": 0.15,
+          "waifu_affinity_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335276"
+      },
+      {
+        "name": "Pathfinder",
+        "category": "exploration",
+        "description": "Always finds the best routes, reducing travel time and encounters",
+        "effects": {
+          "travel_speed_bonus": 0.2,
+          "random_encounter_reduction": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335278"
+      },
+      {
+        "name": "Cartographer",
+        "category": "exploration",
+        "description": "Maps out regions in detail, revealing hidden locations and shortcuts",
+        "effects": {
+          "map_reveal_bonus": true,
+          "hidden_area_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335282"
+      },
+      {
+        "name": "Herbalist",
+        "category": "exploration",
+        "description": "Expert at gathering plants, herbs, and alchemical ingredients",
+        "effects": {
+          "herb_gathering_bonus": 0.25,
+          "potion_success_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335285"
+      },
+      {
+        "name": "Beast Tracker",
+        "category": "exploration",
+        "description": "Can follow animal tracks and anticipate their movements",
+        "effects": {
+          "pet_discovery_bonus": 0.2,
+          "hunt_success_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335287"
+      },
+      {
+        "name": "Mystic Aura",
+        "category": "exploration",
+        "description": "Senses magical energies in the surroundings",
+        "effects": {
+          "magic_detection": true,
+          "rare_relic_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335292"
+      },
+      {
+        "name": "Night Owl",
+        "category": "exploration",
+        "description": "Excels in nighttime exploration with fewer penalties",
+        "effects": {
+          "night_quest_bonus": 0.25,
+          "stealth_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335296"
+      },
+      {
+        "name": "Weather Adept",
+        "category": "exploration",
+        "description": "Adjusts well to harsh weather, reducing negative effects",
+        "effects": {
+          "weather_penalty_reduction": 0.3,
+          "xp_bonus": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:28.335298"
+      },
+      {
+        "name": "Master Craftsman",
+        "category": "crafting_gathering",
+        "description": "Creates items more efficiently, with higher quality",
+        "effects": {
+          "crafting_quality_bonus": 0.2,
+          "crafting_speed_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335302"
+      },
+      {
+        "name": "Resourceful",
+        "category": "crafting_gathering",
+        "description": "Maximizes materials gained from gathering",
+        "effects": {
+          "material_yield_bonus": 0.25,
+          "rare_material_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335308"
+      },
+      {
+        "name": "Alchemy Expert",
+        "category": "crafting_gathering",
+        "description": "Potions and elixirs are more potent and stable",
+        "effects": {
+          "potion_effect_bonus": 0.2,
+          "alchemy_success_rate": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335313"
+      },
+      {
+        "name": "Blacksmith",
+        "category": "crafting_gathering",
+        "description": "Weapons and armor gain additional stats when forged",
+        "effects": {
+          "weapon_stat_bonus": 0.1,
+          "armor_stat_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335317"
+      },
+      {
+        "name": "Forager",
+        "category": "crafting_gathering",
+        "description": "Finds extra food and ingredients while exploring",
+        "effects": {
+          "gathering_bonus": 0.2,
+          "rare_food_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335320"
+      },
+      {
+        "name": "Enchanter",
+        "category": "crafting_gathering",
+        "description": "Enchantments last longer and are more effective",
+        "effects": {
+          "enchantment_strength_bonus": 0.2,
+          "enchantment_duration_bonus": 0.25
+        },
+        "unlock_date": "2025-08-29T08:01:28.335323"
+      },
+      {
+        "name": "Gem Cutter",
+        "category": "crafting_gathering",
+        "description": "Cuts and polishes gems flawlessly, increasing their value",
+        "effects": {
+          "gem_value_bonus": 0.2,
+          "rare_gem_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335327"
+      },
+      {
+        "name": "Tailor",
+        "category": "crafting_gathering",
+        "description": "Crafts clothing and gear with extra bonuses",
+        "effects": {
+          "gear_stat_bonus": 0.15,
+          "clothing_appearance_bonus": 0.2
+        },
+        "unlock_date": "2025-08-29T08:01:28.335333"
+      },
+      {
+        "name": "Jeweler",
+        "category": "crafting_gathering",
+        "description": "Creates jewelry that gives small passive bonuses",
+        "effects": {
+          "accessory_stat_bonus": 0.1,
+          "rare_accessory_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:28.335339"
+      },
+      {
+        "name": "Innovator",
+        "category": "crafting_gathering",
+        "description": "Develops new tools, improving efficiency and versatility",
+        "effects": {
+          "crafting_innovation_bonus": 0.25,
+          "special_item_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:28.335342"
+      }
+    ],
+    "884489252296073287_ra": [
+      {
+        "name": "Kind",
+        "category": "personality",
+        "description": "Always helps others, better healing and support",
+        "effects": {
+          "healing_bonus": 0.12,
+          "quest_success_bonus": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:32.977653"
+      },
+      {
+        "name": "Hot-headed",
+        "category": "personality",
+        "description": "Quick to anger, gains rage faster but loses calm",
+        "effects": {
+          "rage_buildup": 0.15,
+          "mood_stability": -0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977656"
+      },
+      {
+        "name": "Calm",
+        "category": "personality",
+        "description": "Balanced mindset, resists fear and mental effects",
+        "effects": {
+          "fear_resistance": 0.25,
+          "focus_bonus": 0.08
+        },
+        "unlock_date": "2025-08-29T08:01:32.977659"
+      },
+      {
+        "name": "Shieldbearer",
+        "category": "combat",
+        "description": "Expert at defense, reduces all incoming damage slightly",
+        "effects": {
+          "defense_bonus": 0.15,
+          "damage_reduction": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:32.977662"
+      },
+      {
+        "name": "Tank",
+        "category": "combat",
+        "description": "Absorbs hits for the team, massive HP boost",
+        "effects": {
+          "hp_bonus": 0.2,
+          "taunt_chance": 0.08
+        },
+        "unlock_date": "2025-08-29T08:01:32.977666"
+      },
+      {
+        "name": "Elementalist",
+        "category": "combat",
+        "description": "Harness elemental forces, increased elemental damage",
+        "effects": {
+          "fire_damage": 0.1,
+          "ice_damage": 0.1,
+          "lightning_damage": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977670"
+      },
+      {
+        "name": "Berserker Mage",
+        "category": "combat",
+        "description": "Combines magic and rage for devastating attacks",
+        "effects": {
+          "magic_damage_bonus": 0.15,
+          "rage_buildup": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977673"
+      },
+      {
+        "name": "Dreamwalker",
+        "category": "special",
+        "description": "Can slip between dreams and reality, gaining unique buffs from dream events",
+        "effects": {
+          "dream_event_bonus": 0.2,
+          "buff_duration_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977677"
+      },
+      {
+        "name": "Charmcaster",
+        "category": "special",
+        "description": "Masters of persuasion, better deals and higher affinity gains",
+        "effects": {
+          "shop_discount": 0.1,
+          "affinity_gain_bonus": 0.2
+        },
+        "unlock_date": "2025-08-29T08:01:32.977681"
+      },
+      {
+        "name": "Shadow Veil",
+        "category": "special",
+        "description": "Able to blend into shadows, reduces enemy detection",
+        "effects": {
+          "stealth_bonus": 0.2,
+          "escape_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977683"
+      },
+      {
+        "name": "Celestial Bond",
+        "category": "special",
+        "description": "A divine blessing grants power based on the moon phase",
+        "effects": {
+          "buff_scaling": "moon_phase",
+          "xp_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977685"
+      },
+      {
+        "name": "Beast Whisperer",
+        "category": "special",
+        "description": "Animals trust you, better taming and beast ally boosts",
+        "effects": {
+          "beast_affinity": 0.25,
+          "pet_damage_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977690"
+      },
+      {
+        "name": "Blood Pact",
+        "category": "special",
+        "description": "Sacrifices HP to unleash stronger attacks",
+        "effects": {
+          "damage_bonus": 0.2,
+          "hp_drain": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:32.977693"
+      },
+      {
+        "name": "Soul Resonance",
+        "category": "special",
+        "description": "Your soul harmonizes with allies, increasing team synergy",
+        "effects": {
+          "team_buff_bonus": 0.15,
+          "waifu_affinity_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977695"
+      },
+      {
+        "name": "Pathfinder",
+        "category": "exploration",
+        "description": "Always finds the best routes, reducing travel time and encounters",
+        "effects": {
+          "travel_speed_bonus": 0.2,
+          "random_encounter_reduction": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977697"
+      },
+      {
+        "name": "Cartographer",
+        "category": "exploration",
+        "description": "Maps out regions in detail, revealing hidden locations and shortcuts",
+        "effects": {
+          "map_reveal_bonus": true,
+          "hidden_area_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977701"
+      },
+      {
+        "name": "Herbalist",
+        "category": "exploration",
+        "description": "Expert at gathering plants, herbs, and alchemical ingredients",
+        "effects": {
+          "herb_gathering_bonus": 0.25,
+          "potion_success_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977704"
+      },
+      {
+        "name": "Beast Tracker",
+        "category": "exploration",
+        "description": "Can follow animal tracks and anticipate their movements",
+        "effects": {
+          "pet_discovery_bonus": 0.2,
+          "hunt_success_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977707"
+      },
+      {
+        "name": "Mystic Aura",
+        "category": "exploration",
+        "description": "Senses magical energies in the surroundings",
+        "effects": {
+          "magic_detection": true,
+          "rare_relic_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977711"
+      },
+      {
+        "name": "Night Owl",
+        "category": "exploration",
+        "description": "Excels in nighttime exploration with fewer penalties",
+        "effects": {
+          "night_quest_bonus": 0.25,
+          "stealth_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977714"
+      },
+      {
+        "name": "Weather Adept",
+        "category": "exploration",
+        "description": "Adjusts well to harsh weather, reducing negative effects",
+        "effects": {
+          "weather_penalty_reduction": 0.3,
+          "xp_bonus": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:32.977717"
+      },
+      {
+        "name": "Master Craftsman",
+        "category": "crafting_gathering",
+        "description": "Creates items more efficiently, with higher quality",
+        "effects": {
+          "crafting_quality_bonus": 0.2,
+          "crafting_speed_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977719"
+      },
+      {
+        "name": "Resourceful",
+        "category": "crafting_gathering",
+        "description": "Maximizes materials gained from gathering",
+        "effects": {
+          "material_yield_bonus": 0.25,
+          "rare_material_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977767"
+      },
+      {
+        "name": "Alchemy Expert",
+        "category": "crafting_gathering",
+        "description": "Potions and elixirs are more potent and stable",
+        "effects": {
+          "potion_effect_bonus": 0.2,
+          "alchemy_success_rate": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977772"
+      },
+      {
+        "name": "Blacksmith",
+        "category": "crafting_gathering",
+        "description": "Weapons and armor gain additional stats when forged",
+        "effects": {
+          "weapon_stat_bonus": 0.1,
+          "armor_stat_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977775"
+      },
+      {
+        "name": "Forager",
+        "category": "crafting_gathering",
+        "description": "Finds extra food and ingredients while exploring",
+        "effects": {
+          "gathering_bonus": 0.2,
+          "rare_food_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977778"
+      },
+      {
+        "name": "Enchanter",
+        "category": "crafting_gathering",
+        "description": "Enchantments last longer and are more effective",
+        "effects": {
+          "enchantment_strength_bonus": 0.2,
+          "enchantment_duration_bonus": 0.25
+        },
+        "unlock_date": "2025-08-29T08:01:32.977781"
+      },
+      {
+        "name": "Gem Cutter",
+        "category": "crafting_gathering",
+        "description": "Cuts and polishes gems flawlessly, increasing their value",
+        "effects": {
+          "gem_value_bonus": 0.2,
+          "rare_gem_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977784"
+      },
+      {
+        "name": "Tailor",
+        "category": "crafting_gathering",
+        "description": "Crafts clothing and gear with extra bonuses",
+        "effects": {
+          "gear_stat_bonus": 0.15,
+          "clothing_appearance_bonus": 0.2
+        },
+        "unlock_date": "2025-08-29T08:01:32.977787"
+      },
+      {
+        "name": "Jeweler",
+        "category": "crafting_gathering",
+        "description": "Creates jewelry that gives small passive bonuses",
+        "effects": {
+          "accessory_stat_bonus": 0.1,
+          "rare_accessory_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:32.977790"
+      },
+      {
+        "name": "Innovator",
+        "category": "crafting_gathering",
+        "description": "Develops new tools, improving efficiency and versatility",
+        "effects": {
+          "crafting_innovation_bonus": 0.25,
+          "special_item_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:32.977793"
+      }
+    ],
+    "884489252296073287_April Smith": [
+      {
+        "name": "Kind",
+        "category": "personality",
+        "description": "Always helps others, better healing and support",
+        "effects": {
+          "healing_bonus": 0.12,
+          "quest_success_bonus": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:47.245598"
+      },
+      {
+        "name": "Hot-headed",
+        "category": "personality",
+        "description": "Quick to anger, gains rage faster but loses calm",
+        "effects": {
+          "rage_buildup": 0.15,
+          "mood_stability": -0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245607"
+      },
+      {
+        "name": "Calm",
+        "category": "personality",
+        "description": "Balanced mindset, resists fear and mental effects",
+        "effects": {
+          "fear_resistance": 0.25,
+          "focus_bonus": 0.08
+        },
+        "unlock_date": "2025-08-29T08:01:47.245612"
+      },
+      {
+        "name": "Shieldbearer",
+        "category": "combat",
+        "description": "Expert at defense, reduces all incoming damage slightly",
+        "effects": {
+          "defense_bonus": 0.15,
+          "damage_reduction": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:47.245618"
+      },
+      {
+        "name": "Tank",
+        "category": "combat",
+        "description": "Absorbs hits for the team, massive HP boost",
+        "effects": {
+          "hp_bonus": 0.2,
+          "taunt_chance": 0.08
+        },
+        "unlock_date": "2025-08-29T08:01:47.245625"
+      },
+      {
+        "name": "Elementalist",
+        "category": "combat",
+        "description": "Harness elemental forces, increased elemental damage",
+        "effects": {
+          "fire_damage": 0.1,
+          "ice_damage": 0.1,
+          "lightning_damage": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245632"
+      },
+      {
+        "name": "Berserker Mage",
+        "category": "combat",
+        "description": "Combines magic and rage for devastating attacks",
+        "effects": {
+          "magic_damage_bonus": 0.15,
+          "rage_buildup": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245638"
+      },
+      {
+        "name": "Dreamwalker",
+        "category": "special",
+        "description": "Can slip between dreams and reality, gaining unique buffs from dream events",
+        "effects": {
+          "dream_event_bonus": 0.2,
+          "buff_duration_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245647"
+      },
+      {
+        "name": "Charmcaster",
+        "category": "special",
+        "description": "Masters of persuasion, better deals and higher affinity gains",
+        "effects": {
+          "shop_discount": 0.1,
+          "affinity_gain_bonus": 0.2
+        },
+        "unlock_date": "2025-08-29T08:01:47.245654"
+      },
+      {
+        "name": "Shadow Veil",
+        "category": "special",
+        "description": "Able to blend into shadows, reduces enemy detection",
+        "effects": {
+          "stealth_bonus": 0.2,
+          "escape_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245659"
+      },
+      {
+        "name": "Celestial Bond",
+        "category": "special",
+        "description": "A divine blessing grants power based on the moon phase",
+        "effects": {
+          "buff_scaling": "moon_phase",
+          "xp_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245664"
+      },
+      {
+        "name": "Beast Whisperer",
+        "category": "special",
+        "description": "Animals trust you, better taming and beast ally boosts",
+        "effects": {
+          "beast_affinity": 0.25,
+          "pet_damage_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245674"
+      },
+      {
+        "name": "Blood Pact",
+        "category": "special",
+        "description": "Sacrifices HP to unleash stronger attacks",
+        "effects": {
+          "damage_bonus": 0.2,
+          "hp_drain": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:47.245679"
+      },
+      {
+        "name": "Soul Resonance",
+        "category": "special",
+        "description": "Your soul harmonizes with allies, increasing team synergy",
+        "effects": {
+          "team_buff_bonus": 0.15,
+          "waifu_affinity_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245684"
+      },
+      {
+        "name": "Pathfinder",
+        "category": "exploration",
+        "description": "Always finds the best routes, reducing travel time and encounters",
+        "effects": {
+          "travel_speed_bonus": 0.2,
+          "random_encounter_reduction": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245690"
+      },
+      {
+        "name": "Cartographer",
+        "category": "exploration",
+        "description": "Maps out regions in detail, revealing hidden locations and shortcuts",
+        "effects": {
+          "map_reveal_bonus": true,
+          "hidden_area_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245698"
+      },
+      {
+        "name": "Herbalist",
+        "category": "exploration",
+        "description": "Expert at gathering plants, herbs, and alchemical ingredients",
+        "effects": {
+          "herb_gathering_bonus": 0.25,
+          "potion_success_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245703"
+      },
+      {
+        "name": "Beast Tracker",
+        "category": "exploration",
+        "description": "Can follow animal tracks and anticipate their movements",
+        "effects": {
+          "pet_discovery_bonus": 0.2,
+          "hunt_success_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245709"
+      },
+      {
+        "name": "Mystic Aura",
+        "category": "exploration",
+        "description": "Senses magical energies in the surroundings",
+        "effects": {
+          "magic_detection": true,
+          "rare_relic_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245718"
+      },
+      {
+        "name": "Night Owl",
+        "category": "exploration",
+        "description": "Excels in nighttime exploration with fewer penalties",
+        "effects": {
+          "night_quest_bonus": 0.25,
+          "stealth_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245746"
+      },
+      {
+        "name": "Weather Adept",
+        "category": "exploration",
+        "description": "Adjusts well to harsh weather, reducing negative effects",
+        "effects": {
+          "weather_penalty_reduction": 0.3,
+          "xp_bonus": 0.05
+        },
+        "unlock_date": "2025-08-29T08:01:47.245753"
+      },
+      {
+        "name": "Master Craftsman",
+        "category": "crafting_gathering",
+        "description": "Creates items more efficiently, with higher quality",
+        "effects": {
+          "crafting_quality_bonus": 0.2,
+          "crafting_speed_bonus": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245760"
+      },
+      {
+        "name": "Resourceful",
+        "category": "crafting_gathering",
+        "description": "Maximizes materials gained from gathering",
+        "effects": {
+          "material_yield_bonus": 0.25,
+          "rare_material_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245765"
+      },
+      {
+        "name": "Alchemy Expert",
+        "category": "crafting_gathering",
+        "description": "Potions and elixirs are more potent and stable",
+        "effects": {
+          "potion_effect_bonus": 0.2,
+          "alchemy_success_rate": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245771"
+      },
+      {
+        "name": "Blacksmith",
+        "category": "crafting_gathering",
+        "description": "Weapons and armor gain additional stats when forged",
+        "effects": {
+          "weapon_stat_bonus": 0.1,
+          "armor_stat_bonus": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245777"
+      },
+      {
+        "name": "Forager",
+        "category": "crafting_gathering",
+        "description": "Finds extra food and ingredients while exploring",
+        "effects": {
+          "gathering_bonus": 0.2,
+          "rare_food_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245783"
+      },
+      {
+        "name": "Enchanter",
+        "category": "crafting_gathering",
+        "description": "Enchantments last longer and are more effective",
+        "effects": {
+          "enchantment_strength_bonus": 0.2,
+          "enchantment_duration_bonus": 0.25
+        },
+        "unlock_date": "2025-08-29T08:01:47.245788"
+      },
+      {
+        "name": "Gem Cutter",
+        "category": "crafting_gathering",
+        "description": "Cuts and polishes gems flawlessly, increasing their value",
+        "effects": {
+          "gem_value_bonus": 0.2,
+          "rare_gem_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245794"
+      },
+      {
+        "name": "Tailor",
+        "category": "crafting_gathering",
+        "description": "Crafts clothing and gear with extra bonuses",
+        "effects": {
+          "gear_stat_bonus": 0.15,
+          "clothing_appearance_bonus": 0.2
+        },
+        "unlock_date": "2025-08-29T08:01:47.245801"
+      },
+      {
+        "name": "Jeweler",
+        "category": "crafting_gathering",
+        "description": "Creates jewelry that gives small passive bonuses",
+        "effects": {
+          "accessory_stat_bonus": 0.1,
+          "rare_accessory_chance": 0.15
+        },
+        "unlock_date": "2025-08-29T08:01:47.245819"
+      },
+      {
+        "name": "Innovator",
+        "category": "crafting_gathering",
+        "description": "Develops new tools, improving efficiency and versatility",
+        "effects": {
+          "crafting_innovation_bonus": 0.25,
+          "special_item_chance": 0.1
+        },
+        "unlock_date": "2025-08-29T08:01:47.245828"
+      }
+    ]
+  },
+  "evolution_progress": {},
+  "mood_history": {}
+}
