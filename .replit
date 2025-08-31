@@ -19,9 +19,9 @@ args = "KoKoroMichi Bot"
 name = "KoKoroMichi Bot"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "cd \"KoKoroMichi - v3.1.1\" && python bot.py"
-
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python bot.py"
