@@ -866,6 +866,97 @@ class AdminCommands(commands.Cog):
             await ctx.send(embed=embed)
             print(f"Admin help error: {e}")
     
+    @admin_group.command(name="welcome")
+    async def send_welcome_messages(self, ctx):
+        """Send welcome messages to all compatible channels in the server"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            guild = ctx.guild
+            if not guild:
+                embed = self.embed_builder.error_embed(
+                    "Error",
+                    "This command can only be used in a server."
+                )
+                await ctx.send(embed=embed)
+                return
+            
+            # Import the welcome function from bot.py
+            from bot import send_channel_welcome
+            
+            sent_count = 0
+            channel_list = []
+            
+            for channel in guild.text_channels:
+                # Check if this channel should have a welcome message
+                channel_types = [
+                    ('combat', 'duel'), ('arena', 'coliseum'), ('lust',), 
+                    ('forg', 'craft'), ('game',), ('guild',), 
+                    ('pet',), ('dream',), ('event',)
+                ]
+                
+                channel_name_lower = channel.name.lower()
+                should_send_welcome = False
+                
+                for keywords in channel_types:
+                    if any(keyword in channel_name_lower for keyword in keywords):
+                        should_send_welcome = True
+                        break
+                
+                if should_send_welcome:
+                    try:
+                        await send_channel_welcome(channel)
+                        sent_count += 1
+                        channel_list.append(channel.mention)
+                    except Exception as e:
+                        print(f"Failed to send welcome to {channel.name}: {e}")
+            
+            if sent_count > 0:
+                embed = self.embed_builder.success_embed(
+                    "Welcome Messages Sent",
+                    f"Successfully sent welcome messages to {sent_count} channels:"
+                )
+                
+                # Show up to 10 channels in the response
+                if len(channel_list) <= 10:
+                    embed.add_field(
+                        name="Channels Updated",
+                        value="\n".join([f"• {ch}" for ch in channel_list]),
+                        inline=False
+                    )
+                else:
+                    embed.add_field(
+                        name="Channels Updated",
+                        value="\n".join([f"• {ch}" for ch in channel_list[:10]]) + f"\n... and {len(channel_list) - 10} more",
+                        inline=False
+                    )
+            else:
+                embed = self.embed_builder.warning_embed(
+                    "No Compatible Channels",
+                    "No channels found that require welcome messages. Compatible channels include:\n"
+                    "• Combat/Duel zones\n• Arena/Coliseum\n• Guild halls\n• Pet corners\n"
+                    "• Forging halls\n• Mini-game areas\n• Dream realms\n• Event channels"
+                )
+            
+            # Log admin action
+            await self.log_admin_action(ctx, f"Sent welcome messages to {sent_count} channels")
+            
+            await ctx.send(embed=embed)
+            
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Welcome Error",
+                "Unable to send welcome messages. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"Welcome command error: {e}")
+    
     @commands.command(name="userinfo")
     async def user_info(self, ctx, member: discord.Member = None):
         """Get detailed information about a user (moderator command)"""

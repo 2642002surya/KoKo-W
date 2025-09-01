@@ -425,9 +425,11 @@ class KoKoroMichiBot(commands.Bot):
             name=f"{COMMAND_PREFIX}help | {BOT_NAME} {BOT_VERSION}")
         await self.change_presence(activity=activity)
 
-        # Create required channels in all guilds
+        # Create required channels in all guilds and send welcome messages
         for guild in self.guilds:
             await self.setup_guild_channels(guild)
+            # Send welcome messages to all existing channels on restart
+            await self.send_welcome_to_existing_channels(guild)
 
     async def setup_guild_channels(self, guild):
         """Create required channels for bot functionality"""
@@ -509,6 +511,32 @@ class KoKoroMichiBot(commands.Bot):
         """Setup channels when joining new guild"""
         logger.info(f"Joined guild: {guild.name}")
         await self.setup_guild_channels(guild)
+        
+    async def send_welcome_to_existing_channels(self, guild):
+        """Send welcome messages to all existing compatible channels"""
+        try:
+            for channel in guild.text_channels:
+                # Check if this channel should have a welcome message
+                channel_types = [
+                    ('combat', 'duel'), ('arena', 'coliseum'), ('lust',), 
+                    ('forg', 'craft'), ('game',), ('guild',), 
+                    ('pet',), ('dream',), ('event',)
+                ]
+                
+                channel_name_lower = channel.name.lower()
+                should_send_welcome = False
+                
+                for keywords in channel_types:
+                    if any(keyword in channel_name_lower for keyword in keywords):
+                        should_send_welcome = True
+                        break
+                
+                if should_send_welcome:
+                    await send_channel_welcome(channel)
+                    logger.info(f"Sent welcome message to #{channel.name} in {guild.name}")
+                    
+        except Exception as e:
+            logger.error(f"Error sending welcome messages in guild {guild.name}: {e}")
 
 
 # Main bot instance
