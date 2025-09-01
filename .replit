@@ -39,7 +39,7 @@ outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd website/frontend && npx vite --port 5000 --host 0.0.0.0"
+args = "cd kokoromichi-web && npm run dev"
 waitForPort = 5000
 
 [[ports]]
