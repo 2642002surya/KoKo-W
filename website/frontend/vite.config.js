@@ -11,7 +11,10 @@ export default defineConfig({
       'localhost',
       '.replit.dev',
       'a33dbf2c-270e-4863-b32f-f6513273277b-00-2t3drpa2vdv8l.worf.replit.dev'
-    ]
+    ],
+    hmr: {
+      overlay: false
+    }
   },
   resolve: {
     alias: {
