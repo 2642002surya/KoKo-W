@@ -346,7 +346,7 @@ class AdminCommands(commands.Cog):
     
     @admin_group.command(name="erase")
     async def erase_messages(self, ctx, amount: int = 50):
-        """Clear channel messages excluding pinned ones"""
+        """Clear all channel messages - tries to preserve pins but deletes everything if needed"""
         if not self.is_admin(ctx.author.id):
             embed = self.embed_builder.error_embed(
                 "Access Denied",
@@ -364,20 +364,44 @@ class AdminCommands(commands.Cog):
                 await ctx.send(embed=embed)
                 return
             
-            # Delete messages (excluding pinned)
-            def check(msg):
-                return not msg.pinned
+            deleted = []
+            pins_preserved = True
             
-            deleted = await ctx.channel.purge(limit=amount, check=check)
+            try:
+                # First attempt: Delete messages excluding pinned ones
+                def check(msg):
+                    return not msg.pinned
+                
+                deleted = await ctx.channel.purge(limit=amount, check=check)
+                
+                # If we didn't delete enough messages, try deleting everything
+                if len(deleted) < amount // 2:  # If we deleted less than half expected
+                    remaining = amount - len(deleted)
+                    additional_deleted = await ctx.channel.purge(limit=remaining)
+                    deleted.extend(additional_deleted)
+                    pins_preserved = False
+                    
+            except Exception:
+                # If pin detection fails, delete all messages including pins
+                deleted = await ctx.channel.purge(limit=amount)
+                pins_preserved = False
+            
+            # Create success message based on what was deleted
+            if pins_preserved:
+                description = (f"Successfully deleted {len(deleted)} messages from {ctx.channel.mention}\n"
+                             f"✅ Pinned messages were preserved")
+            else:
+                description = (f"Successfully deleted {len(deleted)} messages from {ctx.channel.mention}\n"
+                             f"⚠️ All messages including pinned ones were deleted")
             
             embed = self.embed_builder.success_embed(
                 "Messages Cleared",
-                f"Successfully deleted {len(deleted)} messages from {ctx.channel.mention}\n"
-                f"(Pinned messages were preserved)"
+                description
             )
             
             # Log admin action
-            await self.log_admin_action(ctx, f"Cleared {len(deleted)} messages from {ctx.channel.name}")
+            pin_status = "preserving pins" if pins_preserved else "including pinned messages"
+            await self.log_admin_action(ctx, f"Cleared {len(deleted)} messages from {ctx.channel.name} ({pin_status})")
             
             # Send confirmation and auto-delete it
             await ctx.send(embed=embed, delete_after=10)
