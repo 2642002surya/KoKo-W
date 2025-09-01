@@ -1,139 +1,164 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// Import a simple navigation component
-const Navigation = () => (
-  <nav>
-    <div className="nav-container">
-      <div className="logo">KoKoroMichi</div>
-      <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/commands">Commands</a></li>
-        <li><a href="/features">Features</a></li>
-        <li><a href="/faq">FAQ</a></li>
-      </ul>
-    </div>
-  </nav>
-);
-
-// Simple page components
-const CommandsPage = () => (
-  <div style={{ padding: '6rem 2rem 2rem', minHeight: '100vh' }}>
-    <div className="container">
-      <h1>📚 Bot Commands</h1>
-      <div className="card">
-        <h2>⚔️ Battle Commands</h2>
-        <div className="command-grid">
-          <div className="command-card">
-            <div className="command-name">!battle [character]</div>
-            <div className="command-description">Fight NPCs with your characters</div>
-          </div>
-          <div className="command-card">
-            <div className="command-name">!duel @user</div>
-            <div className="command-description">Challenge another player</div>
-          </div>
-          <div className="command-card">
-            <div className="command-name">!arena</div>
-            <div className="command-description">Enter arena tournaments</div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="card">
-        <h2>❤️ Collection Commands</h2>
-        <div className="command-grid">
-          <div className="command-card">
-            <div className="command-name">!summon</div>
-            <div className="command-description">Summon new characters</div>
-          </div>
-          <div className="command-card">
-            <div className="command-name">!profile</div>
-            <div className="command-description">View your character collection</div>
-          </div>
-          <div className="command-card">
-            <div className="command-name">!inspect [character]</div>
-            <div className="command-description">View character details</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const FeaturesPage = () => (
-  <div style={{ padding: '6rem 2rem 2rem', minHeight: '100vh' }}>
-    <div className="container">
-      <h1>🌟 Game Features</h1>
-      <div className="card-grid">
-        <div className="card">
-          <h2>⚔️ Combat System</h2>
-          <p>Strategic turn-based battles with elemental advantages, skills, and comprehensive buff systems.</p>
-        </div>
-        <div className="card">
-          <h2>👑 Guild System</h2>
-          <p>Join guilds for collaborative gameplay, bonuses, and team-based activities.</p>
-        </div>
-        <div className="card">
-          <h2>🎯 Character Collection</h2>
-          <p>Collect over 50+ unique characters with different rarities from N to Mythic.</p>
-        </div>
-        <div className="card">
-          <h2>🎮 Mini-Games</h2>
-          <p>Enjoy blackjack, slots, lottery, trivia, and more for daily rewards.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const FAQPage = () => (
-  <div style={{ padding: '6rem 2rem 2rem', minHeight: '100vh' }}>
-    <div className="container">
-      <h1>❓ Frequently Asked Questions</h1>
-      <div className="card">
-        <h3>How do I start playing?</h3>
-        <p>Simply invite the bot to your server and use !help to see all available commands!</p>
-      </div>
-      <div className="card">
-        <h3>How do I get new characters?</h3>
-        <p>Use the !summon command to get new characters with gems. You earn gems through daily rewards and activities.</p>
-      </div>
-      <div className="card">
-        <h3>What's the rarity system?</h3>
-        <p>Characters range from N (common) to Mythic (ultra rare): N → R → SR → SSR → UR → LR → Mythic</p>
-      </div>
-    </div>
-  </div>
-);
-
-// Simple Footer
-const Footer = () => (
-  <footer>
-    <div className="container">
-      <p>&copy; 2025 KoKoroMichi. Made with ❤️ for Discord communities.</p>
-    </div>
-  </footer>
-);
-
-// Import HomePage
+// Import pages
 import HomePage from './pages/HomePage';
+import CommandsPage from './pages/CommandsPage';
+import FeaturesPage from './pages/FeaturesPage';
+import FAQPage from './pages/FAQPage';
+import WaifusPage from './pages/WaifusPage';
+
+// Import components
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import ThemeSelector from './components/ThemeSelector';
+import ParticleBackground from './components/ParticleBackground';
 
 function App() {
+  const [theme, setTheme] = useState('water'); // Default theme
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Theme configurations
+  const themes = {
+    water: {
+      name: 'Water',
+      colors: {
+        primary: '#0EA5E9',
+        secondary: '#0284C7',
+        accent: '#38BDF8',
+        background: '#0F172A',
+        surface: '#1E293B',
+        text: '#F1F5F9',
+        textSecondary: '#94A3B8'
+      },
+      gradient: 'from-blue-900 via-blue-800 to-slate-900'
+    },
+    fire: {
+      name: 'Fire',
+      colors: {
+        primary: '#EF4444',
+        secondary: '#DC2626',
+        accent: '#F97316',
+        background: '#0F0A0A',
+        surface: '#2D1B1B',
+        text: '#FEF2F2',
+        textSecondary: '#FCA5A5'
+      },
+      gradient: 'from-red-900 via-orange-800 to-slate-900'
+    },
+    earth: {
+      name: 'Earth',
+      colors: {
+        primary: '#A16207',
+        secondary: '#92400E',
+        accent: '#D97706',
+        background: '#1C1917',
+        surface: '#292524',
+        text: '#FEF7ED',
+        textSecondary: '#D6D3D1'
+      },
+      gradient: 'from-amber-900 via-yellow-800 to-slate-900'
+    },
+    metal: {
+      name: 'Metal',
+      colors: {
+        primary: '#6B7280',
+        secondary: '#4B5563',
+        accent: '#9CA3AF',
+        background: '#111827',
+        surface: '#1F2937',
+        text: '#F9FAFB',
+        textSecondary: '#D1D5DB'
+      },
+      gradient: 'from-gray-800 via-slate-700 to-gray-900'
+    },
+    wood: {
+      name: 'Wood',
+      colors: {
+        primary: '#16A34A',
+        secondary: '#15803D',
+        accent: '#22C55E',
+        background: '#0F1F0F',
+        surface: '#1B2E1B',
+        text: '#F0FDF4',
+        textSecondary: '#BBF7D0'
+      },
+      gradient: 'from-green-900 via-emerald-800 to-slate-900'
+    }
+  };
+
+  const currentTheme = themes[theme];
+
+  // Apply theme to CSS variables
+  useEffect(() => {
+    const root = document.documentElement;
+    Object.entries(currentTheme.colors).forEach(([key, value]) => {
+      root.style.setProperty(`--color-${key}`, value);
+    });
+    root.style.setProperty('--gradient', currentTheme.gradient);
+  }, [currentTheme]);
+
+  // Loading screen
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 to-blue-900 flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="text-center"
+        >
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
+          />
+          <h1 className="text-3xl font-bold text-white mb-2">KoKoroMichi</h1>
+          <p className="text-blue-200">Loading your adventure...</p>
+        </motion.div>
+      </div>
+    );
+  }
+
   return (
     <Router>
-      <div style={{ minHeight: '100vh', position: 'relative' }}>
-        <Navigation />
+      <div 
+        className={`min-h-screen bg-gradient-to-br ${currentTheme.gradient} relative overflow-hidden`}
+        style={{ backgroundColor: currentTheme.colors.background }}
+      >
+        {/* Particle Background */}
+        <ParticleBackground theme={theme} />
         
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/commands" element={<CommandsPage />} />
-            <Route path="/features" element={<FeaturesPage />} />
-            <Route path="/faq" element={<FAQPage />} />
-          </Routes>
-        </main>
+        {/* Main Content */}
+        <div className="relative z-10">
+          <Navigation theme={currentTheme} />
+          
+          <main>
+            <AnimatePresence mode="wait">
+              <Routes>
+                <Route path="/" element={<HomePage theme={currentTheme} />} />
+                <Route path="/commands" element={<CommandsPage theme={currentTheme} />} />
+                <Route path="/features" element={<FeaturesPage theme={currentTheme} />} />
+                <Route path="/waifus" element={<WaifusPage theme={currentTheme} />} />
+                <Route path="/faq" element={<FAQPage theme={currentTheme} />} />
+              </Routes>
+            </AnimatePresence>
+          </main>
+          
+          <Footer theme={currentTheme} />
+        </div>
         
-        <Footer />
+        {/* Theme Selector */}
+        <ThemeSelector 
+          themes={themes}
+          currentTheme={theme}
+          onThemeChange={setTheme}
+        />
       </div>
     </Router>
   );

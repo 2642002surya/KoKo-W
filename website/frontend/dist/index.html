@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/kokoromichi-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KoKoroMichi - Advanced Discord RPG Bot for Waifu Collection, Battle Systems, and Guild Management" />
+    <meta name="keywords" content="Discord bot, RPG, waifu, anime, gacha, battles, guild" />
+    <meta name="author" content="KoKoroMichi Team" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="KoKoroMichi - Discord RPG Bot" />
+    <meta property="og:description" content="Comprehensive Discord RPG bot featuring waifu collection, strategic battles, guild systems, and extensive game mechanics." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kokoromichi.replit.app" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KoKoroMichi - Discord RPG Bot" />
+    <meta name="twitter:description" content="Advanced Discord RPG bot with waifu collection and battle systems" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <title>KoKoroMichi - Discord RPG Bot</title>
+    
+    <style>
+      /* Loading screen styles */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(59, 130, 246, 0.3);
+        border-top: 3px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        color: #3b82f6;
+        font-family: 'Orbitron', monospace;
+        font-size: 1.2rem;
+        font-weight: 600;
+        opacity: 0.9;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: rgba(15, 23, 42, 0.5);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: rgba(59, 130, 246, 0.5);
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(59, 130, 246, 0.7);
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-BVhdS9Xg.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-gH-7aFTg.js">
+    <link rel="modulepreload" crossorigin href="/assets/router-7e_54us5.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-Dx5awCcr.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DsPDObYD.css">
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Loading KoKoroMichi...</div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Remove loading screen once the app loads
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+              loadingScreen.remove();
+            }, 500);
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
