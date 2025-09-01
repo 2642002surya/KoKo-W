@@ -17,7 +17,12 @@ export default defineConfig({
   server: {
     port: 5000,
     host: '0.0.0.0',
-    allowedHosts: ['all']
+    allowedHosts: [
+      'all',
+      '.replit.dev',
+      '.replit.app',
+      'a20629e8-4642-462a-8b0a-619a21cf82d3-00-c8tt2sbusok9.janeway.replit.dev'
+    ]
   },
   build: {
     outDir: 'dist',
