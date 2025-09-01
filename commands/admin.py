@@ -20,13 +20,12 @@ class AdminCommands(commands.Cog):
         self.bot = bot
         self.embed_builder = EmbedBuilder()
         
-        # Admin user IDs
-        self.admin_users = {ADMIN_USER_ID}  # Your admin user ID
+        # Admin and moderator configuration
         self.moderator_users = set()  # Add moderator user IDs here
     
     def is_admin(self, user_id: int) -> bool:
         """Check if user is an admin"""
-        return str(user_id) in self.admin_users or user_id == self.bot.owner_id
+        return str(user_id) == ADMIN_USER_ID or user_id == self.bot.owner_id
     
     def is_moderator(self, user_id: int) -> bool:
         """Check if user is a moderator or admin"""
@@ -35,15 +34,7 @@ class AdminCommands(commands.Cog):
     @commands.group(name="admin", invoke_without_command=True)
     async def admin_group(self, ctx):
         """Admin command group - requires admin permissions"""
-        # Admin commands must be used in DM
-        if not isinstance(ctx.channel, discord.DMChannel):
-            embed = self.embed_builder.warning_embed(
-                "Admin Commands",
-                "Admin commands must be used in direct messages for security."
-            )
-            await ctx.send(embed=embed)
-            return
-        
+        # Check admin permissions
         if not self.is_admin(ctx.author.id):
             embed = self.embed_builder.error_embed(
                 "Access Denied",
@@ -52,13 +43,14 @@ class AdminCommands(commands.Cog):
             await ctx.send(embed=embed)
             return
         
-        embed = self.embed_builder.create_embed(
+        # Send admin panel info to DM for security
+        admin_embed = self.embed_builder.create_embed(
             title="🛠️ Admin Panel",
             description="Bot administration and management commands",
             color=0xFF0000
         )
         
-        embed.add_field(
+        admin_embed.add_field(
             name="👥 User Management",
             value="• `!admin give <user> <item> <amount>` - Give items\n"
                   "• `!admin gold <user> <amount>` - Modify gold\n"
@@ -67,7 +59,7 @@ class AdminCommands(commands.Cog):
             inline=False
         )
         
-        embed.add_field(
+        admin_embed.add_field(
             name="📊 Bot Management",
             value="• `!admin stats` - Bot statistics\n"
                   "• `!admin backup` - Create data backup\n"
@@ -76,13 +68,32 @@ class AdminCommands(commands.Cog):
             inline=False
         )
         
-        await ctx.send(embed=embed)
+        # Send response to server
+        response_embed = self.embed_builder.info_embed(
+            "Admin Command",
+            "Admin panel information sent to your DM for security."
+        )
+        await ctx.send(embed=response_embed)
+        
+        # Send detailed admin info to DM
+        try:
+            await ctx.author.send(embed=admin_embed)
+        except discord.Forbidden:
+            error_embed = self.embed_builder.error_embed(
+                "DM Failed",
+                "Could not send admin panel to your DM. Please enable DMs from server members."
+            )
+            await ctx.send(embed=error_embed)
     
     @admin_group.command(name="give")
     async def give_item(self, ctx, member: discord.Member, item_name: str, amount: int = 1):
         """Give items to a user"""
         if not self.is_admin(ctx.author.id):
-            await ctx.send("❌ Admin access required.")
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
             return
         
         try:
@@ -123,7 +134,11 @@ class AdminCommands(commands.Cog):
     async def modify_gold(self, ctx, member: discord.Member, amount: int):
         """Modify a user's gold (can be negative to subtract)"""
         if not self.is_admin(ctx.author.id):
-            await ctx.send("❌ Admin access required.")
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
             return
         
         try:
@@ -158,7 +173,11 @@ class AdminCommands(commands.Cog):
     async def reset_user(self, ctx, member: discord.Member):
         """Reset a user's data (DESTRUCTIVE - requires confirmation)"""
         if not self.is_admin(ctx.author.id):
-            await ctx.send("❌ Admin access required.")
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
             return
         
         # Create confirmation view
@@ -175,7 +194,11 @@ class AdminCommands(commands.Cog):
     async def show_stats(self, ctx):
         """Display bot statistics"""
         if not self.is_moderator(ctx.author.id):
-            await ctx.send("❌ Moderator access required.")
+            embed = self.embed_builder.error_embed(
+                "Access Denied", 
+                "You don't have permission to use moderator commands."
+            )
+            await ctx.send(embed=embed)
             return
         
         try:

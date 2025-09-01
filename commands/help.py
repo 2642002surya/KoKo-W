@@ -4,6 +4,7 @@ from discord.ext import commands
 from typing import Optional, Dict, List
 
 from core.embed_utils import EmbedBuilder
+from core.config import ADMIN_USER_ID
 
 class CustomHelpCommand(commands.HelpCommand):
     """Custom help command with beautiful embeds and organized information"""
@@ -134,6 +135,48 @@ class CustomHelpCommand(commands.HelpCommand):
         embed.set_footer(text="Have fun exploring the realm! 🌸")
         
         await self.get_destination().send(embed=embed)
+        
+        # Send admin commands to DM if user is admin
+        await self.send_admin_help_if_applicable()
+    
+    async def send_admin_help_if_applicable(self):
+        """Send admin help to DM if user is admin"""
+        user_id = str(self.context.author.id)
+        if user_id == ADMIN_USER_ID:
+            admin_embed = self.embed_builder.create_embed(
+                title="🛠️ Admin Commands",
+                description="Administrative commands available to you",
+                color=0xFF0000
+            )
+            
+            admin_embed.add_field(
+                name="👥 User Management",
+                value="• `!admin give <user> <item> <amount>` - Give items to users\n"
+                      "• `!admin gold <user> <amount>` - Modify user's gold\n"
+                      "• `!admin reset <user>` - Reset user data\n"
+                      "• `!admin ban <user> [reason]` - Ban user from bot",
+                inline=False
+            )
+            
+            admin_embed.add_field(
+                name="📊 Bot Management", 
+                value="• `!admin stats` - View bot statistics\n"
+                      "• `!admin backup` - Create data backup\n"
+                      "• `!admin announce <message>` - Send announcements\n"
+                      "• `!admin maintenance` - Toggle maintenance mode",
+                inline=False
+            )
+            
+            admin_embed.add_field(
+                name="🔐 Security Note",
+                value="Admin commands work in any channel but send detailed responses to DM for security.",
+                inline=False
+            )
+            
+            try:
+                await self.context.author.send(embed=admin_embed)
+            except discord.Forbidden:
+                pass  # User has DMs disabled
     
     async def send_command_help(self, command):
         """Send help for a specific command"""
