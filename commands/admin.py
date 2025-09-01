@@ -404,7 +404,7 @@ class AdminCommands(commands.Cog):
             await self.log_admin_action(ctx, f"Cleared {len(deleted)} messages from {ctx.channel.name} ({pin_status})")
             
             # Send confirmation and auto-delete it
-            await ctx.send(embed=embed, delete_after=10)
+            await ctx.send(embed=embed, delete_after=2)
             
         except discord.Forbidden:
             embed = self.embed_builder.error_embed(
