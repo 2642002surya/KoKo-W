@@ -5,9 +5,21 @@ from typing import Dict, List, Any, Optional
 import random
 
 from .config import EMBED_COLOR, ENCOURAGING_EMOJIS, RARITY_EMOJIS
+from .data_manager import data_manager
 
 class EmbedBuilder:
     """Advanced embed builder with consistent styling and utilities"""
+    
+    @staticmethod
+    def get_random_easter_egg():
+        """Get a random easter egg tip"""
+        try:
+            easter_data = data_manager.get_game_data("easter_egg_tips")
+            if easter_data and "tips" in easter_data:
+                return random.choice(easter_data["tips"])
+        except:
+            pass
+        return "Your journey in KoKoroMichi continues to unfold mysteries..."
     
     @staticmethod
     def create_embed(title: str = None, description: str = None, color: int = EMBED_COLOR, 
@@ -26,6 +38,10 @@ class EmbedBuilder:
             embed.set_thumbnail(url=thumbnail_url)
         if image_url:
             embed.set_image(url=image_url)
+        
+        # Add easter egg footer to all embeds
+        easter_tip = EmbedBuilder.get_random_easter_egg()
+        embed.set_footer(text=f"💡 {easter_tip}")
         
         return embed
     

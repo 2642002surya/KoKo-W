@@ -22,54 +22,23 @@ class PetCommands(commands.Cog):
         self.bot = bot
         self.embed_builder = EmbedBuilder()
         
-        # Available pets
-        self.pet_types = {
-            "dragon_hatchling": {
-                "name": "Dragon Hatchling",
-                "description": "A young dragon with immense potential",
-                "emoji": "🐲",
-                "stats": {"loyalty": 5, "strength": 8, "intelligence": 6, "agility": 7},
-                "growth_rate": "medium",
-                "special_ability": "Fire Breath",
-                "cost": 5000
-            },
-            "celestial_fox": {
-                "name": "Celestial Fox", 
-                "description": "Mystical fox with divine wisdom",
-                "emoji": "🦊",
-                "stats": {"loyalty": 8, "strength": 5, "intelligence": 9, "agility": 8},
-                "growth_rate": "fast",
-                "special_ability": "Mystic Vision",
-                "cost": 4000
-            },
-            "shadow_cat": {
-                "name": "Shadow Cat",
-                "description": "Stealthy feline companion",
-                "emoji": "🐱",
-                "stats": {"loyalty": 6, "strength": 6, "intelligence": 7, "agility": 10},
-                "growth_rate": "fast",
-                "special_ability": "Shadow Strike",
-                "cost": 3000
-            },
-            "crystal_bird": {
-                "name": "Crystal Bird",
-                "description": "Beautiful bird with crystalline feathers",
-                "emoji": "🐦",
-                "stats": {"loyalty": 7, "strength": 4, "intelligence": 8, "agility": 9},
-                "growth_rate": "medium",
-                "special_ability": "Crystal Song",
-                "cost": 3500
-            },
-            "phoenix_chick": {
-                "name": "Phoenix Chick",
-                "description": "Legendary phoenix offspring",
-                "emoji": "🔥",
-                "stats": {"loyalty": 9, "strength": 10, "intelligence": 8, "agility": 8},
-                "growth_rate": "slow",
-                "special_ability": "Rebirth",
-                "cost": 8000
-            }
-        }
+        # Load pet data from JSON file
+        self.load_pet_data()
+    
+    def load_pet_data(self):
+        """Load pet data from pets_companions.json"""
+        try:
+            pet_data = data_manager.get_game_data("pets_companions")
+            self.pet_species = pet_data.get("pet_species", [])
+            self.pet_settings = pet_data.get("pet_settings", {})
+            self.pet_activities = pet_data.get("pet_activities", [])
+            self.pet_foods = pet_data.get("pet_foods", [])
+        except Exception as e:
+            logger.error(f"Failed to load pet data: {e}")
+            self.pet_species = []
+            self.pet_settings = {}
+            self.pet_activities = []
+            self.pet_foods = []
     
     @commands.command(name="pets", aliases=["mypets", "companions"])
     async def view_pets(self, ctx):
@@ -171,18 +140,21 @@ class PetCommands(commands.Cog):
                 await ctx.send(embed=embed)
                 return
             
-            # Find pet type
-            pet_type_lower = pet_type.lower().replace(" ", "_")
-            if pet_type_lower not in self.pet_types:
+            # Find pet type from JSON data
+            pet_template = None
+            for species in self.pet_species:
+                if species.get("name", "").lower() == pet_type.lower() or species.get("id", "").lower() == pet_type.lower():
+                    pet_template = species
+                    break
+            
+            if not pet_template:
                 embed = self.embed_builder.error_embed(
                     "Pet Not Found",
                     f"Pet type '{pet_type}' not available. Use `!adopt_pet` to see available pets."
                 )
                 await ctx.send(embed=embed)
                 return
-            
-            pet_template = self.pet_types[pet_type_lower]
-            adoption_cost = pet_template["cost"]
+            adoption_cost = pet_template.get("adoption_cost", 3000)
             
             # Check if user has enough gold
             user_gold = user_data.get("gold", 0)

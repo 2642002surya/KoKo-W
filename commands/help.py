@@ -48,8 +48,8 @@ class CustomHelpCommand(commands.HelpCommand):
                 "emoji": "🏰"
             },
             "Crafting & Materials": {
-                "commands": ["craft", "gather", "materials"],
-                "description": "Create items and collect materials",
+                "commands": ["craft", "gather", "materials", "relics", "equip", "unequip"],
+                "description": "Create items, collect materials, and manage relics",
                 "emoji": "🔨"
             },
             "Events & Activities": {
@@ -58,8 +58,8 @@ class CustomHelpCommand(commands.HelpCommand):
                 "emoji": "🎊"
             },
             "Achievements & Lore": {
-                "commands": ["achievements", "lore"],
-                "description": "Track progress and discover the realm's history",
+                "commands": ["achievements", "lorebooks", "lore_achievements", "contests", "moodpoll", "fancontest"],
+                "description": "Track progress, discover history, and join community events",
                 "emoji": "🏆"
             },
             "Relationships & Fun": {

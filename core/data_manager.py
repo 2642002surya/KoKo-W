@@ -195,6 +195,13 @@ class DataManager:
     
     def get_game_data(self, section: str = None) -> Dict[str, Any]:
         """Get game configuration data"""
+        if section:
+            # Try to load from specific file first
+            section_file = self.data_dir / f"{section}.json"
+            if section_file.exists():
+                return self._load_json(section_file)
+        
+        # Fallback to main game data file
         game_data = self._load_json(self.game_data_file)
         if section and section in game_data:
             return game_data[section]

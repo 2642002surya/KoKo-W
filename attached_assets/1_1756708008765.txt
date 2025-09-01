@@ -1,0 +1,34 @@
+forget about hello bot and analize the program code folder I upload, check how the bot program is working and there might be requirements needed to download and check each and every command and is if the command is working properly without giving errors like command is working and it throwing error when used like, fix them> mostly imports and exports problem might be so fix them before changing anything cause it is a good perfected code.
+also bot should  search channels before creating specific channels for specific commands, the program code should check if the specific channels are present or not, check should be like, for example for "guild-hall", it should check like :
+emoji-guild-hall or hrsy-guild-hall or harsy-guild-hall-emoji > so if the words of the specific channels are in channel name, then just consider it as specific channels, as for above example, they related to guild-hall, since it's present then just assign it to guild commands,
+specific commands should be only work in specific channels like :
+battle commands should only work in combact-calls, duel-zone
+duel commands should only work in = combact-calls, duel-zone
+arena commands should only work in = arena-hub, coliseum
+intimate commands should only work in = lust-chamber 
+forge commands should only work in = forging-hall
+all mini-games should only work in = mini-games
+guild commands should only work in = guild-hall, guild-chronicles
+pet commands should only work in = pet-corner
+dream commands and pop-ups should only work in = dream-realm
+events related and events should only work in = events
+I want the code to be perfect with all commands working as supposed to be, no more errors
+chracters = waifus, don't get confused and say to user that you don't have any characters when he used characters related commands like !profile, !battle, etc
+Also check the battle logics of !battle, !arena or any commands related to fighting with waifus should be able to use all the things related to battles from users data, they maybe skills, stats, elemental damages, guild buffs, intimate buffs, dream buffs, or any other buffs of allover the program code, relics, weapons, pets and anything you find in all over program code and json files related to that user, then it should be used in battle, if not found then just make it null so it won't take negative effect like throwing errors. also during battle you can also show what buffs, weapons, relics, skills, or any other which are effecting the battle or fight > show in emebed or dramtic messages or emebeds so it'll look realstic
+also for specific channels where some specific commands only work in those channels, i want you to create a commands where it'll send a guide/instructions like below example to each and every specific channels :
+🎉 Event Commands
+Welcome to ⁠🎪-events! Special events and daily activities!
+🎮 Available Commands
+• !events
+• !dailyquest
+• !seasonal
+💡 Tips
+Daily quests and special events • Check regularly for updates
+📖 Need Help?
+Use !help for all commands or !help <command> for specific help
+KoKoroMichi 3.0.0 Advanced • Enjoy your adventure!•Yesterday at 6:23 PM
+
+Also if you search json files, there is easter egg or some quotes data you'll find, that quotes should be in each and every emebed bot code program sends to discord.
+And read the json files, replit might created some data automatic for few commands, I added extra data to present data but there might be mistakes where program code is not able to take/extract that data when related command is used, like pets data have more than 5+ pets, but program code only shows 1 - 4 pets when used !pets > Similarly other commands and related json files have mismatched data for data I added, so please fix the additional data/data which I added to match the data which is already present.
+Also If you find any json files that are remained idle > I mean no command or functions are using that data, study/understand that data and make corresponding commands related to that data, that commands should appear on help command and should work how it should be not giving errors
+Relic commands are not shown in help emebed and not working too, check is relic commands are working as it should be or just no reposne, fix it and make it work like how it should work , not giving no responses when called or errors
