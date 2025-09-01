@@ -6,10 +6,17 @@
 }
 
 :root {
-  --primary: #ff69b4;
-  --secondary: #9400d3;
-  --accent: #ff1493;
-  --background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a0a 100%);
+  /* Default water theme */
+  --theme-primary: #0ea5e9;
+  --theme-secondary: #0284c7;
+  --theme-accent: #38bdf8;
+  --theme-particle: #0ea5e9;
+  
+  /* Legacy support */
+  --primary: var(--theme-primary);
+  --secondary: var(--theme-secondary);
+  --accent: var(--theme-accent);
+  --background: linear-gradient(135deg, #001122 0%, #002244 50%, #001122 100%);
   --surface: #1a1a1a;
   --text: #ffffff;
   --text-muted: #999999;
@@ -81,21 +88,28 @@ body {
 .leading-relaxed { line-height: 1.625; }
 .leading-loose { line-height: 2; }
 
-/* Colors */
+/* Theme-aware Colors */
 .text-white { color: #ffffff; }
 .text-gray-100 { color: #f7fafc; }
 .text-gray-200 { color: #edf2f7; }
 .text-gray-300 { color: #e2e8f0; }
 .text-gray-400 { color: #cbd5e0; }
 .text-gray-500 { color: #a0aec0; }
-.text-pink-400 { color: #f472b6; }
-.text-pink-500 { color: var(--primary); }
-.text-purple-400 { color: #c084fc; }
-.text-purple-500 { color: var(--secondary); }
+.text-pink-400 { color: var(--theme-accent); }
+.text-pink-500 { color: var(--theme-primary); }
+.text-purple-400 { color: var(--theme-secondary); }
+.text-purple-500 { color: var(--theme-secondary); }
 .text-blue-400 { color: #60a5fa; }
 .text-green-400 { color: #4ade80; }
 .text-yellow-400 { color: #facc15; }
 .text-red-400 { color: #f87171; }
+
+/* Theme-aware backgrounds */
+.bg-pink-500 { background-color: var(--theme-primary); }
+.bg-purple-600 { background-color: var(--theme-secondary); }
+.border-pink-500 { border-color: var(--theme-primary); }
+.hover\:border-pink-500:hover { border-color: var(--theme-primary); }
+.hover\:text-pink-400:hover { color: var(--theme-accent); }
 
 /* Backgrounds */
 .bg-transparent { background-color: transparent; }
@@ -287,7 +301,7 @@ body {
 
 /* Professional Gradients and Effects */
 .text-gradient {
-  background: linear-gradient(135deg, #ff69b4, #ff1493, #9400d3);
+  background: linear-gradient(135deg, var(--theme-primary), var(--theme-accent), var(--theme-secondary));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -296,7 +310,15 @@ body {
 }
 
 .bg-gradient-to-r {
-  background: linear-gradient(to right, var(--primary), var(--secondary));
+  background: linear-gradient(to right, var(--theme-primary), var(--theme-secondary));
+}
+
+.bg-cyber {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(var(--theme-primary-rgb), 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(var(--theme-secondary-rgb), 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(var(--theme-accent-rgb), 0.2) 0%, transparent 50%),
+    var(--background);
 }
 
 .bg-gradient-to-br {

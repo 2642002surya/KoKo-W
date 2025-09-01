@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import LoadingScreen from '@/components/LoadingScreen'
 import BackgroundEffects from '@/components/BackgroundEffects'
 import ThemeManager from '@/components/ThemeManager'
+import TokenManager from '@/components/TokenManager'
 
 // Pages (Lazy loaded for better performance)
 const HomePage = React.lazy(() => import('@/pages/HomePage'))
@@ -16,6 +17,7 @@ const CharactersPage = React.lazy(() => import('@/pages/CharactersPage'))
 const DashboardPage = React.lazy(() => import('@/pages/DashboardPage'))
 const LeaderboardPage = React.lazy(() => import('@/pages/LeaderboardPage'))
 const GalleryPage = React.lazy(() => import('@/pages/GalleryPage'))
+const GameSystemsPage = React.lazy(() => import('@/pages/GameSystemsPage'))
 const AboutPage = React.lazy(() => import('@/pages/AboutPage'))
 
 // Contexts
@@ -23,7 +25,7 @@ import { ThemeProvider } from '@/contexts/ThemeContext'
 import { BotDataProvider } from '@/contexts/BotDataContext'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const [isOnline, setIsOnline] = useState(navigator.onLine)
 
   useEffect(() => {
@@ -54,56 +56,60 @@ function App() {
     <ThemeProvider>
       <BotDataProvider>
         <Router>
-          <div className="min-h-screen bg-cyber text-white relative overflow-hidden">
+          <div className="relative min-h-screen bg-cyber overflow-x-hidden">
             {/* Background Effects */}
             <BackgroundEffects />
             
-            {/* Offline Banner */}
-            <AnimatePresence>
-              {!isOnline && (
-                <motion.div
-                  initial={{ y: -50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -50, opacity: 0 }}
-                  className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50"
-                >
-                  You are currently offline. Some features may not work properly.
-                </motion.div>
-              )}
-            </AnimatePresence>
-
             {/* Navigation */}
             <Navigation />
-
+            
             {/* Main Content */}
             <main className="relative z-10">
+              {/* Offline Indicator */}
+              <AnimatePresence>
+                {!isOnline && (
+                  <motion.div
+                    initial={{ y: -100 }}
+                    animate={{ y: 0 }}
+                    exit={{ y: -100 }}
+                    className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg"
+                  >
+                    🔴 You're offline. Some features may not work.
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Page Routes */}
               <Suspense fallback={
                 <div className="min-h-screen flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-pink-500 mx-auto mb-4"></div>
-                    <p className="text-xl text-gradient">Loading page...</p>
-                  </div>
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                    className="w-16 h-16 border-4 border-pink-500 border-t-transparent rounded-full"
+                  />
                 </div>
               }>
-                <AnimatePresence mode="wait">
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/commands" element={<CommandsPage />} />
-                    <Route path="/characters" element={<CharactersPage />} />
-                    <Route path="/dashboard" element={<DashboardPage />} />
-                    <Route path="/leaderboard" element={<LeaderboardPage />} />
-                    <Route path="/gallery" element={<GalleryPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                  </Routes>
-                </AnimatePresence>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/commands" element={<CommandsPage />} />
+                  <Route path="/characters" element={<CharactersPage />} />
+                  <Route path="/systems" element={<GameSystemsPage />} />
+                  <Route path="/dashboard" element={<DashboardPage />} />
+                  <Route path="/leaderboard" element={<LeaderboardPage />} />
+                  <Route path="/gallery" element={<GalleryPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                </Routes>
               </Suspense>
             </main>
 
             {/* Footer */}
             <Footer />
-
+            
             {/* Theme Manager */}
             <ThemeManager />
+            
+            {/* Token Manager */}
+            <TokenManager />
           </div>
         </Router>
       </BotDataProvider>

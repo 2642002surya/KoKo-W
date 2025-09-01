@@ -1,105 +1,79 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Palette, Check } from 'lucide-react'
+import { Palette, Check, Droplets, Flame, Globe, Leaf, Sword } from 'lucide-react'
 import { useTheme } from '@/contexts/ThemeContext'
 
+const getThemeIcon = (themeKey) => {
+  const icons = {
+    water: Droplets,
+    fire: Flame,
+    earth: Globe,
+    wood: Leaf,
+    metal: Sword
+  }
+  return icons[themeKey] || Palette
+}
+
 const ThemeManager = () => {
-  const [isOpen, setIsOpen] = useState(false)
   const { currentTheme, themes, changeTheme } = useTheme()
 
   return (
     <>
-      {/* Theme Toggle Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 p-4 rounded-full btn-primary shadow-xl hover:shadow-pink-500/40 transition-all duration-300"
-      >
-        <Palette size={24} />
-      </motion.button>
-
-      {/* Theme Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="fixed bottom-20 right-6 z-50 p-6 rounded-xl bg-black/90 backdrop-blur-lg border border-pink-500/20 shadow-2xl"
-          >
-            <h3 className="text-xl font-bold text-white mb-6">🎨 Choose Theme</h3>
-            
-            <div className="space-y-3">
-              {Object.entries(themes).map(([key, theme]) => (
-                <motion.button
-                  key={key}
-                  onClick={() => {
-                    changeTheme(key)
-                    setIsOpen(false)
-                  }}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`w-full flex items-center justify-between p-4 rounded-xl border transition-all duration-300 ${
-                    currentTheme === key
-                      ? 'border-pink-500 bg-pink-500/20 shadow-lg shadow-pink-500/25'
-                      : 'border-gray-700 bg-gray-800/50 hover:border-pink-500/50 hover:bg-gray-700/50'
-                  }`}
-                >
-                  <div className="flex items-center space-x-3">
-                    <div
-                      className="w-8 h-8 rounded-full border-2 border-white/20 shadow-lg"
-                      style={{ backgroundColor: theme.primary }}
-                    />
-                    <span className="text-white font-semibold">{theme.name}</span>
-                  </div>
-                  {currentTheme === key && (
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      className="bg-pink-500 rounded-full p-1"
-                    >
-                      <Check size={16} className="text-white" />
-                    </motion.div>
-                  )}
-                </motion.button>
-              ))}
-            </div>
-
-            {/* Theme Preview */}
-            <div className="mt-4 p-4 rounded-lg bg-gray-800/50 border border-gray-700">
-              <div className="text-sm text-gray-400 mb-2">Preview</div>
-              <div className="flex space-x-2">
-                <div
-                  className="w-8 h-8 rounded"
-                  style={{ backgroundColor: themes[currentTheme].primary }}
+      {/* Elemental Theme Toggles - Fixed Bottom Left */}
+      <div className="fixed bottom-6 left-6 z-50 flex flex-col space-y-3">
+        {Object.entries(themes).map(([key, themeData]) => {
+          const isActive = currentTheme === key
+          const IconComponent = getThemeIcon(key)
+          
+          return (
+            <motion.button
+              key={key}
+              onClick={() => changeTheme(key)}
+              whileHover={{ scale: 1.15, x: 5 }}
+              whileTap={{ scale: 0.9 }}
+              className={`relative p-3 rounded-full shadow-xl transition-all duration-300 group ${
+                isActive 
+                  ? 'shadow-lg border-2 border-white/50' 
+                  : 'hover:shadow-lg border border-white/20'
+              }`}
+              style={{
+                backgroundColor: themeData.primary,
+                boxShadow: isActive 
+                  ? `0 0 20px ${themeData.primary}40, 0 0 40px ${themeData.primary}20`
+                  : `0 4px 20px ${themeData.primary}30`
+              }}
+              title={`${themeData.name} Theme`}
+            >
+              <IconComponent 
+                size={20} 
+                color="white" 
+                className={`transition-transform duration-300 ${
+                  isActive ? 'scale-110' : 'group-hover:scale-110'
+                }`}
+              />
+              
+              {/* Active indicator */}
+              {isActive && (
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full border border-gray-800"
                 />
-                <div
-                  className="w-8 h-8 rounded"
-                  style={{ backgroundColor: themes[currentTheme].secondary }}
-                />
-                <div
-                  className="w-8 h-8 rounded"
-                  style={{ backgroundColor: themes[currentTheme].accent }}
-                />
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              )}
+              
+              {/* Hover tooltip */}
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                whileHover={{ opacity: 1, x: 0 }}
+                className="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 px-3 py-1 bg-black/80 text-white text-sm rounded-lg whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-200"
+              >
+                {themeData.emoji} {themeData.name}
+              </motion.div>
+            </motion.button>
+          )
+        })}
+      </div>
 
-      {/* Backdrop */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)}
-            className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm"
-          />
-        )}
-      </AnimatePresence>
     </>
   )
 }

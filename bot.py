@@ -11,6 +11,7 @@ import logging
 import sys
 import os
 from pathlib import Path
+from config import get_bot_token, validate_token
 
 # Setup logging first
 logging.basicConfig(

@@ -11,49 +11,59 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState('cyber')
+  const [currentTheme, setCurrentTheme] = useState('water')
   const [isDarkMode, setIsDarkMode] = useState(true)
 
   const themes = {
-    cyber: {
-      name: 'Cyber',
-      primary: '#ff69b4',
-      secondary: '#9400d3',
-      accent: '#ff1493',
-      background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a0a 100%)',
-      particle: '#ff69b4'
-    },
-    neon: {
-      name: 'Neon',
-      primary: '#00ffff',
-      secondary: '#ff00ff',
-      accent: '#ffff00',
-      background: 'linear-gradient(135deg, #000011 0%, #000033 50%, #000011 100%)',
-      particle: '#00ffff'
-    },
-    fire: {
-      name: 'Fire',
-      primary: '#ff4500',
-      secondary: '#ff6347',
-      accent: '#ffd700',
-      background: 'linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%)',
-      particle: '#ff4500'
-    },
-    ocean: {
-      name: 'Ocean',
+    water: {
+      name: 'Water',
+      emoji: '🌊',
       primary: '#0ea5e9',
       secondary: '#0284c7',
       accent: '#38bdf8',
-      background: 'linear-gradient(135deg, #000a1a 0%, #001a33 50%, #000a1a 100%)',
-      particle: '#0ea5e9'
+      background: 'linear-gradient(135deg, #001122 0%, #002244 50%, #001122 100%)',
+      particle: '#0ea5e9',
+      animationType: 'waves'
     },
-    forest: {
-      name: 'Forest',
+    fire: {
+      name: 'Fire',
+      emoji: '🔥',
+      primary: '#ef4444',
+      secondary: '#dc2626',
+      accent: '#f97316',
+      background: 'linear-gradient(135deg, #220000 0%, #441100 50%, #220000 100%)',
+      particle: '#ef4444',
+      animationType: 'flames'
+    },
+    earth: {
+      name: 'Earth',
+      emoji: '🌍',
+      primary: '#a16207',
+      secondary: '#92400e',
+      accent: '#d97706',
+      background: 'linear-gradient(135deg, #1a1000 0%, #332200 50%, #1a1000 100%)',
+      particle: '#a16207',
+      animationType: 'planets'
+    },
+    wood: {
+      name: 'Wood',
+      emoji: '🌳',
       primary: '#22c55e',
       secondary: '#16a34a',
-      accent: '#84cc16',
+      accent: '#f59e0b',
       background: 'linear-gradient(135deg, #0a1a0a 0%, #1a331a 50%, #0a1a0a 100%)',
-      particle: '#22c55e'
+      particle: '#22c55e',
+      animationType: 'leaves'
+    },
+    metal: {
+      name: 'Metal',
+      emoji: '⚔️',
+      primary: '#6b7280',
+      secondary: '#4b5563',
+      accent: '#9ca3af',
+      background: 'linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%)',
+      particle: '#6b7280',
+      animationType: 'weapons'
     }
   }
 
