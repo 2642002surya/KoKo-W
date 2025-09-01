@@ -1,0 +1,31 @@
+*"Build me a full-stack web app for my Discord bot using Replit.
+
+Frontend: React with Tailwind CSS, fully responsive, modern card/grid layouts, smooth transitions, particle/animated backgrounds. Includes pages:
+
+Home: bot name, animated tagline, invite button, live server stats (member count, online count).
+
+Commands: dynamically loaded from a commands.json file or backend API, with cards showing description, cooldown, category. Clicking a command shows usage stats (fetched from backend).
+
+Waifus: load character data from /characters/*.json. Show rarity, main attribute, and stats. A Summon Toggle cycles through available waifus. Each waifu has a Details button opening a modal with full skills/relic/description. No images, just stat-based cards styled by rarity color.
+
+Features: explain gacha, battles, affection, unlocks with animations/icons.
+
+FAQ: collapsible questions/answers loaded from backend. Include a Submit FAQ form → when submitted, send directly to Discord channel faq-section in server Tenshi no Yami Kyōkai via webhook.
+
+Extras: Dark mode, footer, Discord widget embed.*
+
+Themes: 5-element toggle (Water-blue default, Fire-red, Earth-brown, Metal-ash/steel, Wood-green). Theme changes update primary accents and background animations.
+
+Backend: Node.js (Express) in /server/. Should:
+
+Serve waifu data (/api/waifus).
+
+Serve command data + usage stats (/api/commands).
+
+Serve server stats from Discord API (/api/server-stats).
+
+Accept FAQ submissions (/api/faq) and forward them to the specified Discord webhook.
+
+Provide clean JSON APIs for frontend to fetch.*
+
+Everything must scale cleanly on mobile, tablet, and desktop with no layout errors. The whole project should run in Replit with npm run dev (frontend) and backend via Express. Integrate both so it’s deployable on Replit’s single project container."
