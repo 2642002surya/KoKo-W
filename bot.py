@@ -603,10 +603,10 @@ async def main():
     """Main function to run the bot"""
     try:
         # Get Discord token from environment
-        token = os.getenv('DISCORD_TOKEN')
+        token = os.getenv('DISCORD_BOT_TOKEN')
         
         if not token:
-            logger.error("❌ DISCORD_TOKEN environment variable not found!")
+            logger.error("❌ DISCORD_BOT_TOKEN environment variable not found!")
             logger.info("💡 Please add your Discord bot token to start the bot")
             logger.info(
                 "💡 You can get a token from https://discord.com/developers/applications"
