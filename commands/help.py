@@ -28,32 +28,37 @@ class CustomHelpCommand(commands.HelpCommand):
         # Command categories with their descriptions
         categories = {
             "Profile & Collection": {
-                "commands": ["profile", "collection", "inspect", "inventory", "stats"],
+                "commands": ["profile", "collection", "inspect", "inventory", "stats", "gallery", "showcase"],
                 "description": "Manage your profile and character collection",
                 "emoji": "👤"
             },
             "Summoning & Battles": {
-                "commands": ["summon", "battle", "arena", "upgrade", "train", "rates"],
+                "commands": ["summon", "battle", "arena", "duel", "fight", "upgrade", "train", "rates", "quick_arena"],
                 "description": "Summon characters and engage in combat",
                 "emoji": "⚔️"
             },
             "Economy & Trading": {
-                "commands": ["invest", "businesses", "collect", "auction", "daily"],
+                "commands": ["invest", "businesses", "collect", "auction", "daily", "portfolio", "market", "sell", "buy"],
                 "description": "Build wealth and trade with others",
                 "emoji": "💰"
             },
             "Guilds & Social": {
-                "commands": ["guild", "factions"],
+                "commands": ["guild", "factions", "join_guild", "leave_guild", "guild_info"],
                 "description": "Join guilds and participate in faction warfare",
                 "emoji": "🏰"
             },
             "Crafting & Materials": {
-                "commands": ["craft", "gather", "materials", "relics", "equip", "unequip"],
+                "commands": ["craft", "gather", "materials", "relics", "equip", "unequip", "forge", "enhance"],
                 "description": "Create items, collect materials, and manage relics",
                 "emoji": "🔨"
             },
+            "Pets & Companions": {
+                "commands": ["pets", "adopt_pet", "feed_pet", "train_pet", "pet_adventure", "petrace"],
+                "description": "Care for and train loyal pet companions",
+                "emoji": "🐾"
+            },
             "Events & Activities": {
-                "commands": ["events", "dream", "dailyquest"],
+                "commands": ["events", "dream", "dailyquest", "seasonal", "participate", "randomevent"],
                 "description": "Participate in special events and activities",
                 "emoji": "🎊"
             },
@@ -63,12 +68,32 @@ class CustomHelpCommand(commands.HelpCommand):
                 "emoji": "🏆"
             },
             "Relationships & Fun": {
-                "commands": ["intimate", "interact", "affection", "8ball", "roll", "choose"],
-                "description": "Build relationships with waifus and entertainment",
+                "commands": ["intimate", "interact", "affection", "8ball", "roll", "choose", "fanclub", "mood"],
+                "description": "Build relationships with characters and entertainment",
                 "emoji": "💕"
             },
+            "Boss Fights & Raids": {
+                "commands": ["bossfight", "raid", "pvpboss", "challenge"],
+                "description": "Take on powerful bosses and raid challenges",
+                "emoji": "🐉"
+            },
+            "Mini Games & Quests": {
+                "commands": ["quest", "trivia", "rps", "coinflip", "riddle", "mishap"],
+                "description": "Enjoy mini-games and complete quests",
+                "emoji": "🎲"
+            },
+            "Character Enhancement": {
+                "commands": ["traits", "apply_trait", "remove_trait", "evolve", "awaken"],
+                "description": "Enhance and customize your characters",
+                "emoji": "✨"
+            },
+            "Server & Admin": {
+                "commands": ["setup", "config", "admin", "backup", "maintenance"],
+                "description": "Server management and administration",
+                "emoji": "🛠️"
+            },
             "Utility & Info": {
-                "commands": ["about", "ping", "help"],
+                "commands": ["about", "ping", "help", "status", "info"],
                 "description": "Bot information and utilities",
                 "emoji": "🔧"
             }

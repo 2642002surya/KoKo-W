@@ -24,14 +24,14 @@ class EmbedBuilder:
     @staticmethod
     def create_embed(title: str = None, description: str = None, color: int = EMBED_COLOR, 
                     add_timestamp: bool = True, thumbnail_url: str = None, 
-                    image_url: str = None) -> discord.Embed:
-        """Create a standardized embed"""
+                    image_url: str = None, dramatic: bool = False) -> discord.Embed:
+        """Create a standardized embed with optional dramatic effects"""
         embed = discord.Embed(color=color)
         
         if title:
-            embed.title = title
+            embed.title = EmbedBuilder.add_dramatic_effects(title) if dramatic else title
         if description:
-            embed.description = description
+            embed.description = EmbedBuilder.add_visual_border(description) if dramatic else description
         if add_timestamp:
             embed.timestamp = datetime.now()
         if thumbnail_url:
@@ -44,6 +44,41 @@ class EmbedBuilder:
         embed.set_footer(text=f"💡 {easter_tip}")
         
         return embed
+    
+    @staticmethod
+    def add_dramatic_effects(text: str) -> str:
+        """Add dramatic visual effects to text"""
+        if not text:
+            return text
+        
+        effects = [
+            f"✨ {text} ✨",
+            f"🌟 {text} 🌟", 
+            f"⚡ {text} ⚡",
+            f"💫 {text} 💫",
+            f"🔥 {text} 🔥",
+            f"🌙 {text} 🌙",
+            f"⭐ {text} ⭐"
+        ]
+        return random.choice(effects)
+    
+    @staticmethod
+    def add_visual_border(text: str) -> str:
+        """Add visual border effects to description text"""
+        if not text:
+            return text
+            
+        borders = [
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+            "✦ ─────────────────────────────── ✦",
+            "⋆｡‧˚ʚ♡ɞ˚‧｡⋆ ─────── ⋆｡‧˚ʚ♡ɞ˚‧｡⋆",
+            "•°○●○°• ─────────────── •°○●○°•",
+            "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓",
+            "◦•●◉✿ ─────────────── ✿◉●•◦"
+        ]
+        
+        border = random.choice(borders)
+        return f"{border}\n{text}\n{border}"
     
     @staticmethod
     def success_embed(title: str, description: str = None, **kwargs) -> discord.Embed:

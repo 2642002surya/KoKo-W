@@ -86,7 +86,7 @@ class ArenaCommands(commands.Cog):
                     await battle_msg.edit(embed=prep_embed)
                     await asyncio.sleep(1)
                 
-                # Execute battle
+                # Execute battle using enhanced system 
                 battle_result = await self.execute_arena_battle(character, opponent)
                 
                 # Update user data
