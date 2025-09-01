@@ -216,107 +216,152 @@ async def send_channel_welcome(channel):
     if any(keyword in channel_name for keyword in ['combat', 'duel']):
         embed = embed_builder.create_embed(
             title="⚔️ Welcome to the Combat Zone!",
-            description="Ready for epic battles with your characters!",
+            description="🔥 **The ultimate battlefield where legends are born!** 🔥\n\nEngage in thrilling combat with your favorite characters against NPCs and other players. Every battle brings experience, rewards, and glory!",
             color=0xff0000)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Core Battle Commands",
             value=
-            "• `!battle [character]` - Fight NPCs\n• `!duel @user` - Challenge other players\n• `!combat [character]` - Quick battle",
+            "• `!battle [character]` - Fight computer-controlled enemies\n• `!duel @user` - Challenge another player to PvP combat\n• `!combat [character]` - Quick battle for fast rewards\n• `!arena` - Enter competitive arena tournaments",
             inline=False)
         embed.add_field(
-            name="💡 Pro Tips",
+            name="💡 Battle Strategy Tips",
             value=
-            "• Use your strongest characters for tough fights\n• Level up characters to increase battle power\n• Check `!profile` to see your collection",
+            "• **Character Level**: Higher level = stronger stats and abilities\n• **Rarity Matters**: Mythic and LR characters have powerful skills\n• **Elemental Advantage**: Check character affinities before battle\n• **Equipment**: Upgrade weapons and relics for bonus power\n• **Training**: Use `!train` to boost your character's stats",
+            inline=False)
+        embed.add_field(
+            name="🏆 Rewards & Progression",
+            value=
+            "• **XP & Gold**: Every battle grants experience and currency\n• **Rare Drops**: Defeat bosses for special equipment\n• **Battle Rankings**: Climb the leaderboards for prestige\n• **Guild Bonuses**: Join a guild for team battle advantages",
             inline=False)
 
     elif any(keyword in channel_name for keyword in ['arena', 'coliseum']):
         embed = embed_builder.create_embed(
-            title="🏟️ Welcome to the Arena!",
-            description="Compete in tournaments and special events!",
+            title="🏟️ Welcome to the Grand Arena!",
+            description="🏆 **Where champions rise and legends are forged!** 🏆\n\nThe most prestigious battleground in KoKoroMichi. Face the greatest challenges, compete in tournaments, and claim your place among the elite warriors!",
             color=0xffd700)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Arena Commands",
             value=
-            "• `!arena` - Join arena matches\n• `!tournament` - View tournaments\n• `!leaderboard` - Check rankings",
+            "• `!arena` - Enter ranked arena battles for glory\n• `!tournament` - View active tournaments and events\n• `!leaderboard` - Check current rankings and standings\n• `!pvpboss` - Challenge legendary boss encounters",
+            inline=False)
+        embed.add_field(
+            name="🏅 Tournament System",
+            value=
+            "• **Seasonal Events**: Special limited-time competitions\n• **Ranking Rewards**: Higher ranks give better prizes\n• **Entry Requirements**: Some tournaments need specific levels\n• **Team Battles**: Form alliances for group tournaments",
             inline=False)
 
     elif 'lust' in channel_name:
         embed = embed_builder.create_embed(
             title="🌹 Welcome to the Intimate Chamber",
-            description="Deepen your bonds with your characters...",
+            description="💕 **A place where hearts connect and bonds grow stronger** 💕\n\nBuild meaningful relationships with your characters through intimate interactions, romantic adventures, and heartfelt moments that unlock special abilities and bonuses.",
             color=0xff69b4)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Relationship Commands",
             value=
-            "• `!intimate [character]` - Intimate interactions\n• `!affection [character]` - Check relationship\n• `!romance` - Romance options",
+            "• `!intimate [character]` - Deep personal interactions\n• `!affection [character]` - View relationship status and level\n• `!romance` - Romantic storylines and special events\n• `!kiss [character]` - Express affection for relationship growth",
+            inline=False)
+        embed.add_field(
+            name="💝 Relationship Benefits",
+            value=
+            "• **Combat Bonuses**: Higher affection = stronger battle performance\n• **Special Abilities**: Unlock unique skills through deep bonds\n• **Exclusive Content**: Access character-specific storylines\n• **Daily Rewards**: Loving characters give daily gifts",
             inline=False)
 
     elif any(keyword in channel_name for keyword in ['forg', 'craft']):
         embed = embed_builder.create_embed(
-            title="🔨 Welcome to the Forge!",
+            title="🔨 Welcome to the Master Forge!",
             description=
-            "Craft weapons, upgrade equipment, and enhance your characters!",
+            "⚒️ **The heart of creation and enhancement!** ⚒️\n\nTransform raw materials into legendary equipment, upgrade your characters to new heights, and craft powerful items that will give you the edge in any battle!",
             color=0x8b4513)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Crafting Commands",
             value=
-            "• `!forge` - Access forge menu\n• `!craft [item]` - Craft items\n• `!upgrade [character]` - Upgrade characters",
+            "• `!forge` - Access the main forge interface\n• `!craft [item]` - Create weapons, armor, and tools\n• `!upgrade [character]` - Enhance character abilities\n• `!alchemy` - Brew potions and enhancement items",
+            inline=False)
+        embed.add_field(
+            name="⚡ Enhancement System",
+            value=
+            "• **Weapon Crafting**: Create powerful weapons from rare materials\n• **Character Upgrades**: Boost stats, skills, and special abilities\n• **Relic Enhancement**: Improve ancient artifacts for massive bonuses\n• **Material Gathering**: Collect resources through battles and quests",
             inline=False)
 
     elif 'game' in channel_name:
         embed = embed_builder.create_embed(
-            title="🎮 Welcome to Mini-Games!",
-            description="Play fun games and earn rewards!",
+            title="🎮 Welcome to the Gaming Paradise!",
+            description="🎲 **Fun, rewards, and endless entertainment await!** 🎲\n\nTake a break from intense battles and enjoy a variety of mini-games that offer great rewards, daily bonuses, and pure entertainment value!",
             color=0x00ff00)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Mini-Game Commands",
             value=
-            "• `!blackjack` - Card game\n• `!slots` - Slot machine\n• `!lottery` - Lottery tickets\n• `!trivia` - Knowledge quiz",
+            "• `!blackjack` - Classic card game for gold rewards\n• `!slots` - Lucky slot machine with jackpots\n• `!lottery` - Buy tickets for massive prize pools\n• `!trivia` - Test your knowledge for gem rewards\n• `!roulette` - Spin the wheel of fortune",
+            inline=False)
+        embed.add_field(
+            name="🎁 Gaming Rewards",
+            value=
+            "• **Daily Bonuses**: Play every day for escalating rewards\n• **Jackpot System**: Hit the big wins for massive payouts\n• **Achievement Unlocks**: Complete challenges for special prizes\n• **Streak Bonuses**: Consecutive wins multiply your earnings",
             inline=False)
 
     elif 'guild' in channel_name:
         embed = embed_builder.create_embed(
             title="🏰 Welcome to the Guild Hall!",
-            description="Manage your guild and collaborate with members!",
+            description="⚔️ **United we stand, divided we fall!** ⚔️\n\nJoin forces with like-minded adventurers, create powerful alliances, and unlock the true potential of teamwork through guild bonuses, collaborative events, and shared victories!",
             color=0x4169e1)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Guild Commands",
             value=
-            "• `!guild` - Guild information\n• `!gjoin [guild]` - Join a guild\n• `!gcreate [name]` - Create guild",
+            "• `!guild` - View guild information and member status\n• `!gjoin [guild]` - Request to join an existing guild\n• `!gcreate [name]` - Establish your own guild\n• `!gwar` - Participate in guild vs guild warfare",
+            inline=False)
+        embed.add_field(
+            name="🤝 Guild Benefits",
+            value=
+            "• **Stat Bonuses**: Guild members get combat advantages\n• **Shared Resources**: Pool materials for massive upgrades\n• **Group Events**: Exclusive guild-only tournaments and raids\n• **Leadership Roles**: Become an officer or guild master\n• **Guild Quests**: Collaborative missions with epic rewards",
             inline=False)
 
     elif 'pet' in channel_name:
         embed = embed_builder.create_embed(
-            title="🐾 Welcome to the Pet Corner!",
-            description="Care for your adorable companions!",
+            title="🐾 Welcome to the Pet Sanctuary!",
+            description="🦄 **Where magical companions await your care!** 🦄\n\nAdorable pets that are more than just companions - they're loyal battle partners, resource gatherers, and sources of daily joy and valuable bonuses!",
             color=0x90ee90)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Pet Care Commands",
             value=
-            "• `!pets` - View your pets\n• `!feed [pet]` - Feed your pets\n• `!play [pet]` - Play with pets",
+            "• `!pets` - View all your adorable companions\n• `!feed [pet]` - Keep your pets happy and healthy\n• `!play [pet]` - Bond through fun activities\n• `!petstats [pet]` - Check pet abilities and growth",
+            inline=False)
+        embed.add_field(
+            name="✨ Pet Abilities",
+            value=
+            "• **Battle Support**: Pets assist in combat with special skills\n• **Resource Collection**: Pets gather materials while you're away\n• **Mood Bonuses**: Happy pets boost your overall performance\n• **Evolution System**: Train pets to unlock new forms and abilities\n• **Breeding Program**: Create unique pet combinations",
             inline=False)
 
     elif 'dream' in channel_name:
         embed = embed_builder.create_embed(
-            title="🌙 Welcome to the Dream Realm!",
-            description="Experience mystical dreams and special events!",
+            title="🌙 Welcome to the Mystical Dream Realm!",
+            description="✨ **Where reality bends and impossible becomes possible** ✨\n\nEnter a world beyond the physical realm where your characters experience supernatural adventures, gain mystical powers, and encounter otherworldly challenges!",
             color=0x9370db)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Dream Commands",
             value=
-            "• `!dreams` - View dream events\n• `!dream` - Enter dream state\n• `!nightmare` - Face challenges",
+            "• `!dreams` - View active dream sequences and events\n• `!dream` - Enter deep meditation and dream states\n• `!nightmare` - Brave terrifying challenges for great rewards\n• `!lucid` - Control your dreams for special bonuses",
+            inline=False)
+        embed.add_field(
+            name="🔮 Mystical Benefits",
+            value=
+            "• **Dream Buffs**: Temporary but powerful ability enhancements\n• **Subconscious Training**: Characters learn skills while sleeping\n• **Prophetic Visions**: Get hints about future events and opportunities\n• **Nightmare Rewards**: Face fears to unlock unique achievements\n• **Astral Projection**: Explore hidden realms for rare treasures",
             inline=False)
 
     elif 'event' in channel_name:
         embed = embed_builder.create_embed(
-            title="🎉 Welcome to Events!",
+            title="🎉 Welcome to the Festival Grounds!",
             description=
-            "Participate in seasonal events and special celebrations!",
+            "🎊 **Where celebration never ends and rewards flow freely!** 🎊\n\nJoin spectacular seasonal events, limited-time celebrations, and special occasions that bring the entire community together for unforgettable experiences and exclusive rewards!",
             color=0xff4500)
         embed.add_field(
-            name="🎯 Available Commands",
+            name="🎯 Event Commands",
             value=
-            "• `!events` - View active events\n• `!seasonal` - Seasonal activities\n• `!participate` - Join events",
+            "• `!events` - Browse all active events and celebrations\n• `!seasonal` - Access seasonal activities and themed content\n• `!participate` - Join ongoing events and competitions\n• `!contest` - Enter special contests for amazing prizes",
+            inline=False)
+        embed.add_field(
+            name="🏆 Event Rewards",
+            value=
+            "• **Exclusive Characters**: Limited-edition waifus only available during events\n• **Special Equipment**: Event-themed gear with unique properties\n• **Massive Bonuses**: Double XP, increased drop rates, and more\n• **Community Goals**: Work together to unlock server-wide rewards\n• **Commemorative Items**: Collect rare mementos from each celebration",
             inline=False)
     else:
         return  # Don't send welcome for other channels
@@ -425,11 +470,9 @@ class KoKoroMichiBot(commands.Bot):
             name=f"{COMMAND_PREFIX}help | {BOT_NAME} {BOT_VERSION}")
         await self.change_presence(activity=activity)
 
-        # Create required channels in all guilds and send welcome messages
+        # Create required channels in all guilds (without automatic welcome messages)
         for guild in self.guilds:
             await self.setup_guild_channels(guild)
-            # Send welcome messages to all existing channels on restart
-            await self.send_welcome_to_existing_channels(guild)
 
     async def setup_guild_channels(self, guild):
         """Create required channels for bot functionality"""
@@ -467,8 +510,7 @@ class KoKoroMichiBot(commands.Bot):
                             f"Created channel #{emoji}-{channel_name} in {guild.name}"
                         )
 
-                        # Send welcome message to new channel
-                        await send_channel_welcome(new_channel)
+                        # Channel created - welcome messages can be sent manually using !admin welcome
 
                     except discord.Forbidden:
                         logger.warning(
@@ -512,9 +554,10 @@ class KoKoroMichiBot(commands.Bot):
         logger.info(f"Joined guild: {guild.name}")
         await self.setup_guild_channels(guild)
         
-    async def send_welcome_to_existing_channels(self, guild):
-        """Send welcome messages to all existing compatible channels"""
+    async def send_welcome_to_channels(self, guild, send_to_all=False):
+        """Send welcome messages to channels - called by admin command"""
         try:
+            sent_count = 0
             for channel in guild.text_channels:
                 # Check if this channel should have a welcome message
                 channel_types = [
@@ -531,12 +574,16 @@ class KoKoroMichiBot(commands.Bot):
                         should_send_welcome = True
                         break
                 
-                if should_send_welcome:
+                if should_send_welcome or send_to_all:
                     await send_channel_welcome(channel)
+                    sent_count += 1
                     logger.info(f"Sent welcome message to #{channel.name} in {guild.name}")
+            
+            return sent_count
                     
         except Exception as e:
             logger.error(f"Error sending welcome messages in guild {guild.name}: {e}")
+            return 0
 
 
 # Main bot instance

@@ -87,6 +87,7 @@ class AdminCommands(commands.Cog):
             value="• `!admin editaffection <user> <character> <level>` - Edit affection\n"
                   "• `!admin addrelic <user> <relic>` - Give relic\n"
                   "• `!admin erase [amount]` - Clear channel messages\n"
+                  "• `!admin welcome [guild_id]` - Send welcome messages to channels\n"
                   "• `!admin help` - Show all admin commands",
             inline=False
         )
@@ -1010,6 +1011,91 @@ class AdminCommands(commands.Cog):
         )
         
         await ctx.send(embed=embed)
+    
+    @admin_group.command(name="welcome")
+    async def send_welcome_messages(self, ctx, guild_id: Optional[str] = None):
+        """Send welcome messages to all appropriate channels manually"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            # Determine target guild
+            target_guild = None
+            if guild_id:
+                target_guild = self.bot.get_guild(int(guild_id))
+                if not target_guild:
+                    embed = self.embed_builder.error_embed(
+                        "Guild Not Found",
+                        f"Could not find guild with ID: {guild_id}"
+                    )
+                    await ctx.send(embed=embed)
+                    return
+            else:
+                target_guild = ctx.guild
+            
+            if not target_guild:
+                embed = self.embed_builder.error_embed(
+                    "No Guild Context",
+                    "This command must be used in a guild or provide a guild ID."
+                )
+                await ctx.send(embed=embed)
+                return
+            
+            # Send welcome messages to channels
+            sent_count = await self.bot.send_welcome_to_channels(target_guild, send_to_all=False)
+            
+            embed = self.embed_builder.success_embed(
+                "Welcome Messages Sent",
+                f"Successfully sent welcome messages to **{sent_count}** channels in **{target_guild.name}**!\n\n"
+                f"📋 **What was sent:**\n"
+                f"• Detailed command guides for each channel type\n"
+                f"• Pro tips and strategies for gameplay\n"
+                f"• Information about rewards and progression systems\n"
+                f"• Enhanced descriptions explaining each feature\n\n"
+                f"💡 **Channels targeted:** Combat zones, arenas, guild halls, pet corners, dream realms, event halls, forges, mini-games, and intimate chambers."
+            )
+            
+            embed.add_field(
+                name="📊 Channel Statistics",
+                value=f"Total Channels in Guild: {len(target_guild.text_channels)}\n"
+                      f"Welcome Messages Sent: {sent_count}\n"
+                      f"Coverage: {(sent_count/len(target_guild.text_channels)*100):.1f}%",
+                inline=False
+            )
+            
+            # Add usage tips
+            embed.add_field(
+                name="💡 Admin Tips",
+                value="• Use this command after creating new channels\n"
+                      "• Welcome messages help new users understand each area\n"
+                      "• Messages include detailed gameplay guides and strategies\n"
+                      "• Run again anytime to refresh channel information",
+                inline=False
+            )
+            
+            await ctx.send(embed=embed)
+            
+            # Log admin action
+            await self.log_admin_action(ctx, f"Sent welcome messages to {sent_count} channels in {target_guild.name}")
+            
+        except ValueError:
+            embed = self.embed_builder.error_embed(
+                "Invalid Guild ID",
+                "Please provide a valid numeric guild ID."
+            )
+            await ctx.send(embed=embed)
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Welcome Messages Error",
+                "Unable to send welcome messages. Please try again."
+            )
+            await ctx.send(embed=embed)
+            logger.error(f"Welcome messages error: {e}")
     
     async def log_admin_action(self, ctx, action: str):
         """Log admin actions for audit trail"""
