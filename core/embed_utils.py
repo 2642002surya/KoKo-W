@@ -22,9 +22,9 @@ class EmbedBuilder:
         return "Your journey in KoKoroMichi continues to unfold mysteries..."
     
     @staticmethod
-    def create_embed(title: str = None, description: str = None, color: int = EMBED_COLOR, 
-                    add_timestamp: bool = True, thumbnail_url: str = None, 
-                    image_url: str = None, dramatic: bool = False) -> discord.Embed:
+    def create_embed(title: Optional[str] = None, description: Optional[str] = None, color: int = EMBED_COLOR, 
+                    add_timestamp: bool = True, thumbnail_url: Optional[str] = None, 
+                    image_url: Optional[str] = None, dramatic: bool = False) -> discord.Embed:
         """Create a standardized embed with optional dramatic effects"""
         embed = discord.Embed(color=color)
         
@@ -81,25 +81,25 @@ class EmbedBuilder:
         return f"{border}\n{text}\n{border}"
     
     @staticmethod
-    def success_embed(title: str, description: str = None, **kwargs) -> discord.Embed:
+    def success_embed(title: str, description: Optional[str] = None, **kwargs) -> discord.Embed:
         """Create a success embed (green)"""
         return EmbedBuilder.create_embed(title=f"✅ {title}", description=description, 
                                        color=0x00FF00, **kwargs)
     
     @staticmethod
-    def error_embed(title: str, description: str = None, **kwargs) -> discord.Embed:
+    def error_embed(title: str, description: Optional[str] = None, **kwargs) -> discord.Embed:
         """Create an error embed (red)"""
         return EmbedBuilder.create_embed(title=f"❌ {title}", description=description, 
                                        color=0xFF0000, **kwargs)
     
     @staticmethod
-    def warning_embed(title: str, description: str = None, **kwargs) -> discord.Embed:
+    def warning_embed(title: str, description: Optional[str] = None, **kwargs) -> discord.Embed:
         """Create a warning embed (yellow)"""
         return EmbedBuilder.create_embed(title=f"⚠️ {title}", description=description, 
                                        color=0xFFFF00, **kwargs)
     
     @staticmethod
-    def info_embed(title: str, description: str = None, **kwargs) -> discord.Embed:
+    def info_embed(title: str, description: Optional[str] = None, **kwargs) -> discord.Embed:
         """Create an info embed (blue)"""
         return EmbedBuilder.create_embed(title=f"ℹ️ {title}", description=description, 
                                        color=0x0099FF, **kwargs)

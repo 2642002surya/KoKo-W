@@ -8,7 +8,12 @@ from datetime import datetime, timedelta
 from core.data_manager import data_manager
 from core.embed_utils import EmbedBuilder
 from core.config import ADMIN_USER_ID
-from utils.helpers import format_number
+try:
+    from utils.helpers import format_number
+except ImportError:
+    def format_number(num):
+        """Simple number formatter"""
+        return f"{num:,}"
 import logging
 
 logger = logging.getLogger(__name__)
@@ -65,6 +70,24 @@ class AdminCommands(commands.Cog):
                   "• `!admin backup` - Create data backup\n"
                   "• `!admin announce <message>` - Server announcement\n"
                   "• `!admin maintenance` - Toggle maintenance mode",
+            inline=False
+        )
+        
+        admin_embed.add_field(
+            name="🎮 Game Management",
+            value="• `!admin setlevel <user> <level>` - Set user level\n"
+                  "• `!admin viewdata <user>` - View raw user data\n"
+                  "• `!admin addwaifu <user> <character>` - Add character\n"
+                  "• `!admin banwaifu <user> <character>` - Remove character",
+            inline=False
+        )
+        
+        admin_embed.add_field(
+            name="🔧 Utility Commands",
+            value="• `!admin editaffection <user> <character> <level>` - Edit affection\n"
+                  "• `!admin addrelic <user> <relic>` - Give relic\n"
+                  "• `!admin erase [amount]` - Clear channel messages\n"
+                  "• `!admin help` - Show all admin commands",
             inline=False
         )
         
@@ -321,6 +344,504 @@ class AdminCommands(commands.Cog):
             await ctx.send(embed=embed)
             print(f"Backup error: {e}")
     
+    @admin_group.command(name="erase")
+    async def erase_messages(self, ctx, amount: int = 50):
+        """Clear channel messages excluding pinned ones"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            if amount <= 0 or amount > 1000:
+                embed = self.embed_builder.error_embed(
+                    "Invalid Amount",
+                    "Amount must be between 1 and 1000"
+                )
+                await ctx.send(embed=embed)
+                return
+            
+            # Delete messages (excluding pinned)
+            def check(msg):
+                return not msg.pinned
+            
+            deleted = await ctx.channel.purge(limit=amount, check=check)
+            
+            embed = self.embed_builder.success_embed(
+                "Messages Cleared",
+                f"Successfully deleted {len(deleted)} messages from {ctx.channel.mention}\n"
+                f"(Pinned messages were preserved)"
+            )
+            
+            # Log admin action
+            await self.log_admin_action(ctx, f"Cleared {len(deleted)} messages from {ctx.channel.name}")
+            
+            # Send confirmation and auto-delete it
+            await ctx.send(embed=embed, delete_after=10)
+            
+        except discord.Forbidden:
+            embed = self.embed_builder.error_embed(
+                "Permission Error",
+                "I don't have permission to delete messages in this channel."
+            )
+            await ctx.send(embed=embed)
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Erase Error",
+                "Unable to clear messages. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"Erase error: {e}")
+    
+    @admin_group.command(name="setlevel")
+    async def set_user_level(self, ctx, member: discord.Member, level: int):
+        """Set a user's level manually"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            if level <= 0 or level > 100:
+                embed = self.embed_builder.error_embed(
+                    "Invalid Level",
+                    "Level must be between 1 and 100"
+                )
+                await ctx.send(embed=embed)
+                return
+            
+            user_data = data_manager.get_user_data(str(member.id))
+            old_level = user_data.get("level", 1)
+            user_data["level"] = level
+            
+            # Calculate XP for new level
+            user_data["xp"] = level * 1000  # Simple XP calculation
+            
+            data_manager.save_user_data(str(member.id), user_data)
+            
+            embed = self.embed_builder.success_embed(
+                "Level Set",
+                f"Successfully set {member.mention}'s level\n"
+                f"Previous Level: {old_level} → New Level: {level}"
+            )
+            
+            # Log admin action
+            await self.log_admin_action(ctx, f"Set {member.display_name}'s level to {level}")
+            
+            await ctx.send(embed=embed)
+            
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Set Level Error",
+                "Unable to set user level. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"Set level error: {e}")
+    
+    @admin_group.command(name="viewdata")
+    async def view_user_data(self, ctx, member: discord.Member):
+        """View raw user JSON data for debugging"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            user_data = data_manager.get_user_data(str(member.id))
+            
+            # Format JSON for Discord display
+            json_data = json.dumps(user_data, indent=2, ensure_ascii=False)
+            
+            # Split into chunks if too long
+            if len(json_data) > 1900:
+                # Send basic info first
+                embed = self.embed_builder.info_embed(
+                    f"📊 User Data - {member.display_name}",
+                    f"**User ID:** {member.id}\n"
+                    f"**Level:** {user_data.get('level', 1)}\n"
+                    f"**Gold:** {format_number(user_data.get('gold', 0))}\n"
+                    f"**Gems:** {format_number(user_data.get('gems', 0))}\n"
+                    f"**Characters:** {len(user_data.get('claimed_waifus', []))}\n"
+                    f"**Last Active:** {user_data.get('last_active', 'Never')[:19]}"
+                )
+                await ctx.send(embed=embed)
+                
+                # Send full data as file
+                import io
+                file_content = json.dumps(user_data, indent=2, ensure_ascii=False)
+                file_buffer = io.BytesIO(file_content.encode('utf-8'))
+                file = discord.File(file_buffer, filename=f"userdata_{member.id}.json")
+                
+                await ctx.send("📄 **Full user data (JSON file):**", file=file)
+            else:
+                embed = self.embed_builder.info_embed(
+                    f"📊 Raw User Data - {member.display_name}",
+                    f"```json\n{json_data}\n```"
+                )
+                await ctx.send(embed=embed)
+            
+            # Log admin action
+            await self.log_admin_action(ctx, f"Viewed raw data for {member.display_name}")
+            
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "View Data Error",
+                "Unable to retrieve user data. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"View data error: {e}")
+    
+    @admin_group.command(name="banwaifu")
+    async def ban_waifu(self, ctx, member: discord.Member, *, character_name: str):
+        """Remove a waifu from user's collection"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            user_data = data_manager.get_user_data(str(member.id))
+            claimed_waifus = user_data.get("claimed_waifus", [])
+            
+            # Find and remove the character
+            removed_waifu = None
+            for i, waifu in enumerate(claimed_waifus):
+                if waifu.get("name", "").lower() == character_name.lower():
+                    removed_waifu = claimed_waifus.pop(i)
+                    break
+            
+            if removed_waifu:
+                data_manager.save_user_data(str(member.id), user_data)
+                
+                embed = self.embed_builder.success_embed(
+                    "Character Removed",
+                    f"Successfully removed **{removed_waifu.get('name', character_name)}** "
+                    f"from {member.mention}'s collection"
+                )
+                
+                # Log admin action
+                await self.log_admin_action(ctx, f"Removed {character_name} from {member.display_name}'s collection")
+            else:
+                embed = self.embed_builder.error_embed(
+                    "Character Not Found",
+                    f"Character **{character_name}** not found in {member.mention}'s collection"
+                )
+            
+            await ctx.send(embed=embed)
+            
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Ban Waifu Error",
+                "Unable to remove character. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"Ban waifu error: {e}")
+    
+    @admin_group.command(name="addwaifu")
+    async def add_waifu(self, ctx, member: discord.Member, *, character_name: str):
+        """Manually add a waifu to user's collection"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            # Get character data
+            character_data = data_manager.get_character_data(character_name)
+            
+            if not character_data:
+                embed = self.embed_builder.error_embed(
+                    "Character Not Found",
+                    f"Character **{character_name}** not found in the database.\n"
+                    f"Please check the character name and try again."
+                )
+                await ctx.send(embed=embed)
+                return
+            
+            user_data = data_manager.get_user_data(str(member.id))
+            
+            # Check if user already has this character
+            claimed_waifus = user_data.get("claimed_waifus", [])
+            for waifu in claimed_waifus:
+                if waifu.get("name", "").lower() == character_name.lower():
+                    embed = self.embed_builder.warning_embed(
+                        "Character Already Owned",
+                        f"{member.mention} already owns **{character_data.get('name', character_name)}**"
+                    )
+                    await ctx.send(embed=embed)
+                    return
+            
+            # Add character to collection
+            new_waifu = character_data.copy()
+            new_waifu["level"] = 1
+            new_waifu["obtained_at"] = datetime.now().isoformat()
+            
+            claimed_waifus.append(new_waifu)
+            user_data["claimed_waifus"] = claimed_waifus
+            data_manager.save_user_data(str(member.id), user_data)
+            
+            embed = self.embed_builder.success_embed(
+                "Character Added",
+                f"Successfully added **{character_data.get('name', character_name)}** "
+                f"to {member.mention}'s collection!"
+            )
+            
+            # Add character details
+            rarity = character_data.get('rarity', 'N')
+            embed.add_field(
+                name="Character Details",
+                value=f"**Rarity:** {rarity}\n"
+                      f"**HP:** {character_data.get('hp', 0)}\n"
+                      f"**ATK:** {character_data.get('atk', 0)}",
+                inline=True
+            )
+            
+            # Log admin action
+            await self.log_admin_action(ctx, f"Added {character_name} to {member.display_name}'s collection")
+            
+            await ctx.send(embed=embed)
+            
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Add Waifu Error",
+                "Unable to add character. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"Add waifu error: {e}")
+    
+    @admin_group.command(name="editaffection")
+    async def edit_affection(self, ctx, member: discord.Member, character_name: str, affection_level: int):
+        """Edit user's affection/intimate level with a character"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            if affection_level < 0 or affection_level > 100:
+                embed = self.embed_builder.error_embed(
+                    "Invalid Affection Level",
+                    "Affection level must be between 0 and 100"
+                )
+                await ctx.send(embed=embed)
+                return
+            
+            user_data = data_manager.get_user_data(str(member.id))
+            
+            # Check if user has this character
+            claimed_waifus = user_data.get("claimed_waifus", [])
+            character_found = False
+            
+            for waifu in claimed_waifus:
+                if waifu.get("name", "").lower() == character_name.lower():
+                    old_affection = waifu.get("affection", 0)
+                    waifu["affection"] = affection_level
+                    character_found = True
+                    break
+            
+            if not character_found:
+                embed = self.embed_builder.error_embed(
+                    "Character Not Found",
+                    f"{member.mention} doesn't own **{character_name}**"
+                )
+                await ctx.send(embed=embed)
+                return
+            
+            data_manager.save_user_data(str(member.id), user_data)
+            
+            embed = self.embed_builder.success_embed(
+                "Affection Updated",
+                f"Successfully updated affection level for **{character_name}**\n"
+                f"Owner: {member.mention}\n"
+                f"Previous: {old_affection} → New: {affection_level}"
+            )
+            
+            # Log admin action
+            await self.log_admin_action(ctx, f"Set {character_name} affection to {affection_level} for {member.display_name}")
+            
+            await ctx.send(embed=embed)
+            
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Edit Affection Error",
+                "Unable to edit affection level. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"Edit affection error: {e}")
+    
+    @admin_group.command(name="addrelic")
+    async def add_relic(self, ctx, member: discord.Member, *, relic_name: str):
+        """Give a relic to a user manually"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            # Check if relic exists
+            relic_data = data_manager.get_game_data("relics")
+            if not relic_data:
+                # Try loading from relic files
+                from pathlib import Path
+                relic_file = Path("data/relics") / f"{relic_name}.json"
+                if relic_file.exists():
+                    import json
+                    with open(relic_file, 'r') as f:
+                        relic_info = json.load(f)
+                else:
+                    relic_info = {"name": relic_name, "description": "Admin-given relic"}
+            else:
+                relic_info = relic_data.get(relic_name, {"name": relic_name, "description": "Admin-given relic"})
+            
+            user_data = data_manager.get_user_data(str(member.id))
+            inventory = user_data.setdefault("inventory", {})
+            relics = inventory.setdefault("relics", {})
+            
+            # Add relic to inventory
+            relics[relic_name] = relics.get(relic_name, 0) + 1
+            data_manager.save_user_data(str(member.id), user_data)
+            
+            embed = self.embed_builder.success_embed(
+                "Relic Added",
+                f"Successfully gave **{relic_name}** to {member.mention}"
+            )
+            
+            if relic_info.get("description"):
+                embed.add_field(
+                    name="Relic Description",
+                    value=relic_info["description"],
+                    inline=False
+                )
+            
+            # Log admin action
+            await self.log_admin_action(ctx, f"Gave {relic_name} relic to {member.display_name}")
+            
+            await ctx.send(embed=embed)
+            
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Add Relic Error",
+                "Unable to add relic. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"Add relic error: {e}")
+    
+    @admin_group.command(name="help", aliases=["adminhelp"])
+    async def admin_help(self, ctx):
+        """Display all admin commands in a comprehensive embed"""
+        if not self.is_admin(ctx.author.id):
+            embed = self.embed_builder.error_embed(
+                "Access Denied",
+                "You don't have permission to use admin commands."
+            )
+            await ctx.send(embed=embed)
+            return
+        
+        try:
+            help_embed = self.embed_builder.create_embed(
+                title="🛠️ Complete Admin Commands Reference",
+                description="Comprehensive list of all administrative commands for KoKoroMichi Bot",
+                color=0xFF0000
+            )
+            
+            help_embed.add_field(
+                name="👥 User Management",
+                value="• `!admin give <user> <item> <amount>` - Give items to user\n"
+                      "• `!admin gold <user> <amount>` - Modify user's gold\n"
+                      "• `!admin setlevel <user> <level>` - Set user level (1-100)\n"
+                      "• `!admin reset <user>` - Reset all user data (DESTRUCTIVE)\n"
+                      "• `!admin viewdata <user>` - View raw user JSON data",
+                inline=False
+            )
+            
+            help_embed.add_field(
+                name="🎮 Character Management",
+                value="• `!admin addwaifu <user> <character>` - Add character to collection\n"
+                      "• `!admin banwaifu <user> <character>` - Remove character from collection\n"
+                      "• `!admin editaffection <user> <character> <level>` - Edit affection (0-100)\n"
+                      "• `!admin addrelic <user> <relic>` - Give relic to user",
+                inline=False
+            )
+            
+            help_embed.add_field(
+                name="📊 Bot Management",
+                value="• `!admin stats` - Show detailed bot statistics\n"
+                      "• `!admin backup` - Create data backup\n"
+                      "• `!admin announce <message>` - Make server announcement\n"
+                      "• `!admin erase [amount]` - Clear channel messages (preserve pinned)",
+                inline=False
+            )
+            
+            help_embed.add_field(
+                name="ℹ️ Information Commands",
+                value="• `!userinfo [user]` - Get detailed user information\n"
+                      "• `!admin help` - Show this help message\n"
+                      "• All admin commands work in DM for security",
+                inline=False
+            )
+            
+            help_embed.add_field(
+                name="⚠️ Security Notes",
+                value="• All admin commands require admin permissions\n"
+                      "• Destructive actions require confirmation\n"
+                      "• All admin actions are logged for audit trail\n"
+                      "• Admin panel information is sent via DM",
+                inline=False
+            )
+            
+            help_embed.set_footer(text="KoKoroMichi Bot v3.1.1 | Admin System")
+            
+            # Send to DM for security
+            try:
+                await ctx.author.send(embed=help_embed)
+                
+                response_embed = self.embed_builder.info_embed(
+                    "Admin Help",
+                    "Complete admin commands reference sent to your DM for security."
+                )
+                await ctx.send(embed=response_embed)
+                
+            except discord.Forbidden:
+                # If DM fails, send in channel but warn
+                warning_embed = self.embed_builder.warning_embed(
+                    "⚠️ DM Failed",
+                    "Could not send to DM. Displaying here (less secure)."
+                )
+                await ctx.send(embed=warning_embed)
+                await ctx.send(embed=help_embed)
+            
+            # Log admin action
+            await self.log_admin_action(ctx, "Viewed admin help documentation")
+            
+        except Exception as e:
+            embed = self.embed_builder.error_embed(
+                "Help Error",
+                "Unable to display admin help. Please try again."
+            )
+            await ctx.send(embed=embed)
+            print(f"Admin help error: {e}")
+    
     @commands.command(name="userinfo")
     async def user_info(self, ctx, member: discord.Member = None):
         """Get detailed information about a user (moderator command)"""
@@ -475,6 +996,18 @@ class ResetConfirmationView(discord.ui.View):
         await interaction.response.edit_message(embed=embed, view=self)
 
 
+# Add a simple command for !adminhelp shortcut
+@commands.command(name="adminhelp")
+async def admin_help_shortcut(ctx):
+    """Quick access to admin help"""
+    admin_cog = ctx.bot.get_cog("AdminCommands")
+    if admin_cog:
+        await admin_cog.admin_help(ctx)
+    else:
+        await ctx.send("❌ Admin system not available.")
+
 async def setup(bot):
     """Setup function for loading the cog"""
     await bot.add_cog(AdminCommands(bot))
+    # Add the shortcut command
+    bot.add_command(admin_help_shortcut)

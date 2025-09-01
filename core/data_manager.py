@@ -193,7 +193,7 @@ class DataManager:
             self.logger.error(f"Error loading characters: {e}")
         return characters
     
-    def get_game_data(self, section: str = None) -> Dict[str, Any]:
+    def get_game_data(self, section: Optional[str] = None) -> Dict[str, Any]:
         """Get game configuration data"""
         if section:
             # Try to load from specific file first

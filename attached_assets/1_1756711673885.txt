@@ -1,0 +1,12 @@
+forget about hello bot and analize the program code folder I upload, check how the bot program is working and there might be requirements needed to download and check each and every command and is if the command is working properly without giving errors like command is working and it throwing error when used like, fix them> mostly imports and exports problem might be so fix them before changing anything cause it is a good perfected code.
+whats the command for sending instructions to those specific channels ?
+Also add these below for admin commands :
+
+!erase - Clear channel messages excluding pinned
+!setlevel - Set user level manually
+!viewdata - View raw user JSON data for debugging
+!banwaifu - Remove waifu from user collection
+!addwaifu - Manually add waifu to user
+!editaffection - Edit user affection/intimate levels of waifu's
+!addrelic - Give relic to user manually
+!adminhelp - Display all admin commands in embed
