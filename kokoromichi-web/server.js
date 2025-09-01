@@ -1,10 +1,14 @@
-const express = require('express')
-const cors = require('cors')
-const helmet = require('helmet')
-const compression = require('compression')
-const rateLimit = require('express-rate-limit')
-const path = require('path')
-const fs = require('fs')
+import express from 'express'
+import cors from 'cors'
+import helmet from 'helmet'
+import compression from 'compression'
+import rateLimit from 'express-rate-limit'
+import path from 'path'
+import fs from 'fs'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const app = express()
 const PORT = process.env.PORT || 3001
@@ -16,8 +20,18 @@ app.use(helmet({
 }))
 app.use(compression())
 app.use(cors({
-  origin: ['http://localhost:5000', 'https://*.replit.app', 'https://*.replit.dev'],
-  credentials: true
+  origin: [
+    'http://localhost:5000',
+    'http://127.0.0.1:5000',
+    'http://0.0.0.0:5000',
+    'https://*.replit.app',
+    'https://*.replit.dev',
+    /\.replit\.app$/,
+    /\.replit\.dev$/
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }))
 
 // Rate limiting

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api'
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:3001/api'
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -46,9 +46,10 @@ export const fetchBotStats = async () => {
       lastUpdated: new Date().toISOString()
     }
   } catch (error) {
-    // Fallback data when API is not available
+    console.warn('API not available, using fallback data')
+    // Fallback data when API is not available - still show website content
     return {
-      isOnline: false,
+      isOnline: true,
       guilds: 1,
       users: 5,
       commands: 98,

@@ -14,7 +14,7 @@ const ThemeManager = () => {
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg hover:shadow-pink-500/25 transition-all duration-200"
+        className="fixed bottom-6 right-6 z-50 p-4 rounded-full btn-primary shadow-xl hover:shadow-pink-500/40 transition-all duration-300"
       >
         <Palette size={24} />
       </motion.button>
@@ -28,7 +28,7 @@ const ThemeManager = () => {
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             className="fixed bottom-20 right-6 z-50 p-6 rounded-xl bg-black/90 backdrop-blur-lg border border-pink-500/20 shadow-2xl"
           >
-            <h3 className="text-lg font-semibold text-white mb-4">Choose Theme</h3>
+            <h3 className="text-xl font-bold text-white mb-6">🎨 Choose Theme</h3>
             
             <div className="space-y-3">
               {Object.entries(themes).map(([key, theme]) => (
@@ -40,21 +40,27 @@ const ThemeManager = () => {
                   }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`w-full flex items-center justify-between p-3 rounded-lg border transition-all duration-200 ${
+                  className={`w-full flex items-center justify-between p-4 rounded-xl border transition-all duration-300 ${
                     currentTheme === key
-                      ? 'border-pink-500 bg-pink-500/10'
-                      : 'border-gray-700 bg-gray-800/50 hover:border-pink-500/50'
+                      ? 'border-pink-500 bg-pink-500/20 shadow-lg shadow-pink-500/25'
+                      : 'border-gray-700 bg-gray-800/50 hover:border-pink-500/50 hover:bg-gray-700/50'
                   }`}
                 >
                   <div className="flex items-center space-x-3">
                     <div
-                      className="w-6 h-6 rounded-full border-2 border-white/20"
+                      className="w-8 h-8 rounded-full border-2 border-white/20 shadow-lg"
                       style={{ backgroundColor: theme.primary }}
                     />
-                    <span className="text-white font-medium">{theme.name}</span>
+                    <span className="text-white font-semibold">{theme.name}</span>
                   </div>
                   {currentTheme === key && (
-                    <Check size={20} className="text-pink-400" />
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      className="bg-pink-500 rounded-full p-1"
+                    >
+                      <Check size={16} className="text-white" />
+                    </motion.div>
                   )}
                 </motion.button>
               ))}

@@ -19,6 +19,10 @@ args = "KoKoroMichi Bot"
 task = "workflow.run"
 args = "Website"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "API Server"
+
 [[workflows.workflow]]
 name = "KoKoroMichi Bot"
 author = "agent"
@@ -41,6 +45,22 @@ outputType = "webview"
 task = "shell.exec"
 args = "cd kokoromichi-web && npm run dev"
 waitForPort = 5000
+
+[[workflows.workflow]]
+name = "API Server"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd kokoromichi-web && node server.js"
+waitForPort = 3001
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
 
 [[ports]]
 localPort = 5000

@@ -105,9 +105,9 @@ const Navigation = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg font-medium text-white hover:shadow-lg hover:shadow-pink-500/25 transition-all duration-200"
+                className="hidden sm:inline-flex items-center space-x-2 px-6 py-3 btn-primary rounded-xl font-semibold text-white shadow-lg hover:shadow-pink-500/30 transition-all duration-300"
               >
-                <Crown size={16} />
+                <Crown size={18} />
                 <span>Invite Bot</span>
               </motion.a>
 
@@ -169,10 +169,10 @@ const Navigation = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center space-x-2 w-full px-4 py-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg font-medium text-white"
+                  className="flex items-center justify-center space-x-2 w-full px-6 py-4 btn-primary rounded-xl font-semibold text-white shadow-lg"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Crown size={18} />
+                  <Crown size={20} />
                   <span>Invite Bot to Server</span>
                 </motion.a>
               </div>
