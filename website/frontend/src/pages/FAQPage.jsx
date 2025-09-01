@@ -257,11 +257,24 @@ const FAQPage = ({ theme }) => {
         }]
       };
 
-      // In a real implementation, this would be sent to your Discord webhook
-      // For now, we'll simulate the submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSubmitStatus('success');
+      // Send to backend API which forwards to Discord webhook
+      const response = await fetch('/api/faq', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.email,
+          email: formData.email,
+          question: formData.question
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+      } else {
+        setSubmitStatus('error');
+      }
       setFormData({ email: '', question: '' });
     } catch (error) {
       setSubmitStatus('error');

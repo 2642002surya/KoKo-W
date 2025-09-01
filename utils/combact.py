@@ -5,7 +5,7 @@ import random
 from datetime import datetime
 from discord import File, Embed
 
-CHARACTERS_DIR = os.path.join(os.path.dirname(__file__), '../characters')
+from core.config import CHARACTERS_DIR
 USERS_FILE = os.path.join(os.path.dirname(__file__), '../data/users.json')
 
 # -------------------

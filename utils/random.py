@@ -7,7 +7,8 @@ from utils.history import add_summon
 import discord
 from utils.template import create_waifu_template
 
-CHARACTERS_FOLDER = os.path.join(os.path.dirname(__file__), '..', 'characters')
+from core.config import CHARACTERS_DIR
+CHARACTERS_FOLDER = str(CHARACTERS_DIR)
 
 PITY_LIMIT = 20
 SSR_CHANCE = 0.03

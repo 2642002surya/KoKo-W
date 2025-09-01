@@ -17,7 +17,7 @@ import ParticleBackground from './components/ParticleBackground';
 
 function App() {
   const [theme, setTheme] = useState('water'); // Default theme
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Theme configurations
   const themes = {
@@ -99,31 +99,10 @@ function App() {
     root.style.setProperty('--gradient', currentTheme.gradient);
   }, [currentTheme]);
 
-  // Loading screen
+  // Initialize without loading screen
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000);
-    return () => clearTimeout(timer);
+    setIsLoading(false);
   }, []);
-
-  if (isLoading) {
-    return (
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 to-blue-900 flex items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="text-center"
-        >
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
-          />
-          <h1 className="text-3xl font-bold text-white mb-2">KoKoroMichi</h1>
-          <p className="text-blue-200">Loading your adventure...</p>
-        </motion.div>
-      </div>
-    );
-  }
 
   return (
     <Router>

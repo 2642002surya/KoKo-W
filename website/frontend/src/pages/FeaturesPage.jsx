@@ -19,31 +19,35 @@ const FeaturesPage = ({ theme }) => {
         'Affinity bonuses based on character relationships',
         'Trait effects that unlock special abilities',
         'Relic powers that dramatically increase stats',
-        'Elemental advantages for tactical depth'
+        'Elemental advantages for tactical depth',
+        'Arena tournaments with seasonal rankings',
+        'World boss raids requiring guild coordination'
       ],
       color: '#FF4444',
       gradient: 'from-red-500 to-orange-500'
     },
     {
       icon: Heart,
-      title: 'Character Collection & Rarity System',
-      description: 'Collect 50+ unique characters across 7 rarity tiers',
+      title: 'Character Collection & Progression',
+      description: 'Collect 328+ unique characters across 7 rarity tiers with deep progression',
       details: [
-        'N (Normal) - Common characters, great for beginners',
-        'R (Rare) - Solid characters with decent abilities', 
-        'SR (Super Rare) - Strong characters with unique skills',
-        'SSR (Super Super Rare) - Powerful characters with special traits',
-        'UR (Ultra Rare) - Elite characters with exceptional abilities',
-        'LR (Legendary Rare) - Legendary characters with ultimate power',
-        'Mythic - The rarest and most powerful characters in existence'
+        'N (Normal 60.4%) - Common characters, great for beginners',
+        'R (Rare 25%) - Solid characters with decent abilities', 
+        'SR (Super Rare 10%) - Strong characters with unique skills',
+        'SSR (Super Super Rare 3%) - Powerful characters with special traits',
+        'UR (Ultra Rare 1%) - Elite characters with exceptional abilities',
+        'LR (Legendary Rare 0.5%) - Legendary characters with ultimate power',
+        'Mythic (0.1%) - The rarest and most powerful characters in existence',
+        'Character awakening and potential unlocking systems',
+        'Trait development for specialized character builds'
       ],
       color: '#FF69B4',
       gradient: 'from-pink-500 to-purple-500'
     },
     {
       icon: Users,
-      title: 'Guild System & Faction Warfare',
-      description: 'Team-based gameplay with collaborative activities',
+      title: 'Guild System & Social Features',
+      description: 'Team-based gameplay with collaborative activities and social interactions',
       details: [
         'Create or join guilds with up to 50 members',
         'Guild banks for shared resource management',
@@ -51,26 +55,100 @@ const FeaturesPage = ({ theme }) => {
         'Guild vs Guild warfare events',
         'Collaborative boss raids requiring teamwork',
         'Guild-exclusive quests and challenges',
-        'Leadership roles with special privileges'
+        'Fan clubs for favorite characters',
+        'Mood polls and community voting systems',
+        'Character relationship and affection mechanics'
       ],
       color: '#4169E1',
       gradient: 'from-blue-500 to-indigo-500'
     },
     {
       icon: Coins,
-      title: 'Advanced Economy System',
-      description: 'Multi-currency system with investments and trading',
+      title: 'Advanced Economy & Trading',
+      description: 'Multi-currency system with investments, auctions, and business management',
       details: [
         'Gold and Gems as primary currencies',
-        'Business investments for passive income',
+        'Business investments for passive income generation',
         'Auction house for player-to-player trading',
-        'Daily rewards and login streaks',
+        'Daily rewards and login streak bonuses',
         'Portfolio management for multiple businesses',
-        'Market fluctuations affecting prices',
-        'Economic events that impact the entire server'
+        'Market fluctuations affecting investment prices',
+        'Economic events that impact the entire server',
+        'Store system with rotating inventory',
+        'Investment risk/reward balancing'
       ],
       color: '#FFD700',
       gradient: 'from-yellow-500 to-amber-500'
+    },
+    {
+      icon: Hammer,
+      title: 'Crafting & Equipment System',
+      description: 'Create powerful items and relics through advanced crafting mechanics',
+      details: [
+        'Material gathering from multiple locations',
+        'Recipe discovery and crafting progression',
+        'Relic forging for powerful equipment',
+        'Item enhancement and upgrade systems',
+        'Resource management and inventory control',
+        'Rare material trading and exchange',
+        'Equipment optimization for character builds',
+        'Seasonal crafting events with exclusive recipes'
+      ],
+      color: '#8B4513',
+      gradient: 'from-amber-600 to-orange-600'
+    },
+    {
+      icon: Sparkles,
+      title: 'Events & Activities',
+      description: 'Dynamic content with seasonal events, quests, and special activities',
+      details: [
+        'Seasonal events with exclusive rewards',
+        'Dream realm mystical adventures',
+        'Daily quest system with rotating objectives',
+        'Random events for surprise encounters',
+        'Contest participation and competitions',
+        'Pet racing and companion activities',
+        'Treasure hunting expeditions',
+        'Achievement tracking and rewards',
+        'Lore reading with story progression'
+      ],
+      color: '#9400D3',
+      gradient: 'from-purple-500 to-indigo-500'
+    },
+    {
+      icon: Gamepad2,
+      title: 'Mini Games & Entertainment',
+      description: 'Variety of fun mini-games and entertainment features',
+      details: [
+        'Number guessing games with rewards',
+        'Rock Paper Scissors tournaments',
+        'Slot machine gambling mechanics',
+        'Trivia questions across multiple categories',
+        'Magic 8-ball mystical answers',
+        'Dice rolling and random generation',
+        'Choice making and decision games',
+        'Coin flipping with betting options',
+        'Character compliment and praise systems'
+      ],
+      color: '#00CED1',
+      gradient: 'from-cyan-500 to-blue-500'
+    },
+    {
+      icon: Shield,
+      title: 'Administration & Security',
+      description: 'Comprehensive admin tools and secure bot management',
+      details: [
+        'DM-only admin commands for enhanced security',
+        'User data management and viewing tools',
+        'Server-wide announcement capabilities',
+        'Automated backup systems for data protection',
+        'Channel setup and configuration automation',
+        'Permission management and role integration',
+        'Bot statistics and performance monitoring',
+        'Error tracking and debugging tools'
+      ],
+      color: '#DC143C',
+      gradient: 'from-red-600 to-pink-600'
     }
   ];
 
