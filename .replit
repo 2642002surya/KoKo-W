@@ -15,6 +15,10 @@ author = "agent"
 task = "workflow.run"
 args = "KoKoroMichi Bot"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Website"
+
 [[workflows.workflow]]
 name = "KoKoroMichi Bot"
 author = "agent"
@@ -25,3 +29,19 @@ outputType = "console"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python bot.py"
+
+[[workflows.workflow]]
+name = "Website"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd website && npm run dev"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
