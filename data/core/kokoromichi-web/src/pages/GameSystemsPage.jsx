@@ -5,8 +5,10 @@ import {
   Target, Coins, Gem, Shield, ArrowUp, Gift, Map, BookOpen,
   Sparkles, Flame, Droplet, Globe, Leaf, Wrench
 } from 'lucide-react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const GameSystemsPage = () => {
+  const { theme } = useTheme()
   const [activeSystem, setActiveSystem] = useState('summoning')
 
   const gameSystems = {
@@ -298,7 +300,7 @@ const GameSystemsPage = () => {
           animate={{ y: 0, opacity: 1 }}
           className="text-center mb-16"
         >
-          <h1 className="text-6xl font-bold mb-6 text-gradient">
+          <h1 className="text-6xl font-bold mb-6" style={{ color: theme.primary }}>
             🎮 Game Systems
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -403,7 +405,7 @@ const GameSystemsPage = () => {
           transition={{ delay: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl font-bold mb-12 text-gradient">🔗 System Integration</h2>
+          <h2 className="text-4xl font-bold mb-12" style={{ color: theme.primary }}>🔗 System Integration</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {

@@ -313,36 +313,30 @@ body {
   .xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
-/* Professional Gradients and Effects */
+/* Fixed Text Gradient - No more pink boxes */
 .text-gradient {
-  background: linear-gradient(135deg, var(--theme-primary), var(--theme-accent), var(--theme-secondary));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
+  color: var(--theme-primary) !important;
+  font-weight: bold;
 }
 
-/* Fallback for text-gradient when it doesn't work */
-@supports not (-webkit-background-clip: text) {
-  .text-gradient {
-    color: var(--theme-primary);
-    -webkit-text-fill-color: initial;
-  }
+/* Force visible headings everywhere */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--theme-text, var(--theme-primary)) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-/* Force visible headings on desktop */
-@media (min-width: 768px) {
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--theme-text, var(--theme-primary)) !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  .text-gradient {
-    color: var(--theme-primary) !important;
-  }
+/* Specific heading fixes */
+.text-5xl, .text-6xl, .text-4xl, .text-3xl, .text-2xl {
+  color: var(--theme-primary) !important;
+}
+
+/* Remove any background-clip that causes pink boxes */
+* {
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
 }
 
 .bg-gradient-to-r {
@@ -407,10 +401,10 @@ body {
               0 0 20px rgba(255, 105, 180, 0.2);
 }
 
-/* Button Styles */
+/* Button Styles - Theme Aware */
 .btn-primary {
-  background: linear-gradient(135deg, #ff69b4, #ff1493);
-  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+  background: var(--theme-primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   border: none;
   color: white;
   font-weight: 600;
@@ -419,7 +413,8 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+  background: var(--theme-secondary);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .btn-secondary {

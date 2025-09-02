@@ -5,8 +5,10 @@ import {
   Target, Coins, Gem, Gamepad2, Swords, Crown as GuildIcon,
   Bot, Code, Database, Server
 } from 'lucide-react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const AboutPage = () => {
+  const { theme } = useTheme()
   const gameFeatures = [
     {
       icon: Crown,
@@ -159,7 +161,7 @@ const AboutPage = () => {
           animate={{ y: 0, opacity: 1 }}
           className="text-center mb-20"
         >
-          <h1 className="text-6xl font-bold mb-6 text-gradient">🌸 About KoKoroMichi</h1>
+          <h1 className="text-6xl font-bold mb-6" style={{ color: theme.primary }}>🌸 About KoKoroMichi</h1>
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             The most advanced Discord RPG bot ever created, featuring comprehensive character collection, 
             strategic combat, guild systems, and endless adventures in a beautifully crafted anime-inspired world.
@@ -189,7 +191,7 @@ const AboutPage = () => {
           transition={{ delay: 0.4 }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 text-gradient">🎮 Game Features</h2>
+          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: theme.primary }}>🎮 Game Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {gameFeatures.map((feature, index) => {
               const Icon = feature.icon
@@ -229,7 +231,7 @@ const AboutPage = () => {
           transition={{ delay: 0.6 }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 text-gradient">⚙️ Technical Excellence</h2>
+          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: theme.primary }}>⚙️ Technical Excellence</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {techSpecs.map((spec, index) => {
               const Icon = spec.icon
@@ -263,7 +265,7 @@ const AboutPage = () => {
           transition={{ delay: 0.8 }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 text-gradient">📋 Command Categories</h2>
+          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: theme.primary }}>📋 Command Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { category: 'Profile & Collection', commands: ['profile', 'inspect', 'inventory', 'top', 'compare'], icon: '👤' },
@@ -306,7 +308,7 @@ const AboutPage = () => {
           transition={{ delay: 1.0 }}
           className="text-center"
         >
-          <h2 className="text-4xl font-bold mb-12 text-gradient">📊 By The Numbers</h2>
+          <h2 className="text-4xl font-bold mb-12" style={{ color: theme.primary }}>📊 By The Numbers</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: '98+', label: 'Commands', icon: '⚡' },
@@ -328,7 +330,7 @@ const AboutPage = () => {
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700 hover:border-pink-500/50 transition-all duration-300"
               >
                 <div className="text-3xl mb-2">{stat.icon}</div>
-                <div className="text-3xl font-bold mb-2 text-gradient">{stat.number}</div>
+                <div className="text-3xl font-bold mb-2" style={{ color: theme.primary }}>{stat.number}</div>
                 <div className="text-sm font-medium text-gray-400">{stat.label}</div>
               </motion.div>
             ))}

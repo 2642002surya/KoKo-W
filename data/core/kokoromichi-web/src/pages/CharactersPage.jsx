@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Search, Filter, Star, Heart, Sword, Shield } from 'lucide-react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const CharactersPage = () => {
+  const { theme } = useTheme()
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedRarity, setSelectedRarity] = useState('all')
 
@@ -92,7 +94,7 @@ const CharactersPage = () => {
           animate={{ y: 0, opacity: 1 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold mb-6 text-gradient">
+          <h1 className="text-5xl font-bold mb-6" style={{ color: theme.primary }}>
             👥 Character Collection
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">

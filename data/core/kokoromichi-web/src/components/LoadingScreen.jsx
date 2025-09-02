@@ -1,7 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const LoadingScreen = () => {
+  const { theme } = useTheme()
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,7 +33,8 @@ const LoadingScreen = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-4xl font-bold text-gradient mb-4"
+          className="text-4xl font-bold mb-4"
+          style={{ color: theme.primary }}
         >
           KoKoroMichi
         </motion.h1>

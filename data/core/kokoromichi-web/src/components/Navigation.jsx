@@ -3,8 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Home, Command, Users, BarChart3, Image, Info, Crown, Gamepad2, Sparkles, HelpCircle } from 'lucide-react'
 import { useBotData } from '@/contexts/BotDataContext'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const Navigation = () => {
+  const { theme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
@@ -55,7 +57,7 @@ const Navigation = () => {
               >
                 🌸
               </motion.span>
-              <span className="text-xl font-bold text-gradient group-hover:scale-105 transition-transform">
+              <span className="text-xl font-bold group-hover:scale-105 transition-transform" style={{ color: theme.primary }}>
                 KoKoroMichi
               </span>
             </Link>

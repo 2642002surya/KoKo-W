@@ -15,32 +15,36 @@ const getThemeIcon = (themeKey) => {
 }
 
 const ThemeManager = () => {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(true)  // Start expanded for visibility
   const { currentTheme, themes, changeTheme } = useTheme()
 
   return (
-    <div className="fixed top-20 right-6 z-50">
+    <div className="fixed top-24 right-4 z-50">
       <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="bg-black/90 backdrop-blur-lg rounded-2xl border border-white/30 overflow-hidden shadow-2xl"
-        style={{ boxShadow: `0 0 40px ${themes[currentTheme].primary}40` }}
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="bg-black/95 backdrop-blur-xl rounded-2xl border-2 border-white/40 overflow-hidden shadow-2xl"
+        style={{ 
+          boxShadow: `0 0 50px ${themes[currentTheme].primary}60, 0 20px 40px rgba(0,0,0,0.5)`,
+          minWidth: '220px'
+        }}
       >
         {/* Header Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="w-full p-4 flex items-center justify-between text-white hover:bg-white/10 transition-colors min-w-[200px]"
+          className="w-full p-4 flex items-center justify-between text-white hover:bg-white/20 transition-all duration-200 relative"
+          style={{ background: `linear-gradient(135deg, ${themes[currentTheme].primary}20, transparent)` }}
         >
           <div className="flex items-center space-x-3">
             <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center"
+              className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg"
               style={{ backgroundColor: themes[currentTheme].primary }}
             >
-              {React.createElement(getThemeIcon(currentTheme), { size: 16, color: 'white' })}
+              {React.createElement(getThemeIcon(currentTheme), { size: 20, color: 'white' })}
             </div>
             <div className="text-left">
-              <div className="font-bold text-sm">🎨 Themes</div>
-              <div className="text-xs opacity-60">{themes[currentTheme].name} Active</div>
+              <div className="font-bold text-base text-white">🎨 Element Themes</div>
+              <div className="text-sm text-white/80">{themes[currentTheme].emoji} {themes[currentTheme].name}</div>
             </div>
           </div>
           {isExpanded ? (

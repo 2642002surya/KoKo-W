@@ -1,8 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Heart, Github, Twitter, MessageCircle, Crown } from 'lucide-react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const Footer = () => {
+  const { theme } = useTheme()
   const currentYear = new Date().getFullYear()
   
   const socialLinks = [
@@ -26,7 +28,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <span className="text-3xl">🌸</span>
-              <span className="text-2xl font-bold text-gradient">KoKoroMichi</span>
+              <span className="text-2xl font-bold" style={{ color: theme.primary }}>KoKoroMichi</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
               The ultimate Discord RPG experience featuring 98+ commands, strategic battles, 
@@ -111,7 +113,7 @@ const Footer = () => {
               { label: 'Active Users', value: '1K+' }
             ].map((stat) => (
               <div key={stat.label} className="p-4 rounded-lg bg-gray-800/50">
-                <div className="text-2xl font-bold text-gradient">{stat.value}</div>
+                <div className="text-2xl font-bold" style={{ color: theme.primary }}>{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
             ))}

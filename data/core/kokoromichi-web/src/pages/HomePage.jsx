@@ -3,9 +3,11 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Crown, Users, Sword, Heart, Sparkles, ArrowRight, Play, Shield, Star, Zap, Trophy, Gift } from 'lucide-react'
 import { useBotData } from '@/contexts/BotDataContext'
+import { useTheme } from '@/contexts/ThemeContext'
 
 const HomePage = () => {
   const { botStats, loading } = useBotData()
+  const { theme } = useTheme()
 
   const features = [
     {
@@ -123,13 +125,7 @@ const HomePage = () => {
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
               }}
               transition={{ duration: 5, repeat: Infinity }}
-              style={{
-                background: 'linear-gradient(90deg, #ff69b4, #9400d3, #ff1493, #ff69b4)',
-                backgroundSize: '200% 200%',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}
+              style={{ color: theme.primary }}
             >
               🌸 KoKoroMichi
             </motion.h1>
@@ -249,7 +245,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-6 text-gradient">
+            <h2 className="text-5xl font-bold mb-6" style={{ color: theme.primary }}>
               🎮 Game Features
             </h2>
             <p className="text-xl max-w-3xl mx-auto text-gray-300">
@@ -299,7 +295,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-6 text-gradient">
+            <h2 className="text-5xl font-bold mb-6" style={{ color: theme.primary }}>
               ✨ Why Choose KoKoroMichi?
             </h2>
           </motion.div>
@@ -334,7 +330,7 @@ const HomePage = () => {
           className="max-w-4xl mx-auto text-center p-12 rounded-3xl border border-pink-500/20 backdrop-blur-lg bg-gradient-to-br from-gray-800/40 to-gray-900/40"
         >
           <div className="text-7xl mb-6">⚔️</div>
-          <h3 className="text-4xl font-bold mb-6 text-gradient">
+          <h3 className="text-4xl font-bold mb-6" style={{ color: theme.primary }}>
             Ready to Begin Your Epic Adventure?
           </h3>
           <p className="text-xl mb-8 text-gray-300 leading-relaxed">
