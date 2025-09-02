@@ -229,27 +229,15 @@ const FAQPage = () => {
     setSubmissionStatus('sending')
 
     try {
-      // Discord webhook URL for the FAQ channel
-      const webhookUrl = `https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN`
-      
-      const discordEmbed = {
-        embeds: [{
-          title: '❓ New FAQ Submission',
-          color: parseInt(theme.primary.replace('#', ''), 16),
-          fields: [
-            { name: '📧 Email/Contact', value: formData.email || 'Not provided', inline: true },
-            { name: '🎮 Discord', value: formData.discord || 'Not provided', inline: true },
-            { name: '❓ Question', value: formData.question, inline: false }
-          ],
-          timestamp: new Date().toISOString(),
-          footer: { text: 'KoKoroMichi FAQ System' }
-        }]
-      }
-
-      const response = await fetch(webhookUrl, {
+      // Submit via API server for security
+      const response = await fetch('/api/submit-faq', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(discordEmbed)
+        body: JSON.stringify({
+          email: formData.email,
+          discord: formData.discord,
+          question: formData.question
+        })
       })
 
       if (response.ok) {

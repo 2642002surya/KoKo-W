@@ -269,6 +269,52 @@ app.get('/api/server/stats', (req, res) => {
   })
 })
 
+// FAQ submission endpoint
+app.post('/api/submit-faq', async (req, res) => {
+  try {
+    const { email, discord, question } = req.body
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL
+    
+    if (!webhookUrl) {
+      return res.status(500).json({ error: 'Webhook not configured' })
+    }
+
+    if (!question || !question.trim()) {
+      return res.status(400).json({ error: 'Question is required' })
+    }
+
+    const discordEmbed = {
+      embeds: [{
+        title: '❓ New FAQ Submission',
+        color: 0x0ea5e9,
+        fields: [
+          { name: '📧 Email/Contact', value: email || 'Not provided', inline: true },
+          { name: '🎮 Discord', value: discord || 'Not provided', inline: true },
+          { name: '❓ Question', value: question.substring(0, 1000), inline: false }
+        ],
+        timestamp: new Date().toISOString(),
+        footer: { text: 'KoKoroMichi FAQ System' }
+      }]
+    }
+
+    const fetch = (await import('node-fetch')).default
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(discordEmbed)
+    })
+
+    if (response.ok) {
+      res.json({ success: true, message: 'Question submitted successfully' })
+    } else {
+      throw new Error(`Discord webhook failed with status: ${response.status}`)
+    }
+  } catch (error) {
+    console.error('FAQ submission error:', error)
+    res.status(500).json({ error: 'Failed to submit question' })
+  }
+})
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ 
