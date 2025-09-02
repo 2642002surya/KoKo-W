@@ -18,6 +18,8 @@ const DashboardPage = React.lazy(() => import('@/pages/DashboardPage'))
 const LeaderboardPage = React.lazy(() => import('@/pages/LeaderboardPage'))
 const GalleryPage = React.lazy(() => import('@/pages/GalleryPage'))
 const GameSystemsPage = React.lazy(() => import('@/pages/GameSystemsPage'))
+const EnhancedFeaturesPage = React.lazy(() => import('@/pages/EnhancedFeaturesPage'))
+const FAQPage = React.lazy(() => import('@/pages/FAQPage'))
 const AboutPage = React.lazy(() => import('@/pages/AboutPage'))
 
 // Contexts
@@ -94,6 +96,8 @@ function App() {
                   <Route path="/commands" element={<CommandsPage />} />
                   <Route path="/characters" element={<CharactersPage />} />
                   <Route path="/systems" element={<GameSystemsPage />} />
+                  <Route path="/features" element={<EnhancedFeaturesPage />} />
+                  <Route path="/faq" element={<FAQPage />} />
                   <Route path="/dashboard" element={<DashboardPage />} />
                   <Route path="/leaderboard" element={<LeaderboardPage />} />
                   <Route path="/gallery" element={<GalleryPage />} />

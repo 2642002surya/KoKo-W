@@ -21,9 +21,12 @@ export const ThemeProvider = ({ children }) => {
       primary: '#0ea5e9',
       secondary: '#0284c7',
       accent: '#38bdf8',
-      background: 'linear-gradient(135deg, #001122 0%, #002244 50%, #001122 100%)',
+      background: 'linear-gradient(135deg, #001122 0%, #002244 50%, #003366 25%, #001122 100%)',
       particle: '#0ea5e9',
-      animationType: 'waves'
+      animationType: 'waves',
+      textColor: '#e0f2fe',
+      cardBg: 'rgba(14, 165, 233, 0.1)',
+      borderColor: '#0ea5e9'
     },
     fire: {
       name: 'Fire',
@@ -31,9 +34,12 @@ export const ThemeProvider = ({ children }) => {
       primary: '#ef4444',
       secondary: '#dc2626',
       accent: '#f97316',
-      background: 'linear-gradient(135deg, #220000 0%, #441100 50%, #220000 100%)',
+      background: 'linear-gradient(135deg, #220000 0%, #441100 50%, #660000 25%, #220000 100%)',
       particle: '#ef4444',
-      animationType: 'flames'
+      animationType: 'flames',
+      textColor: '#fef2f2',
+      cardBg: 'rgba(239, 68, 68, 0.1)',
+      borderColor: '#ef4444'
     },
     earth: {
       name: 'Earth',
@@ -41,9 +47,12 @@ export const ThemeProvider = ({ children }) => {
       primary: '#a16207',
       secondary: '#92400e',
       accent: '#d97706',
-      background: 'linear-gradient(135deg, #1a1000 0%, #332200 50%, #1a1000 100%)',
+      background: 'linear-gradient(135deg, #1a1000 0%, #332200 50%, #4a3300 25%, #1a1000 100%)',
       particle: '#a16207',
-      animationType: 'planets'
+      animationType: 'planets',
+      textColor: '#fef3c7',
+      cardBg: 'rgba(161, 98, 7, 0.1)',
+      borderColor: '#a16207'
     },
     wood: {
       name: 'Wood',
@@ -51,9 +60,12 @@ export const ThemeProvider = ({ children }) => {
       primary: '#22c55e',
       secondary: '#16a34a',
       accent: '#f59e0b',
-      background: 'linear-gradient(135deg, #0a1a0a 0%, #1a331a 50%, #0a1a0a 100%)',
+      background: 'linear-gradient(135deg, #0a1a0a 0%, #1a331a 50%, #0f2f0f 25%, #0a1a0a 100%)',
       particle: '#22c55e',
-      animationType: 'leaves'
+      animationType: 'leaves',
+      textColor: '#f0fdf4',
+      cardBg: 'rgba(34, 197, 94, 0.1)',
+      borderColor: '#22c55e'
     },
     metal: {
       name: 'Metal',
@@ -61,9 +73,12 @@ export const ThemeProvider = ({ children }) => {
       primary: '#6b7280',
       secondary: '#4b5563',
       accent: '#9ca3af',
-      background: 'linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%)',
+      background: 'linear-gradient(135deg, #111827 0%, #1f2937 50%, #374151 25%, #111827 100%)',
       particle: '#6b7280',
-      animationType: 'weapons'
+      animationType: 'weapons',
+      textColor: '#f9fafb',
+      cardBg: 'rgba(107, 114, 128, 0.1)',
+      borderColor: '#6b7280'
     }
   }
 
@@ -96,6 +111,12 @@ export const ThemeProvider = ({ children }) => {
     document.documentElement.style.setProperty('--theme-secondary', theme.secondary)
     document.documentElement.style.setProperty('--theme-accent', theme.accent)
     document.documentElement.style.setProperty('--theme-particle', theme.particle)
+    document.documentElement.style.setProperty('--theme-text', theme.textColor)
+    document.documentElement.style.setProperty('--theme-card-bg', theme.cardBg)
+    document.documentElement.style.setProperty('--theme-border', theme.borderColor)
+    
+    // Update body background with theme
+    document.body.style.background = theme.background
   }, [currentTheme, themes])
 
   const value = {

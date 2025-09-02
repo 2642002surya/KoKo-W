@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Home, Command, Users, BarChart3, Image, Info, Crown, Gamepad2 } from 'lucide-react'
+import { Menu, X, Home, Command, Users, BarChart3, Image, Info, Crown, Gamepad2, Sparkles, HelpCircle } from 'lucide-react'
 import { useBotData } from '@/contexts/BotDataContext'
 
 const Navigation = () => {
@@ -14,6 +14,8 @@ const Navigation = () => {
     { path: '/', label: 'Home', icon: Home },
     { path: '/commands', label: 'Commands', icon: Command },
     { path: '/characters', label: 'Characters', icon: Users },
+    { path: '/features', label: 'Features', icon: Sparkles },
+    { path: '/faq', label: 'FAQ', icon: HelpCircle },
     { path: '/systems', label: 'Game Systems', icon: Gamepad2 },
     { path: '/dashboard', label: 'Dashboard', icon: BarChart3 },
     { path: '/leaderboard', label: 'Leaderboard', icon: Crown },

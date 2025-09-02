@@ -1,0 +1,14 @@
+Take present website as basic version and update it to most advanced version and, the present website showing only few commands, try it like make a search box type with above mentioning " type !help and press enter ", so when user used that !help command, it'll show all the commands by category wise in attractive way or may show like modules like
+understand the bot code program and make the features section way more informative
+In faq, there should be way more FAQ's so it'll be helpful and an send box like :
+user email/discord :
+FAQ :
+SEND 
+so user can send the questions regarding the bot game and when he pressed "send", those email and questions should be sent to channel "faw-section" in emebed of server "Tenshi no Yami Kyōkai" or ID : 1344604154429046817
+You didn't set the backgrounds, I want the backgrounds in very fancy or attractive professional manner with 5 theme options :
+1. Fire - color red - fire ball blasting in background
+2. water - color blue(default) - oceans or water flowing or waves in background
+3. eath - color brown - planets revolving or you can set universe or solor system revolving
+4. metal - color ash or metalic color - weapons, sheilds, boots, armors, rings, etc all kind of weapons roaming
+5. wood - color green - all greenery with leaves flowing all around here and there, some green leaves, some red, some orange, all kinds of leaves
+Remember texts colors, bakground colors, ot total theme of webpages should be depend on above 5 elemental options, and they should be in fixed position at bottom left, where user can select when he click it'll show drop up menu, there he can select
