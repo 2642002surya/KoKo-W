@@ -265,6 +265,20 @@ body {
   .sm\:text-3xl { font-size: 1.875rem; }
   .sm\:text-4xl { font-size: 2.25rem; }
   .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+  
+  /* Fix mobile heading visibility */
+  .text-5xl { font-size: 2.5rem !important; }
+  .text-6xl { font-size: 3rem !important; }
+  .text-4xl { font-size: 2rem !important; }
+  .text-3xl { font-size: 1.75rem !important; }
+  
+  /* Ensure headings are always visible */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--theme-text, #ffffff) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 }
 
 @media (min-width: 640px) {
@@ -307,6 +321,28 @@ body {
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
+}
+
+/* Fallback for text-gradient when it doesn't work */
+@supports not (-webkit-background-clip: text) {
+  .text-gradient {
+    color: var(--theme-primary);
+    -webkit-text-fill-color: initial;
+  }
+}
+
+/* Force visible headings on desktop */
+@media (min-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--theme-text, var(--theme-primary)) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .text-gradient {
+    color: var(--theme-primary) !important;
+  }
 }
 
 .bg-gradient-to-r {
