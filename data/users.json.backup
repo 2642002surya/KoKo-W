@@ -903,23 +903,74 @@
     "inventory_slots": 25
   },
   "884489252296073287": {
-    "name": "",
-    "gold": 10000,
-    "gems": 100,
+    "name": "༒ V E N O M ༒",
+    "gold": 10110,
+    "gems": 0,
     "level": 1,
-    "xp": 0,
+    "xp": 55,
     "hp": 100,
-    "claimed_waifus": [],
+    "claimed_waifus": [
+      {
+        "name": "Carolyn Carpenter",
+        "rarity": "N 🌿",
+        "level": 1,
+        "exp": 0,
+        "max_exp": 100,
+        "hp": 60,
+        "atk": 43,
+        "def": 40,
+        "potential": 404,
+        "element": "Dark",
+        "skills": [],
+        "fate": [
+          {
+            "angels": [
+              "Nichole Simpson",
+              "Brianna Taylor"
+            ],
+            "fate_name": "Psychic Bond",
+            "effect": "DMG UP 15%"
+          },
+          {
+            "angels": [
+              "Samantha Ramos",
+              "Rebecca Evans"
+            ],
+            "fate_name": "Voices of Fate",
+            "effect": "HP DOWN 10%"
+          },
+          {
+            "angels": [
+              "Janet Warren"
+            ],
+            "fate_name": "Shadowed Mind",
+            "effect": "ACC UP 12%"
+          },
+          {
+            "angels": [
+              "Patricia King"
+            ],
+            "fate_name": "Commanding Presence",
+            "effect": "DMG DOWN 8%"
+          }
+        ],
+        "affection": 0,
+        "summoned_at": "2025-09-02T14:02:44.048634",
+        "relic": null
+      }
+    ],
     "waifu_stats": {},
-    "inventory": {},
+    "inventory": {
+      "Small Gem": 1
+    },
     "investments": {},
     "guild_id": null,
     "achievements": [],
     "battle_stats": {
-      "battles_won": 0,
+      "battles_won": 1,
       "battles_lost": 0,
-      "total_damage_dealt": 0,
-      "total_damage_taken": 0
+      "total_damage_dealt": 38,
+      "total_damage_taken": 37
     },
     "crafting_stats": {
       "items_crafted": 0,
@@ -932,7 +983,11 @@
       "display_mode": "detailed"
     },
     "created_at": "2025-08-31T15:29:34.123473",
-    "last_active": "2025-08-31T15:29:34.123484"
+    "last_active": "2025-09-04T14:01:16.448980",
+    "summon_stats": {
+      "total_summons": 2,
+      "gems_spent": 100
+    }
   },
   "test_user": {
     "test": true,
@@ -970,39 +1025,5 @@
     },
     "created_at": "2025-08-31T12:39:28.133435",
     "last_active": "2025-08-31T12:39:53.177770"
-  },
-  "884489252296073287": {
-    "name": "",
-    "gold": 10110,
-    "gems": 100,
-    "level": 1,
-    "xp": 55,
-    "hp": 100,
-    "claimed_waifus": [],
-    "waifu_stats": {},
-    "inventory": {
-      "Small Gem": 1
-    },
-    "investments": {},
-    "guild_id": null,
-    "achievements": [],
-    "battle_stats": {
-      "battles_won": 1,
-      "battles_lost": 0,
-      "total_damage_dealt": 38,
-      "total_damage_taken": 37
-    },
-    "crafting_stats": {
-      "items_crafted": 0,
-      "materials_gathered": 0,
-      "successful_crafts": 0
-    },
-    "settings": {
-      "auto_collect": false,
-      "notifications": true,
-      "display_mode": "detailed"
-    },
-    "created_at": "2025-08-31T15:29:34.123473",
-    "last_active": "2025-08-31T15:29:34.126279"
   }
 }

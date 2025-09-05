@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 # Bot configuration
 BOT_NAME = "KoKoroMichi"
 BOT_VERSION = "3.1.1"
-COMMAND_PREFIX = "!"
+COMMAND_PREFIX = "koko "
 EMBED_COLOR = 0xFF69B4
 
 # Channel restrictions mapping for commands
